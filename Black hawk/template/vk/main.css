@@ -1,0 +1,492 @@
+﻿/*************
+*Автор: Kernel
+**************/
+
+@charset "Utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+	background-color: #EDEEF0;
+}
+
+/***Шапка***/
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 45px;
+	background-color: #507299;
+	border-top: 1px solid #A6A6A6;
+	border-bottom: 1px solid #466991;
+	z-index: 999;
+}
+
+#wrapperHeader {
+	margin: 0px auto;
+	width: 1000px;
+	height: 44px;
+}
+
+#logotype {
+	margin: 3px 10px 0px;
+	float: left;
+	background: url('images/logotype.png') no-repeat;
+	width: 40px;
+	height: 40px;
+	background-size: 35px;
+	cursor: pointer;
+}
+
+#logotype:active {
+	margin: 5px 10px 0px;
+}
+
+#wrapperSearch {
+	margin: 9px 120px;
+	float: left;
+}
+
+#search {
+	float: left;
+	height: 19px;
+	width: 210px;
+	padding: 3px 0px 3px 10px;
+	color: #77ADC3;
+	background-color: #31537A;
+	border: 1px solid #31537A;
+	border-radius: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+
+#search:focus {
+	background-color: #fff;
+	border: 1px solid #fff;
+	color: #000;
+}
+
+header #title {
+	padding-top: 15px;
+	padding-left: 20px;
+	float: right;
+	width: 130px;
+	height: 28px;
+	font-family: Open Sans,Helvetica Neue,sans-serif;
+	font-weight: bold;
+	color: #fff;
+	font-size: 12.5px;
+	cursor: pointer;
+}
+
+header #title:hover {
+	background-color: #486991;
+}
+
+header #title:active {
+	background-color: #43648C;
+}
+
+/***Конктент часть***/
+#wrapper {
+	overflow: auto;
+	margin: 0px auto;
+	width: 1000px;
+	height: 800px;
+}
+
+/**Мобильные версии**/
+
+#mobileVersion {
+	margin-top: 100px;
+	float: left;
+	width: 580px;
+	height: 600px;
+}
+
+#mobileVersion #title, #mobileVersion #altTitle {
+	text-align: center;
+	font-family: Open Sans,Helvetica Neue,sans-serif;
+}
+
+#mobileVersion #title {
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+#mobileVersion #altTitle {
+	font-size: 15px;
+	color: #222;
+	line-height: 23px;
+}
+
+#android #download, #ios #download, #wp #download  {
+	padding: 5px 2px 5px 15px;
+	width: 130px;
+	height: 22px;
+	text-align: center;
+	line-height: 2.1;
+	background-color: transparent;
+	color: #285473;
+	font-size: 12.5px;
+	font-family: Open Sans,Helvetica Neue,sans-serif;
+}
+
+#android #download:hover, #ios #download:hover, #wp #download:hover {
+	background-color: #E1E5EB;
+}
+
+
+#android {
+	margin: 50px 0px 0px 55px;
+	float: left;
+	background: url('images/android.png') no-repeat;
+	width: 180px;
+	height: 430px;
+	cursor: pointer;
+}
+
+#android #download {
+	margin: 397px auto 0px;
+}
+
+#android #logo {
+	float: left;
+	background: url('images/icoAndroid.png') no-repeat;
+	width: 20px;
+	height: 100%;
+}
+
+#ios {
+	position: relative;
+	margin: 35px 0px 0px -30px;
+	float: left;
+	background: url('images/ios.png') no-repeat;
+	width: 190px;
+	height: 445px;
+	z-index: 20;
+	cursor: pointer;
+}
+
+#ios #download {
+	margin: 412px auto 0px;
+}
+
+#ios #logo {
+	float: left;
+	background: url('images/icoIos.png') no-repeat;
+	width: 20px;
+	height: 100%;
+}
+
+#wp {
+	margin: 50px 0px 0px -30px;
+	float: left;
+	background: url('images/wp.png') no-repeat;
+	width: 190px;
+	height: 430px;
+	cursor: pointer;
+}
+
+#wp #download {
+	margin: 397px auto 0px;
+}
+
+#fuckLogoWP{
+	display: block;
+	float: left;
+	width: 20px;
+	height: 100%;
+}
+
+/**Форма Авторизации и Регистрации**/
+#rightForm {
+	margin: 90px 0px 0px 75px;
+	float: left;
+	width: 340px;
+	height: 615px;
+}
+
+#authorizationForm {
+	float: left;
+	width: 99.5%;
+	height: 200px;
+	background-color: #fff;
+	border: 1px solid #E3E4E8;
+	border-bottom: 1px solid #D7D8DB;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+#login, #password, #nameUser, #lastnameUser {
+	padding: 6px 12px 8px;
+	width: 80%;
+	height: 35px;
+	border: 1px solid #D3D9DE;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	box-sizing: border-box;
+	font-size: 14px;
+	font-family: Open Sans,Helvetica Neue,sans-serif;
+	color: #000;
+}
+
+#login {
+	margin: 30px 0px 0px 30px;
+}
+
+#password, #nameUser, #lastnameUser {
+	margin: 17px 0px 0px 30px;
+}
+
+#finishAuthorization {
+	margin: 20px 0px 0px 30px;
+	float: left;
+	width: 105px;
+	height: 35px;
+	background-color: #5E81A8;
+	border: 1px solid #5E81A8;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#finishAuthorization:hover {
+	background-color: #6888AD;
+}
+
+#finishAuthorization:active {
+	background-color: #5779A1;
+	padding-top: 2px;
+}
+
+#restorePass{
+	float: left;
+	margin: 30px 0px 0px 20px;
+	font-family: Open Sans,Helvetica Neue,sans-serif;
+	font-size: 13px;
+}
+
+#restorePass a {
+	color: #285473;
+}
+
+#registrationForm {
+	margin-top: 35px;
+	float: left;
+	width: 99.5%;
+	height: 320px;
+	background-color: #fff;
+	border: 1px solid #E3E4E8;
+	border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-ms-border-radius: 5px 5px 0px 0px;
+	-o-border-radius: 5px 5px 0px 0px;
+}
+
+#registrationForm #title, #registrationForm #altTitle {
+	text-align: center;
+	font-family: Open Sans,Helvetica Neue,sans-serif;
+}
+
+#registrationForm #title {
+	font-weight: 400px;
+	margin-top: 25px;
+	font-size: 20px;
+	color: #2b2f33;
+}
+
+#registrationForm #altTitle {
+	margin-top: 5px;
+	font-size: 12.5px;
+	color: #656565;
+}
+
+#birthdayTitle {
+	margin: 15px 30px;
+	float: left;
+	font-family: Open Sans,Helvetica Neue,sans-serif;
+	color: #939393;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#dateBirthday {
+	margin: 1px 0px 0px 30px;
+	float: left;
+	width: 85%;
+}
+
+#dateList, #monthList, #yearList {
+	margin-right: 2px;
+	padding: 4px 0 2px 9px;
+	height: 30px;
+	font-size: 15px;
+	text-align: center;
+	color: #7C7F82;
+	border: 1px solid #D3D9DE;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+#dateList {
+	width: 80px;
+}
+
+#monthList {
+	width: 100px;
+}
+
+#yearList {
+	width: 78px;
+}
+
+#dateList:focus, #monthList:focus, #yearList:focus {
+	color: #000;
+}
+
+#registrationForm #button {
+	margin: 15px 30px;
+	float: left;
+	width: 80%;
+	height: 40px;
+}
+
+#registrationButton {
+	width: 100%;
+	height: 35px;
+	background-color: #5FB053;
+	border: 1px solid #5FB053;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	font-family: Open Sans,Helvetica Neue,sans-serif;
+	font-weight: bold;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#registrationButton:hover {
+	background-color: #68B35D;
+}
+
+#registrationButton:active {
+	padding-top: 3px;
+	background-color: #5AA84D;
+}
+
+#authorizationFacebookForm {
+	float: left;
+	width: 99.5%;
+	height: 50px;
+	background-color: #fff;
+	border-left: 1px solid #E3E4E8;
+	border-right: 1px solid #E3E4E8;
+	border-bottom: 1px solid #D7D8DB;
+	border-radius: 0px 0px 5px 5px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-ms-border-radius: 0px 0px 5px 5px;
+	-o-border-radius: 0px 0px 5px 5px;
+	cursor: pointer;
+}
+
+#linkFacebook {
+	margin: 15px auto;
+	width: 200px;
+	height: 20px;
+	background: url('images/facebook.png') no-repeat;
+	font-size: 1em;
+}
+
+#linkFacebook a {
+	margin-left: 32px;
+	color: #285473;
+}
+
+#authorizationFacebookForm:hover a {
+	text-decoration: underline;
+}
+
+/***Футер***/
+.clear {
+	clear: both;
+}
+
+footer {
+	margin: 40px auto 0px;
+	width: 100%;
+	height: 50px;
+	border-top: 1px solid #E4E8ED;
+}
+
+#aboutVk , #infoVk, #languageVk {
+	color: #828282;
+	font-family: Open Sans,Helvetica Neue,sans-serif;
+	font-size: 13px;
+}
+
+#aboutVk {
+	margin: 20px 0px 0px 30px;
+	float: left;
+}
+
+#aboutVk a, #infoVk a , #languageVk a{
+	color: #285473;
+}
+
+#infoVk {
+	margin: 20px 0px 0px 120px;
+	float: left;
+}
+
+.marginRightLink {
+	margin-right: 20px;
+}
+
+#languageVk {
+	margin: 20px 0px 0px 30px;
+	float: right;
+}
+
+
+
+
+
+
+
+
+

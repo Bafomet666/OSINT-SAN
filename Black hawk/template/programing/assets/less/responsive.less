@@ -1,0 +1,162 @@
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) { 
+    .navbar-collapse {
+        border-top: none;
+        .box-shadow(none);
+        width: 100%;
+        left: 0;
+        top: 60px;
+        position: absolute;
+        background: darken(@text-color, 15%);
+        z-index: 40;
+    }
+    
+    .header .main-nav .navbar-collapse .nav-item.active a {
+        color: @color-primary;
+    }
+    
+    .header.header-scrolled .main-nav .navbar-collapse .nav-item.active a {
+        border: none;
+        color: @color-primary;
+    }
+    
+    .main-nav .navbar-collapse .nav-item {
+        margin-right: 0;
+    }
+    
+    .main-nav .navbar-collapse .nav-item a {
+        text-align: center;
+    }
+    
+    
+    .pricing-wrapper .item-inner {
+        min-height: inherit;
+    }
+    .pricing-wrapper .price-desc {
+        min-height: inherit;
+    }
+    .hero-section .figure-image {
+        width: 300px;
+    }
+    .hero-carousel .carousel-inner .heading {
+        font-size: 26px;
+    }
+    
+    .hero-carousel .carousel-inner .item-content-inner {
+        padding-top: 100px;
+    }
+    .hero-section .figure-holder .figure-image {
+        width: inherit;
+        bottom: 0;
+        top: inherit;
+        right: inherit;
+        left:15px;
+        max-width: 320px;
+    }
+
+    .technologies li {
+        margin-bottom: 15px;
+    }
+    
+    .members-wrapper .item {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .hero-carousel {
+        height: 660px;
+    }
+    .hero-section .carousel-inner {
+        height: 660px;
+    }
+    
+    .hero-carousel .carousel-inner .item {
+        height: 660px;
+    }
+    
+    .testimonials-section .item .profile-image {
+        width: 60px;
+        height: 60px;
+    }
+    .testimonials-section .item .quote {
+        margin-left: 85px;
+        padding: 15px;
+    }
+    .testimonials-section .item.item-reversed .quote {
+        margin-right: 85px;
+    }
+    
+    .team-section .item-inner {
+        min-height: inherit;
+    }
+    
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .feature-nav {
+        text-align: left;
+        padding-left: 30px;
+    }
+    
+    .feature-nav > li {
+        font-size: 15px;
+    }
+    .hero-section .figure-holder .figure-image {
+        width: 400px;
+        bottom: inherit;
+        top: 130px;
+    }
+    .hero-carousel .carousel-inner .item-content-inner {
+        max-width: 300px;
+        padding-top: 120px;
+    }
+    
+    .team-section .item-inner {
+        min-height: 515px;
+    }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .feature-nav  {
+        margin-top: 30px;
+        padding-left: 15px;
+    }
+    .feature-nav > li {
+        font-size: 16px;
+    }
+    .feature-nav > li > a {
+        padding: 15px 0;
+    }
+    
+    .feature-nav > li.active > a {
+        padding: 15px 0;
+    }
+    .hero-section .figure-holder .figure-image {
+        width: 420px;
+        bottom: inherit;
+        top: 130px;
+    }
+    .hero-carousel .carousel-inner .item-content-inner {
+        max-width: 500px;
+    }
+    .team-section .item-inner {
+        min-height: 490px;
+    }
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .hero-section .figure-holder .figure-image {
+        width: 570px;
+        bottom: 0;
+        top: inherit;
+    }
+}
+
+

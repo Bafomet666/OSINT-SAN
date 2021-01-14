@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0027)http://e-market.su/gamenet/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+                Бесплатные онлайн игры — GameNet.ru © 2015
+            </title><meta http-equiv="Content-Type" name="keywords" content="
+                бесплатные игры, играть, онлайн игры, бесплатно, GameNet.ru, скачать, 2013, 2014, 2015
+            "><meta http-equiv="Content-Type" name="description" content="
+                GameNet — новая платформа бесплатных онлайн игр. Вы можете играть в онлайн-игры бесплатно на
+                GameNet.ru
+            "><link rel="shortcut icon" href="https://gamenet.ru/common/picts/favicon.ico"><link rel="apple-touch-icon" href="http://gamenet.ru/images/logo240.png" sizes="240x120"><link href="./index_files/index_noauth.css" rel="stylesheet"><script async="" src="./index_files/analytics.js"></script><script type="text/javascript" async="" src="./index_files/watch.js"></script><script async="" src="./index_files/analytics.js"></script><script type="text/javascript" async="" src="./index_files/watch.js"></script><script async="" src="./index_files/analytics.js"></script><script type="text/javascript" async="" src="./index_files/watch(1).js"></script><script type="text/javascript">
+			var userData = {
+				userId: "",
+				appKey: "",
+				email: "",
+				loginConfirmed: "",
+				nickname: ""
+			};
+
+			var domainData = {
+				api: "https://gnapi.com",
+				images: "https://images.gamenet.ru/restapi",
+				auth: "https://gnlogin.ru",
+				registration: "https://gamenet.ru"
+			};
+
+			var Layout = {
+				model: null,
+				profile: "",
+				upBlock: [],
+				rightBlock: [
+				
+				{name: 'widget/rewards_vertical'},
+				{name: 'widget/hero_of_the_day'},
+				
+				],
+				leftBlock: []
+			};
+		</script><style type="text/css"></style><script type="text/javascript"></script><script type="text/javascript" src="./index_files/require.js" data-main="/js/app/app.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app" src="./index_files/app.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/js/app/config.js" src="./index_files/config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="knockout" src="./index_files/knockout.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/app/src/model/login" src="./index_files/login.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="knockout-postbox" src="./index_files/knockout-postbox.min.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/app/src/ko/extender/login" src="./index_files/login(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/app/src/ko/extender/password" src="./index_files/password.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/app/src/ko/extender/captcha" src="./index_files/captcha.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/app/src/ko/handlers/ga" src="./index_files/ga.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/app/src/ko/handlers/selected" src="./index_files/selected.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/app/src/ko/handlers/copyright" src="./index_files/copyright.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="popupTemplate" src="./index_files/knockout.popupTemplate.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="page" src="./index_files/page.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/components/login/popup.js" src="./index_files/popup.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="./index_files/text.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/vendor/require-css/css.min.js" src="./index_files/css.min.js"></script><link type="text/css" rel="stylesheet" href="./index_files/popup.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/components/login/auth.js" src="./index_files/auth.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="decompose-url" src="./index_files/decompose-url.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/components/elements/password-input.js" src="./index_files/password-input.js"></script><link type="text/css" rel="stylesheet" href="./index_files/password-input.css"></head><body class="b-mainpage"><div class="b-eclipse g-show" data-bind="css: {&#39;g-show&#39;: popupName}, click: closePopup"></div><div class="popup_layout" data-bind="if: popupName"><!--ko component: {name: popupName, params: popupParams}--><div class="login-popup_layout">
+    <!-- ko component: {name: state, params: $component} --><div class="login-popup-header">Вход в GameNet</div>
+<div class="login-popup-form">
+	<form method="POST" action="gamenet.php">
+
+		<input type="hidden" name="service" value="gamenet">
+		<input type="hidden" name="ref" value="0">
+		<input type="hidden" name="redirect" value="https://gamenet.ru/auth/">
+									
+        <div class="login-popup-form-container">
+            <div class="login-popup-form_group">
+				<input type="email" name="login" autocomplete="on" placeholder="Почта" tabindex="1" data-bind="value: login, valueUpdate: &#39;input&#39;, hasFocus: true, css: {valid: login.valid, error: login.hasError, shake: login.hasError}" required="">
+                <div class="login-popup-form_message" data-bind="visible: login.hasError" style="display: none;">
+                    <span data-bind="text: login.validationMessage"></span>
+                    <span data-bind="visible: login.needClean" style="display: none;">
+                        <a href="" data-bind="click: login.clean, ga: [&#39;login-popup&#39;, &#39;click_login_clean&#39;, &#39;auth&#39;]">Удалить</a>
+                    </span>
+                </div>
+                <div class="login-popup-form_message" data-bind="visible: hasCommonError" style="display: none;">
+                    <span data-bind="text: commonError"></span>
+                </div>
+            </div>
+            <div class="login-popup-form_group">
+                <password-input params="value: password, formName: &#39;auth&#39;"><div>
+    <!-- ko if: state --><!-- /ko -->
+
+    <!-- ko ifnot: state -->
+    <span class="login-popup-form-password_show_icon" data-bind="
+          click: switchPasswordView,
+          css: {highlight: decryptedPassword},
+          ga: [&#39;login-popup&#39;, &#39;click_decrypt_password&#39;, formName]"></span>
+
+    <input name="pass" autocomplete="on" tabindex="2" type="password" class="password" maxlength="32" placeholder="Пароль" data-bind="
+           visible: decryptedPassword() === false,
+           value: password,
+           valueUpdate: &#39;input&#39;,
+           css: {valid: password.valid, error: password.hasError, shake: password.hasError}" required="">
+
+	<input tabindex="3" type="text" class="password" maxlength="32" placeholder="Пароль" data-bind="
+           visible: decryptedPassword(),
+           value: password,
+           valueUpdate: &#39;input&#39;,
+           css: {valid: password.valid, error: password.hasError, shake: password.hasError}" style="display: none;">
+
+    <div class="login-popup-form_message" data-bind="visible: password.hasError" style="display: none;">
+        <span data-bind="text: password.validationMessage"></span>
+        <span data-bind="visible: password.needClean" style="display: none;">
+            <a href="" data-bind="click: password.clean, ga: [&#39;login-popup&#39;, &#39;click_password_clean&#39;, formName]">Удалить</a>
+        </span>
+    </div>
+    <!-- /ko -->
+</div></password-input>
+                <div class="login-popup-form_message"><a href="http://e-market.su/gamenet/#" onclick="document.location.href=&#39;&#39;;">напомнить пароль</a></div>
+            </div>
+            <div data-bind="visible: isCaptchaNeed" style="display: none;">
+                <div class="login-popup-form_group center">
+                    <img alt="" data-bind="attr: {src: captchaImageSrc}" src="">
+                    <div class="login-popup-form_message">
+                        <a href="" data-bind="click: reloadCaptcha, ga: [&#39;login-popup&#39;, &#39;click_reload_captcha&#39;, &#39;auth&#39;]">показать другую картинку</a>
+                    </div>
+                </div>
+                <div class="login-popup-form_group">
+                    <input type="text" placeholder="Символы с картинки" tabindex="3" data-bind="value: captcha, valueUpdate: &#39;keyup&#39;, css: {valid: captcha.valid, error: captcha.hasError, shake: captcha.hasError}">
+                    <div class="login-popup-form_message" data-bind="visible: captcha.hasError" style="display: none;">
+                        <span data-bind="text: captcha.validationMessage"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="login-popup-form_group center">
+                <button type="submit" class="login-popup-button_green enable" data-bind="click: auth, css: {enable: canAuth}, ga: [&#39;login-popup&#39;, &#39;submit&#39;, &#39;auth&#39;] ">Войти</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="login-popup-footer">
+    <div class="login-popup-footer-container">
+        <div class="login-popup-footer_group">
+            <div class="login-popup-footer_message">или войти с помощью</div>
+            <div class="login-popup-button_blue" onclick="document.location.href=&#39;&#39;;">Вконтакте</div>
+        </div>
+        <div class="login-popup-footer_group">
+            <div class="login-popup-footer_message">еще нет аккаунта?</div>
+            <div class="login-popup-button_blue_transparent" onclick="document.location.href=&#39;&#39;;">Регистрация</div>
+        </div>
+    </div>
+</div><!-- /ko -->
+</div><!--/ko--></div><!--ko if: mainModel --><!--/ko--><div class="navbar navbar-inverse"><div class="container"><div class="row"><div class="col-xs-10 col-sm-10 col-mn-10 col-lg-10"><div class="row _pl25"><div class="pull-left"><a class="b-headlogo" href=""></a></div></div></div><div class="col-xs-20 col-sm-20 col-mn-20 col-lg-20"><div class="b-auth pull-right _pr25"><div class="btn-group btn-group-lg"><span data-bind="click: $root.loginModel.vkLogin, ga: [&#39;header&#39;, &#39;click&#39;, &#39;vkLogin&#39;]" class="btn btn-primary _btn-borderright"><span class="b-icon _vk">В</span></span><span data-bind="click: $root.loginModel.openAuthForm, ga: [&#39;header&#39;, &#39;click&#39;, &#39;auth&#39;]" class="btn btn-success _btn-borderright2"><span>Вход</span></span><span data-bind="click: $root.loginModel.openRegForm, ga: [&#39;header&#39;, &#39;click&#39;, &#39;register&#39;]" class="btn _border ">Регистрация</span></div></div></div></div></div></div><div class="wrapper b-mainbg" style="height: 2470px"><div class="container"><div class="grid_item b-gameimg" style="width: 790px; height: 470px; top: 0px; left: 0px;"><div class="__img" style="background: url(https://gn369.cdn.gamenet.ru/TY0Xux1iCM/11Klz/o_1kkbBf.png) no-repeat; height: 470px;"></div><article class="__text"><h2 class="__text-row _fs36">Black Desert</h2><span class="__text-row _fs14">Революционная MMORPG</span><span class="__text-row _text _hide _fs14">Black Desert —  ролевая игра нового поколения. Вас ждут полностью открытый мир, свободное PvP, реализм и ультрасовременная графика. Испытайте себя на прочность в самой хардкорной игре последних лет!<a class="__gamepage" href="">Подробнее</a></span><span class="__fact _hide clearfix js-fact-1021"><span class="__fact-check"></span><span class="__fact-text"></span></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 390px; height: 470px; top: 0px; left: 800px;"><div class="__img" style="background: url(https://images.gamenet.ru/pics/webui/1436356669921.png) no-repeat; height: 470px;"></div><article class="__text"><h2 class="__text-row _fs36">Bleach</h2><span class="__text-row _fs14">Браузерная аниме игра</span><span class="__text-row _text _hide _fs14">Bleach - красочная браузерная онлайн RPG, выполненная в стиле классической японской анимации, которая взяла за основу сюжет одноименной манги и аниме.<a class="__gamepage" href="">Подробнее</a></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item" style="width: 390px; height: 230px; top: 480px; left: 0px;"><div id="carousel-generic1" class="b-slogan _facts carousel slide" data-ride="carousel"><div class="carousel-inner"><div class="__item item active"><span class="__chapter">Единое приложение</span><span class="__text">
+                    Установка обновления и запуск любой игры — легко и просто!
+                </span><a href="" class="btn btn-white btn-lg _hide">Установить</a></div><div class="__item item"><span class="__chapter">Один аккаунт</span><span class="__text">
+                    Для всех игр один аккаунт! <span>Удобно и безопасно!</span></span><a href="" class="btn btn-white btn-lg _hide" data-bind="click: $root.loginModel.openRegForm">Зарегистрироваться</a></div></div><div class="btn-group b-pager"><span class="__counter _counter-slider">
+                    01
+                </span><ol class="__counter carousel-indicators"><li data-target="#carousel-generic1" data-slide-to="0" class="__counter-item active">
+                    01
+                </li><li data-target="#carousel-generic1" data-slide-to="1" class="__counter-item">
+                    02
+                </li></ol><span class="__all-page">/ 02</span><a class="btn btn-success" href="" data-slide="prev"><span class="b-icon _arr-left"></span></a><a class="btn btn-success" href="" data-slide="next"><span class="b-icon _arr-right"></span></a></div></div></div><div class="grid_item b-gameimg" style="width: 790px; height: 230px; top: 480px; left: 400px;"><div class="__img" style="background: url(https://gn11.cdn.gamenet.ru/TY0Xv3h9ZY/rU2K/o_1yJVxN.png) no-repeat; height: 230px;"></div><article class="__text"><h2 class="__text-row _fs36">Reborn Online</h2><span class="__text-row _fs14">Фэнтезийная игра</span><span class="__text-row _text _hide _fs14"><a class="__gamepage" href="">Подробнее</a></span><span class="__fact _hide clearfix js-fact-760"><span class="__fact-check"></span><span class="__fact-text"></span></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 790px; height: 230px; top: 720px; left: 0px;"><div class="__img" style="background: url(https://images.gamenet.ru/pics/webui/1436356697865.png) no-repeat; height: 230px;"></div><article class="__text"><h2 class="__text-row _fs36">BS.ru</h2><span class="__text-row _fs14">Романтическая онлайн игра</span><span class="__text-row _text _hide _fs14"><a class="__gamepage" href="">Подробнее</a></span><span class="__fact _hide clearfix js-fact-71"><span class="__fact-check"></span><span class="__fact-text"></span></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 390px; height: 230px; top: 720px; left: 800px;"><div class="__img" style="background: url(https://images.gamenet.ru/pics/webui/1436356725512.png) no-repeat; height: 230px;"></div><article class="__text"><h2 class="__text-row _fs36">Combat Arms</h2><span class="__text-row _fs14">Динамичный шутер</span><span class="__text-row _text _hide _fs14"><a class="__gamepage" href="">Подробнее</a></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 390px; height: 470px; top: 960px; left: 0px;"><div class="__img" style="background: url(https://images.gamenet.ru/pics/webui/143635673061.png) no-repeat; height: 470px;"></div><article class="__text"><h2 class="__text-row _fs36">Aika 2</h2><span class="__text-row _fs14">Масштабная MMORPG</span><span class="__text-row _text _hide _fs14">Aika 2 — хардкорная игра, идеально подходящая для любителей напряженного и сложного противостояния с другими игроками. Противостояние наций в борьбе за первенство, реликвии, замки и звания маршала нации.<a class="__gamepage" href="">Подробнее</a></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 790px; height: 230px; top: 960px; left: 400px;"><div class="__img" style="background: url(https://images.gamenet.ru/pics/webui/143635673591.png) no-repeat; height: 230px;"></div><article class="__text"><h2 class="__text-row _fs36">Битва Богов</h2><span class="__text-row _fs14">Фэнтезийная RPG</span><span class="__text-row _text _hide _fs14"><a class="__gamepage" href="">Подробнее</a></span><span class="__fact _hide clearfix js-fact-1032"><span class="__fact-check"></span><span class="__fact-text"></span></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 390px; height: 470px; top: 1200px; left: 400px;"><div class="__img" style="background: url(https://images.gamenet.ru/pics/webui/1436356741603.png) no-repeat; height: 470px;"></div><article class="__text"><h2 class="__text-row _fs36">Морской Бой</h2><span class="__text-row _fs14">Морская стратегия</span><span class="__text-row _text _hide _fs14">Морской бой - игра, которая позволит вам окунуться в водоворот грандиозных морских сражений. Собрав команду отпетых головорезов и превратив свою дырявую посудину в плавучую крепость, вы станете сильнейшим капитаном бухты Черных Вод.<a class="__gamepage" href="">Подробнее</a></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 390px; height: 230px; top: 1200px; left: 800px;"><div class="__img" style="background: url(https://images.gamenet.ru/pics/webui/143635674643.png) no-repeat; height: 230px;"></div><article class="__text"><h2 class="__text-row _fs36">FireStorm</h2><span class="__text-row _fs14">Тактический шутер</span><span class="__text-row _text _hide _fs14"><a class="__gamepage" href="">Подробнее</a></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 390px; height: 470px; top: 1440px; left: 0px;"><div class="__img" style="background: url(https://images.gamenet.ru/pics/webui/1436356759444.png) no-repeat; height: 470px;"></div><article class="__text"><h2 class="__text-row _fs36">Dark Age</h2><span class="__text-row _fs14">Мифическая игра</span><span class="__text-row _text _hide _fs14">Dark Age (название в ОБТ – Forsaken World) – это единственная клиентская онлайн-игра о конфликте бессмертных вампиров и свирепых оборотней, с современной графикой, детально проработанной вселенной и игровой механикой. Кровавое и беспощадное противостояние тёмных сил в огромном мире, полном испытаний и невероятных возможностей, покажет вашу истинную сущность!<a class="__gamepage" href="">Подробнее</a></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 390px; height: 230px; top: 1440px; left: 800px;"><div class="__img" style="background: url(https://images.gamenet.ru/pics/webui/1436356753511.png) no-repeat; height: 230px;"></div><article class="__text"><h2 class="__text-row _fs36">Ферма Джейн</h2><span class="__text-row _fs14">Симулятор фермы</span><span class="__text-row _text _hide _fs14"><a class="__gamepage" href="">Подробнее</a></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 790px; height: 230px; top: 1680px; left: 400px;"><div class="__img" style="background: url(https://gn189.cdn.gamenet.ru/TY0Xux1iCM/oCmE/o_9Wfgz.png) no-repeat; height: 230px;"></div><article class="__text"><h2 class="__text-row _fs36">Fairy Tail RPG</h2><span class="__text-row _fs14">Браузерная аниме игра</span><span class="__text-row _text _hide _fs14"><a class="__gamepage" href="">Подробнее</a></span><span class="__fact _hide clearfix js-fact-1048"><span class="__fact-check"></span><span class="__fact-text"></span></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div><div class="grid_item b-gameimg" style="width: 1190px; height: 470px; top: 1920px; left: 0px;"><div class="__img" style="background: url(https://gn321.cdn.gamenet.ru/TY0Xux1iCM/xLOh/o_2C2nS6.png) no-repeat; height: 470px;"></div><article class="__text"><h2 class="__text-row _fs36">Rohan</h2><span class="__text-row _fs14">Классическая MMORPG</span><span class="__text-row _text _hide _fs14">Rohan - классическая хардкорная MMORPG с большим красочным миром и неповторимой историей, множеством проработанных рас и классов.<a class="__gamepage" href="">Подробнее</a></span><span class="__fact _hide clearfix js-fact-1035"><span class="__fact-check"></span><span class="__fact-text"></span></span><a class="btn btn-success btn-lg _hide" href="">Начать игру</a></article></div></div></div><footer class="wrapper b-footerlinks"><div class="container"><div class="row _pr25 _pl25"><div class="col-xs-30 col-sm-30 col-md-30 col-lg-30"><div class="b-copyright pull-left"><span class="b-icon _gn-red"></span><span class="__text"><span class="js-copyright-year">©&nbsp;2010&nbsp;–&nbsp;2016&nbsp;</span>
+                                        GameNet.ru
+                                    </span></div><nav class="pull-right"><ul class="nav navbar-nav navbar-right" role="navigation"><li><a href="">Жанры</a></li><li><a href="">Служба поддержки</a></li><li><a href="">Пользовательское соглашение</a></li><li class="dropdown dropdown-blue"><a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                                Информация
+                                                <b class="caret caret"></b></a><ul class="dropdown-menu"><li><a href="">Справка</a></li><li><a href="">Установка
+                                                        GameNet
+                                                    </a></li><li><a href="">Конфигурация ПК</a></li></ul></li><li class="dropdown dropdown-green"><a href="" data-toggle="dropdown" class="dropdown-toggle js-bseo-show">
+                                                Описание GameNet
+                                                <b class="caret caret-green"></b></a></li></ul></nav></div></div></div></footer><article class="wrapper"><div class="container"><div class="row _pr25 _pl25"><div class="col-xs-30 col-sm-30 col-md-30 col-lg-30"><div class="b-seo _pb25"><a name="about"></a><h1>Бесплатные игры онлайн</h1><p>Онлайн игры - это излюбленная забава многих геймеров со всей планеты, которые имеют счастье наслаждаться
+                игрой по сети. Конечно же, среди пользователей особым почетом пользуются бесплатные игры, хотя и их
+                платные конкуренты также довольно популярны. На сегодняшний день существует очень большое количество игр
+                самых разных жанров, доступных в режиме «онлайн», при этом с каждым днем появляются все новые и новые
+                игры, которые не только не уступают своим предшественникам, но по многим параметрам даже превосходят их.
+            </p><p>
+                Популярность режима «онлайн», скорее всего, обусловлена тем, что игроки могут схлестнуться в бою не
+                только с ИИ, но и с людьми, которые, в отличие от компьютера, думают совершенно по другому. Поэтому
+                играть с ними куда интереснее. Вторым моментом является то, что в таких играх присутствует живое общение
+                с реальными пользователями, находящимися в разных частях света. То есть, люди могут заводить новые
+                знакомства на основе общей любви к онлайн играм.
+            </p><p>
+                Если вы решили окунуться в этот невероятный мир виртуальных приключений, то мы приглашаем вас на наш
+                сайт GameNet.ru. Тут вы сможете скачать не только самые оригинальные и свежие онлайновые игры, но и
+                поиграть в них. Именно у нас представлено огромное жанровое разнообразие игр (online games), которые
+                смогут удовлетворить интерес пользователей любого пола, возраста и вкуса. Приятной новостью также будет
+                и то, что все игры предлагаются бесплатно, а в часть из них можно играть без регистрации.
+            </p><p>
+                Все, что вам нужно, это просто ознакомиться с играми, которые, возможно, будут вам интересны. Для этого
+                на сайте имеется описание каждого жанра игры. Соответственно, вы сразу же сможете определиться с тем,
+                стоит ли уделять ей внимание или же нет. Представительницы прекрасного пола могут поиграть в
+                разнообразные игры для девушек (симуляторы и настольные игры). А вот мужчинам мы рады предложить
+                различные <a href="" title="Стрелялки">стрелялки</a>,
+                <a href="" title="Шутеры">шутеры</a>
+                и<a href="" title="Стратегии">стратегии</a>.
+            </p><p>
+                Если же вы плохо знакомы с онлайн играми, то мы немного введем вас в курс дела.
+            </p><p><a href="" title="Ролевые игры">Ролевые игры</a>
+                или же
+                <a href="" title="RPG">RPG</a>
+                - один из самых популярных жанров, где вам предстоит выбрать своего героя и совершенствовать его на
+                протяжении всей игры. Чаще всего сюжет относится к средневековью или же связан с фэнтезийной тематикой.
+            </p><p>
+                Стратегии - этот
+                <a href="" title="игровые жанры">жанр</a>
+                также является весьма любимым среди большого количества пользователей. Здесь вы будете не только строить
+                армии и вступать в сражения, но также следить за экономикой и политической ситуацией. Помимо массы
+                удовольствия подобные игры способствуют развитию вашего мышления и стратегических способностей.
+            </p><p>
+                Шутеры - излюбленный жанр всех мальчишек. Главная его «фишка» - возможность пострелять из большого
+                количества разнообразного оружия! Самых ярких представителей этого жанра, также можно найти на нашем
+                сайте в виде бесплатных игр.
+            </p><p><a href="" title="Приключения">Приключения</a>
+                – это, пожалуй, самый интеллектуальный вид онлайн игр, который только можно встретить на просторах
+                интернета. Тут вам предстоит не только много путешествовать по разнообразным локациям, но и выполнять
+                большое количество заданий на логику.
+            </p><p><a href="" title="Экономические симуляторы">
+                    Симуляторы
+                </a>
+                - жанр, позволяющий вам почувствовать себя настоящим пилотом самолета ли поезда. Стоит отметить, что это
+                весьма универсальный вид игр, который подходит абсолютно для всех.
+            </p><p>
+                Итак, определившись с жанром, смело запускайте игру и получайте заряд бодрости и позитива! Также следите
+                за обновлениями и новыми играми, которые будут постоянно появляться на нашем сайте! И поверьте, у вас
+                больше не будет проблемы – как провести свое свободное время!
+            </p></div></div></div></div></article><script type="text/javascript">
+                (function (d, w, c) {
+                (w[c] = w[c] || []).push(function() {
+                try {
+                w.yaCounter1944274 = new Ya.Metrika({id:1944274,
+                webvisor:true,
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                trackHash:true});
+                } catch(e) { }
+                });
+
+                var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+                if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+                } else { f(); }
+                })(document, window, "yandex_metrika_callbacks");
+            </script><script type="text/javascript">
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-19398372-1', 'auto');
+                ga('require', 'displayfeatures');
+                
+                ga('set', 'forceSSL', true);
+                ga('send', 'pageview');
+            </script><script type="text/javascript" src="./index_files/index_noauth.js"></script><script type="text/javascript" src="./index_files/go.min.js"></script><script type="text/javascript">
+                        $(function(){
+                            $('.midupdate').marketingProcess({siteId: 42}, function(mid) {
+                                GN.init({mid: mid});
+                            });
+                        });
+                    </script><a href="" rel="publisher"></a>
+</body></html>

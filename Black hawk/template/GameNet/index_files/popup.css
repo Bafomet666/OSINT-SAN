@@ -1,0 +1,233 @@
+.login-popup_layout {
+    width: 400px;
+    margin-left: -200px;
+    margin-top: 100px;
+    line-height: 1;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+.login-popup_layout form {
+    margin: 0;
+    padding: 0;
+}
+
+.login-popup_layout button {
+    border: none;
+}
+
+.login-popup_layout a.underline {
+    text-decoration: underline;
+    border: none;
+}
+
+.login-popup_layout a {
+    text-decoration: none;
+    border-bottom: 1px dashed #4090ce;
+}
+.login-popup-header {
+    background-color: #30343c;
+    font-size: 26px;
+    font-family: open_sanslight, Helvetica, Arial, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.login-popup-form {
+    background-color: #fafafa;
+}
+
+.login-popup-form-container {
+    width: 286px;
+    margin: 0 auto;
+    padding: 17px 0;
+}
+
+.login-popup-form_group {
+    margin-top: 20px;
+    position: relative;
+}
+
+.login-popup-form input, .login-popup-form select {
+    font-size: 14px;
+    color: #333333;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    width: 100%;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.login-popup-form input::-moz-focus-inner,
+.login-popup-form select::-moz-focus-inner{
+    border: 0;
+    padding: 0;
+}
+.login-popup-form input:focus {
+    border-color: #1abc9c;
+    color: #1abc9c;
+}
+.login-popup-form input::selection {
+    color: #ffffff;
+    background-color: #ff4c74;
+}
+.login-popup-form input.filled {
+    border-color: #666666;
+}
+
+.login-popup-form_message.error {
+    color: red;
+    margin-bottom: 5px;
+}
+.login-popup-form_message {
+    font-size: 13px;
+    color: #666666;
+    margin-top: 5px;
+    line-height: 1.3;
+}
+
+.login-popup-button_green {
+    background-color: #69d7c5;
+    color: #aeebe3;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login-popup-button_green.enable {
+    background-color: #1abc9c;
+    color: #fafafa;
+}
+
+.login-popup-footer {
+    background-color: #ececec;
+}
+
+.login-popup-footer-container {
+    width: 286px;
+    margin: 0 auto;
+    padding: 1px 0 30px 0;
+    text-align: center;
+}
+
+.login-popup-button_blue {
+    background-color: #406792;
+    color: #fafafa;
+    padding: 15px 40px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-popup-footer_message {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.login-popup-button_blue_transparent {
+    background: none;
+    border: 1px solid #379adb;
+    color: #379adb;
+    padding: 10px 50px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-popup-footer_group {
+    margin-top: 20px;
+}
+
+.login-popup_layout .center {
+    text-align: center;
+}
+.login-popup-form_group .center {
+    text-align: center;
+}
+.login-popup_layout input.valid {
+    border-color: #666666;
+}
+.login-popup_layout input.error {
+    border-color: #ff4c74;
+}
+
+.login-popup-form-password_show_icon {
+    width: 22px;
+    height: 13px;
+    background: url('/images/eye-icon.png') 0 0 no-repeat;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    opacity: 0.3;
+    z-index: 999;
+}
+.login-popup-form-password_show_icon:hover {
+    background-position: -22px 0;
+    opacity: 1;
+}
+.login-popup-form-password_show_icon.highlight {
+    background-position: -44px 0;
+    opacity: 1;
+}
+
+.shake {
+    animation: shake 0.6s cubic-bezier(.90,.01,.19,.2) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.field--wrapper {
+    position: relative;
+}
+.field--wrapper label {
+    position: absolute;
+    left: 7px;
+    top: 12px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #ccc;
+    padding: 0 4px;
+    background-color: white;
+    z-index: 2;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+.field--wrapper.collapsed label {
+    font-size: 12px;
+    top: -6px;
+    font-weight: bold;
+}
+.field--wrapper.collapsed label.focused {
+    color: #1abc9c;
+}
+.field--wrapper.collapsed label.valid {
+    color: #666;
+}
+.field--wrapper.collapsed label.error {
+    color: red;
+}
