@@ -1,39 +1,44 @@
 ##           Framework: OSINT SAN.  [ На стадии редактирования.]
 ##           Update​ : Black Hawk
 
-Наша группа: https://t.me/osint_san_framework
+
+Данный framework создан для сбора информации с открытых источников.
+Но есть инструменты поиска и брутфорса которые использовать нужно, только с разрешения владельца ресурса, хочу вас предупредить что я не несу никакой ответственности за ваши действия при работе с фреймворком. В фреймворке используется большое количество API.
+
+Наша официальная группа поддержки и обновлений: https://t.me/osint_san_framework
+
+В бесплатной версии вам представленна demo версия " OSINT SAN 2.0 "
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/55.png)​
-
 
 
 ## Настройка все API
 
      Название API и их путь.
 
-nomber api /OsintSan/plugins/api
+     nomber api /OsintSan/plugins/api
 
-gmap api /OsintSan/plugins/api
+     gmap api /OsintSan/plugins/api
 
-ipstack api /OsintSan/plugins/api
+     ipstack api /OsintSan/plugins/api
 
-shodan api /OsintSan/core/config and /OsintSan/api
+     shodan api /OsintSan/core/config and /OsintSan/api
 
-maildb api /OsintSan/plugins/maildb
+     maildb api /OsintSan/plugins/maildb
 
-hackertarget api /OsintSan/plugins/whois
+     hackertarget api /OsintSan/plugins/whois
 
-whatcms /OsintSan/plugins/webosint/whatcms
+     whatcms /OsintSan/plugins/webosint/whatcms
 
-virus total /OsintSan/plugins/webosint/subdomain.py
+    virus total /OsintSan/plugins/webosint/subdomain.py
 
-macvendors /OsintSan/plugins/macaddress.py 
+    macvendors /OsintSan/plugins/macaddress.py 
 
-hunter /OsintSan/plugins/maildb.py hunter.io
+    hunter /OsintSan/plugins/maildb.py hunter.io
 
-ZoomEye, там через авторизацию внутри эксплойта.
+    ZoomEye, там через авторизацию внутри эксплойта.
 
-censys
+    censys
 
 
 Как только вы ввели свои API, вам нужно установить зависимости.
@@ -41,17 +46,15 @@ censys
 После вам нужно в самой папке с фреймворком, открыть консоль и
 прописать в ней, команду на установку зависимостей:
 
-# sudo pip3 install -r requerements.txt
+# sudo pip3 install -r requerements.txt после того как вы встановили основные зависимости, установите еще дополнительные, ниже.
 
          sudo apt install etherape
          pip3 install subprocess.run
          pip3 install wxPython
-## Дополнительные модули для adb...
-
-        apt-get install adb
-        sudo apt update
-        sudo apt-get install android-tools-adb
-        sudo apt install android-tools-adb android-tools-fastboot
+         sudo apt-get install adb
+         sudo apt update
+         sudo apt-get install android-tools-adb
+         sudo apt install android-tools-adb android-tools-fastboot
 
 ## Авторизация.
 
