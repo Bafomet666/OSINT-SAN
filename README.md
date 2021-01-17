@@ -10,34 +10,35 @@
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/55.png)​
 
+В Framework используется много API нужно зарегистрироватся и получить всех API.
 
 ## Настройка всех API
 
      Название API и их путь.
 
-     nomber api /OsintSan/plugins/api
+     nomber api /OsintSan/plugins/api [http://apilayer.net/api]
 
-     gmap api /OsintSan/plugins/api
+     gmap api /OsintSan/plugins/api [https://developers.google.com/maps/documentation]
 
-     ipstack api /OsintSan/plugins/api
+     ipstack api /OsintSan/plugins/api [https://ipstack.com/]
 
-     shodan api /OsintSan/core/config and /OsintSan/api
+     shodan api /OsintSan/core/config and /OsintSan/api [https://www.shodan.io/]
 
-     maildb api /OsintSan/plugins/maildb
+     maildb api /OsintSan/plugins/maildb [Уже введен]
 
-     hackertarget api /OsintSan/plugins/whois
+     hackertarget api /OsintSan/plugins/whois [Уже введен]
 
-     whatcms /OsintSan/plugins/webosint/whatcms
+     whatcms /OsintSan/plugins/webosint/whatcms [https://whatcms.org/API]
 
-     virus total /OsintSan/plugins/webosint/subdomain.py
+     virus total /OsintSan/plugins/webosint/subdomain.py [Уже введен]
 
-     macvendors /OsintSan/plugins/macaddress.py 
+     macvendors /OsintSan/plugins/macaddress.py [https://macvendors.com/api]
 
-     hunter /OsintSan/plugins/maildb.py hunter.io
+     hunter /OsintSan/plugins/maildb.py hunter.io [https://hunter.io/api]
 
-     ZoomEye, там через авторизацию внутри эксплойта.
+     ZoomEye Вход в API идет через авторизацию.
 
-     censys
+     Сensys [https://censys.io/api]  [же введен]
 
 
 ## Установка зависимостей.
