@@ -12,7 +12,7 @@
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/55.png)​
 
 
-## Настройка все API
+## Настройка всех API
 
      Название API и их путь.
 
@@ -30,23 +30,24 @@
 
      whatcms /OsintSan/plugins/webosint/whatcms
 
-    virus total /OsintSan/plugins/webosint/subdomain.py
+     virus total /OsintSan/plugins/webosint/subdomain.py
 
-    macvendors /OsintSan/plugins/macaddress.py 
+     macvendors /OsintSan/plugins/macaddress.py 
 
-    hunter /OsintSan/plugins/maildb.py hunter.io
+     hunter /OsintSan/plugins/maildb.py hunter.io
 
-    ZoomEye, там через авторизацию внутри эксплойта.
+     ZoomEye, там через авторизацию внутри эксплойта.
 
-    censys
+     censys
 
+
+## Установка зависимостей.
 
 Как только вы ввели свои API, вам нужно установить зависимости.
 Установка легкая, вам потребуется python3 и установленный pip3.
 После вам нужно в самой папке с фреймворком, открыть консоль и
-прописать в ней, команду на установку зависимостей:
-
-# sudo pip3 install -r requerements.txt после того как вы встановили основные зависимости, установите еще дополнительные, ниже.
+прописать в ней, команду на установку зависимостей sudo pip3 install -r requerements.txt
+после успешной установки, установите еще дополнительные зависимости, ниже.
 
          sudo apt install etherape
          pip3 install subprocess.run
@@ -56,9 +57,10 @@
          sudo apt-get install android-tools-adb
          sudo apt install android-tools-adb android-tools-fastboot
 
-## Авторизация.
+## Переходим к авторизации.
 
-Логин и пароль вы получите в паблике в закрепе.
+Логин и пароль находятся в нашем телеграм канале, ссылка на него выше.
+
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/Screenshot%20at%202021-01-16%2017-31-57.png)
 
