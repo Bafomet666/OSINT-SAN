@@ -60,9 +60,9 @@ censys
 
 ## Авторизация.
 
-Логин и пароль вы получите после в паблике.
+Логин и пароль вы получите в паблике в закрепе.
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/5555.png)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/Screenshot%20at%202021-01-16%2017-31-57.png)
 
 После прохождения авторизации, откроется меню с
 инструментарием.
