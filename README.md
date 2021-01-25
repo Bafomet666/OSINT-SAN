@@ -14,7 +14,7 @@
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/55.png)​
 
-В Framework используется много API нужно зарегистрироватся и получить всех API.
+В Framework используется много API нужно зарегистрироватся и получить все API.
 
 ## Настройка всех API
 
@@ -62,6 +62,8 @@
          sudo apt install android-tools-adb android-tools-fastboot
 
 ## Переходим к авторизации.
+
+Запускаем инструмент через команду : python3 osintsan.py
 
 Логин и пароль находятся в нашем телеграм канале, ссылка на него выше.
 
