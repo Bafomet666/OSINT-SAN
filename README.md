@@ -42,7 +42,7 @@
 
      ZoomEye Вход в API идет через авторизацию.
 
-     Сensys [https://censys.io/api]  [же введен]
+     Сensys [https://censys.io/api]  [Уже введен]
 
 
 ## Установка зависимостей.
@@ -54,10 +54,8 @@
 после успешной установки, установите еще дополнительные зависимости, ниже.
 
          sudo apt install etherape
-         pip3 install subprocess.run
          pip3 install wxPython
          sudo apt-get install adb
-         sudo apt update
          sudo apt-get install android-tools-adb
          sudo apt install android-tools-adb android-tools-fastboot
 
