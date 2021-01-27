@@ -441,4 +441,7 @@ dns whois сайтов.
 Очень много подпунктов, использовать осторожно.
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0-002.png)
 ### Функция [ 03 ]
+Вводим номер ( Пример: +74997059999 ) и получаем сведенья.
+![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0-003.png)
+
 
