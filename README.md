@@ -1,3 +1,6 @@
+Идет подготовка к update 3.0
+
+
 ##           Framework: OSINT SAN. 
      Update black hawk 2.0
 
