@@ -23,7 +23,7 @@
 
      Название API и их путь.
 
-     nomber api /OsintSan/plugins/api [http://apilayer.net/api]
+     nomber api /OsintSan/plugins/api [https://numverify.com/]
 
      gmap api /OsintSan/plugins/api [https://developers.google.com/maps/documentation]
 
