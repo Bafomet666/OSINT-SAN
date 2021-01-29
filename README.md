@@ -76,225 +76,49 @@
 Поиск по фото.
 Вам нужно указать путь до картинки. После вас спросят хотите ли
 вы открыть браузер, вы жмете “ y “ и открывается браузер.
-![alt tag](https://github.com/Bafomet666/screen/blob/main/06.png)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/0066.png)
 ### Функция [ 07 ]
 Проверка сервера либо IP адреса на HoneyPot ( ловушку для
 хакеров )
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/07.png)
 Показывает все в процентах.
 
-
-
-
-
-
-
-##           Framework: OSINT SAN. 
-     Update black hawk 2.0
-
-     Дата выхода версии 3.0 конец февраля, глобальное обновление будет платным. English version will be released in March 2021
-     
-     Зайдите в наш тг мы там анонсы бдущих обновлений выкладываем. Постоянно дорабатываем софт. Но на гит пока не выкладываем
-
-Данный framework создан для сбора информации с открытых источников.
-Но есть инструменты поиска и брутфорса которые использовать нужно, только с разрешения владельца ресурса, хочу вас предупредить что я не несу никакой ответственности за ваши действия при работе с фреймворком. В фреймворке используется большое количество API.
-
-Наша официальная группа поддержки и обновлений: https://t.me/osint_san_framework
-
-В бесплатной версии вам представленна demo версия " OSINT SAN 2.0 "
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/55.png)​
-
-В Framework используется много API нужно зарегистрироватся и получить все API.
-
-## Настройка всех API
-
-     Название API и их путь.
-
-     nomber api /OsintSan/plugins/api [https://numverify.com/]
-
-     gmap api /OsintSan/plugins/api [https://developers.google.com/maps/documentation]
-
-     ipstack api /OsintSan/plugins/api [https://ipstack.com/]
-
-     shodan api /OsintSan/core/config and /OsintSan/api [https://www.shodan.io/]
-
-     maildb api /OsintSan/plugins/maildb [Уже введен]
-
-     hackertarget api /OsintSan/plugins/whois [Уже введен]
-
-     whatcms /OsintSan/plugins/webosint/whatcms [https://whatcms.org/API]
-
-     virus total /OsintSan/plugins/webosint/subdomain.py [Уже введен]
-
-     macvendors /OsintSan/plugins/macaddress.py [https://macvendors.com/api]
-
-     hunter /OsintSan/plugins/maildb.py hunter.io [https://hunter.io/api]
-
-     ZoomEye Вход в API идет через авторизацию.
-
-     Сensys [https://censys.io/api]  [Уже введен]
-
-
-## Установка зависимостей.
-
-Как только вы ввели свои API, вам нужно установить зависимости.
-Установка легкая, вам потребуется python3 и установленный pip3.
-После вам нужно в самой папке с фреймворком, открыть консоль и
-прописать в ней, команду на установку зависимостей sudo pip3 install -r requerements.txt
-после успешной установки, установите еще дополнительные зависимости, ниже.
-
-         sudo apt install etherape
-         pip3 install wxPython
-         sudo apt-get install adb
-         sudo apt-get install android-tools-adb
-         sudo apt install android-tools-adb android-tools-fastboot
-
-## Переходим к авторизации.
-
-Запускаем инструмент через команду : python3 osintsan.py
-
-Логин и пароль находятся в нашем телеграм канале, ссылка на него выше.
-
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/Screenshot%20at%202021-01-16%2017-31-57.png)
-
-После прохождения успешной авторизации, откроется меню с
-инструментарием.
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/update%202.0.png)
-
-## Давайте перейдем к самим инструментам и их описанию.
-
-## Функция 01.
-Начнем с первого инструмента это проверка IP адреса в shodan and
-census на утечки. Здесь все довольно просто, вбиваете адрес и
-пользуете результат. Попробуем адрес google проверить, прописав
-команду 8.8.8.8
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/66.png)
-
-После получения результата вас переместить в меню для
-дальнейшего использования.
-
-## Функция 02.
-Работаем с доменным именем ( Это первая вкладка по доменному
-имени )
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/01.png)
-
-Здесь все просто, выбираешь вариант и запускаешь, возможно
-попросят указать дополнительные параметры. Полностью каждую
-вкладку описывать смысла не вижу, те кто приобретает инструмент
-уже знают что каждый пункт выполняет.
-
-## Функция 03.
-Базовый сбор информации о мобильном номере.
-В будущем планируем подключить бота из telegram для получения
-большей информации.
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/02.png)
-
-На стандартных API в месяц 50 запросов бесплатно.
-
-## Функция 04.
-Большая информативная карта dns сети.
-После того как вы выбрали пункт 4, вам нужно вписать нужный вам
-домен, примером я возьму яндекс. Следующем делом вам выведет
-такое вот окно
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/04.png)
-
-можно идти в саму папку с фреймворком и смотреть карту
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/05.png)
-
-Карта обширная, в разрешении 2195x1285
-
-## Функция 05.
-Извлечение геолокации из фото.
-Здесь вам нужно указать путь к фотo, для получения результата.
-Пример пути : /home/bafomet/Downloads/Telegram
-Desktop/IMG_9077421_731458.jpg
-
-Очень большое количество данных выводит, запускать без root в
-консоли.
-
-
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/08.png)
-
-Ожидайте 5 функций поиска в 1 клик в “ V - 3.0 “
-
-
-
- # Функция 08. 
- Mac address info
- 
-     └──>  Выбери опцию :8
-     └──> MAC адрес геолокация ( 08:00:69:02:01:FC ) :08:00:69:02:01:FC
-     Компания:SILICON GRAPHICS INC.
-     Адрес:2011 N. SHORELINE BLVD.,MOUNTAIN VIEW  CA  94039-7311,US
-     Страна:US
-     
-# Функция 09. 
+### Функция [ 08 ]
+ Mac address info, с вероятностью 40% покажет еще и геолкацию.
+![alt tag](https://github.com/Bafomet666/screen/blob/main/88854.png)
+### Функция [ 09 ]
 IP геолокация на картах.
 Как по мне самые вкусное что я делал. IP геолокация GUI на картах.
 При нажатии функции 9 вам выпадет вот такое окно.
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/09.png)​
-
+![alt tag](https://github.com/Bafomet666/screen/blob/main/00009.png)​
 Далее вам нужно либо ввести IP адрес либо домен.
-Вариант выберите обязательно.
-Приведу пример:
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/010.png)​
-
-Эту систему буду внедрять в Big Bro 8.0
-    
-# Функция 10. 
+Вариант выберите обязательно.  
+### Функция [ 10 ]
 Проверяем что качает через torrent в данный момент жертва.
 Попутно узнаем её координаты.
- 
+ (Скрин сделан на версии продукта 2.0)
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/photo_2020-12-13_02-33-17.jpg)​
-
 Если в данный момент, жертва ничего не загружает будет
 выводиться окно:
-
+ (Скрин сделан на версии продукта 2.0)
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/011.png)
-
-# Функция 11.
+### Функция [ 11 ]
 OSINT Instagram.
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/012.png)
-
-# Функция 12.
-Обычная проверка IP адреса на средства анонимности, я выгрузил с сети миллиардную базу IP адресов прокси серверов и vpn/ что бы проверять быстро на использования анонимайзеров. Из-за этого +300 мегабайт к фреимворку, позже сделаю через API что бы уменьшить вес.
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/013.png)
-
-# Функция 13.
-
+![alt tag](https://github.com/Bafomet666/screen/blob/main/1111111.png)
+### Функция [ 12 ]
+DNS info, огромнейший pack информации выводит, я не смогу здесь все в один скрин выложить.
+### Функция [ 13 ]
 Ищем адреса mail с сайтов. Используем API censys.
-
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/014.png)
-
-# Функция 14.
-Подключение через ADB, точнее это оболочка для быстрого подключения. Обязательно установить все зависимости.
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/015.png)
-
-Пожалуйста не писать мне дурацкие вопросы, как вкл, почему не термукс не работает. 95% ошибок что мне задают, по поводу этого инструмента, это все гуглитcя первой страничкой в гугл, сначала изучите что такое adb android, потом пишите, если что то очень сложное, и не можете решить.
-
-# Функция 15.
-Все уже знают, и использовали мой Big Bro, если не премиум версию то free точно. Здесь стоит версия premiun на 40 сайтов.
-Есть и бесплатная https://github.com/Bafomet666/Bigbro здесь и прочитаете подробное описание инструмента.
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/6.5.png)
-
-# Функция 16.
+### Функция [ 14 ]
+Подключение через ADB, точнее это оболочка для быстрого подключения. Обязательно установить зависимости.
+![alt tag](https://github.com/Bafomet666/screen/blob/main/14000.png)
+### Функция [ 15 ]
+Big bro 8.0 режим геолокации.
+![alt tag](https://github.com/Bafomet666/screen/blob/main/big%20bro%20geo.png)
+### Функция [ 16 ]
 Массовый dump данных с Shodan. Работает через API, тот же поисковик только в консоли и анонимный.
-
+Скрин сделать на версии продукта 2.0
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/017.jpg)
 
 # Функция 17.
