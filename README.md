@@ -1,4 +1,4 @@
-## OSINT SAN 3.0 Красная тревога.  (Идет подготовка к обновлению. На стадии редактирования)
+## OSINT SAN 3.0  Красная тревога.  (Идет подготовка к обновлению. На стадии редактирования)
 
 
 Данный framework создан для сбора информации с открытых источников.
@@ -10,81 +10,45 @@
 
 Вот выглядит меню самого инструмента. На момент твоего прочтения уже введены новые функции и возможно скрин не актуален.
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0%2001.png)
-В меню вы видите 45 функций для OSINT. От простого до сложного. Сейчас заполнено только одно menu, второе меню начнем пополнять в обнолении 4.0 и выше.
+В меню вы видите 45 функций для поиска. От простого до сложного. Сейчас заполнено только одно menu, второе меню начнем пополнять в обнолении 4.0 и выше.
 В сравнении с версий 2.0 было внесено много изменений от визуальных изменений, до изменения структуры кода и полной переделки некоторых модулей.
-
-Малая часть изменений в update 3.0
-
-              Переделан Big Bro 8.0
-              └──> Добавлена ветка фишинга.
-              └──> Обновлены сайты в ветке геоположения.
-              
-              Обновлен requerements.txt
-              
-              Переписано ядро управления модулями.
-              
-              Проведена структуризация файлов
-              Если раньше было в куче (65 файлов)
-              то сейчас в папке с инструментом их 12.
-              
-              Добавленно второе меню.
-              
-              Расширена функция 21. Теперь это OSINT Википедия. Она многостраничная.
-              
-              Полностью переработано меню авторизации. 
-              └──> login: osint
-              └──> Password: san
-              
-              Вкладка 34. Вес утечек расширен до 950гб.
-              
-              Исправлена проблема с двойным меню в инструментах при получении информации.
-              
-              Исправлен выход из Big Bro, теперь достаточно нажать ctrl + c
-              
-              Полный список изменений вы можете увидеть в нашем телеграм канале.
-              
+            
 ## Давай теперь перейдем к API.
 Их нужно зарегистрировать и прописать по указаному пути. Многие я оставлю прописаными в инструменте но так как там лимиты маленькие, лучше создать свои.
 
 Название API и их путь.
 
-     nomber api /OsintSan/plugins/api [http://apilayer.net/api]
+     nomber api /OSINT SAN 3.0 RED OSINT/plugins/api [http://apilayer.net/api]
 
-     gmap api /OsintSan/plugins/api [https://developers.google.com/maps/documentation]
+     gmap api /OSINT SAN 3.0 RED OSINT/plugins/api [https://developers.google.com/maps/documentation]
 
-     ipstack api /OsintSan/plugins/api [https://ipstack.com/]
+     ipstack api /OSINT SAN 3.0 RED OSINT/plugins/api [https://ipstack.com/]
 
-     shodan api /OsintSan/core/config and /OsintSan/api [https://www.shodan.io/]
+     shodan api /OSINT SAN 3.0 RED OSINT/core/config and OSINT SAN 3.0 RED OSINT/exploit_database/api [https://www.shodan.io/]
 
-     maildb api /OsintSan/plugins/maildb [Уже введен]
+     maildb api /OSINT SAN 3.0 RED OSINT/plugins/maildb [Уже введен]
 
-     hackertarget api /OsintSan/plugins/whois [Уже введен]
+     whatcms /OSINT SAN 3.0 RED OSINT/plugins/webosint/whatcms [https://whatcms.org/API]
 
-     whatcms /OsintSan/plugins/webosint/whatcms [https://whatcms.org/API]
+     virus total /OSINT SAN 3.0 RED OSINT/plugins/webosint/subdomain.py [Уже введен]
 
-     virus total /OsintSan/plugins/webosint/subdomain.py [Уже введен]
+     macvendors /OSINT SAN 3.0 RED OSINT/plugins/macaddress.py [https://macvendors.com/api]
 
-     macvendors /OsintSan/plugins/macaddress.py [https://macvendors.com/api]
-
-     hunter /OsintSan/plugins/maildb.py hunter.io [https://hunter.io/api]
+     hunter /OSINT SAN 3.0 RED OSINTplugins/maildb.py hunter.io [https://hunter.io/api]
 
      ZoomEye Вход в API идет через авторизацию.
-
-     Сensys [https://censys.io/api]  [Уже введен]
      
  ## Приступим к установке зависимостей.
  
-Как только вы ввели все свои API, вам нужно установить зависимости. Установка легкая, вам потребуется python3 и установленный pip3. После вам нужно в самой папке с фреймворком, открыть консоль и прописать в ней, команду на установку зависимостей " sudo pip3 install -r requerements.txt " также установите еще дополнительные зависимости.
+Как только вы ввели все свои API, вам нужно установить зависимости. Установка легкая.
 
-     sudo apt install etherape   ( уже установлен если вы с parrot os )
-     sudo pip3 install wxPython
-     sudo apt-get install android-tools-adb
-     sudo apt install android-tools-adb android-tools-fastboot
-              
-После того как вы успешно прошли два этапа ( API и зависимости ) мы можем приступать к запуску и авторизации.
+    sudo pip3 install -r requerements.txt
+    
+    В сложных модулях, вам будет представлен выбор заполнительной установки модулей.
+
 
 # Баннер авторизации.
-Если ты читал внимательно инструкцию выше ты знаешь данные на вход.
+Пароль и логин хранится у нас в паблике в telegram.
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0%2002.png)
 
 После успешной авторизации тебе будет доступно меню с инструментами.
@@ -94,7 +58,7 @@
 
 ### Функция [ 01 ]
 Начнем с простого инструмента, это проверка IP адреса в shodan and census на утечки, здесь все просто, прописываете адрес и получаете результат.
-![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0-001.png)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/0130.png)
 ### Функция [ 02 ]
 Здесь уже все по круче. Использовать только с разрешения владельца ресурса.
 Вам будет предложенно ввести адрес сайта, пример google.com и ввести порт, можно просто enter нажать он сам все сделает.
@@ -103,7 +67,21 @@
 ### Функция [ 03 ]
 Вводим номер ( Пример: +74997059999 ) и получаем сведенья.
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0-003.png)
-
+### Функция [ 04 ]
+После успешного использования, карта появляется в папке инструмента, всегда в высоком разрешении и очень детальная.
+![alt tag](https://github.com/Bafomet666/screen/blob/main/044.png)
+### Функция [ 05 ]
+Если в фото есть геолокация, софт её найдет, вам толко нужно будет указать путь. Пример пути: /home/bafomet/Desktop/deanon.png
+### Функция [ 06 ]
+Поиск по фото.
+Вам нужно указать путь до картинки. После вас спросят хотите ли
+вы открыть браузер, вы жмете “ y “ и открывается браузер.
+![alt tag](https://github.com/Bafomet666/screen/blob/main/06.png)
+### Функция [ 07 ]
+Проверка сервера либо IP адреса на HoneyPot ( ловушку для
+хакеров )
+![alt tag](https://github.com/Bafomet666/screen/blob/main/07.png)
+Показывает все в процентах.
 
 
 
@@ -242,28 +220,13 @@ Desktop/IMG_9077421_731458.jpg
 Очень большое количество данных выводит, запускать без root в
 консоли.
 
-## Функция 06.
-Поиск по фото.
-Вам нужно указать путь до картинки. После вас спросят хотите ли
-вы открыть браузер, вы жмете “ y “ и открывается браузер.
-После того как выполнится запрос вас опять переместит в меню.
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/06.png)
-
-Пока только google поиск, я хочу сделать чтобы поиск открывал
-в 5 поисковых системах.
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/08.png)
 
 Ожидайте 5 функций поиска в 1 клик в “ V - 3.0 “
 
-## Функция 07.
-Проверка сервера либо IP адреса на HoneyPot ( ловушку для
-хакеров )
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/07.png)
-
-Показывает все в процентах.
 
  # Функция 08. 
  Mac address info
