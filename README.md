@@ -221,7 +221,7 @@ https://ru.wikipedia.org/wiki/EtherApe
 ### Функция [ 28 ]
 Open Maltego, просто открывает мальтего.
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/022.jpg)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/maltego.jpg)
 
 ### Функция [ 29 ]
 Массовый dump данных с ZoomEye. Аналог shodan.
