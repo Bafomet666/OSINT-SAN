@@ -12,7 +12,7 @@ https://t.me/osint_san_framework
 
 ---
 
-Меню OSINT SAN. Во время вашего прочтения, уже введены новые функции.
+Как выглядит меню OSINT SAN.
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0%2001.png)
 
