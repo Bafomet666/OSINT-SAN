@@ -1,4 +1,5 @@
 ## OSINT SAN 3.0  Красная тревога.
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
 
 Framework создан для сбора информации с открытых источников.
