@@ -28,7 +28,7 @@ Framework создан для сбора информации с открыты�
 
      maildb api /OSINT SAN 3.0 RED OSINT/plugins/maildb [Уже введен]
 
-     whatcms /OSINT SAN 3.0 RED OSINT/plugins/webosint/whatcms [https://whatcms.org/API]
+     whatcms /OSINT SAN 3.0 RED OSINT/plugins/webosint/CMSdetect [https://whatcms.org/API]
 
      virus total /OSINT SAN 3.0 RED OSINT/plugins/webosint/subdomain.py [Уже введен]
 
