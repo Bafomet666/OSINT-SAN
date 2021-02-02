@@ -1,5 +1,4 @@
-## OSINT SAN 3.0  [![N|bafomet](https://cldup.com/dTxpPi9lDf.thumb.png)](https://github.com/Bafomet666/screen/blob/main/Screenshot%20at%202021-02-02%2010-25-26.png)
-
+## OSINT SAN 3.0  [![N|bafomet](https://github.com/Bafomet666/screen/blob/main/Screenshot%20at%202021-02-02%2010-25-26.png)](https://github.com/Bafomet666/OSINT-SAN)
 
 
 Framework создан для сбора информации с открытых источников.
