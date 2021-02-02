@@ -7,7 +7,7 @@
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/bafomet%20soft%20logo.png)
 
 ### Инструмент работает на Kali Linux * Parrot OS, адаптации под другие os и termux пока нету.
-Перед работой с framework обязательно поддержки нас подпиской на офицальный канал, и поставь звезду на репозиторий.
+Перед работой с framework обязательно поддержки нас подпиской на официальный канал, и поставь звезду на репозиторий.
 https://t.me/osint_san_framework
 
 ---
