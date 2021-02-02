@@ -45,6 +45,8 @@ https://t.me/osint_san_framework
 
      ZoomEye api вход проходит через авторизацию.
      
+---
+     
 ## Зависимости. ![Альтернативный текст](https://camo.githubusercontent.com/d4d0378438eebbdfdf98948d518a47cb34bd241b3c836aaae47255a64f2c3bbe/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d332e372532422d627269676874677265656e)
  
 Как только вы ввели все свои API, вам нужно установить зависимости.
@@ -52,7 +54,7 @@ https://t.me/osint_san_framework
      sudo pip3 install -r requerements.txt
     
      В сложных модулях, вам будет предоставлен выбор дополнительной установки модулей.
-
+---
 
 ### Баннер авторизации.
 
@@ -66,6 +68,8 @@ https://t.me/osint_san_framework
  
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0%2002.png)
+
+---
 
 После успешной авторизации тебе будет доступно меню с инструментами.
 
