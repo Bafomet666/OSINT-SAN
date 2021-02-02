@@ -32,8 +32,6 @@ Framework создан для сбора информации с открыты�
 
      virus total /OSINT SAN 3.0 RED OSINT/plugins/webosint/subdomain.py [Уже введен]
 
-     macvendors /OSINT SAN 3.0 RED OSINT/plugins/macaddress.py [https://macvendors.com/api]
-
      hunter /OSINT SAN 3.0 RED OSINTplugins/maildb.py hunter.io [https://hunter.io/api]
 
      ZoomEye api вход проходит через авторизацию.
