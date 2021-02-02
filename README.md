@@ -49,7 +49,7 @@ https://t.me/osint_san_framework
      В сложных модулях, вам будет предоставлен выбор дополнительной установки модулей.
 
 
-### Баннер авторизации. ![Альтернативный текст](https://github.githubassets.com/images/icons/emoji/unicode/1f6e1.png)
+### Баннер авторизации.
 
 Пароль и логин хранится у нас в паблике в telegram.
 
@@ -57,9 +57,9 @@ https://t.me/osint_san_framework
 
 Запускаем инструмент командой:
 
-Если вам нужны функции без root, запускайте терминал:  python3 osintsan.py ![Альтернативный текст](https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png)
+Если вам нужны функции без root, запускайте терминал:  python3 osintsan.py 
       
-Если вам нужны функции root, запускайте терминал:      sudo python3 osintsan.py ![Альтернативный текст](https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png)
+Если вам нужны функции root, запускайте терминал: sudo python3 osintsan.py
  
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0%2002.png)
