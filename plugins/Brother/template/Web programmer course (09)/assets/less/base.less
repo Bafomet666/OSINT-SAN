@@ -1,0 +1,270 @@
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	color: @text-color;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+	margin-bottom: 15px;
+	line-height: 1.5;
+}
+
+a {
+	color: darken(@color-primary, 5%);
+	.transition (all 0.4s ease-in-out);
+	&:hover {
+		text-decoration: underline;
+		color: darken(@color-primary, 10%);
+	}
+	&:active {
+		text-decoration: none;
+	}
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+.btn, a.btn {
+	.transition (all 0.4s ease-in-out);
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1.5;
+	.fa {
+		margin-right: 5px;
+	}
+}
+
+.btn-cta, a.btn-cta {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 30px;
+}
+
+.btn-primary {
+	background: @color-primary;
+	border: 1px solid @color-primary;
+	color: #fff;
+	&:hover, &:focus, &:active, &.active, &.hover {
+		background: darken(@color-primary, 5%);
+		color: #fff;
+		border: 1px solid darken(@color-primary, 5%);
+	}
+
+}
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+.carousel-indicators {
+    bottom: 30px;
+    margin-bottom: 0;
+    
+    li {
+        background-color: rgba(256, 256, 256, 0.4);
+        border: none;
+        width: 11px;
+        height: 11px;
+        margin: 0;
+        margin-right: 5px;
+        &.active {
+            background-color: @color-primary;
+            width: 11px;
+            height: 11px;
+            margin: 0;
+            margin-right: 5px;
+        }
+    }
+}
+    
+/* ======= Header ======= */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 30;    
+    height: 60px;
+    .transition (none);
+
+    &.header-scrolled {
+        background: #fff;
+        .box-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+        a {
+            color: @text-color;
+            
+        }
+        .logo {
+            color: @color-primary;
+            padding-top: 12px;
+            .logo-icon-wrapper {
+                background: @color-primary;
+                width: 40px;
+                height: 40px;
+                .border-radius(50%);
+                text-align: center;
+                
+                
+            }
+            .logo-icon {
+                width: 20px;
+                height: 20px;
+                margin-right: 0;
+                
+                
+            }
+        }
+        .main-nav .nav .nav-item a {
+            color: @text-grey;
+        }
+        .main-nav .nav .nav-item.active a {
+            color: @text-color;
+            border-bottom: 4px solid @color-primary;
+        }
+    }
+    a {
+        color: #fff;
+        .transition (none);
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .logo {
+        margin: 0;
+        display: inline-block;
+        float: left;
+        font-size: 28px;
+        padding-top: 15px;
+        .logo-icon-wrapper {
+            margin-right: 3px;
+            position:relative;
+            display: inline-block;
+            top: -3px;
+        }
+        
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+        }
+        .highlight {
+            font-weight:800;
+        }
+    }
+}
+
+
+.main-nav {
+    margin-top: 6px;
+    .navbar-toggle {
+        margin-right: 0;
+        margin-top: 0;
+        background: none;
+        position: absolute;
+        right:10px;
+        top: 10px;
+        background: darken(@text-color, 15%);
+        
+        &:focus {
+            outline: none;
+        }
+        .icon-bar {
+            background-color: #fff;
+            height: 3px;
+        }
+        &:hover {
+            .icon-bar {
+                background-color: #fff;
+            }
+        }
+    }
+    
+    .nav {
+        .nav-item {
+            font-weight: normal;
+            font-size: 14px;
+            margin-right: 25px;
+            
+            &.active {
+                a {
+                    background: none;
+                    color: #fff;
+                }
+            }
+            
+            a {
+                color: rgba(256, 256, 256, 0.65);
+                font-weight: 700;
+                &:hover {  
+                    color: #fff;   
+                    background: none;         
+                }
+                &:focus {
+                    outline: none;
+                    background: none;
+                }
+                &:active {
+                    outline: none;
+                    background: none;
+                }
+            }    
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    
+        &.active {
+            position: relative;                     
+        }
+        
+    }
+}
+
+.nav>li>a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* ====== Footer ====== */
+.footer {
+    background: darken(@text-color, 15%);
+    color: rgba(256, 256, 256, 0.6);
+    padding: 15px 0;
+    a {
+        color: @color-primary;
+    }
+    .fa-heart {
+        color: @color-pink;
+    }
+}
+
+
+

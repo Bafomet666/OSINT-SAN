@@ -1,0 +1,103 @@
+/* ======= Team Section ======= */
+.team-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background: @smoky-white;
+    .section-title {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 36px;
+        font-weight:300;
+    }
+    .intro {
+        color: @text-grey;
+        font-size: 16px;
+        max-width: 760px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+    .story {
+        
+        margin: 0 auto;
+        margin-bottom: 60px;
+        max-width: 800px;
+    }
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    .members-wrapper{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .item-inner {
+        padding: 30px;
+        background: #fff;
+        .border-radius(8px);
+    }
+    .member-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: @color-primary;
+    }
+    .member-title {
+        font-size: 16px;
+        margin-top:0;
+        margin-bottom: 15px;
+        color: @text-color-secondary;
+    }
+    .social {
+        margin-bottom: 30px;
+        a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            font-size: 18px;
+            .border-radius(50%);
+            background: @color-primary;
+            padding-top:4px;
+            color: #fff;
+            &.google {
+                background: @google;
+                &:hover {
+                    background: darken(@google, 5%);
+                }
+            }
+            &.twitter {
+                background: @twitter;
+                &:hover {
+                    background: darken(@twitter, 5%);
+                }
+            }
+            &.facebook {
+                background: @facebook;
+                &:hover {
+                    background: darken(@facebook, 5%);
+                }
+            }
+            &.linkedin {
+                background: @linkedin;
+                &:hover {
+                    background: darken(@linkedin, 5%);
+                }
+            }
+            &.github {
+                background: @github;
+                &:hover {
+                    background: darken(@github, 5%);
+                }
+            }
+            &.dribbble {
+                background: @dribbble;
+                &:hover {
+                    background: darken(@dribbble, 5%);
+                }
+            }
+        }
+    }
+    .member-desc {
+        color: @text-color-secondary;
+    }
+
+}
