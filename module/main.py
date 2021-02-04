@@ -13,7 +13,7 @@ while True:
         print("")
         user_name = input(REDL + " └──>" + WHSL + " Жду от тебя ввод username instagram "+GNSL+"[ "+REDL + "main_menu" + GNSL + " ]"+ENDL + " :")
         print("")
-        input(GNSL+" [ "+REDL + "Напоминание" + GNSL + " ]"+ WHSL +" Если захочешь выйти введи 99. Нажми enter что бы продолжить" +ENDL + " :")
+        input(GNSL+" [ "+REDL + "Напоминание" + GNSL + " ]"+ WHSL +" Если захочешь выйти, введи 99. Нажми enter что бы продолжить" +ENDL + " :")
         if user_name == '99':
             os.system("cd ..;python3 osintsan.py")
             break        
