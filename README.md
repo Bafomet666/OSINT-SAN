@@ -65,7 +65,7 @@ https://t.me/osint_san_framework
     Если вам нужны функции root, запускайте терминал: sudo python3 osintsan.py
  
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0%2002.png)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/autrz.png)
 
 ---
 
