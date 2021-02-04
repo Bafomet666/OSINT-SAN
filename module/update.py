@@ -1,9 +1,71 @@
-#bafomet soft
-import base64, codecs
-magic = 'IyMhL3Vzci9iaW4vcHl0aG9uCiMtKi0gY29kaW5nOiB1dGYtOCAtKi0KI0RldmVsb3BlciBieSBCYWZvbWV0CmltcG9ydCBzdWJwcm9jZXNzCmltcG9ydCBvcwppbXBvcnQgc3lzCmltcG9ydCByZWFkbGluZQojc2V0IGNvbG9yCldIU0wgPSAnXDAzM1sxOzMybScKRU5ETCA9ICdcMDMzWzBtJwpSRURMID0gJ1wwMzNbMDszMW0nCkdOU0wgPSAnXDAzM1sxOzM0bScKb3Muc3lzdGVtKCJwcmludGYgJ1wwMzNdMjtPU0lOVCBVcGRhdGVcYSciKQpvcy5zeXN0ZW0oJ2NsZWFyJykKb3Muc3lzdGVtKCJjZCBjb3JlO3B5dGhvbjMgYmFubmVyLnB5IikKcGFnZV8xID0gJycnezF9CiAKIHsxfXswfVt7Mn0gT2ZmaWNpYWwgY2hhbm5lbCB7MH10ZyB7MX1Ab3NpbnRfc2FuX2ZyYW1ld29yayB7MX17MH1dICAgICAgICAgICAgICAgIHswfVt7Mn0gR2l0SHViIHsxfWh0dHBzOi8vZ2l0aHViLmNvbS9CYWZvbWV0NjY2IHsxfXswfV0gICAgICAgICAgICB7MH1bIHsxfVJ7Mn0g0L/QsNGC0YcgMy4xIHsxfXswfV0KCnswfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIF9fX19fX18gICBfX19fX19fXyAgX19fX19fXyAgICAgICAgICBfX19fX18gICAgX19fX19fICAgX19fX19fICBfXyAgICBfXyAgX19fX19fX18gIHsxfSAgICAgX18gICAgX18gCnswfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLyAgICAgICBcIC8gICAgICAgIHwvICAgICAgIFwgICAgICAgIC8gICAgICBcICAvICAgICAgXCAvICAgICAgfC8gIFwgIC8gIHwvICAgICAgICB8IHsxfSAgICAvICB8ICAvICB8CnswfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJCQkJCQkJCAgfCQkJCQkJCQkLyAkJCQkJCQkICB8ICAgICAgLyQkJCQkJCAgfC8kJCQkJCQgIHwkJCQkJCQvICQkICBcICQkIHwkJCQkJCQkJC8gIHsxfSAgICAkJCB8ICAkJCB8CnswfSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJCQgfF9fJCQgfCQkIHxfXyAgICAkJCB8ICAkJCB8ICAgICAgJCQgfC'
-love = 'NtWPDtsPDxVSksKlDxYlNtVPDxVUjtVPDxWPNtKPDxVUjtVPNxWPO8VPNtVUfksFNtVPNxWPNtKP8xWP8tPafjsFNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtWPDtVPNtWPD8VPDxVPNtVUjtVPNxWPO8VPNxWPO8VPNtVPNtWPDtsPNtWPDtsPDxVPNtVPNtKPNtVPDxVUjtVPDxWPDtVPDxVUjtVPNxWPO8VPNtVUfksFNtVPNtVPDxVPNxWQjtVNc7ZU0tVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPDxWPDxWPDtVUjxWPDxWP8tVPNtWPDtsPNtWPDtsPNtVPNtVPDxVUjtVPDxVUjtWPDxWPDxVPO8VPNxWPO8VPNxWPNxWPNxWPO8VPNtWPDtsPNtVPO7ZK0tVPNtVPNxWPDxVPOpVNc7ZU0tVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPDxVUjtVPDxVUjxWPO8K19sK18tWPDtsS9sWPDtsPNtVPNtVPDxVSksKlDxVUjiVPOpK18xWPO8VS8xWPO8KlNxWPO8WPDxWPO8VPNtWPDtsPNtVPO7ZK0tVPNtVPDxVP8xWPNtsNc7ZU0tVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPDxVUjtVPDxVUjxWPNtVPNtVPO8WPDtVPNtWPDiVPNtVPNtVPDxVPNtVPDxYlNxWPNtVPNxWP8tYlNxWPNtVUjxWPO8VPDxWPO8VPNtWPDtsPNtVPO7ZK0tVPNtWPDtsPNtWPDtsNc7ZU0tVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPDxYlNtVPDxYlNxWPDxWPDxWP8tWPDxWPDxWP8tVPNtVPNtVPNxWPDxWPDiVPNtWPDxWPDxYlNtWPDxWPDxYlNxWP8tVPNxWP8tVPNtWPDiVPNtVPO7ZK0tVPNtWPDiVPNtWPDiVNbtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNt'
-god = 'ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKIHsyfUZyYW1ld29yayA6ezJ9ezB9IE9TSU5UIFNBTi57MH0KIHsyfVVwZGF0ZXswfSBSRUQgQWxlcnQgdi0zLjAKIAogezJ90KHQv9C40YHQvtC6INC40LfQvNC10L3QtdC90LjQuSDQvtCx0L3QvtCy0LvQtdC90LjQuSDQuCDQuNC90YHRgtGA0YPQutGG0LjRjyDQv9C+INGD0YHRgtCw0L3QvtCy0LrQtS4uLiAgIAoKIHswfdCe0LHQvdC+0LLQu9C10L3QuNC1INC30LDQs9GA0YPQttCw0LXRgtGB0Y8g0LLQstC40LTQtSDQv9Cw0L/QutC4LCDQn9C+0YHQu9C1INCy0LDQvCDQvdGD0LbQvdC+INGB0LrQvtC/0LjRgNC+0LLQsNGC0Ywg0LLRgdC1INC40Lcg0L/QsNC/0LrQuCB1cGRhdGUtb3NpbnQKINCyINC/0LDQv9C60YMg0YEg0YHQsNC80LjQvCDRjdC60YHQv9C70L7QudGC0L7QvCBPc2ludFNhbiDRgSDQt9Cw0LzQtdC90L7QuSDRhNCw0LnQu9C+0LIuCgog0J3QviDQstC+0LfQvNC+0LbQvdC+INC80L7Qs9GD0YIg0YHQu9C10YLQtdGC0Ywg0LLQsNGI0LggQVBJLCDQt9Cw0YDQsNC90LXQtSDQv9GA0L7RiNGDINC40LfQstC40L3QtdC90LjRjy4KINCe0LHQvdC+0LLQu9C10L3QuNGPINCy0YvRhdC+0LTRj9GCINGA0LDQtyDQsiDQvNC10YHRj9GGLiDQn9Cw0YLRh9C4INC80L7Qs9GD0YIg0LLRi9GF0L7QtNC40YLRjCDRgNCw0Lcg0LIg0LTQstC1INC90LXQtNC10LvQuC4KCiB7Mn3QlNCw0YLQsCDQv9C+0YHQu9C10LTQvdC10LPQviDQvtCx0L3QvtCy0LvQtdC90LjRjyAxMCDRhNC10LLRgNCw0LvRjy4gICAgICAgICAgIAoKIHswfVsgezF9OTl7MH0gXSB7Mn3QktGL0LnRgtC4Li4uICAgICAgIHswfVsgezF9MHswfSBdIHsyfSDQl9Cw0LPRgNGD0LfQuNGC0Ywg0L7QsdC90L7QstC70LXQvd'
-destiny = 'P40YHhYv4tVPNtVPNtVPNtVPNtVPNtVPNXVPNXWlpaYzMipz1uqPuUGyAZYPOFEHEZYPOKFSAZXDbXMTIzVT1unJ4bXGbXVPNtVUOlnJ50XUOuM2IsZFxXVPNtVT9jqTyiovN9VTyhpUI0XSWSERjtXlNvVBXHyBXHtBXHtQ4vVPftEH5RGPNeVvQDxgPl0YKDgAP40LYDgFN5BFQDgAP70L8t0YYEv9TS0Y7DgAPjVQbtVvNeEH5RGPNeVPVtVvxXVPNtVNbtVPNtq2ucoTHbZFx6PvNtVPNtVPNtnJLto3O0nJ9hVQ09VPp5BFp6PvNtVPNtVPNtVPNtVUOlnJ50XPVvXDbtVPNtVPNtVPNtVPOjpzyhqPtbVafksFOormO9VPftrmS9KKflsFQDbqP/0YQEtqP40YUDivQDg9PjVAP40LUDi9P+0YiEwAP30Y7DfgPj0Y3DhAP1VAP90YQEvAP10YCDivOSrUOfo2y0YvVcYzMipz1uqPuFEHEZYPOUGyAZYPOKFSAZXFxXVPNtVPNtVPNtVPNto3Zhp3ymqTIgXPWyrTy0VvxXVPNtVPNtVPNtVPNtMKucqPtcPvNtVPNtVPNtVPNtVT9jqTyiovN9VTyhpUI0XRIBERjtXlNvVvgUGyAZXlWoVvgFEHEZVPftVvOgMJ51VPVtXlOUGyAZVPftVy0vX0IBERjtXlNvVQbvXDbXVPNtVPNtVPOyoTyzVT9jqTyiovN9CFNaZPp6PvNtVPNtVPNtVPNtVUOlnJ50XPtvrmS9JlO7ZU0ermS9VS17Za0t0WsDfAPm0LQEt9P30YeDfPQEtFOanKEbqJVhYv57Z30vXF5zo3WgLKDbHxIRGPjtE05GGPjtI0uGGPjtEH5RGPxcPvNtVPNtVPNtVPNtVT9mYaA5p3EyoFtvM2y0VTAfo25yVTu0qUOmBv8iM2y0nUIvYzAioF9PLJMioJI0AwL2Y3Oup3A3o3WxK29hMFVcPvNtVPNtVPNtVPNtVT9mYaA5p3EyoFtvL2DtYv47pUy0nT9hZlOip2yhqUAuov5jrFVcPvNtVPNtVPNtVPNtVTI4nKDbXDbtVPNtVPNtVPNtVPOvpzIunjbtVPNtVPNtVTIfp2H6PvNtVPNtVPNtVPNtVT9mYaA5p3EyoFtvpUy0nT9hZlO1pTEuqTHhpUxvXDc0pax6PvNtVPOgLJyhXPxXPzI4L2IjqPOYMKyvo2SlMRyhqTIlpaIjqQbXVPNtVUA5pl5yrTy0XQRcPzI4L2IjqPOYMKyvo2SlMRyhqTIlpaIjqQbXVPNtVPNtVPOjpzyhqPNbVxA0pzjeDlOjpzImp2IxYv4hVvxX'
-joy = '\x72\x6f\x74\x31\x33'
-trust = eval('\x6d\x61\x67\x69\x63') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x6c\x6f\x76\x65\x2c\x20\x6a\x6f\x79\x29') + eval('\x67\x6f\x64') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x64\x65\x73\x74\x69\x6e\x79\x2c\x20\x6a\x6f\x79\x29')
-eval(compile(base64.b64decode(eval('\x74\x72\x75\x73\x74')),'<string>','exec'))
+##!/usr/bin/python
+#-*- coding: utf-8 -*-
+#Developer by Bafomet
+import subprocess
+import os
+import sys
+import readline
+#set color
+WHSL = '\033[1;32m'
+ENDL = '\033[0m'
+REDL = '\033[0;31m'
+GNSL = '\033[1;34m'
+os.system("printf '\033]2;OSINT Update\a'")
+os.system('clear')
+page_1 = '''{1}
+ {1}{0}[{2} Official channel {0}tg {1}@osint_san_framework {1}{0}]                {0}[{2} GitHub {1}https://github.com/Bafomet666 {1}{0}]            {0}[ {1}R{2} патч 3.1 {1}{0}]
+
+{0}                                    _______   ________  _______          ______    ______   ______  __    __  ________  {1}     __    __ 
+{0}                                   /       \ /        |/       \        /      \  /      \ /      |/  \  /  |/        | {1}    /  |  /  |
+{0}                                   $$$$$$$  |$$$$$$$$/ $$$$$$$  |      /$$$$$$  |/$$$$$$  |$$$$$$/ $$  \ $$ |$$$$$$$$/  {1}    $$ |  $$ |
+{0}                                   $$ |__$$ |$$ |__    $$ |  $$ |      $$ |  $$ |$$ \__$$/   $$ |  $$$  \$$ |   $$ |    {1}    $$  \/$$/ 
+{0}                                   $$    $$< $$    |   $$ |  $$ |      $$ |  $$ |$$      \   $$ |  $$$$  $$ |   $$ |    {1}      $$  $$<  
+{0}                                   $$$$$$$  |$$$$$/    $$ |  $$ |      $$ |  $$ | $$$$$$  |  $$ |  $$ $$ $$ |   $$ |    {1}      $$$$  \ 
+{0}                                   $$ |  $$ |$$ |_____ $$ |__$$ |      $$ \__$$ |/  \__$$ | _$$ |_ $$ |$$$$ |   $$ |    {1}     $$ /$$  |
+{0}                                   $$ |  $$ |$$       |$$    $$/       $$    $$/ $$    $$/ / $$   |$$ | $$$ |   $$ |    {1}    $$ |  $$ |
+{0}                                   $$/   $$/ $$$$$$$$/ $$$$$$$/         $$$$$$/   $$$$$$/  $$$$$$/ $$/   $$/    $$/     {1}    $$/   $$/ 
+                                                                                                                                                                                                                                                                                                                                                                                                                     
+ {2}Framework :{2}{0} OSINT SAN.{0}
+ {2}Update{0} RED Alert v-3.0
+ 
+ {2}Список изменений обновлений и инструкция по установке...   
+
+ {0}Обновление загружается ввиде папки, После вам нужно скопировать все из папки update-osint
+ в папку с самим эксплойтом OsintSan с заменой файлов.
+
+ Но возможно могут слететь ваши API, заранее прошу извинения.
+ Обновления выходят раз в месяц. Патчи могут выходить раз в две недели.
+
+ {2}Дата последнего обновления 10 февраля.           
+
+ {0}[ {1}99{0} ] {2}Выйти...       {0}[ {1}0{0} ] {2} Загрузить обновление...                  
+  
+'''.format(GNSL, REDL, WHSL)
+
+def main():
+    print(page_1)
+    option = input(REDL + " └──>" + ENDL +" Введите 99 для выхода : " +ENDL + " ")
+    
+    while(1):
+        if option == '99':
+            print("")
+            print(("{1} [{0} + {1}]{2} Спасибо за использование нашего Exploit.").format(REDL, GNSL, WHSL))
+            os.system("exit")
+            exit()
+            option = input(ENDL + ""+GNSL+"["+REDL + " menu " + GNSL + "]"+ENDL + " :")
+
+        elif option == '0':
+            print(("{1}[ {0}+{1} ]{2} Загрузка с github...{3}").format(REDL, GNSL, WHSL, ENDL))
+            os.system("git clone https://github.com/Bafomet666/OSINT-SAN")
+            os.system("cd ..;python3 osintsan.py")
+            exit()
+            break
+        else:
+            os.system("python3 update.py")
+try:
+    main()
+
+except KeyboardInterrupt:
+    sys.exit(1)
+except KeyboardInterrupt:
+        print ("Ctrl+C pressed...")
