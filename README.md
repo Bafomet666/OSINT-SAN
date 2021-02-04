@@ -89,7 +89,7 @@ https://t.me/osint_san_framework
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0-002.png)
 
 ### Функция [ 03 ]
-Вводите номер ( Пример: +74997059999 ) и получаем сведенья.
+Вводите номер ( Пример: +74997059999 ) и получаем данные:
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0-003.png)
 
