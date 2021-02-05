@@ -1,9 +1,307 @@
-#bafomet soft
-import base64, codecs
-magic = 'IyAtKi0gY29kaW5nOiB1dGYtOCAtKi0KZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCB1bmljb2RlX2xpdGVyYWxzCgpmcm9tIHBsdWdpbnMuY2Vuc3lzIGltcG9ydCBjZW5zeXNfaXAKZnJvbSBwbHVnaW5zLmRuc2R1bXAgaW1wb3J0IGRuc21hcApmcm9tIHBsdWdpbnMuaG9uZXlwb3QgaW1wb3J0IGhvbmV5cG90CmZyb20gcGx1Z2lucy5zaG9kYW5faW8gaW1wb3J0IHNob2Rhbl9ob3N0CmZyb20gcGx1Z2lucy5kb21haW4gaW1wb3J0IGRvbWFpbgpmcm9tIHBsdWdpbnMuUGhvbmVudW1iZXIgaW1wb3J0IFBob25lbnVtYmVyCmZyb20gcGx1Z2lucy5yZXZlcnNlaW1hZ2VzZWFyY2ggaW1wb3J0IHJldmVyc2VpbWFnZXNlYXJjaApmcm9tIHBsdWdpbnMubWV0YWRhdGEgaW1wb3J0IGdwc19hbmFseXplcgpmcm9tIHBsdWdpbnMubWFjYWRkcmVzcyBpbXBvcnQgTWFjQWRkcmVzc0xvb2t1cApmcm9tIHBsdWdpbnMuaXBhZGRyZXNzIGltcG9ydCBJUEhlYXRtYXAKZnJvbSBwbHVnaW5zLnRvcnJlbnQgaW1wb3J0IHRvcnJlbnQKZnJvbSBwbHVnaW5zLnByb3h5IGltcG9ydCBpcDJQcm94eQpmcm9tIHBsdWdpbnMubWFpbGRiIGltcG9ydCBtYWlsZGIKZnJvbSBwbHVnaW5zLlVzZXJuYW1lIGltcG9ydCB1c2VyCmZyb20gcHJvbXB0X3Rvb2xraXQgaW1wb3J0IHByb21wdApmcm9tIG9zaW50c2FuIGltcG9ydCBtZW51CmZyb20gY29yZSBpbXBvcnQgYmFubmVyCmltcG9ydCBzdWJwcm9jZXNzCmltcG9ydCBvcwppbXBvcnQgc3lzCiNEZXZlbG9wZXIgYnkgQmFmb21ldApXSFNMID0gJ1wwMzNbMTszMm0nCkVOREwgPSAnXDAzM1swbScKUkVETCA9ICdcMDMzWzA7MzFtJwpHTlNMID0gJ1wwMzNbMTszNG0nCgpkZWYgcmVwbCgpOiAgIyBSZWFk4oCTZXZhbOKAk3ByaW50IGxvb3AKICAgIHdoaWxlIDE6CiAgICAgICAgcHJpbnQobWVudSgpKQogICAgICAgIHVzZXJfaW5wdXQgPSBwcm9tcHQoIiDilJTilIDilIA+ICDQktGL0LHQtdGA0Lgg0L7Qv9GG0LjRjiA6ICIgKQogICAgICAgIGlmIGxlbih1c2VyX2lucHV0KT09MDoKICAgICAgICAgICAgcHJpbnQoIlxuIikKICAgICAgICAgICAgY29udGludWUKICAgICAgICB0cnk6CiAgICAgICAgICAgIGNob2ljZSA9IGludCh1c2VyX2lucHV0KQogICAgICAgIGV4Y2VwdCBWYWx1ZUVycm9yOgogICAgICAgICAgICBwcmludCgiXG4iKQogICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBpZiBjaG9pY2UgPT0gMToKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIHByaW50KCIiKQogICAgICAgICAgICAgICAgaXAgPSBwcm9tcHQoIiAg4pSU4pSA4pSAPiDQktCy0LXQtNC40YLQtSBJUCDQsNC00YDQtdGBIDogIikKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIG9zLnN5c3RlbSgiY2xlYXIiKQogICAgICAgICAgICBvcy5zeXN0ZW0oImNkIGNvcmU7cHl0aG9uMyBiYW5uZXIucHkiKQogICAgICAgICAgICBzaG9kYW5faG9zdChpcCkKICAgICAgICAgICAgY2Vuc3lzX2lwKGlwKQogICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBlbGlmIGNob2ljZSA9PSAyOgogICAgICAgICAgICB3aGlsZSAxOgogICAgICAgICAgICAgICAgaG9zdCA9IGlucHV0KCIg4pSU4pSA4pSAPiDQktCy0LXQtNC40YLQtSDRhdC+0YHRgtC40L3QsyDQu9C40LHQviBJUCDQsNC00YDQtdGBIDogIikKICAgICAgICAgICAgICAgIHBvcnQgPSBpbnB1dCgiIOKUlOKUgOKUgD4g0J3QsNC20LzQuCBlbnRlciwg0LjQu9C4INC90LDQv9C40YjQuCDRgdCy0L7QuSDQstCw0YDQuNCw0L3RgtCwINC/0L7RgNGC0LAgOiAiKQogICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgIGlmIHBvcnQgPT0gIiI6CiAgICAgICAgICAgICAgICAgICAgICAgIHBvcnQ9ODAKICAgICAgICAgICAgICAgICAgICBlbGlmIHBvcnQgbm90IGluIFs4MCw0NDNdOgogICAgICAgICAgICAgICAgICAgICAgICBwcmludCgiINCd0LXQstC10YDQvdGL0Lkg0L/QvtGA0YIgIikKICAgICAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGV4Y2VwdCBWYWx1ZUVycm9yOgogICAgICAgICAgICAgICAgICAgIHBvcnQ9ODAKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIGRvbWFpbihob3N0LGludChwb3J0KSkKICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgZWxpZiBjaG9pY2UgPT0gMzoKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIHByaW50KCIiKQogICAgICAgICAgICAgICAgcGggPSBwcm9tcHQoIiDilJTilIDilIA+INCS0LLQtdC00Lgg0LzQvtCx0LjQu9GM0L3Ri9C5INC90L7QvNC10YAg0YLQtdC70LXRhNC+0L3QsCDRgSArNy4uLiA6ICIpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgY29yZTtweXRob24zIGJhbm5lci5weSIpCiAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICBQaG9uZW51bWJlcihwaCkKICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgZWxpZiBjaG9pY2UgPT0gNDoKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIHByaW50KCIiKQogICAgICAgICAgICAgICAgcHJpbnQoIiDQoNCw0LHQvtGC0LDQtdGCINGC0L7Qu9GM0LrQviDRgSAoLmNvbSAucnUpIikKICAgICAgICAgICAgICAgIHByaW50KCIiKQogICAgICAgICAgICAgICAgZG5zbWFwX2lucCA9IHByb21wdCgiICAgIOKUlOKUgOKUgD4g0JLQstC10LTQuNGC0LUgdXJsIDogIikKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIGRuc21hcChkbnNtYXBfaW5wKQogICAgICAgICAgICBvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICAgICAgb3Muc3lzdGVtKCJjZCBjb3JlO3B5dGhvbjMgYmFubmVyLnB5IikKICAgICAgICAgICAgY29udGludWUKCiAgICAgICAgZWxpZiBjaG9pY2UgPT0gNToKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIHByaW50KCIiKQogICAgICAgICAgICAgICAgcHJpbnQoIiAgINCf0YDQuNC80LXRgCDQv9GD0YLQuDogL2hvbWUvYmFmb21ldC9EZXNrdG9wL2RlYW5vbi5wbmciKQogICAgICAgICAgICAgICAgcHJpbnQoIiIpCiAgICAgICAgICAgICAgICBpbWdfcGF0aCA9IHByb21wdCgiIOKUlOKUgOKUgD4g0KPQutCw0LbQuNGC0LUg0L/Rg9GC0Ywg0LTQviDRhNC+0YLQvtCz0YDQsNGE0LjQuCA6IikKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgIG9zLnN5c3RlbSgiY2xlYXIiKQogICAgICAgICAgICBvcy5zeXN0ZW0oImNkIGNvcmU7cHl0aG9uMyBiYW5uZXIucHkiKQogICAgICAgICAgICBncHNfYW5hbHl6ZXIoaW1nX3BhdGgpCiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgIGVsaWYgY2hvaWNlID09IDY6CiAgICAgICAgICAgIHdoaWxlIDE6CiAgICAgICAgICAgICAgICBwcmludCgiIikKICAgICAgICAgICAgICAgIHByaW50KCIgINCf0YDQuNC80LXRgCDQv9GD0YLQuDogL2hvbWUvYmFmb21ldC9EZXNrdG9wL2RlYW5vbi5wbmciKQogICAgICAgICAgICAgICAgcHJpbnQoIiIpCiAgICAgICAgICAgICAgICBpbWcgPSBwcm9tcHQoIiDilJTilIDilIA+INCj0LrQsNC20LjRgtC1INC/0YPRgtGMINC00L4g0YTQvtGC0L7Qs9GA0LDRhNC40LggOiIpCiAgICAgICA'
-love = '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'
-god = 'B5IikKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgICAgICBjb250aW51ZQoKICAgICAgICBlbGlmIGNob2ljZSA9PSAyMDoKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgZXhwbG9pdF9kYXRhYmFzZTtweXRob24zIHN1YmplY3Rpb24ucHkiKQogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjbGVhciIpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNkIGNvcmU7cHl0aG9uMyBiYW5uZXIucHkiKQogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgICAgIGNvbnRpbnVlCgogICAgICAgIGVsaWYgY2hvaWNlID09IDIxOgogICAgICAgICAgICB3aGlsZSAxOgogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjZCBtb2R1bGU7cHl0aG9uMyBJbmZvcm1hdGlvbl9zZXJ2aWNlcy5weSIpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgY29yZTtweXRob24zIGJhbm5lci5weSIpCiAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIAogICAgICAgIGVsaWYgY2hvaWNlID09IDIyOgogICAgICAgICAgICB3aGlsZSAxOgogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjZCBleHBsb2l0X2RhdGFiYXNlO3N1ZG8gLi9pbnN0YXNoZWxsLnNoIikKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2xlYXIiKQogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjZCBjb3JlO3B5dGhvbjMgYmFubmVyLnB5IikKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgIGVsaWYgY2hvaWNlID09IDIzOgogICAgICAgICAgICB3aGlsZSAxOiAKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgZXhwbG9pdF9kYXRhYmFzZTtweXRob24zIGVycm9yLnB5IikKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2xlYXIiKQogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjZCBjb3JlO3B5dGhvbjMgYmFubmVyLnB5IikKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgIGVsaWYgY2hvaWNlID09IDI0OgogICAgICAgICAgICB3aGlsZSAxOgogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjZCBleHBsb2l0X2RhdGFiYXNlO3B5dGhvbjMgcGFzcy5weSIpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgY29yZTtweXRob24zIGJhbm5lci5weSIpCiAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICBlbGlmIGNob2ljZSA9PSAyNToKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgcGx1Z2lucy94c3M7cHl0aG9uMiB4c3MucHkiKQogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICAKICAgICAgICBlbGlmIGNob2ljZSA9PSAyNjoKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgZXhwbG9pdF9kYXRhYmFzZTtweXRob24zIGJ4NTQucHkiKQogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjbGVhciIpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNkIGNvcmU7cHl0aG9uMyBiYW5uZXIucHkiKQogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgICAgICAKICAgICAgICBlbGlmIGNob2ljZSA9PSAyNzoKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgZXhwbG9pdF9kYXRhYmFzZTtweXRob24zIGRvbWlhbjIucHkiKQogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjbGVhciIpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNkIGNvcmU7cHl0aG9uMyBiYW5uZXIucHkiKQogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgZWxpZiBjaG9pY2UgPT0gMjg6CiAgICAgICAgICAgIHdoaWxlIDE6CiAgICAgICAgICAgICAgICBzdWJwcm9jZXNzLmNhbGwoInN1ZG8gbWFsdGVnbyIsIHNoZWxsPVRydWUpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgY29yZTtweXRob24zIGJhbm5lci5weSIpCiAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICBlbGlmIGNob2ljZSA9PSAyOToKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgZXhwbG9pdF9kYXRhYmFzZTtweXRob24zIHpvb20ucHkiKQogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjbGVhciIpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNkIGNvcmU7cHl0aG9uMyBiYW5uZXIucHkiKQogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgZWxpZiBjaG9pY2UgPT0gMzA6CiAgICAgICAgICAgIHdoaWxlIDE6CiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNkIGV4cGxvaXRfZGF0YWJhc2U7cHl0aG9uMyBkZWFub25fbWFpbi5weSIpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgY29yZTtweXRob24zIGJhbm5lci5weSIpCiAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICBlbGlmIGNob2ljZSA9PSAzMToKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiZmlyZWZveCBodHRwczovL2NhbmFyeXRva2Vucy5vcmciKQogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjbGVhciIpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNkIGNvcmU7cHl0aG9uMyBiYW5uZXIucHkiKQogICAgICAgICAgICAgICAgYnJlYWsKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgZWxpZiBjaG9pY2UgPT0gMzI6CiAgICAgICAgICAgIHdoaWxlIDE6CiAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgY29udGludWUgICAKICAgICAgICBlbGlmIGNob2ljZSA9PSAzMzoKICAgICAgICAgICAgd2hpbGUgMToKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgbW9kdWxlO3B5dGhvbjMgd2hveW91cy5weSIpCiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNsZWFyIikKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2QgY29yZTtweXRob24zIGJhbm5lci5weSIpCiAgICAgICAgICAgICAgICBicmVhawogICAgICAgICAgICAgICAgY29udGludWUgCiAgICAgICAgZWxpZiBjaG9pY2UgPT0gMzQ6CiAgICAgICAgICAgIHdoaWxlIDE6CiAgICAgICAgICAgICAgICBvcy5zeXN0ZW0oImNkIG1vZHVsZTtweXRob24zIGxlYWtzLnB5IikKICAgICAgICAgICAgICAgIG9zLnN5c3RlbSgiY2xlYXIiKQogICAgICAgICAgICAgICAgb3Muc3lzdGVtKCJjZCBjb3JlO3B5dGhvbjMgYmFubmVyLnB5IikKICAgICAgICAgICAgICAgIGJyZWFrCiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgIGVsaWYgY2hvaWNlID09IDM1O'
-destiny = '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'
-joy = '\x72\x6f\x74\x31\x33'
-trust = eval('\x6d\x61\x67\x69\x63') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x6c\x6f\x76\x65\x2c\x20\x6a\x6f\x79\x29') + eval('\x67\x6f\x64') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x64\x65\x73\x74\x69\x6e\x79\x2c\x20\x6a\x6f\x79\x29')
-eval(compile(base64.b64decode(eval('\x74\x72\x75\x73\x74')),'<string>','exec'))
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from plugins.censys import censys_ip
+from plugins.dnsdump import dnsmap
+from plugins.honeypot import honeypot
+from plugins.shodan_io import shodan_host
+from plugins.domain import domain
+from plugins.Phonenumber import Phonenumber
+from plugins.reverseimagesearch import reverseimagesearch
+from plugins.metadata import gps_analyzer
+from plugins.macaddress import MacAddressLookup
+from plugins.ipaddress import IPHeatmap
+from plugins.torrent import torrent
+from plugins.proxy import ip2Proxy
+from plugins.maildb import maildb
+from plugins.Username import user
+from prompt_toolkit import prompt
+
+from osintsan import menu
+from core.banner import show_banner
+import subprocess
+import os
+import sys
+
+# Developer by Bafomet
+WHSL = "\033[1;32m"
+ENDL = "\033[0m"
+REDL = "\033[0;31m"
+GNSL = "\033[1;34m"
+
+
+def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
+    while True:
+        print(menu())
+        user_input = input(" └──>  Выбери опцию : ")
+        if len(user_input) == 0:
+            print()
+            continue
+        try:
+            choice = int(user_input)
+        except ValueError:
+            print()
+            continue
+
+        if choice == 1:
+            print()
+            ip = prompt("  └──> Введите IP адрес : ")
+
+            show_banner(clear=True)
+
+            shodan_host(ip)
+            censys_ip(ip)
+
+        elif choice == 2:
+            host = input(" └──> Введите хостинг либо IP адрес : ")
+            port = ""
+
+            while True:
+                try:
+                    port = input(" └──> Нажми enter, или напиши свой варианта порта : ")
+                    port = int(port)
+                except ValueError:
+                    if port == "":
+                        port = 80
+                    else:
+                        continue
+
+                if port not in [80, 443]:
+                    print(" Неверный порт ")
+                    continue
+                else:
+                    break
+
+            domain(host, port)
+            continue
+
+        elif choice == 3:
+            print()
+            ph = prompt(" └──> Введи мобильный номер телефона с +7... : ")
+
+            show_banner(clear=True)
+            Phonenumber(ph)
+
+        elif choice == 4:
+            print("\n Работает только с (.com .ru)\n")
+            dnsmap_inp = prompt("    └──> Введите url : ")
+
+            dnsmap(dnsmap_inp)
+
+            show_banner(clear=True)
+
+        elif choice == 5:
+            print("\n   Пример пути: /home/bafomet/Desktop/deanon.png\n")
+            img_path = prompt(" └──> Укажите путь до фотографии :")
+
+            show_banner(clear=True)
+
+            gps_analyzer(img_path)
+
+        elif choice == 6:
+            print("\n  Пример пути: /home/bafomet/Desktop/deanon.png\n")
+            img = prompt(" └──> Укажите путь до фотографии :")
+
+            show_banner(clear=True)
+
+            reverseimagesearch(img)
+
+        elif choice == 7:
+            print()
+            hp_inp = prompt(" └──> Введите IP адрес : ")
+
+            show_banner(clear=True)
+
+            honeypot(hp_inp)
+
+        elif choice == 8:
+            print()
+            mac = prompt(" └──> Ожидаю ввод MAC адреса :")
+
+            show_banner(clear=True)
+
+            MacAddressLookup(mac)
+
+        elif choice == 9:
+            os.system("cd module/gui;python3 gui.py")
+
+            show_banner(clear=True)
+
+        elif choice == 10:
+            print()
+            ip_ = prompt(" └──> Введите IP адрес :")
+
+            show_banner(clear=True)
+
+            torrent(ip_)
+
+        elif choice == 11:
+            os.system("cd module;python3 main.py")
+
+            show_banner(clear=True)
+
+        elif choice == 12:
+            os.system("cd module;python3 subzone.py")
+
+        elif choice == 13:
+            print("\n Пример :google.com\n")
+            web = prompt(" └──> Введи домен организации :")
+            show_banner(clear=True)
+            maildb(web)
+
+        elif choice == 14:
+            os.system("cd exploit_database;python3 startadb.py")
+            show_banner(clear=True)
+
+        elif choice == 15:
+            os.system("cd plugins/Brother;sudo python3 dlc.py -t manual -k start")
+            show_banner(clear=True)
+
+        elif choice == 16:
+            os.system("cd exploit_database;python3 hynder.py")
+            subprocess.call("python3 osintsan.py", shell=True)
+
+        elif choice == 17:
+            subprocess.call("sudo etherape", shell=True)
+            show_banner(clear=True)
+
+        elif choice == 18:
+            os.system("cd module;python3 update.py")
+
+            show_banner(clear=True)
+
+        elif choice == 19:
+            subprocess.call(
+                "firefox https://github.com/Bafomet666/OSINT-SAN", shell=True
+            )
+
+            show_banner(clear=True)
+
+        elif choice == 20:
+            os.system("cd exploit_database;python3 subjection.py")
+            show_banner(clear=True)
+
+        elif choice == 21:
+            os.system("cd module;python3 Information_services.py")
+            show_banner(clear=True)
+
+        elif choice == 22:
+            os.system("cd exploit_database;sudo ./instashell.sh")
+            show_banner(clear=True)
+
+        elif choice == 23:
+            os.system("cd exploit_database;python3 error.py")
+            show_banner(clear=True)
+
+        elif choice == 24:
+            os.system("cd exploit_database;python3 pass.py")
+            show_banner(clear=True)
+
+        elif choice == 25:
+            os.system("cd plugins/xss;python2 xss.py")
+
+        elif choice == 26:
+            os.system("cd exploit_database;python3 bx54.py")
+            show_banner(clear=True)
+
+        elif choice == 27:
+            os.system("cd exploit_database;python3 domian2.py")
+            show_banner(clear=True)
+
+        elif choice == 28:
+            subprocess.call("sudo maltego", shell=True)
+            show_banner(clear=True)
+
+        elif choice == 29:
+            os.system("cd exploit_database;python3 zoom.py")
+            show_banner(clear=True)
+
+        elif choice == 30:
+            os.system("cd exploit_database;python3 deanon_main.py")
+            show_banner(clear=True)
+
+        elif choice == 31:
+            os.system("firefox https://canarytokens.org")
+            show_banner(clear=True)
+
+        elif choice == 32:
+            pass
+
+        elif choice == 33:
+            os.system("cd module;python3 whoyous.py")
+            show_banner(clear=True)
+
+        elif choice == 34:
+            os.system("cd module;python3 leaks.py")
+            show_banner(clear=True)
+
+        elif choice == 35:
+            os.system("firefox https://search4faces.com")
+            os.system("firefox https://findclone.ru")
+            os.system("firefox https://images.google.com/")
+            os.system("firefox https://yandex.ru/images/")
+            os.system("firefox https://tineye.com/")
+            os.system("firefox https://pimeyes.com/en/")
+            os.system("firefox https://carnet.ai/")
+            show_banner(clear=True)
+
+        elif choice == 36:
+            os.system("cd module;python3 osint_pack.py")
+            show_banner(clear=True)
+
+        elif choice == 37:
+            os.system("cd plugins/webvuln/src/tisyka;python3 bx66.py")
+            show_banner(clear=True)
+
+        elif choice == 38:
+            os.system("firefox https://temp-mail.org/ru/")
+            os.system("firefox https://10minemail.com/ru/")
+            os.system("firefox https://10minutemail.net/?lang=ru")
+            os.system("firefox https://www.lite14.us/10minutemail/russian.html")
+            os.system("firefox https://protonmail.com/ru/")
+            os.system("firefox https://tutanota.com/ru/blog/posts/anonymous-email/")
+            show_banner(clear=True)
+
+        elif choice == 39:
+            os.system("cd plugins/Brother;sudo python3 dlc2.py -t manual -k start")
+            show_banner(clear=True)
+
+        elif choice == 40:
+            pass
+
+        elif choice == 41:
+            os.system("cd module;python3 avito.py")
+
+        elif choice == 44:
+            os.system("firefox https://t.me/osint_san_framework")
+            os.system("firefox https://github.com/Bafomet666/OSINT-SAN")
+            show_banner(clear=True)
+
+        elif choice == 45:
+            os.system("cd module;python3 license_agreement.py")
+            show_banner(clear=True)
+
+        elif choice == 66:
+            show_banner(clear=True)
+
+        elif choice == 99:
+            os.system("python3 osintsan.py")
+
+        elif choice == 88:
+            from core.core import main
+
+            main()
+
+        elif choice == 0:
+            print(" Спасибо что использовали наш Framework...")
+            sys.exit()
+
+        else:
+            pass
+
+
+try:
+    repl()
+except KeyboardInterrupt:
+    os.system("clear")
+    sys.exit()
