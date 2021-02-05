@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from core.banner import show_banner
 from plugins.censys import censys_ip
 from plugins.dnsdump import dnsmap
 from plugins.honeypot import honeypot
@@ -16,20 +17,14 @@ from plugins.proxy import ip2Proxy
 from plugins.maildb import maildb
 from plugins.Username import user
 from prompt_toolkit import prompt
-
 from osintsan import menu
-from core.banner import show_banner
+
 import subprocess
 import os
 import sys
 
+
 # Developer by Bafomet
-WHSL = "\033[1;32m"
-ENDL = "\033[0m"
-REDL = "\033[0;31m"
-GNSL = "\033[1;34m"
-
-
 def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
     while True:
         print(menu())

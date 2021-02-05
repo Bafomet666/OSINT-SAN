@@ -2,60 +2,55 @@
 # -*- coding: utf-8 -*-
 # Developer by Bafomet
 from core.banner import show_banner
+from utils import COLORS
 
 import os
-
-# set color
-WHSL = "\033[1;32m"
-ENDL = "\033[0m"
-REDL = "\033[0;31m"
-GNSL = "\033[1;34m"
 
 os.system("printf '\033]2;OSINT Attack mod\a'")
 os.system("clear")
 show_banner()
 
-free_slot_text = f"{WHSL}Свободный слот..."
+free_slot_text = f"{COLORS.WHSL}Свободный слот..."
 
 PAGE = f"""                                                                                     
-  {GNSL}[ {REDL}01{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}16{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}31{GNSL} ] {free_slot_text}         {REDL}Ожидайте в версиях 4.0 и выше...
-  {GNSL}[ {REDL}02{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}17{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}32{GNSL} ] {free_slot_text}         {REDL}Буду пополнять по мере свободного времени.
-  {GNSL}[ {REDL}03{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}18{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}33{GNSL} ] {free_slot_text}
-  {GNSL}[ {REDL}04{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}19{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}34{GNSL} ] {free_slot_text}
-  {GNSL}[ {REDL}05{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}20{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}35{GNSL} ] {free_slot_text}
-  {GNSL}[ {REDL}06{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}21{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}36{GNSL} ] {free_slot_text}
-  {GNSL}[ {REDL}07{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}22{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}37{GNSL} ] {free_slot_text}
-  {GNSL}[ {REDL}08{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}23{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}38{GNSL} ] {free_slot_text} 
-  {GNSL}[ {REDL}09{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}24{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}39{GNSL} ] {free_slot_text} 
-  {GNSL}[ {REDL}10{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}25{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}40{GNSL} ] {free_slot_text}
-  {GNSL}[ {REDL}11{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}26{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}41{GNSL} ] {free_slot_text}
-  {GNSL}[ {REDL}12{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}27{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}42{GNSL} ] {free_slot_text}
-  {GNSL}[ {REDL}13{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}28{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}43{GNSL} ] {free_slot_text}
-  {GNSL}[ {REDL}14{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}29{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}44{GNSL} ] {free_slot_text}
-  {GNSL}[ {REDL}15{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}30{GNSL} ] {free_slot_text}              {GNSL}[ {REDL}45{GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}01{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}16{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}31{COLORS.GNSL} ] {free_slot_text}         {COLORS.REDL}Ожидайте в версиях 4.0 и выше...
+  {COLORS.GNSL}[ {COLORS.REDL}02{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}17{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}32{COLORS.GNSL} ] {free_slot_text}         {COLORS.REDL}Буду пополнять по мере свободного времени.
+  {COLORS.GNSL}[ {COLORS.REDL}03{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}18{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}33{COLORS.GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}04{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}19{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}34{COLORS.GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}05{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}20{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}35{COLORS.GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}06{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}21{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}36{COLORS.GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}07{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}22{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}37{COLORS.GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}08{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}23{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}38{COLORS.GNSL} ] {free_slot_text} 
+  {COLORS.GNSL}[ {COLORS.REDL}09{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}24{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}39{COLORS.GNSL} ] {free_slot_text} 
+  {COLORS.GNSL}[ {COLORS.REDL}10{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}25{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}40{COLORS.GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}11{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}26{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}41{COLORS.GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}12{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}27{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}42{COLORS.GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}13{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}28{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}43{COLORS.GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}14{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}29{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}44{COLORS.GNSL} ] {free_slot_text}
+  {COLORS.GNSL}[ {COLORS.REDL}15{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}30{COLORS.GNSL} ] {free_slot_text}              {COLORS.GNSL}[ {COLORS.REDL}45{COLORS.GNSL} ] {free_slot_text}
 
-  {REDL}└──> {GNSL} {WHSL}Обратно в OSINT Menu.... {GNSL}[{REDL} 88 {GNSL}]{GNSL}        
-  {REDL}└──> {GNSL} {WHSL}Очистить...  {GNSL}[{REDL} 66 {GNSL}]{GNSL}
+  {COLORS.REDL}└──> {COLORS.GNSL} {COLORS.WHSL}Обратно в OSINT Menu.... {COLORS.GNSL}[{COLORS.REDL} 88 {COLORS.GNSL}]{COLORS.GNSL}        
+  {COLORS.REDL}└──> {COLORS.GNSL} {COLORS.WHSL}Очистить...  {COLORS.GNSL}[{COLORS.REDL} 66 {COLORS.GNSL}]{COLORS.GNSL}
 
 """
 
 
 def _main():
     print(PAGE)
-    option = input(f"{REDL}  └──>{ENDL} Выберите опцию : {ENDL} ")
+    option = input(f"{COLORS.REDL}  └──>{COLORS.ENDL} Выберите опцию : {COLORS.ENDL} ")
 
     while True:
         if option == "88":
-            print(f"\n{GNSL}[ {REDL}+{GNSL} ]{WHSL} Выполняем обратный переход.\n")
+            print(f"\n{COLORS.GNSL}[ {COLORS.REDL}+{COLORS.GNSL} ]{COLORS.WHSL} Выполняем обратный переход.\n")
             show_banner(clear=True)
             return
 
         elif int(option) in range(1, 5):
-            print(f"{GNSL}[ {REDL}+{GNSL} ]{WHSL} Переход...{ENDL}")
+            print(f"{COLORS.GNSL}[ {COLORS.REDL}+{COLORS.GNSL} ]{COLORS.WHSL} Переход...{COLORS.ENDL}")
             return
 
         elif option == "66":
-            print(f"{GNSL}[ {REDL}+{GNSL} ]{WHSL} Переход...{ENDL}")
+            print(f"{COLORS.GNSL}[ {COLORS.REDL}+{COLORS.GNSL} ]{COLORS.WHSL} Переход...{COLORS.ENDL}")
             os.system("clear")
             _main()
             return

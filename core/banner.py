@@ -1,15 +1,12 @@
+from utils import COLORS
+
 import random
 import os
 
 # dev by bafomet
-# Set color
-WHSL = "\033[1;32m"
-ENDL = "\033[0m"
-REDL = "\033[0;31m"
-GNSL = "\033[1;34m"
 
-BANNER1 = f""" {REDL}
- {REDL}{GNSL}[{WHSL} Official channel {GNSL}tg {REDL}@osint_san_framework {REDL}{GNSL}]            {GNSL}[{WHSL} GitHub {REDL}https://github.com/Bafomet666 {REDL}{GNSL}]            {GNSL}[ {REDL}R{WHSL} - c \xd1\x80\xd1\x83\xd1\x82\xd0\xbe\xd0\xbc.{REDL} N{WHSL} - \xd0\xb1\xd0\xb5\xd0\xb7 \xd1\x80\xd1\x83\xd1\x82\xd0\xb0 {REDL}{GNSL}]
+BANNER1 = f""" {COLORS.REDL}
+ {COLORS.REDL}{COLORS.GNSL}[{COLORS.WHSL} Official channel {COLORS.GNSL}tg {COLORS.REDL}@osint_san_framework {COLORS.REDL}{COLORS.GNSL}]            {COLORS.GNSL}[{COLORS.WHSL} GitHub {COLORS.REDL}https://github.com/Bafomet666 {COLORS.REDL}{COLORS.GNSL}]            {COLORS.GNSL}[ {COLORS.REDL}R{COLORS.WHSL} - c \xd1\x80\xd1\x83\xd1\x82\xd0\xbe\xd0\xbc.{COLORS.REDL} N{COLORS.WHSL} - \xd0\xb1\xd0\xb5\xd0\xb7 \xd1\x80\xd1\x83\xd1\x82\xd0\xb0 {COLORS.REDL}{COLORS.GNSL}]
 
                                   $$$$$$$\\                  $$\\        $$$$$$\\  $$\\                      $$\\     
                                   $$  __$$\\                 $$ |      $$  __$$\\ $$ |                     $$ |    
@@ -20,43 +17,43 @@ BANNER1 = f""" {REDL}
                                   $$ |  $$ |\\$$$$$$$\\ \\$$$$$$$ |      $$ |  $$ |$$ |\\$$$$$$$\\ $$ |       \\$$$$  |
                                   \\__|  \\__| \\_______| \\_______|      \\__|  \\__|\\__| \\_______|\\__|        \\____/ 
 
- {WHSL}Framework :{WHSL}{GNSL} OSINT SAN.{GNSL}
- {WHSL}Update{GNSL} RED Alert v-3.0
+ {COLORS.WHSL}Framework :{COLORS.WHSL}{COLORS.GNSL} OSINT SAN.{COLORS.GNSL}
+ {COLORS.WHSL}Update{COLORS.GNSL} RED Alert v-3.0
   """
 
-BANNER2 = f"""{GNSL}
- {REDL}{GNSL}[{WHSL} Official channel {GNSL}tg {REDL}@osint_san_framework {REDL}{GNSL}]            {GNSL}[{WHSL} GitHub {REDL}https://github.com/Bafomet666 {REDL}{GNSL}]            {GNSL}[ {REDL}R{WHSL} - c \xd1\x80\xd1\x83\xd1\x82\xd0\xbe\xd0\xbc.{REDL} N{WHSL} - \xd0\xb1\xd0\xb5\xd0\xb7 \xd1\x80\xd1\x83\xd1\x82\xd0\xb0 {REDL}{GNSL}]
+BANNER2 = f"""{COLORS.GNSL}
+ {COLORS.REDL}{COLORS.GNSL}[{COLORS.WHSL} Official channel {COLORS.GNSL}tg {COLORS.REDL}@osint_san_framework {COLORS.REDL}{COLORS.GNSL}]            {COLORS.GNSL}[{COLORS.WHSL} GitHub {COLORS.REDL}https://github.com/Bafomet666 {COLORS.REDL}{COLORS.GNSL}]            {COLORS.GNSL}[ {COLORS.REDL}R{COLORS.WHSL} - c \xd1\x80\xd1\x83\xd1\x82\xd0\xbe\xd0\xbc.{COLORS.REDL} N{COLORS.WHSL} - \xd0\xb1\xd0\xb5\xd0\xb7 \xd1\x80\xd1\x83\xd1\x82\xd0\xb0 {COLORS.REDL}{COLORS.GNSL}]
 
-{GNSL}                             _______   ________  _______          ______    ______   ______  __    __  ________  {REDL}     __    __ 
-{GNSL}                            /       \\ /        |/       \\        /      \\  /      \\ /      |/  \\  /  |/        | {REDL}    /  |  /  |
-{GNSL}                            $$$$$$$  |$$$$$$$$/ $$$$$$$  |      /$$$$$$  |/$$$$$$  |$$$$$$/ $$  \\ $$ |$$$$$$$$/  {REDL}    $$ |  $$ |
-{GNSL}                            $$ |__$$ |$$ |__    $$ |  $$ |      $$ |  $$ |$$ \\__$$/   $$ |  $$$  \\$$ |   $$ |    {REDL}    $$  \\/$$/ 
-{GNSL}                            $$    $$< $$    |   $$ |  $$ |      $$ |  $$ |$$      \\   $$ |  $$$$  $$ |   $$ |    {REDL}      $$ $$<  
-{GNSL}                            $$$$$$$  |$$$$$/    $$ |  $$ |      $$ |  $$ | $$$$$$  |  $$ |  $$ $$ $$ |   $$ |    {REDL}      $$$$  \\ 
-{GNSL}                            $$ |  $$ |$$ |_____ $$ |__$$ |      $$ \\__$$ |/  \\__$$ | _$$ |_ $$ |$$$$ |   $$ |    {REDL}     $$ /$$  |
-{GNSL}                            $$ |  $$ |$$       |$$    $$/       $$    $$/ $$    $$/ / $$   |$$ | $$$ |   $$ |    {REDL}    $$ |  $$ |
-{GNSL}                            $$/   $$/ $$$$$$$$/ $$$$$$$/         $$$$$$/   $$$$$$/  $$$$$$/ $$/   $$/    $$/     {REDL}    $$/   $$/ 
+{COLORS.GNSL}                             _______   ________  _______          ______    ______   ______  __    __  ________  {COLORS.REDL}     __    __ 
+{COLORS.GNSL}                            /       \\ /        |/       \\        /      \\  /      \\ /      |/  \\  /  |/        | {COLORS.REDL}    /  |  /  |
+{COLORS.GNSL}                            $$$$$$$  |$$$$$$$$/ $$$$$$$  |      /$$$$$$  |/$$$$$$  |$$$$$$/ $$  \\ $$ |$$$$$$$$/  {COLORS.REDL}    $$ |  $$ |
+{COLORS.GNSL}                            $$ |__$$ |$$ |__    $$ |  $$ |      $$ |  $$ |$$ \\__$$/   $$ |  $$$  \\$$ |   $$ |    {COLORS.REDL}    $$  \\/$$/ 
+{COLORS.GNSL}                            $$    $$< $$    |   $$ |  $$ |      $$ |  $$ |$$      \\   $$ |  $$$$  $$ |   $$ |    {COLORS.REDL}      $$ $$<  
+{COLORS.GNSL}                            $$$$$$$  |$$$$$/    $$ |  $$ |      $$ |  $$ | $$$$$$  |  $$ |  $$ $$ $$ |   $$ |    {COLORS.REDL}      $$$$  \\ 
+{COLORS.GNSL}                            $$ |  $$ |$$ |_____ $$ |__$$ |      $$ \\__$$ |/  \\__$$ | _$$ |_ $$ |$$$$ |   $$ |    {COLORS.REDL}     $$ /$$  |
+{COLORS.GNSL}                            $$ |  $$ |$$       |$$    $$/       $$    $$/ $$    $$/ / $$   |$$ | $$$ |   $$ |    {COLORS.REDL}    $$ |  $$ |
+{COLORS.GNSL}                            $$/   $$/ $$$$$$$$/ $$$$$$$/         $$$$$$/   $$$$$$/  $$$$$$/ $$/   $$/    $$/     {COLORS.REDL}    $$/   $$/ 
                                                                                                                                                                                                                                                                                                                                                                                                                      
- {WHSL}Framework :{WHSL}{GNSL} OSINT SAN.{GNSL}
- {WHSL}Update{GNSL} RED Alert v-3.0
+ {COLORS.WHSL}Framework :{COLORS.WHSL}{COLORS.GNSL} OSINT SAN.{COLORS.GNSL}
+ {COLORS.WHSL}Update{COLORS.GNSL} RED Alert v-3.0
  """
 
 BANNER3 = f"""
- {REDL}{GNSL}[{WHSL} Official channel {GNSL}tg {REDL}@osint_san_framework {REDL}{GNSL}]            {GNSL}[{WHSL} GitHub {REDL}https://github.com/Bafomet666 {REDL}{GNSL}]            {GNSL}[ {REDL}R{WHSL} - c \xd1\x80\xd1\x83\xd1\x82\xd0\xbe\xd0\xbc.{REDL} N{WHSL} - \xd0\xb1\xd0\xb5\xd0\xb7 \xd1\x80\xd1\x83\xd1\x82\xd0\xb0 {REDL}{GNSL}]
+ {COLORS.REDL}{COLORS.GNSL}[{COLORS.WHSL} Official channel {COLORS.GNSL}tg {COLORS.REDL}@osint_san_framework {COLORS.REDL}{COLORS.GNSL}]            {COLORS.GNSL}[{COLORS.WHSL} GitHub {COLORS.REDL}https://github.com/Bafomet666 {COLORS.REDL}{COLORS.GNSL}]            {COLORS.GNSL}[ {COLORS.REDL}R{COLORS.WHSL} - c \xd1\x80\xd1\x83\xd1\x82\xd0\xbe\xd0\xbc.{COLORS.REDL} N{COLORS.WHSL} - \xd0\xb1\xd0\xb5\xd0\xb7 \xd1\x80\xd1\x83\xd1\x82\xd0\xb0 {COLORS.REDL}{COLORS.GNSL}]
 
-{GNSL}                 ______    ______   ______  __    __  ________         ______    ______   __    __    {REDL}     ______    ______   ________  ________ 
-{GNSL}                /      \\  /      \\ /      |/  \\  /  |/        |       /      \\  /      \\ /  \\  /  |   {REDL}    /      \\  /      \\ /        |/        |
-{GNSL}               /$$$$$$  |/$$$$$$  |$$$$$$/ $$  \\ $$ |$$$$$$$$/       /$$$$$$  |/$$$$$$  |$$  \\ $$ |   {REDL}   /$$$$$$  |/$$$$$$  |$$$$$$$$/ $$$$$$$$/ 
-{GNSL}               $$ |  $$ |$$ \\__$$/   $$ |  $$$  \\$$ |   $$ |         $$ \\__$$/ $$ |__$$ |$$$  \\$$ |   {REDL}   $$____$$ |$$$  \\$$ |    /$$/      /$$/  
-{GNSL}               $$ |  $$ |$$      \\   $$ |  $$$$  $$ |   $$ |         $$      \\ $$    $$ |$$$$  $$ |   {REDL}    /    $$/ $$$$  $$ |   /$$/      /$$/   
-{GNSL}               $$ |  $$ | $$$$$$  |  $$ |  $$ $$ $$ |   $$ |          $$$$$$  |$$$$$$$$ |$$ $$ $$ |   {REDL}   /$$$$$$/  $$ $$ $$ |  /$$/      /$$/    
-{GNSL}               $$ \\__$$ |/  \\__$$ | _$$ |_ $$ |$$$$ |   $$ |         /  \\__$$ |$$ |  $$ |$$ |$$$$ |   {REDL}   $$ |_____ $$ \\$$$$ | /$$/      /$$/     
-{GNSL}               $$    $$/ $$    $$/ / $$   |$$ | $$$ |   $$ |         $$    $$/ $$ |  $$ |$$ | $$$ |   {REDL}   $$       |$$   $$$/ /$$/      /$$/      
-{GNSL}                $$$$$$/   $$$$$$/  $$$$$$/ $$/   $$/    $$/           $$$$$$/  $$/   $$/ $$/   $$/    {REDL}   $$$$$$$$/  $$$$$$/  $$/       $$/       
+{COLORS.GNSL}                 ______    ______   ______  __    __  ________         ______    ______   __    __    {COLORS.REDL}     ______    ______   ________  ________ 
+{COLORS.GNSL}                /      \\  /      \\ /      |/  \\  /  |/        |       /      \\  /      \\ /  \\  /  |   {COLORS.REDL}    /      \\  /      \\ /        |/        |
+{COLORS.GNSL}               /$$$$$$  |/$$$$$$  |$$$$$$/ $$  \\ $$ |$$$$$$$$/       /$$$$$$  |/$$$$$$  |$$  \\ $$ |   {COLORS.REDL}   /$$$$$$  |/$$$$$$  |$$$$$$$$/ $$$$$$$$/ 
+{COLORS.GNSL}               $$ |  $$ |$$ \\__$$/   $$ |  $$$  \\$$ |   $$ |         $$ \\__$$/ $$ |__$$ |$$$  \\$$ |   {COLORS.REDL}   $$____$$ |$$$  \\$$ |    /$$/      /$$/  
+{COLORS.GNSL}               $$ |  $$ |$$      \\   $$ |  $$$$  $$ |   $$ |         $$      \\ $$    $$ |$$$$  $$ |   {COLORS.REDL}    /    $$/ $$$$  $$ |   /$$/      /$$/   
+{COLORS.GNSL}               $$ |  $$ | $$$$$$  |  $$ |  $$ $$ $$ |   $$ |          $$$$$$  |$$$$$$$$ |$$ $$ $$ |   {COLORS.REDL}   /$$$$$$/  $$ $$ $$ |  /$$/      /$$/    
+{COLORS.GNSL}               $$ \\__$$ |/  \\__$$ | _$$ |_ $$ |$$$$ |   $$ |         /  \\__$$ |$$ |  $$ |$$ |$$$$ |   {COLORS.REDL}   $$ |_____ $$ \\$$$$ | /$$/      /$$/     
+{COLORS.GNSL}               $$    $$/ $$    $$/ / $$   |$$ | $$$ |   $$ |         $$    $$/ $$ |  $$ |$$ | $$$ |   {COLORS.REDL}   $$       |$$   $$$/ /$$/      /$$/      
+{COLORS.GNSL}                $$$$$$/   $$$$$$/  $$$$$$/ $$/   $$/    $$/           $$$$$$/  $$/   $$/ $$/   $$/    {COLORS.REDL}   $$$$$$$$/  $$$$$$/  $$/       $$/       
                                                                                                                                   
                                                                                     
- {WHSL}Framework :{WHSL}{GNSL} OSINT SAN.{GNSL}
- {WHSL}Update{GNSL} RED Alert v-3.0 
+ {COLORS.WHSL}Framework :{COLORS.WHSL}{COLORS.GNSL} OSINT SAN.{COLORS.GNSL}
+ {COLORS.WHSL}Update{COLORS.GNSL} RED Alert v-3.0 
  """
 
 
