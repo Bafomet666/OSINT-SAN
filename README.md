@@ -41,7 +41,7 @@ https://t.me/osint_san_framework
 
      hunter /OSINT SAN 3.0 RED OSINTplugins/maildb.py hunter.io [https://hunter.io/api]
 
-     ZoomEye api вход проходит через авторизацию.
+     ZoomEye API, вход проходит путем авторизации.
      
 ---
      
