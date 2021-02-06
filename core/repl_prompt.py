@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from core.banner import show_banner
+from utils.banner import show_banner
 from plugins.censys import censys_ip
 from plugins.dnsdump import dnsmap
 from plugins.honeypot import honeypot

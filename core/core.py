@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # Developer by Bafomet
-from core.banner import show_banner
+from utils.banner import show_banner
 from utils import COLORS
 
 import os
