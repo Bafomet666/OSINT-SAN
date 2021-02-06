@@ -4,6 +4,16 @@ import shodan
 from core.config import shodan_api
 
 api = shodan.Shodan(shodan_api)
+
+def check_shodan_api():
+    try:
+        api.info()
+    except shodan.APIError:
+        print("API ключ Shodan'а невалиден!")
+        return False
+    else:
+        return True
+
 #color
 R = "\033[31m"   # Red
 G = "\033[1;34m" # Blue

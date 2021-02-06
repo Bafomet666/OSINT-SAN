@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from utils.banner import show_banner
+from utils import COLORS
 from prompt_toolkit import prompt
 from osintsan import menu
 
@@ -25,16 +26,20 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             continue
 
         if choice == 1:
-            from plugins.shodan_io import shodan_host
+            from plugins.shodan_io import shodan_host, check_shodan_api
             from plugins.censys import censys_ip
 
-            print()
-            ip = prompt("  └──> Введите IP адрес : ")
+            if not check_shodan_api():
+                show_banner(clear=True)
+                print(f"{COLORS.REDL}`shodan_api` не валиден, поправь в core/config.py токен!{COLORS.REDL}")
+            else:
+                print()
+                ip = prompt("  └──> Введите IP адрес : ")
 
-            show_banner(clear=True)
+                show_banner(clear=True)
 
-            shodan_host(ip)
-            censys_ip(ip)
+                shodan_host(ip)
+                censys_ip(ip)
 
         elif choice == 2:
             from plugins.domain import domain
