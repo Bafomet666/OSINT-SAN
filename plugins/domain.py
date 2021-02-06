@@ -15,6 +15,7 @@ from .webosint.header import header
 from .webosint.crawler import crawler
 from .webosint.who.whoami import whoami
 from .portscan import PortScan
+from utils.banner import show_banner
 
 R = '\033[31m'   # Red
 G = '\033[1;34m' # Blue
@@ -23,7 +24,7 @@ W = '\033[0m'    # white
 O = '\033[45m'   # Purple
 
 # Checking whether the target host is alive or dead
-def CheckTarget(host,port):
+def CheckTarget(host, port):
     s =  socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     result = s.connect_ex((host, port))
 
@@ -35,14 +36,12 @@ def CheckTarget(host,port):
 # Main Method
 def domain(host,port):
 
-    if CheckTarget(host,port)==True:
-        os.system("clear")
-        os.system("cd core;python3 banner.py")
+    if CheckTarget(host, port) == True:
+        show_banner(clear=True)
         print("\n Выбирай опцию \n")
-        Menu(host,port)
+        Menu(host, port)
     else:
         print("The Host is Unreachable \n")
-        exit()
 
 
 NmapFunctions = {
@@ -58,7 +57,7 @@ def nmaprec(host,port):
             print("1. Scan Default Ports (22-443)")
             print("2. Enter Custom Range")
             print("3. Back to Main Menu")
-            print('')
+            print()
             Choice = int(input(">> "))
             if (Choice >= 0) and (Choice < 3):
                 NmapFunctions[Choice](host, port)
@@ -112,9 +111,8 @@ def Menu(host,port):
         if (Selection >= 0) and (Selection <=12):
             MainFunctions[Selection](host, port)
         elif Selection == 99:
-            os.system("clear")
-            os.system("cd core;python3 banner.py")
+            show_banner(clear=True)
             return
         else:
             print("Ошибка: выберите подходящий вариант")
-        print('')
+        print()
