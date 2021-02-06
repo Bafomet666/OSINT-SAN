@@ -2,20 +2,6 @@
 from __future__ import unicode_literals
 
 from utils.banner import show_banner
-from plugins.censys import censys_ip
-from plugins.dnsdump import dnsmap
-from plugins.honeypot import honeypot
-from plugins.shodan_io import shodan_host
-from plugins.domain import domain
-from plugins.Phonenumber import Phonenumber
-from plugins.reverseimagesearch import reverseimagesearch
-from plugins.metadata import gps_analyzer
-from plugins.macaddress import MacAddressLookup
-from plugins.ipaddress import IPHeatmap
-from plugins.torrent import torrent
-from plugins.proxy import ip2Proxy
-from plugins.maildb import maildb
-from plugins.Username import user
 from prompt_toolkit import prompt
 from osintsan import menu
 
@@ -39,6 +25,9 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             continue
 
         if choice == 1:
+            from plugins.shodan_io import shodan_host
+            from plugins.censys import censys_ip
+
             print()
             ip = prompt("  └──> Введите IP адрес : ")
 
@@ -48,6 +37,8 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             censys_ip(ip)
 
         elif choice == 2:
+            from plugins.domain import domain
+
             host = input(" └──> Введите хостинг либо IP адрес : ")
             port = ""
 
@@ -70,13 +61,17 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             domain(host, port)
 
         elif choice == 3:
+            from plugins.Phonenumber import Phonenumber
             print()
             ph = prompt(" └──> Введи мобильный номер телефона с +7... : ")
 
             show_banner(clear=True)
+
             Phonenumber(ph)
 
         elif choice == 4:
+            from plugins.dnsdump import dnsmap
+
             print("\n Работает только с (.com .ru)\n")
             dnsmap_inp = prompt("    └──> Введите url : ")
 
@@ -85,6 +80,8 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 5:
+            from plugins.metadata import gps_analyzer
+
             print("\n   Пример пути: /home/bafomet/Desktop/deanon.png\n")
             img_path = prompt(" └──> Укажите путь до фотографии :")
 
@@ -93,6 +90,8 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             gps_analyzer(img_path)
 
         elif choice == 6:
+            from plugins.reverseimagesearch import reverseimagesearch
+
             print("\n  Пример пути: /home/bafomet/Desktop/deanon.png\n")
             img = prompt(" └──> Укажите путь до фотографии :")
 
@@ -101,6 +100,8 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             reverseimagesearch(img)
 
         elif choice == 7:
+            from plugins.honeypot import honeypot
+
             print()
             hp_inp = prompt(" └──> Введите IP адрес : ")
 
@@ -109,6 +110,8 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             honeypot(hp_inp)
 
         elif choice == 8:
+            from plugins.macaddress import MacAddressLookup
+
             print()
             mac = prompt(" └──> Ожидаю ввод MAC адреса :")
 
@@ -124,6 +127,8 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 10:
+            from plugins.torrent import torrent
+
             print()
             ip_ = prompt(" └──> Введите IP адрес :")
 
@@ -140,9 +145,12 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             os.system("cd module;python3 subzone.py")
 
         elif choice == 13:
+            from plugins.maildb import maildb
+
             print("\n Пример :google.com\n")
             web = prompt(" └──> Введи домен организации :")
             show_banner(clear=True)
+
             maildb(web)
 
         elif choice == 14:
