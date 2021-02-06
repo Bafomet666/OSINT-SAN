@@ -68,7 +68,6 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
                     break
 
             domain(host, port)
-            continue
 
         elif choice == 3:
             print()
@@ -118,7 +117,9 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             MacAddressLookup(mac)
 
         elif choice == 9:
-            os.system("cd module/gui;python3 gui.py")
+            from module.gui import run_gui
+
+            run_gui()
 
             show_banner(clear=True)
 

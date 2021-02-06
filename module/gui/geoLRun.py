@@ -1,19 +1,19 @@
 #!/usr/bin/python
 #by bafomet
-import os, sys
-import time
+import os
 import math
 import socket
 import urllib.request
 from urllib.request import urlopen
 from json import load
-from PIL import Image, ImageDraw
+from PIL import Image
 
 import wx  # use wx to build the UI.
 from geopy.distance import geodesic
 
-import geoLGobal as gv
-import geoLPanel as gp
+from module.gui import geoLGobal as gv
+from module.gui import geoLPanel as gp
+
 
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
@@ -170,5 +170,11 @@ class MyApp(wx.App):
         mainFrame.Show(True)
         return True
 
-app = MyApp(0)
-app.MainLoop()
+
+def main():
+    app = MyApp(0)
+    app.MainLoop()
+
+
+if __name__ == '__main__':
+    main()

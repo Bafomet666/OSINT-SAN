@@ -1,7 +1,9 @@
+from module.gui import geoLGobal as gv
+
 import wx
 import webbrowser
 from datetime import datetime
-import geoLGobal as gv
+
 
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
@@ -173,5 +175,3 @@ class PanelCtrl(wx.Panel):
             self.detailTC.Clear()
         else:
             self.detailTC.AppendText(" - %s \n" %str(data))
-            
-            
