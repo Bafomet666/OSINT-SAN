@@ -1,7 +1,6 @@
 import IP2Proxy
 import re
 import requests
-from plugins.api import *
 from plugins.webosint.who.whois import *
 #Developer by Bafomet
 
@@ -25,10 +24,8 @@ def ip2Proxy(IP):
             print("Usage:" + record['usage_type'])
             print("ASN:" + record['asn'])
             print("Name:" + record['as_name'])
-            api_key = ipstack()
-            if api_key == "":
-                print("Add you ipstack api key to src/api.py")
-                exit()
+            if not ipstack_api:
+                print("Add you ipstack api key to settings.py")
             r = requests.get("http://api.IPstack.com/" + IP + "?access_key=" + api_key)
             response = r.json()
             print("Latitude :"+" {latitude}".format(**response))
