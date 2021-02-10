@@ -2,38 +2,45 @@ import webbrowser
 from PIL import Image
 from PIL.ExifTags import *
 
+
 def get_exif(fn):
+    print('[ + ]' + 'Проверка Metadata...' + '\n')
     try:
-        ret = {}
-        print ('[ + ]' + 'Проверка Metadata...' + '\n')
         i = Image.open(fn)
-        info = i._getexif()
-        if str(info) == "None":
-            print("Метаданные не очень информативны:")
-            return -1
-        for tag, value in info.items():
-            decoded = TAGS.get(tag, tag)
-            ret[decoded] = value
-        return ret
     except IOError:
-        print('')
-        print("ERROR : Файл не найден")
-        exit()
+        print("Error: Файл не найден")
+        return -1
+
+    info = i._getexif()
+    if not info:
+        print("Метаданные не очень информативны:")
+        return -1
+
+    ret = {}
+    for tag, value in info.items():
+        decoded = TAGS.get(tag, tag)
+        ret[decoded] = value
+
+    return ret
+
 
 def gps_analyzer(img_path):
+    exif_data = get_exif(img_path)
 
-    a = get_exif(img_path)
-
-    if a==-1:
+    if exif_data == -1:
         return
-    for x,y in a.items():
-        print("%s : %s" %(x, y))
 
-    if "GPSInfo" in a:
-        lat = [float(x) / float(y) for x, y in a['GPSInfo'][2]]
-        latref = a['GPSInfo'][1]
-        lon = [float(x) / float(y) for x, y in a['GPSInfo'][4]]
-        lonref = a['GPSInfo'][3]
+    for x, y in exif_data.items():
+        print(f"{x} : {y}")
+
+    gps_info = exif_data.get("GPSInfo")
+
+    if gps_info:
+        lat = [float(x) / float(y) for x, y in gps_info[2]]
+        latref = gps_info[1]
+
+        lon = [float(x) / float(y) for x, y in gps_info[4]]
+        lonref = gps_info[3]
 
         lat = lat[0] + lat[1] / 60 + lat[2] / 3600
         lon = lon[0] + lon[1] / 60 + lon[2] / 3600
@@ -41,6 +48,7 @@ def gps_analyzer(img_path):
             lat = -lat
         if lonref == 'W':
             lon = -lon
+
         map_it(lat, lon)
 
     else:
@@ -50,13 +58,14 @@ def gps_analyzer(img_path):
 
 def map_it(lat, lon):
     # Prints latitude and longitude values
-    print('')
-    print("Accurate Latitude  : %s" % lat)
-    print("Accurate Longitude : %s" % lon)
-    print('')
-    # Creates the URL for the map using the latitude and longitude values
-    maps_url = "https://maps.google.com/maps?q=%s,+%s" % (lat, lon)
+    print()
+    print(f"Accurate Latitude  : {lat}")
+    print(f"Accurate Longitude : {lon}")
+    print()
     # Prompts the user to launch a web browser with the map
+    query = f"{lat},+{lon}"
+    maps_url = f"https://maps.google.com/maps?q={query}"
+
     openWeb = input("Open GPS location in web broser? (Y/N) ")
     if openWeb.upper() == 'Y':
         webbrowser.open(maps_url, new=2)

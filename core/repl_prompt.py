@@ -89,7 +89,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             from plugins.metadata import gps_analyzer
 
             print("\n   Пример пути: /home/bafomet/Desktop/deanon.png\n")
-            img_path = prompt(" └──> Укажите путь до фотографии :")
+            img_path = input(" └──> Укажите путь до фотографии :")
 
             show_banner(clear=True)
 
