@@ -80,11 +80,10 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             from plugins.dnsdump import dnsmap
 
             print("\n Работает только с (.com .ru)\n")
-            dnsmap_inp = prompt("    └──> Введите url : ")
-
-            dnsmap(dnsmap_inp)
+            dnsmap_inp = input("    └──> Введите url : ")
 
             show_banner(clear=True)
+            dnsmap(dnsmap_inp)
 
         elif choice == 5:
             from plugins.metadata import gps_analyzer
