@@ -99,7 +99,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             from plugins.reverseimagesearch import reverseimagesearch
 
             print("\n  Пример пути: /home/bafomet/Desktop/deanon.png\n")
-            img = prompt(" └──> Укажите путь до фотографии :")
+            img = input(" └──> Укажите путь до фотографии :")
 
             show_banner(clear=True)
 
