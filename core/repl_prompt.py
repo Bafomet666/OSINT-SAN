@@ -66,13 +66,15 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             domain(host, port)
 
         elif choice == 3:
-            from plugins.Phonenumber import Phonenumber
-            print()
-            ph = prompt(" └──> Введи мобильный номер телефона с +7... : ")
+            from plugins.Phonenumber import phone_number, check_phone_api_token
 
-            show_banner(clear=True)
-
-            Phonenumber(ph)
+            if not check_phone_api_token():
+                show_banner(clear=True)
+                print(f"{COLORS.REDL}phone api невалиден! (settings.py){COLORS.REDL}")
+            else:
+                ph = input(" └──> Введи мобильный номер телефона с +7... : ")
+                show_banner(clear=True)
+                phone_number(ph)
 
         elif choice == 4:
             from plugins.dnsdump import dnsmap
