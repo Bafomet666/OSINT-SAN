@@ -1,252 +1,271 @@
-#by bafomet
-#imports
+# by bafomet
+# imports
 from colorama import init, Fore, Back, Style
 import requests
 import json
-import argparse
 import socket
-import time
 import urllib3
 import subprocess
-import os
-import sys
+import io
 import time
 
-R = '\033[31m'   # Red
-N = '\033[1;37m' # White
-G = '\033[32m'   # Green
-O = '\033[0;33m' # Orange
-B = '\033[1;34m' # Blue
-P = '\033[1;35m' # Purple
+R = '\033[31m'  # Red
+N = '\033[1;37m'  # White
+G = '\033[32m'  # Green
+O = '\033[0;33m'  # Orange
+B = '\033[1;34m'  # Blue
+P = '\033[1;35m'  # Purple
 
 init(autoreset=True)
 
-active_subdomains = []
-nameservers = []
 
-class Abuse_certificate_transparency:
-	def __init__(self, domain, output):
-		self.domain = domain
-		self.output = output
+def get_host(domain):
+    return urllib3.util.url.parse_url(domain).host
 
 
-	def parse_url(self):
-		#parse host from scheme, to use for certificate transparency abuse
-		try:
-			host = urllib3.util.url.parse_url(self.domain).host
-		except Exception as e:
-			print(f' Недействительный - домен, попробуйте еще раз...')
-			sys.exit(1)
-		return host
+class AbuseCertificateTransparency:
 
-	def request_json(self):
-		#request json data to get list of registered subdomains with cert trans records
-		subdomains = []
-		try:
-			r = requests.get(f'https://crt.sh/?q=%.{abuse.parse_url()}&output=json')
-			#r = requests.get('https://crt.sh/?q=%.facebook.com&output=json')
-			if r.status_code != 200:
-				print('{!} host status-code: %s\n ~ unable to access records using this abuse certificate transparency method' % (r.status_code))
-			else:
-				try:
-					json_data = json.loads(r.text)
-					for sub in (json_data):
-						subdomains.append(sub['name_value'])
-				except Exception as e:
-					print(f'json_data:Error {e}')
-					pass
-		except Exception as e:
-			print(f'request_json//Error: {e}')
-			pass
-		return subdomains
+    def __init__(self, domain, output):
+        self.domain = domain
+        self.output = output
 
-	def active_subs(self):
-		#check registered subdomains to see if active or not
-		global active_subdomains
+    def run(self):
+        subdomains = self.request_json()
+        active_subdomains = self.active_subs(subdomains)
+        self.write_file(subdomains, active_subdomains)
 
-		for sub in abuse.request_json():
-			try:
-				sub = socket.gethostbyname_ex(sub)
-				if sub in active_subdomains:
-					pass
-				else:
-					active_subdomains.append(sub)
-			except:
-				continue
-		number_all = len(abuse.request_json())
-		number_active = len(active_subdomains)
+    def request_json(self):
+        #  request json data to get list of registered subdomains with cert trans records
+        r = requests.get(
+            "https://crt.sh",
+            params={
+                "q": f"%.{self.domain}",
+                "output": "json",
+            }
+        )
+        if r.status_code != 200:
+            print(f'[!] host status-code: {r.status_code}')
+            print('~ unable to access records using this abuse certificate transparency method')
+            return
 
-		Style.RESET_ALL
+        json_data = json.loads(r.text)
+        subdomains = []
+        for sub in json_data:
+            subdomains.append(sub['name_value'])
 
-		try:
-			print('\n',Fore.GREEN+'''\n\n{!} There are %s %s %s''' %
-				(Fore.RED+Back.BLACK+str(number_all), Fore.RED+Back.BLACK+'  REGISTERED', Fore.GREEN+'  subdomains for this domain.'))
-			time.sleep(2)
+        return subdomains
 
-			index = Fore.GREEN+Back.BLACK+str('  INDEX:green')
-			sub_red = Fore.RED+Back.BLACK+str('  SUBDOMAIN:red')
-			line = Fore.CYAN+Back.BLACK+str('*****************************')
-			print('\n%s\n%s %s\n%s\n' % (line, index, sub_red, line))
-			time.sleep(1.3)
+    def active_subs(self, subdomains):
+        # check registered subdomains to see if active or not
 
-			for index, sub in enumerate(abuse.request_json()):
-				print(Fore.GREEN+str(index+1),Fore.RED+str(sub))
+        active_subdomains = []
+        for sub in subdomains:
+            try:
+                sub = socket.gethostbyname_ex(sub)
+            except:
+                continue
+            else:
+                if sub not in active_subdomains:
+                    active_subdomains.append(sub)
 
-			print('\n',Fore.GREEN+'''\n\n{!} There are %s %s %s''' %
-				(Fore.RED+Back.BLACK+str(number_active), Fore.RED+Back.BLACK+'ACTIVE', Fore.GREEN+'  subdomains for this domain.'))
-			time.sleep(2)
+        number_all = len(subdomains)
+        number_active = len(active_subdomains)
 
-			index = Fore.GREEN+Back.BLACK+str('  INDEX:green')
-			dns_white = Fore.WHITE+Back.BLACK+str('  DNS SERVER:white')
-			sub_red = Fore.RED+Back.BLACK+str('  SUBDOMAIN:red')
-			ip_yell = Fore.BLUE+Back.BLACK+str('  IP_ADDR:blue')
-			line = Fore.CYAN+Back.BLACK+str('************************************************************')
-			print('\n%s\n%s %s %s %s\n%s\n' % (line, index, dns_white, sub_red, ip_yell, line))
-			time.sleep(1.3)
+        Style.RESET_ALL
 
-			for index, sub in enumerate(active_subdomains):
-				print(Fore.GREEN+str(index+1), Fore.WHITE+Back.BLACK+str(sub[0]), Fore.RED+Back.BLACK+str(sub[1]), Fore.BLUE+Back.BLACK+str(sub[2]))
+        try:
+            print()
+            print(
+                f"{Fore.GREEN}\n\n"
+                f"[!] There are {Fore.RED + Back.BLACK + str(number_all)}"
+                f" {Fore.RED + Back.BLACK + '  REGISTERED'}"
+                f" {Fore.GREEN + '  subdomains for this domain.'}"
+            )
+            time.sleep(2)
 
-		except Exception as e:
-			print(f'active_subdomains//Error: {e}')
-			pass
+            index = Fore.GREEN + Back.BLACK + str('  INDEX:green')
+            sub_red = Fore.RED + Back.BLACK + str('  SUBDOMAIN:red')
+            line = Fore.CYAN + Back.BLACK + str('*****************************')
+            print()
+            print(line)
+            print(f"{index} {sub_red}")
+            print(line)
+            time.sleep(1.3)
 
-		return active_subdomains
+            for index, sub in enumerate(subdomains):
+                print(Fore.GREEN + str(index + 1), Fore.RED + str(sub))
+
+            print()
+            print(
+                f"{Fore.GREEN}\n\n[1] There are "
+                f"{Fore.RED + Back.BLACK + str(number_active)} "
+                f"{Fore.RED + Back.BLACK + 'ACTIVE'} "
+                f"{Fore.GREEN + '  subdomains for this domain.'}"
+            )
+
+            time.sleep(2)
+
+            index = Fore.GREEN + Back.BLACK + str('  INDEX:green')
+            dns_white = Fore.WHITE + Back.BLACK + str('  DNS SERVER:white')
+            sub_red = Fore.RED + Back.BLACK + str('  SUBDOMAIN:red')
+            ip_yell = Fore.BLUE + Back.BLACK + str('  IP_ADDR:blue')
+            line = Fore.CYAN + Back.BLACK + str(
+                '************************************************************')
+
+            print()
+            print(line)
+            print(f"{index} {dns_white} {sub_red} {ip_yell}")
+            print(line)
+
+            time.sleep(1.3)
+
+            for index, sub in enumerate(active_subdomains):
+                print(
+                    Fore.GREEN + str(index + 1),
+                    Fore.WHITE + Back.BLACK + str(sub[0]),
+                    Fore.RED + Back.BLACK + str(sub[1]),
+                    Fore.BLUE + Back.BLACK + str(sub[2]),
+                )
+
+        except Exception as e:
+            print(f'active_subdomains//Error: {e}')
+            pass
+
+        return active_subdomains
+
+    def write_file(self, subdomains, active_subdomains):
+        # write registerd subdomains and active subdomains to file
+
+        try:
+            if self.output is not None:
+                reg = '  REGISTERED_' + self.output
+                active = '  ACTIVE_' + self.output
+
+                with open(reg, 'w') as r:
+                    for index, sub in enumerate(subdomains):
+                        r.write(f'{index} {sub}\n')
+
+                with open(active, 'w') as a:
+                    for index, sub in enumerate(active_subdomains):
+                        a.write(f'{index} {sub}\n')
+
+        except Exception as e:
+            print(f'write_file//Error: {e}')
 
 
-	def write_file(self,):
-		#write registerd subdomains and active subdomains to file
-		global active_subdomains
-		try:
-			if self.output is not None:
-				reg = '  REGISTERED_'+self.output
-				active = '  ACTIVE_'+self.output
-				with open(reg,'w') as r:
-					for index, sub in enumerate(abuse.request_json()):
-						text = f'{index} {sub}\n'
-						r.write(text)
-				with open(active,'w') as a:
-					for index, sub in enumerate(active_subdomains):
-						text = f'{index} {sub}\n'
-						a.write(text)
-		except Exception as e:
-			print(f'write_file//Error: {e}')
-			pass
+class DnsZoneTransfer:
+    def __init__(self, domain, output):
+        self.domain = domain
+        self.output = output
 
-class Dns_zone_transfer:
-	def __init__(self, output):
-		self.domain = abuse.parse_url()
-		self.output = output
+    def run(self):
+        nameservers = self.nslookup()
+        self.dns_records(nameservers)
 
-	def nslookup(self):
-		global nameservers
-		#nslookup to find nameservers of target domain
-		dns_white = Fore.RED+Back.BLACK+str('Dns records')
-		sec_bit = Fore.GREEN+Back.BLACK+str('for this domain.\n')
-		print(Fore.GREEN+Back.BLACK+str('\n\n\n{!} %s %s' % (dns_white, sec_bit)))
-		line = Fore.CYAN+Back.BLACK+str('************************************************************')
-		records = Fore.GREEN+Back.BLACK+str('DNS RECORDS:green')
-		print('%s\n%s\n%s\n' % (line, records, line))
-		try:
-			with open('nslookup.txt','w') as output_vale:
-				cmd = subprocess.call(f'nslookup -type=ns {self.domain}', stdout=output_vale)
-			with open('nslookup.txt','r') as ns2:
-				for line in ns2.readlines():
-					if 'nameserver' in line:
-						line = line.split(' ')[2]
-						nameservers.append(line)
+    def nslookup(self):
+        # nslookup to find nameservers of target domain
+        dns_white = Fore.RED + Back.BLACK + str('Dns records')
+        sec_bit = Fore.GREEN + Back.BLACK + str('for this domain.')
+        print(Fore.GREEN + Back.BLACK + str(f'\n\n\n[!] {dns_white} {sec_bit}'))
+        print()
 
-			os.remove('nslookup.txt')
-			#print(nameservers)
-		except Exception as e:
-			#print(e)
-			pass
-		return nameservers
+        line = Fore.CYAN + Back.BLACK + str(
+            '************************************************************')
+        records = Fore.GREEN + Back.BLACK + str('DNS RECORDS:green')
+        print(line)
+        print(records)
+        print(line)
 
-	def dns_records(self):
-		global nameservers
-		#zone transfer - to get dns records if dns server is not configured properly
-		count = 0
-		try:
-			for ns in nameservers:                                                 
-                                                      
-				with open('gogo.txt','w') as go:
-					go.write(f'nslookup\nset type=all\nserver {ns}\nls -d {abuse.parse_url()}\n.\n')
+        result = subprocess.check_output(["nslookup", "-type=ns", self.domain]).decode()
+        nameservers = []
+        for line in result.splitlines():
+            nameserver = line.split(' ')[2]
+            nameservers.append(nameserver)
 
-				if self.output is not None:
-					filename = 'DNS_RECORDS_%s' % (self.output)
-					if count == 0:
-						with open(filename,'w') as fp:
-							fp.write('**********DNS RECORDS**********\n\n')
-							with open('gogo.txt','r') as go:
-								cmd = subprocess.call('cmd.exe', stdin=go, stdout=fp)
-							count +=1
-					else:
-						with open(filename,'a') as write_here:
-							with open('gogo.txt','r') as go:
-								cmd = subprocess.call('cmd.exe', stdin=go, stdout=write_here)
-				else:
-					with open('gogo.txt','r') as fp:
-						cmd = subprocess.call('cmd.exe', stdin=fp)
-					fp.close()
-		except Exception as e:
-			print(e)
+        return nameservers
 
-		try:
-			os.remove('gogo.txt')
-		except:
-			pass
+    def dns_records(self, nameservers):
+        # zone transfer - to get dns records if dns server is not configured properly
+        filename = f'DNS_RECORDS_{self.output}'
+        command = 'nslookup\n' \
+                  'set type=all\n' \
+                  'server\n' \
+                  '{ns}\n' \
+                  f'ls -d {self.domain}\n' \
+                  f'.\n'
+        with open(filename, 'w') as fp:
+            fp.write('**********DNS RECORDS**********\n\n')
 
-		try:
-			with open(filename,'r') as rd:
-				for line in rd.readlines():
-					print(line)
-		except:
-			pass
+            for ns in nameservers:
 
-if __name__=='__main__':
-    
+                command_ = command.format(ns=ns)
+
+                if self.output is not None:
+                    subprocess.Popen(
+                        ['cmd.exe'],
+                        stdin=subprocess.PIPE,
+                        stdout=fp,
+                    ).communicate(command_.encode())
+                else:
+                    subprocess.Popen(
+                        ['cmd.exe'],
+                        stdin=subprocess.PIPE,
+                    ).communicate(command_.encode())
+
+        try:
+            with open(filename, 'r') as rd:
+                for line in rd.readlines():
+                    print(line)
+        except:
+            pass
+
+
+def subzone():
     while True:
         try:
-            #l3e86
-            print("")
-            domain = input(B+" Вводите url : ")
-            print("")
-            output = input(G+" Укажите имя выходного файла : ")
-            print("")
-            print(R+" Подождите идет сбор информации, время ожидания одна минута")
-            print("")
-            print(R+" Данные будут сохранены в папке module.")
+            # l3e86
+            print()
+            url = input(f"{B} Вводите url : ")
+            print()
+            output = input(f"{G} Укажите имя выходного файла : ")
+            print()
+            print(f"{R} Подождите идет сбор информации, время ожидания одна минута")
+            print()
+            print(f"{R} Данные будут сохранены в папке module.")
             time.sleep(1)
             ############
-            
-	        # Abuse certificate authority to get all and active subdomains of a domain
-            abuse = Abuse_certificate_transparency(domain, output)
-            abuse.parse_url()
-            abuse.request_json()
-            abuse.active_subs()
-            abuse.write_file()
+
+            # Abuse certificate authority to get all and active subdomains of a domain
+            domain = get_host(url)
+            abuse = AbuseCertificateTransparency(domain, output)
+            abuse.run()
 
             # Dns zone transfer to see if any information is leaking
-            zone = Dns_zone_transfer(output)
-            zone.nslookup()
-            zone.dns_records()
-            
-            print(R+" Для выхода введи 99")
+            zone = DnsZoneTransfer(domain, output)
+            zone.run()
+
+            print(f"{R} Для выхода введи 99")
             try:
-                cheak_input = input('> ')
-                if cheak_input == '99':
-                    os.system("cd ..;python3 osintsan.py")
-                elif cheak_input == 0:
-                    sys.exit()
+                check_input = input('> ')
+
+                if check_input == '99':
+                    return
+
+                elif len(check_input) == 0:
                     print('[!] Пока')
+                    return
+
                 else:
                     pass
-                    
+
             except KeyboardInterrupt:
-                sys.exit()
-	        
+                return
+
         except KeyboardInterrupt:
 
             print(':> SubZone Completed')
-            sys.exit(0)
+            return
+
+
+if __name__ == '__main__':
+    subzone()
