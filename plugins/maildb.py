@@ -2,6 +2,8 @@
 #-*- coding: utf-8 -*-
 #Developer by Bafomet
 #и одного импорта хватит с головой
+from settings import maildb_api
+
 import requests
 
 # Set color
@@ -12,21 +14,40 @@ O = '\033[0;33m' # Orange
 B = '\033[1;34m' # Blue
 P = '\033[1;35m' # Purple
 
+
+def check_maildb_token():
+    return not maildb_api
+
+
 def maildb(emailaddress):
-    if  ("@" and ".com") or ("@" and ".in") in emailaddress:
-        req=requests.get("https://api.hunter.io/v2/domain-search?domain="+emailaddress+"&api_key=замени меня н apihttps://api.hunter.io")
-        j=req.json()
-        print(R+" [ + ] "+ G +"Собрано из домена "+emailaddress+"...\n")
-        for i in range(len(j['data']['emails'])):
-            print("  Email ID   :",j['data']['emails'][i]['value'])
-            print("  First Name :",j['data']['emails'][i]['first_name'])
-            print("  Last Name  :",j['data']['emails'][i]['last_name'])
-            if j['data']['emails'][i]['position']!=None:
-                print("  Position   :",j['data']['emails'][i]['position'])
-            if j['data']['emails'][i]['linkedin']!=None:
-                print("  Linkedin   :",j['data']['emails'][i]['linkedin'])
-            if j['data']['emails'][i]['twitter']!=None:
-                print("Twitter    :",j['data']['emails'][i]['twitter'])
+    if "@" in emailaddress and (".com" in emailaddress or ".in" in emailaddress):
+
+        url = "https://api.hunter.io/v2/domain-search"
+        response = requests.get(
+            url,
+            params={
+                "domain": emailaddress,
+                "api_key": maildb_api,
+            },
+        )
+
+        result = response.json()
+        print(f"{R} [ + ] {G}Собрано из домена {emailaddress}")
+        print()
+
+        emails = result['data']['emails']
+        for email in emails:
+            print(f"  Email ID   :{email['value']}")
+            print(f"  First Name :{email['first_name']}")
+            print(f"  Last Name  :{email['last_name']}")
+
+            if email['position']:
+                print(f"  Position   :{email['position']}")
+            if email['linkedin']:
+                print(f"  Linkedin   :{email['linkedin']}")
+            if email['twitter']:
+                print(f"   Twitter    :{email['twitter']}")
             print()
+
     else:
-        print(R+" Такого домена не существует хули ты мне пиздишь")
+        print(f"{R} Такого домена не существует хули ты мне пиздишь")

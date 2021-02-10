@@ -158,13 +158,16 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             subzone()
 
         elif choice == 13:
-            from plugins.maildb import maildb
+            from plugins.maildb import maildb, check_maildb_token
 
-            print("\n Пример :google.com\n")
-            web = prompt(" └──> Введи домен организации :")
-            show_banner(clear=True)
+            if not check_maildb_token():
+                print(f"{COLORS.REDL}Не установлен maildb_api (в settings.py){COLORS.REDL}")
+            else:
+                print("\n Пример :google.com\n")
+                web = input(" └──> Введи домен организации :")
+                show_banner(clear=True)
 
-            maildb(web)
+                maildb(web)
 
         elif choice == 14:
             os.system("cd exploit_database;python3 startadb.py")
