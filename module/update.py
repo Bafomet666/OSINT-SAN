@@ -1,15 +1,12 @@
 ##!/usr/bin/python
-#-*- coding: utf-8 -*-
-#Developer by Bafomet
-import subprocess
+# -*- coding: utf-8 -*-
+# Developer by Bafomet
+
+from utils import COLORS
+
 import os
 import sys
-import readline
-#set color
-WHSL = '\033[1;32m'
-ENDL = '\033[0m'
-REDL = '\033[0;31m'
-GNSL = '\033[1;34m'
+
 os.system("printf '\033]2;OSINT Update\a'")
 os.system('clear')
 page_1 = '''{1}
@@ -40,32 +37,32 @@ page_1 = '''{1}
 
  {0}[ {1}99{0} ] {2}Выйти...       {0}[ {1}0{0} ] {2} Загрузить обновление...                  
   
-'''.format(GNSL, REDL, WHSL)
+'''.format(COLORS.GNSL, COLORS.REDL, COLORS.WHSL)
 
-def main():
+
+def update():
     print(page_1)
-    option = input(REDL + " └──>" + ENDL +" Введите 99 для выхода : " +ENDL + " ")
+    option = input(f"{COLORS.REDL} └──>{COLORS.ENDL} Введите 99 для выхода : {COLORS.ENDL} ")
     
-    while(1):
+    while True:
         if option == '99':
-            print("")
-            print(("{1} [{0} + {1}]{2} Спасибо за использование нашего Exploit.").format(REDL, GNSL, WHSL))
-            os.system("exit")
-            exit()
-            option = input(ENDL + ""+GNSL+"["+REDL + " menu " + GNSL + "]"+ENDL + " :")
+            print()
+            print(f"{COLORS.GNSL} [{COLORS.REDL} + {COLORS.GNSL}]{COLORS.WHSL} Спасибо за использование нашего Exploit.")
+            return
 
         elif option == '0':
-            print(("{1}[ {0}+{1} ]{2} Загрузка с github...{3}").format(REDL, GNSL, WHSL, ENDL))
+            print(f"{COLORS.GNSL}[ {COLORS.REDL}+{COLORS.GNSL} ]{COLORS.WHSL} Загрузка с github...{COLORS.ENDL}")
             os.system("git clone https://github.com/Bafomet666/OSINT-SAN")
             os.system("cd ..;python3 osintsan.py")
-            exit()
-            break
-        else:
-            os.system("python3 update.py")
-try:
-    main()
+            return
 
-except KeyboardInterrupt:
-    sys.exit(1)
-except KeyboardInterrupt:
-        print ("Ctrl+C pressed...")
+        else:
+            update()
+
+
+if __name__ == '__main__':
+    try:
+        update()
+    except KeyboardInterrupt:
+        print("Ctrl+C pressed...")
+        sys.exit(1)

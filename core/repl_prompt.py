@@ -186,7 +186,8 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 18:
-            os.system("cd module;python3 update.py")
+            from module.update import update
+            update()
 
             show_banner(clear=True)
 
