@@ -124,7 +124,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             from plugins.macaddress import MacAddressLookup
 
             print()
-            mac = prompt(" └──> Ожидаю ввод MAC адреса :")
+            mac = input(" └──> Ожидаю ввод MAC адреса :")
 
             show_banner(clear=True)
 
