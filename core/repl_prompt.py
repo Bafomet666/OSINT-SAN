@@ -31,7 +31,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
 
             if not check_shodan_api():
                 show_banner(clear=True)
-                print(f"{COLORS.REDL}`shodan_api` не валиден, поправь в core/config.py токен!{COLORS.REDL}")
+                print(f"{COLORS.REDL}API ключ Shodan'а невалиден! (settings.py){COLORS.REDL}")
             else:
                 print()
                 ip = prompt("  └──> Введите IP адрес : ")
@@ -106,14 +106,19 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             reverseimagesearch(img)
 
         elif choice == 7:
+            from plugins.shodan_io import check_shodan_api
             from plugins.honeypot import honeypot
 
-            print()
-            hp_inp = prompt(" └──> Введите IP адрес : ")
+            if not check_shodan_api():
+                show_banner(clear=True)
+                print(f"{COLORS.REDL}`shodan_api` не валиден, поправь в settings.py токен!{COLORS.REDL}")
+            else:
+                print()
+                hp_inp = input(" └──> Введите IP адрес : ")
 
-            show_banner(clear=True)
+                show_banner(clear=True)
 
-            honeypot(hp_inp)
+                honeypot(hp_inp)
 
         elif choice == 8:
             from plugins.macaddress import MacAddressLookup

@@ -1,18 +1,22 @@
 #Developer by Bafomet
 # -*- coding: utf-8 -*-
 import shodan
-from core.config import shodan_api
+from settings import shodan_api
 
 api = shodan.Shodan(shodan_api)
 
+
 def check_shodan_api():
+    if not shodan_api:
+        return False
+
     try:
         api.info()
     except shodan.APIError:
-        print("API ключ Shodan'а невалиден!")
         return False
-    else:
-        return True
+
+    return True
+
 
 #color
 R = "\033[31m"   # Red
@@ -20,6 +24,7 @@ G = "\033[1;34m" # Blue
 C = "\033[1;32m" # Green
 W = "\033[0m"    # white
 O = "\033[45m"   # Purple
+
 
 def shodan_host(IP):
     try:
