@@ -1,28 +1,34 @@
 #Developer by Bafomet
 # -*- coding: utf-8 -*-
-import sys
-from requests import get
-from core.config import shodan_api
-#color
+import requests
+from settings import shodan_api
+
+# color
 R = "\033[31m"   # Red
 G = "\033[1;34m" # Blue
 C = "\033[1;32m" # Green
 W = "\033[0m"    # white
 O = "\033[45m"   # Purple
 
+
 def honeypot(inp):
-    honey = "https://api.shodan.io/labs/honeyscore/%s?key=%s" % (inp, shodan_api)
+    url = f"https://api.shodan.io/labs/honeyscore/{inp}"
+
     try:
-        result = get(honey).text
+        result = requests.get(url, params={"key": shodan_api}).text
     except:
-        result = None
-        sys.stdout.write("\n%s Нет доступной информации " % bad + "\n")
+        print(f"\nНет доступной информации!")
+        return
+
     if "error" in result or "404" in result:
         print("IP не найден")
         return
+
     elif result:
-            probability = str(float(result) * 10)
-            print(G + " [ + ]" + R + " Вероятность что это Honeypot : %s%%" % (probability) + "\n")
-            print(G + "  На Shodan проверил, там тоже пусто.")
+        probability = str(float(result) * 10)
+        print(f"{G} [ + ]{R} Вероятность что это Honeypot : {probability:0.2f}%")
+        print()
+        print(f"{G}  На Shodan проверил, там тоже пусто.")
+
     else:
         print(" Что-то пошло не так ")
