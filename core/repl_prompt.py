@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from utils.banner import show_banner
 from utils import COLORS
-from prompt_toolkit import prompt
 from osintsan import menu
 
 import subprocess
@@ -16,6 +15,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
     while True:
         print(menu())
         user_input = input(" └──>  Выбери опцию : ")
+
         if len(user_input) == 0:
             print()
             continue
@@ -34,7 +34,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
                 print(f"{COLORS.REDL}API ключ Shodan'а невалиден! (settings.py){COLORS.REDL}")
             else:
                 print()
-                ip = prompt("  └──> Введите IP адрес : ")
+                ip = input("  └──> Введите IP адрес : ")
 
                 show_banner(clear=True)
 
@@ -141,13 +141,15 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             from plugins.torrent import torrent
 
             print()
-            ip_ = prompt(" └──> Введите IP адрес :")
+            ip_ = input(" └──> Введите IP адрес :")
 
             show_banner(clear=True)
 
             torrent(ip_)
 
         elif choice == 11:
+            # TODO
+            # from module import main
             os.system("cd module;python3 main.py")
 
             show_banner(clear=True)
@@ -170,6 +172,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
                 maildb(web)
 
         elif choice == 14:
+            # TODO
             os.system("cd exploit_database;python3 startadb.py")
             show_banner(clear=True)
 
