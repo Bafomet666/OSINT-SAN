@@ -147,7 +147,9 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 12:
-            os.system("cd module;python3 subzone.py")
+            from module.subzone import subzone
+            show_banner(clear=True)
+            subzone()
 
         elif choice == 13:
             from plugins.maildb import maildb
