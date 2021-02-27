@@ -11,7 +11,7 @@
 
 Главное меню Framework, напомню что их 2, второе находится в разработке.
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/menu.png)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/OSINT-menu.png)
 
 В меню вы увидите 45 функций для поиска. От простого до сложного. Сейчас заполнено только одно меню, второе меню начнем пополнять в обновлении 4.0 и выше.
 
@@ -65,7 +65,7 @@ Official public https://t.me/osint_san_framework
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/login.png)
 
-После успешной авторизации вам будет доступно меню с инструментами.
+После успешной авторизации, вам будет доступно меню с инструментами.
 
 ---
 
