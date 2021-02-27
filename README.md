@@ -57,12 +57,13 @@
 
 Инструменты запускаются в двух режимах:
 
-    Если вам нужны функции без root, запускайте терминал:  python3 osintsan.py 
+    Если вам нужны функции без root [ Они зеленой строкой ], запускайте терминал:  python3 osintsan.py 
       
-    Если вам нужны функции root, запускайте терминал: sudo python3 osintsan.py
+    Если вам нужны функции root [ Они зеленой красной ], запускайте терминал: sudo python3 osintsan.py
  
+Official public https://t.me/osint_san_framework
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/autrz.png)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/login.png)
 
 ---
 
