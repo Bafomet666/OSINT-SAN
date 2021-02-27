@@ -5,7 +5,7 @@
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/LOGOup.png)
 
-Адаптация под платформы: Kali Linux * Parrot OS
+Адаптированно под платформы: Kali Linux * Parrot OS
 
 ---
 
