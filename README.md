@@ -5,15 +5,13 @@
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/LOGOup.png)
 
-### Инструмент работает на Kali Linux * Parrot OS, адаптации под другие os и termux пока нет.
-Перед работой с framework, обязательно поддержите нас подпиской на официальный канал, и поставь звезду на репозиторий.
-https://t.me/osint_san_framework
+Адаптация под платформы: Kali Linux * Parrot OS
 
 ---
 
-Как выглядит меню OSINT SAN.
+Главное меню Framework, напомню что их 2, второе находится в разработке.
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/3.0%2001.png)
+/github.com/Bafomet666/screen/blob/main/3.0%2001.png)
 
 В меню вы увидите 45 функций для поиска. От простого до сложного. Сейчас заполнено только одно меню, второе меню начнем пополнять в обновлении 4.0 и выше.
 
