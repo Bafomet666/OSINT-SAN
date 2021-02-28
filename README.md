@@ -39,6 +39,8 @@
      hunter /OSINT SAN 3.0 RED OSINTplugins/maildb.py hunter.io [https://hunter.io/api]
 
      ZoomEye API, вход проходит путем авторизации.
+
+     Обязательно установите завимости в settings.py
      
 ---
      
