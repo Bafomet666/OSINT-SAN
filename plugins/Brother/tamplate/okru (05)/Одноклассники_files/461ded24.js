@@ -1,1 +1,0 @@
-define(function(){var a="__full",b="invisible",c=90;return{activate:function(e){var f=e.getElementsByClassName("media-text_cnt_tx");if(!f.length){return;}f=f[0];var d=e.nextSibling;if(!d||!d.classList.contains("media_more")){return;}if(f.clientHeight>c){e.classList.remove(a);d.classList.remove(b);}else{e.classList.add(a);d.classList.add(b);}}};});
