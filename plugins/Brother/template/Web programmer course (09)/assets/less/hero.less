@@ -1,0 +1,67 @@
+/* ======= Hero Section ======= */
+.hero-section {
+    min-height: 560px;
+    background: @text-color;
+    position: relative;
+    
+    .figure-holder-wrapper {
+        position: absolute;
+        left:0;
+        bottom: 0;
+        width:100%;
+        overflow:hidden;
+    }
+    .figure-holder {
+        position: relative;
+        height: 560px;
+       
+        .figure-image {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index:10;
+        }
+    }
+}
+
+
+.hero-carousel {
+    height: 560px;
+    color: #fff;
+
+    .carousel-inner {
+        .item {
+            height: 560px;
+            background-position: center center;
+        }
+        .item-1 {
+            background-image: url('../images/hero-1.jpg');
+            .background-size(cover);
+        }
+        .item-2 {
+            background-image: url('../images/hero-2.jpg');
+            .background-size(cover);
+        }
+        .item-3 {
+            background-image: url('../images/hero-3.jpg');
+            .background-size(cover);
+        }
+
+        .heading {
+            font-size: 30px;
+            line-height: 1.4;
+            font-weight: bold;
+            margin-top:0;
+            margin-bottom: 15px;
+        }
+        .intro {
+            font-size: 18px;
+            & + .btn {
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
+
+

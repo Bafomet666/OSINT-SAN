@@ -1,0 +1,80 @@
+/* ======= Pricing Section ======= */
+.pricing-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    .section-title {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 36px;
+        font-weight:300;
+    }
+    .intro {
+        color: @text-grey;
+        font-size: 16px;
+        max-width: 760px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+}
+
+.pricing-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    .item {
+        margin-bottom: 30px;
+    }
+    .item-inner {
+        color: #fff;
+        padding: 30px;
+        .border-radius(8px);
+        background: @color-primary;
+        min-height: 390px;
+        a {
+            color: rgba(0, 0, 0, 0.4);
+        }
+    }
+    .item-1 {
+        .item-inner {
+            background: @color-green;
+        }
+    }
+    .item-2 {
+        .item-inner {
+            background: @color-blue;
+        }
+    }
+    .item-3 {
+        .item-inner {
+            background: @color-orange;
+        }
+    }
+    .item-heading {
+        font-weight: 800;
+        font-size: 18px;
+        margin: 0;
+        min-height: 60px;
+    }
+    .price-figure {
+        font-size:46px;
+        margin-bottom: 15px;
+        .currency {
+            vertical-align:super;
+            font-size: 26px;
+            .opacity(0.6);
+        }
+        .number {
+            font-weight: 500;
+        }
+    }
+    .price-desc {
+        margin-bottom: 30px;
+        min-height: 120px;
+    }
+    a.btn {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        &:hover {
+           background: rgba(0, 0, 0, 0.4); 
+        }
+    }
+}

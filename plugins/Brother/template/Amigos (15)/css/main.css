@@ -1,0 +1,120 @@
+html
+body{
+
+  background-position: center center;    
+  background-repeat: no-repeat;    
+  background-attachment: fixed;    
+  background-size: cover;    
+  margin:0;
+  padding:0;
+  margin: 0 auto;
+  overflow: auto;
+
+
+}
+@media only screen and (max-width: 767px)
+
+.back {
+  
+
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+img {
+      
+      display: block;
+    
+      max-width: 100%;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+    }
+
+
+h1
+{
+  font-family: 'Raleway', bolder sans-serif;
+  color: white;
+  text-align: center;
+  font-size:50px ;
+  filter: drop-shadow(0px 0px 8px black);
+  margin: auto;
+  position: fixed;
+  top: 30%;
+  left: 0%;
+  right: 0%;
+}
+h2
+{
+  font-family: 'Raleway', bolder sans-serif;
+  color: white;
+  text-align: center;
+  font-size:30px ;
+  filter: drop-shadow(0px 0px 8px black);
+  margin: auto;
+  position: fixed;
+  top: 3%;
+  left: 0%;
+  right: 60%;
+}
+h3
+{
+  font-family: 'Raleway', bolder sans-serif;
+  color: white;
+  text-align: center;
+  font-size:30px ;
+  filter: drop-shadow(0px 0px 8px black);
+  margin: auto;
+  position: fixed;
+  top: 3%;
+  left: 60%;
+  right: 0%;
+}
+
+.button
+{
+  background-color: Transparent;
+  border: 4px solid black;
+  cursor: pointer;
+  color: black;
+  font-size: 25px;
+  padding: 14px 40px;
+  border-radius: 6px;
+  text-align: center;
+  font-family: 'Raleway', bolder sans-serif;
+  position: fixed;
+  left: 25%;
+  right: 25%;
+  bottom: 5%;
+  filter: drop-shadow(0px 0px 8px black);
+  transition: text-shadow 0.2s linear;
+  padding:10px 20px;
+  font:normal 45px arial;
+  text-align:center;
+  background:rgba(117, 190, 218, 0.5)
+  height:100px;
+  color:#FFFFFF;
+}
+.text
+{
+  font-family: 'Raleway', bolder sans-serif;
+  color: white;
+  text-align: center;
+  filter: drop-shadow(0px 0px 8px cyan);
+  margin: auto;
+  position: fixed;
+  top: 5%;
+  left: 0%;
+  right: 0%;
+  z-index: 1;
+}
+
+
+@keyframes rotate
+{
+  0%{background-position: 0 0;}
+  100%{background-position: 700px 0;}
+}
