@@ -47,7 +47,6 @@ def leaks_menu():
 
         elif option == '0':
             print("{1}[ {0}+{1} ]{2} Загрузка с github...{3}".format(REDL, GNSL, WHSL, ENDL))
-            os.system("git clone https://github.com/Bafomet666/testleaks")
             return
         else:
             continue
