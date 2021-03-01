@@ -15,7 +15,7 @@ maildb_api = "e96ed36e3cf64a17c"  # https://api.hunter.io
 zoomeye_api = "eyJh0PQ"  # https://api.zoomeye.org/user/login non required
 
 # (несколько ключей писать через запятую) "API1,API2,API2"
-phone_apis = "bcceaaee97"  # http://apilayer.net/api
+phone_apis = "bcceaaee97"  # https://numverify.com
 
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 PLUGINS_PATH = os.path.join(PROJECT_PATH, 'plugins')
