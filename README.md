@@ -22,7 +22,7 @@
 
 Название API и их путь.
 
-     nomber api /OSINT SAN 3.0 RED OSINT/plugins/api [http://apilayer.net/api]
+     nomber api /OSINT SAN 3.0 RED OSINT/plugins/api [https://numverify.com]
 
      gmap api /OSINT SAN 3.0 RED OSINT/plugins/api [https://developers.google.com/maps/documentation]
 
