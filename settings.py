@@ -5,10 +5,10 @@ import os
 shodan_api = "17x0y"  # https://www.shodan.io
 ipstack_api = "278321a02"  # https://ipstack.com
 gmap_api = None  # https://developers.google.com/maps/documentation
-torrent_api = "3cd6463b477d46b79e9eeec21342e4c7"  # https://api.antitor.com #Рабочий API
+torrent_api = "46463b475353526tc7"  # https://api.antitor.com #Рабочий API
 
 # https://developers.virustotal.com/reference#getting-started 
-virustotal_api = "1af37bfeb7b1628ba10695fb187987a6651793e37df006a5cdf8786b0e4f6453" #Рабочий API
+virustotal_api = "353646353565854f53" #Рабочий API
 
 cms_detect_api = None  # https://whatcms.org/API
 maildb_api = "e96ed36e3cf64a17c"  # https://api.hunter.io
