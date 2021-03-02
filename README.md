@@ -187,11 +187,14 @@ https://ru.wikipedia.org/wiki/EtherApe
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/OSINT%20menu%2019.png)
 
 ### Функция [ 20 ]
-Окно списка зависимостей.
-### Функция [ 21 ]
-Огромная многостраничная википедия по осинту.
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/00000021.png)
+Функция открывает 10 сайтов для поиска человека по лицу.
+
+### Функция [ 21 ]
+
+OSINT Wikipedia.
+
+![alt tag](https://github.com/Bafomet666/screen/blob/main/OSINT%20menu%2021.png)
 
 ### Функция [ 22 ]
 Брутфорс instagram.
