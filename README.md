@@ -23,13 +23,11 @@
 
 API для поиска мобильного номера.
 
-   /OSINT SAN 3.0 RED OSINT/plugins/api: [Открыть сайт](https://numverify.com)
+     API для получения информации о номере [Открыть сайт](https://numverify.com)
 
-     gmap api /OSINT SAN 3.0 RED OSINT/plugins/api [https://developers.google.com/maps/documentation]
+     API для получения информации whois [Открыть сайт]([https://ipstack.com/)
 
-     ipstack api /OSINT SAN 3.0 RED OSINT/plugins/api [https://ipstack.com/]
-
-     shodan api /OSINT SAN 3.0 RED OSINT/core/config and OSINT SAN 3.0 RED OSINT/exploit_database/api [https://www.shodan.io/]
+     Shodan API [Открыть сайт](https://www.shodan.io/)
 
      maildb api /OSINT SAN 3.0 RED OSINT/plugins/maildb [Уже введен]
 
