@@ -334,7 +334,7 @@ Mod film миссия невыполнима.
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/Screenshot%20at%202021-02-02%2010-59-29.png)​
 
 ### Функция [ 45 ] Лицензионное соглашение.
-![alt tag](https://github.com/Bafomet666/screen/blob/main/sogl.png)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/OSINT%20menu%2045.png)
 
 
 
