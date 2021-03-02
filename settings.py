@@ -4,7 +4,7 @@ import os
 shodan_api = "17x0y"  # https://www.shodan.io
 ipstack_api = "278321a02"  # https://ipstack.com
 gmap_api = None  # https://developers.google.com/maps/documentation / для gui и для plugins/ipaddress.py
-torrent_api = "3cd6463b477d46b79e9eeec21342e4c7"  # https://api.antitor.com #Рабочий API
+torrent_api = "3cd6463b477d46b79e9eeec21342e4c7"  # https://api.antitor.com/test/?key=5ad37f25a4d94b288df60921e1524f02 #Рабочий API
 
 # https://developers.virustotal.com/reference#getting-started 
 virustotal_api = "353646353565854f53" #Рабочий API plugins/webosint/subdomain.py
