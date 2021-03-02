@@ -1,5 +1,4 @@
 import os
-#Регистрируй. Там 2 API я оставил вам подарком.
 #####  API ТОКЕНЫ, ВПИСЫВАТЬ ВМЕСТО `NONE`
 #####  ПО ТИПУ `shodan_api = "..."`
 shodan_api = "17x0y"  # https://www.shodan.io
