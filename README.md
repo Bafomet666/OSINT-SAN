@@ -283,7 +283,7 @@ IP logger для профи, Firefox.
 ### Функция [ 33 ]
 dns whois сайтов.
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/33.png)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/OSINT%20menu%2033.png)
 
 ### Функция [ 34 ]
 
