@@ -22,19 +22,19 @@
 Название API и сайты для их получения.
 
 
-  API для получения информации о номере [Открыть сайт](https://numverify.com)
+  API для получения информации о номере: [Открыть сайт](https://numverify.com)
 
-  API для получения информации whois [Открыть сайт](https://ipstack.com)
+  API для получения информации whois: [Открыть сайт](https://ipstack.com)
 
-  Shodan API [Открыть сайт](https://www.shodan.io)
+  Shodan API: [Открыть сайт](https://www.shodan.io)
 
-  Проверка на CMS [Открыть сайт](https://whatcms.org/API)
+  Проверка на CMS: [Открыть сайт](https://whatcms.org/API)
 
-  VirusTotal — бесплатная служба проверки [Открыть сайт](https://developers.virustotal.com/v3.0/reference)
+  VirusTotal бесплатная служба проверки: [Открыть сайт](https://developers.virustotal.com/v3.0/reference)
  
-  Hunter.io API для получения сведений по mail [Открыть сайт](https://hunter.io/api)
+  Hunter.io API для получения сведений по mail: [Открыть сайт](https://hunter.io/api)
 
-  ZoomEye API, вход осущесвляется путем авторизации в самом инструменте [Открыть сайт](https://www.zoomeye.org)
+  ZoomEye API, вход осущесвляется путем авторизации в самом инструменте: [Открыть сайт](https://www.zoomeye.org)
 
   Torrent API Уже введен.
 
