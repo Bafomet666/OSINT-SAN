@@ -161,7 +161,7 @@ Big bro 8.0 режим геолокации.
 Массовый dump данных с Shodan. Работает через API, тот же поисковик только в консоли и анонимный.
 Скрин сделать на версии продукта 2.0
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/017.jpg)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/OSINT%20Menu%2016.png)
 
 ### Функция [ 17 ]
 Графический мониторинг твоей сети.
