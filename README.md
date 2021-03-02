@@ -38,7 +38,7 @@
 
   ZoomEye API, вход осущесвляется путем авторизации в самом инструменте: [Открыть сайт](https://www.zoomeye.org)
 
-  Torrent API Уже введен.
+  Torrent API: [Открыть сайт](https://iknowwhatyoudownload.com/en/api/)
 
   Обязательно прописывать API в settings.py
      
