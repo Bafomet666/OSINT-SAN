@@ -18,11 +18,11 @@
 ---
 
 ## Установка API.
-Их нужно зарегистрировать и прописать по указаному пути. Многие я оставлю прописаными в инструменте, но так как, лимиты маленькие, лучше создать свои.
-
+Их нужно зарегистрировать и прописывать по указаному пути.
 Название API и их путь.
 
-     nomber api /OSINT SAN 3.0 RED OSINT/plugins/api [https://numverify.com]
+API для поиска мобильного номера.
+    /OSINT SAN 3.0 RED OSINT/plugins/api: [Открыть сайт]: [https://numverify.com]
 
      gmap api /OSINT SAN 3.0 RED OSINT/plugins/api [https://developers.google.com/maps/documentation]
 
