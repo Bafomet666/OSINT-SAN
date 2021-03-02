@@ -23,11 +23,11 @@
 
 API для поиска мобильного номера.
 
-     API для получения информации о номере [Открыть сайт](https://numverify.com)
+  API для получения информации о номере [Открыть сайт](https://numverify.com)
 
-     API для получения информации whois [Открыть сайт]([https://ipstack.com/)
+  API для получения информации whois [Открыть сайт]([https://ipstack.com)
 
-     Shodan API [Открыть сайт](https://www.shodan.io/)
+  Shodan API [Открыть сайт](https://www.shodan.io)
 
      maildb api /OSINT SAN 3.0 RED OSINT/plugins/maildb [Уже введен]
 
