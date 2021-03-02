@@ -28,17 +28,17 @@
 
   Shodan API [Открыть сайт](https://www.shodan.io)
 
-     maildb api /OSINT SAN 3.0 RED OSINT/plugins/maildb [Уже введен]
+  Проверка на CMS [Открыть сайт](https://whatcms.org/API)
 
-     whatcms /OSINT SAN 3.0 RED OSINT/plugins/webosint/CMSdetect [https://whatcms.org/API]
+  VirusTotal — бесплатная служба проверки [Открыть сайт](https://developers.virustotal.com/v3.0/reference)
+ 
+  Hunter.io API для получения сведений по mail [Открыть сайт](https://hunter.io/api)
 
-     virus total /OSINT SAN 3.0 RED OSINT/plugins/webosint/subdomain.py [Уже введен]
+  ZoomEye API, вход осущесвляется путем авторизации в самом инструменте.
 
-     hunter /OSINT SAN 3.0 RED OSINTplugins/maildb.py hunter.io [https://hunter.io/api]
+  Torrent API Уже введен.
 
-     ZoomEye API, вход проходит путем авторизации.
-
-     Обязательно установите завимости в settings.py
+  Обязательно прописывать API в settings.py
      
 ---
      
