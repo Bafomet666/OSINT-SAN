@@ -30,6 +30,8 @@
 
   Проверка на CMS: [Открыть сайт](https://whatcms.org/API)
 
+  Gmap для gui [Открыть сайт](https://developers.google.com/maps/documentation)
+
   VirusTotal бесплатная служба проверки: [Открыть сайт](https://developers.virustotal.com/v3.0/reference)
  
   Hunter.io API для получения сведений по mail: [Открыть сайт](https://hunter.io/api)
@@ -179,7 +181,11 @@ https://ru.wikipedia.org/wiki/EtherApe
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/016.png)
 
 ### Функция [ 19 ]
-Открывает инструкцию.
+
+Фишинг модификация Big bro. Находится в beta версии.
+
+![alt tag](https://github.com/Bafomet666/screen/blob/main/OSINT%20menu%2019.png)
+
 ### Функция [ 20 ]
 Окно списка зависимостей.
 ### Функция [ 21 ]
