@@ -148,22 +148,25 @@ DNS info, огромнейший pack информации.
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/014.png)
 
 ### Функция [ 14 ]
+
 Подключение через ADB, точнее это оболочка для быстрого подключения. Обязательно установить зависимости.
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/14000.png)
 
 ### Функция [ 15 ]
+
 Big bro 8.0 режим геолокации.
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/big%20bro%20geo.png)
 
 ### Функция [ 16 ]
-Массовый dump данных с Shodan. Работает через API, тот же поисковик только в консоли и анонимный.
-Скрин сделать на версии продукта 2.0
+
+Массовый dump данных с Shodan. Работает через API, тот же поисковик только в разы удобнее и эффективнее.
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/OSINT%20Menu%2016.png)
 
 ### Функция [ 17 ]
+
 Графический мониторинг твоей сети.
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/99.png)
