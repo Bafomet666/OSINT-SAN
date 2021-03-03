@@ -36,7 +36,7 @@
  
   Hunter.io API для получения сведений по mail: [Открыть сайт](https://hunter.io/api)
 
-  ZoomEye API, вход осущесвляется путем авторизации в самом инструменте: [Открыть сайт](https://www.zoomeye.org)
+  ZoomEye API, вход осуществляется путем авторизации в самом инструменте: [Открыть сайт](https://www.zoomeye.org)
 
   Torrent API: [Открыть сайт](https://iknowwhatyoudownload.com/en/api/)
 
