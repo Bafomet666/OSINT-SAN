@@ -34,7 +34,7 @@
 
   VirusTotal бесплатная служба проверки: [Открыть сайт](https://developers.virustotal.com/v3.0/reference)
  
-  Hunter.io API для получения сведений по mail: [Открыть сайт](https://hunter.io/api)
+  Hunter.io API для получения сведений о @mail: [Открыть сайт](https://hunter.io/api)
 
   ZoomEye API, вход осуществляется путем авторизации в самом инструменте: [Открыть сайт](https://www.zoomeye.org)
 
