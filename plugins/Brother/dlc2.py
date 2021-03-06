@@ -61,7 +61,7 @@ result = ''
 os.system('clear')
 os.system("cd template/banner;python2 banner.py")
 def banner():
-	print(" Режим фишинга")
+	print(" Режим фишинг, все это в бета версии, возможно будут баги")
 	
 def tunnel_select():
 	if tunnel_mode == None:
