@@ -349,7 +349,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             main()
             show_banner(clear=True)
 
-        elif choice == 0:
+        elif choice == 00:
             return
 
         else:
