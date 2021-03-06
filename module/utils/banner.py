@@ -1,9 +1,59 @@
-#Защита от дурачков
-import base64, codecs
-magic = 'ZnJvbSBtb2R1bGUudXRpbHMgaW1wb3J0IENPTE9SUwoKaW1wb3J0IHJhbmRvbQppbXBvcnQgb3MKIy0qLSBjb2Rpbmc6IHV0Zi04IC0qLQojIGRldiBieSBiYWZvbWV0CgpCQU5ORVIxID0gZiIiIgoge0NPTE9SUy5SRURMfXtDT0xPUlMuR05TTH1be0NPTE9SUy5XSFNMfSBPZmZpY2lhbCBjaGFubmVsIHtDT0xPUlMuR05TTH10ZyB7Q09MT1JTLlJFREx9QG9zaW50X3Nhbl9mcmFtZXdvcmsge0NPTE9SUy5SRURMfXtDT0xPUlMuR05TTH1dICAgIHtDT0xPUlMuR05TTH1be0NPTE9SUy5XSFNMfSBHaXRIdWIge0NPTE9SUy5SRURMfWh0dHBzOi8vZ2l0aHViLmNvbS9CYWZvbWV0NjY2IHtDT0xPUlMuUkVETH17Q09MT1JTLkdOU0x9XQp7Q09MT1JTLkdOU0x9ICAgICAgICAgICAgIF9fX19fXyAgICBfX19fX18gICBfX19fX18gIF9fICAgIF9fICBfX19fX19fXyAgICAgICAgIF9fX19fXyAgICBfX19fX18gICBfXyAgICBfXyAgICAge0NPTE9SUy5SRURMfSAgICBfX19fX18gICAgICBfX19fX19fICAKe0NPTE9SUy5HTlNMfSAgICAgICAgICAgIC8gICAgICBcICAvICAgICAgXCAvICAgICAgfC8gIFwgIC8gIHwvICAgICAgICB8ICAgICAgIC8gICAgICBcICAvICAgICAgXCAvICBcICAvICB8ICAgIHtDT0xPUlMuUkVETH0gICAvICAgICAgXCAgICAvICAgICAgIHwgCntDT0xPUlMuR05TTH0gICAgICAgICAgIC8kJCQkJCQgIHwvJCQkJCQkICB8JCQkJCQkLyAkJCAgXCAkJCB8JCQkJCQkJCQvICAgICAgIC8kJCQkJCQgIHwvJCQkJCQkICB8JCQgIFwgJCQgfCAgICB7Q09MT1JTLlJFREx9ICAvJCQkJCQkICB8ICAgJCQkJCQkJC8gIAp7Q09MT1JTLkdOU0x9ICAgICAgICAgICAkJCB8ICAkJCB8JCQgXF9fJCQvICAgJCQgfCAgJCQkICBcJCQgfCAgICQkIHwgICAgICAgICAkJCBcX18kJC8gJCQgfF9fJCQgfCQkJCAgXCQkIHwgICAge0NPTE9SUy5SRURMfSAgJCQgX19fJCQgfCAgICQkIHxfX19fICAKe0NPTE9SUy5HTlNMfSAgICAgICAgICAgJCQgfCAgJCQgfCQkICAgICAgXCAgICQkIHwgICQkJCQgICQkIHwgICAkJCB8ICAgICAgICAgJCQgICAgICBcICQkICAgICQkIHwkJCQkICAkJCB8ICAgIHtDT0xPUlMuUkVETH0gICAgLyAgICQkPCAgICAkJCAgICAgIFwgCntDT0xPUlMuR05TTH0gICAgICAgICAgICQkIHwgICQkIHwgJCQkJCQkICB8ICAkJCB8ICAkJCAkJCAkJCB8ICAgJCQgfCAgICAgICAgICAkJCQkJCQgIHwkJCQkJCQkJCB8JCQgJCQgJCQgfCAgICB7Q09MT1JTLlJFREx9ICAgXyQkJCQkICB8ICAgJCQkJCQkJCAgfAp7Q09MT1JTLkdOU0x9ICAgICAgICAgICAkJCBcX18kJCB8LyAgXF'
-love = '9sWPDtsPOsWPDtsS8tWPDtsPDxWPDtsPNtVPDxVUjtVPNtVPNtVPNiVPOpK18xWPO8WPDtsPNtWPDtsPDxVUjxWPDxVUjtVPNtr0ACGR9FHl5FEHEZsFNtYlNtKS9sWPDtsS9sVP8tVSksKlDxVUjXr0ACGR9FHl5UGyAZsFNtVPNtVPNtVPNtWPDtVPNtWPDiVPDxVPNtVPDxYlNiVPDxVPNtsPDxVUjtWPDxVUjtVPNxWPO8VPNtVPNtVPNtWPDtVPNtWPDiVPDxVUjtVPDxVUjxWPO8VPDxWPO8VPNtVUgQG0kCHyZhHxIRGU0tVPDxVPNtVPDxYl8tVUjxWPNtVPNxWP8tPagQG0kCHyZhE05GGU0tVPNtVPNtVPNtVPNxWPDxWPDiVPNtWPDxWPDxYlNtWPDxWPDxYlNxWP8tVPNxWP8tVPNtWPDiVPNtVPNtVPNtVPNxWPDxWPDiVPNxWP8tVPNxWP8tWPDiVPNtWPDiVPNtVPO7D09ZG1WGYyWSERk9VPNtWPDxWPDxYlNxWP8tVPDxWPDxWP8tVNbXVUgQG0kCHyZhI0uGGU1TpzSgMKqipzftBagQG0kCHyZhI0uGGU17D09ZG1WGYxqBH0k9VR9GFH5HVSAOGv57D09ZG1WGYxqBH0k9PvO7D09ZG1WGYyqVH0k9IKOxLKEyr0ACGR9FHl5FEHEZsFOVo21cL2yxMFO2YGZhADbtVPVvVtcPDH5BEIVlVQ0tMvVvVtbtr0ACGR9FHl5FEHEZsKgQG0kCHyZhE05GGU1or0ACGR9FHl5KFSAZsFOCMzMcL2yuoPOwnTShozIfVUgQG0kCHyZhE05GGU10MlO7D09ZG1WGYyWSERk9DT9mnJ50K3Auoy9zpzSgMKqipzftr0ACGR9FHl5FEHEZsKgQG0kCHyZhE05GGU1qVPNtVUgQG0kCHyZhE05GGU1or0ACGR9FHl5KFSAZsFOUnKEVqJVtr0ACGR9FHl5FEHEZsJu0qUOmBv8iM2y0nUIvYzAioF9PLJMioJI0AwL2VUgQG0kCHyZhHxIRGU17D09ZG1WGYxqBH0k9KDc7D09ZG1WGYxqBH0k9VPOsK19sK19sVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtK19sK19sVPNtVS9sK19sKlNtVPOsK19sK18tVNc7D09ZG1WGYxqBH0k9VP8tVPNtVPNtKPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNiVPNtVPNtKPNtYlNtVPNtVSjtVP8tVPNtVPOpVNc7D09ZG1WGYxqBH0k9VPDxWPDxWPDtVUjtVS9sK19sKlNtVPOsK19sK18tVPOsK19sK19sVPNtVS9sK19sKlNtVS9sK19sK18tVPNtVPNtVP8xWPDxWPDtVUjiWPDxWPDxVPO8YlDxWPDxWPNtsNc7D09ZG1WGYxqBH0k9VPDxVUjtVPDxVUjtYlNtVPNtVSjtVP8tVPNtVPOpVP8tVPNtVPNtKPNtYlNtVPNtVSjtYlNtVPNtVPOpVPNtVPNtVPDxVUksKlDxVUjxWPOpK18xWP8tWPDtKS9sWPDiVNc7D09ZG1WGYxqBH0k9VPDxVUjtVPDxVUjiWPDxWPDxVPO8VPDxWPDxWPNtsPDxWPDxWPDt'
-god = 'IHwvJCQkJCQkICB8JCQkJCQkJCAgfCAgICAgICQkICAgICQkIHwkJCAgICAgIFwgJCQgICAgICBcIAp7Q09MT1JTLkdOU0x9ICQkIHwgICQkIHwkJCAgICAkJCB8IC8gICAgJCQgfCQkIHwgICQkIHwkJCB8ICAkJCB8JCQgfCAgJCQgfCAgICAgICQkJCQkJCQkIHwgJCQkJCQkICB8ICQkJCQkJCAgfAp7Q09MT1JTLkdOU0x9ICQkIHxfXyQkIHwkJCQkJCQkJC8gLyQkJCQkJCQgfCQkIHwgICQkIHwkJCBcX18kJCB8JCQgfCAgJCQgfCAgICAgICQkIHwgICQkIHwvICBcX18kJCB8LyAgXF9fJCQgfAp7Q09MT1JTLkdOU0x9ICQkICAgICQkLyAkJCAgICAgICB8JCQgICAgJCQgfCQkIHwgICQkIHwkJCAgICAkJC8gJCQgfCAgJCQgfCAgICAgICQkIHwgICQkIHwkJCAgICAkJC8gJCQgICAgJCQvIAp7Q09MT1JTLkdOU0x9ICQkJCQkJCQvICAgJCQkJCQkJC8gICQkJCQkJCQvICQkLyAgICQkLyAgJCQkJCQkLyAgJCQvICAgJCQvICAgICAgICQkLyAgICQkLyAgJCQkJCQkLyAgICQkJCQkJC8KCiB7Q09MT1JTLldIU0x9RnJhbWV3b3JrIDp7Q09MT1JTLldIU0x9e0NPTE9SUy5HTlNMfSBPU0lOVCBTQU4ue0NPTE9SUy5HTlNMfQoge0NPTE9SUy5XSFNMfVVwZGF0ZXtDT0xPUlMuUkVETH0gSG9taWNpZGUgdi0zLjUKICIiIgpCQU5ORVIzID0gZiIiIgoge0NPTE9SUy5SRURMfXtDT0xPUlMuR05TTH1be0NPTE9SUy5XSFNMfSBPZmZpY2lhbCBjaGFubmVsIHtDT0xPUlMuR05TTH10ZyB7Q09MT1JTLlJFREx9QG9zaW50X3Nhbl9mcmFtZXdvcmsge0NPTE9SUy5SRURMfXtDT0xPUlMuR05TTH1dICAgIHtDT0xPUlMuR05TTH1be0NPTE9SUy5XSFNMfSBHaXRIdWIge0NPTE9SUy5SRURMfWh0dHBzOi8vZ2l0aHViLmNvbS9CYWZvbWV0NjY2IHtDT0xPUlMuUkVETH17Q09MT1JTLkdOU0x9XQp7Q09MT1JTLkdOU0x9ICAgICAgICAgICAgICAgICAgICAgIF9fX19fXyAgICBfX19fX18gICBfX19fX18gIF9fICAgIF9fICBfX19fX19fXyAgICB7Q09MT1JTLlJFREx9ICAgICBfX19fX18gICAgX19fX19fICAgIF9fX19fXyAgICAgX18gICAKe0NPTE9SUy5HTlNMfSAgICAgICAgICAgICAgICAgICAgIC8gICAgICBcICAvICAgICAgXCAvICAgICAgfC8gIFwgIC8gIHwvICAgICAgICB8ICAge0NPTE9SUy5SRURMfSAgICAvICAgICAgXCAgLyAgICAgIFwgIC8gICAgICBcICBfLyAgfCAgCntDT0xPUlMuR05TTH0gICAgICAgICAgICAgICAgICAgIC8kJCQkJCQgIHwvJCQkJCQkICB8JCQkJCQkLyAkJCAgXCAkJCB8JCQkJCQkJCQvICAgIHtDT0xPUlMuUkVETH0gICAvJCQkJCQkICB8LyQkJCQkJCAgfC8kJCQkJCQgIHwvIC'
-destiny = 'DxVUjtVNc7D09ZG1WGYxqBH0k9VPNtVPNtVPNtVPNtVPNtVPNtVPNxWPO8VPNxWPO8WPDtKS9sWPDiVPNtWPDtsPNtWPDxVPOpWPDtsPNtVPDxVUjtVPNtVPO7D09ZG1WGYyWSERk9VPNtWPEsK19sWPDtsPDxWPNtKPDxVUjxWS9sK18xWPO8WPDxWPO8VPNXr0ACGR9FHl5UGyAZsFNtVPNtVPNtVPNtVPNtVPNtVPNtWPDtsPNtWPDtsPDxVPNtVPNtKPNtVPDxVUjtVPDxWPDtVPDxVUjtVPNxWPO8VPNtVPNtr0ACGR9FHl5FEHEZsFNtVPNiVPNtVPDxYlNxWPDxVPNxWPO8VP8tVPNtWPDiVPNtWPDtsPNtPagQG0kCHyZhE05GGU0tVPNtVPNtVPNtVPNtVPNtVPNtVPDxVUjtVPDxVUjtWPDxWPDxVPO8VPNxWPO8VPNxWPNxWPNxWPO8VPNtWPDtsPNtVPNtVUgQG0kCHyZhHxIRGU0tVPNiWPDxWPDxYlNtWPDtWPDtWPDtsP8xWPDxWPDiVPNtVPDxVUjtVNc7D09ZG1WGYxqBH0k9VPNtVPNtVPNtVPNtVPNtVPNtVPNxWPOpK18xWPO8YlNtKS9sWPDtsPOsWPDtsS8tWPDtsPDxWPDtsPNtVPDxVUjtVPNtVPO7D09ZG1WGYyWSERk9VPNtWPDtsS9sK19sVPDxVSjxWPDxVUjxWPO8K19sK18tVS8xWPO8KlNXr0ACGR9FHl5UGyAZsFNtVPNtVPNtVPNtVPNtVPNtVPNtWPDtVPNtWPDiVPDxVPNtVPDxYlNiVPDxVPNtsPDxVUjtWPDxVUjtVPNxWPO8VPNtVPNtr0ACGR9FHl5FEHEZsFNtVPDxVPNtVPNtVUjxWPNtVPDxWP8tWPDtVPNtVPNtsP8tWPDtVPO8PagQG0kCHyZhE05GGU0tVPNtVPNtVPNtVPNtVPNtVPNtVPNxWPDxWPDiVPNtWPDxWPDxYlNtWPDxWPDxYlNxWP8tVPNxWP8tVPNtWPDiVPNtVPNtVUgQG0kCHyZhHxIRGU0tVPNxWPDxWPDxWP8tVPDxWPDxWP8tVPDxWPDxWPDxYlNxWPDxWPDiVNbtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNtVPNXVUgQG0kCHyZhI0uGGU1TpzSgMKqipzftBagQG0kCHyZhI0uGGU17D09ZG1WGYxqBH0k9VR9GFH5HVSAOGv57D09ZG1WGYxqBH0k9PvO7D09ZG1WGYyqVH0k9IKOxLKEyr0ACGR9FHl5FEHEZsFOVo21cL2yxMFO2YGZhADbtVvVvPzEyMvOmnT93K2Wuoz5ypvtdYPOwoTIupw1TLJkmMFx6PvNtVPOcMvOwoTIupwbXVPNtVPNtVPOipl5mrKA0MJ0bVzAfMJSlVvxXVPNtVTWuoz5ypvN9VUWuozEioF5GrKA0MJ1FLJ5xo20bXF5wnT9cL2HbJ0WOGx5SHwRfVRWOGx5SHwVfVRWOGx5SHwAqXDbtVPNtpUWcoaDbLzShozIlXDbXPzyzVS9sozSgMI9sVQ09VPWsK21unJ5sKlV6PvNtVPOmnT93K2Wuoz5ypvtcPt=='
-joy = '\x72\x6f\x74\x31\x33'
-trust = eval('\x6d\x61\x67\x69\x63') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x6c\x6f\x76\x65\x2c\x20\x6a\x6f\x79\x29') + eval('\x67\x6f\x64') + eval('\x63\x6f\x64\x65\x63\x73\x2e\x64\x65\x63\x6f\x64\x65\x28\x64\x65\x73\x74\x69\x6e\x79\x2c\x20\x6a\x6f\x79\x29')
-eval(compile(base64.b64decode(eval('\x74\x72\x75\x73\x74')),'<string>','exec'))
+from module.utils import COLORS
+
+import random
+import os
+#-*- coding: utf-8 -*-
+# dev by bafomet
+
+BANNER1 = f"""
+ {COLORS.REDL}{COLORS.GNSL}[{COLORS.WHSL} Official channel {COLORS.GNSL}tg {COLORS.REDL}@osint_san_framework {COLORS.REDL}{COLORS.GNSL}]    {COLORS.GNSL}[{COLORS.WHSL} GitHub {COLORS.REDL}https://github.com/Bafomet666 {COLORS.REDL}{COLORS.GNSL}]
+{COLORS.GNSL}             ______    ______   ______  __    __  ________         ______    ______   __    __ 
+{COLORS.GNSL}            /      \  /      \ /      |/  \  /  |/        |       /      \  /      \ /  \  /  | 
+{COLORS.GNSL}           /$$$$$$  |/$$$$$$  |$$$$$$/ $$  \ $$ |$$$$$$$$/       /$$$$$$  |/$$$$$$  |$$  \ $$ |
+{COLORS.GNSL}           $$ |  $$ |$$ \__$$/   $$ |  $$$  \$$ |   $$ |         $$ \__$$/ $$ |__$$ |$$$  \$$ |   
+{COLORS.GNSL}           $$ |  $$ |$$      \   $$ |  $$$$  $$ |   $$ |         $$      \ $$    $$ |$$$$  $$ |    
+{COLORS.GNSL}           $$ |  $$ | $$$$$$  |  $$ |  $$ $$ $$ |   $$ |          $$$$$$  |$$$$$$$$ |$$ $$ $$ |   
+{COLORS.GNSL}           $$ \__$$ |/  \__$$ | _$$ |_ $$ |$$$$ |   $$ |         /  \__$$ |$$ |  $$ |$$ |$$$$ |    
+{COLORS.GNSL}           $$    $$/ $$    $$/ / $$   |$$ | $$$ |   $$ |         $$    $$/ $$ |  $$ |$$ | $$$ |    
+{COLORS.GNSL}            $$$$$$/   $$$$$$/  $$$$$$/ $$/   $$/    $$/           $$$$$$/  $$/   $$/ $$/   $$/  
+{COLORS.REDL}           ,_._._._._._._._._|__________________________________________________________,
+{COLORS.REDL}           |_|_|_|_|_|_|_|_|_|_________________________________________________________/
+{COLORS.REDL}                             !   """
+BANNER2 = f"""
+ {COLORS.REDL}{COLORS.GNSL}[{COLORS.WHSL} Official channel {COLORS.GNSL}tg {COLORS.REDL}@osint_san_framework {COLORS.REDL}{COLORS.GNSL}]    {COLORS.GNSL}[{COLORS.WHSL} GitHub {COLORS.REDL}https://github.com/Bafomet666 {COLORS.REDL}{COLORS.GNSL}]
+{COLORS.GNSL}             ______    ______   ______  __    __  ________         ______    ______   __    __ 
+{COLORS.GNSL}            /      \  /      \ /      |/  \  /  |/        |       /      \  /      \ /  \  /  | 
+{COLORS.GNSL}           /$$$$$$  |/$$$$$$  |$$$$$$/ $$  \ $$ |$$$$$$$$/       /$$$$$$  |/$$$$$$  |$$  \ $$ |
+{COLORS.GNSL}           $$ |  $$ |$$ \__$$/   $$ |  $$$  \$$ |   $$ |         $$ \__$$/ $$ |__$$ |$$$  \$$ |   
+{COLORS.GNSL}           $$ |  $$ |$$      \   $$ |  $$$$  $$ |   $$ |         $$      \ $$    $$ |$$$$  $$ |    
+{COLORS.GNSL}           $$ |  $$ | $$$$$$  |  $$ |  $$ $$ $$ |   $$ |          $$$$$$  |$$$$$$$$ |$$ $$ $$ |   
+{COLORS.GNSL}           $$ \__$$ |/  \__$$ | _$$ |_ $$ |$$$$ |   $$ |         /  \__$$ |$$ |  $$ |$$ |$$$$ |    
+{COLORS.GNSL}           $$    $$/ $$    $$/ / $$   |$$ | $$$ |   $$ |         $$    $$/ $$ |  $$ |$$ | $$$ |    
+{COLORS.GNSL}            $$$$$$/   $$$$$$/  $$$$$$/ $$/   $$/    $$/           $$$$$$/  $$/   $$/ $$/   $$/  
+{COLORS.REDL}           ,_._._._._._._._._|__________________________________________________________,
+{COLORS.REDL}           |_|_|_|_|_|_|_|_|_|_________________________________________________________/
+{COLORS.REDL}                             !   """
+BANNER3 = f"""
+ {COLORS.REDL}{COLORS.GNSL}[{COLORS.WHSL} Official channel {COLORS.GNSL}tg {COLORS.REDL}@osint_san_framework {COLORS.REDL}{COLORS.GNSL}]    {COLORS.GNSL}[{COLORS.WHSL} GitHub {COLORS.REDL}https://github.com/Bafomet666 {COLORS.REDL}{COLORS.GNSL}]
+{COLORS.GNSL}             ______    ______   ______  __    __  ________         ______    ______   __    __ 
+{COLORS.GNSL}            /      \  /      \ /      |/  \  /  |/        |       /      \  /      \ /  \  /  | 
+{COLORS.GNSL}           /$$$$$$  |/$$$$$$  |$$$$$$/ $$  \ $$ |$$$$$$$$/       /$$$$$$  |/$$$$$$  |$$  \ $$ |
+{COLORS.GNSL}           $$ |  $$ |$$ \__$$/   $$ |  $$$  \$$ |   $$ |         $$ \__$$/ $$ |__$$ |$$$  \$$ |   
+{COLORS.GNSL}           $$ |  $$ |$$      \   $$ |  $$$$  $$ |   $$ |         $$      \ $$    $$ |$$$$  $$ |    
+{COLORS.GNSL}           $$ |  $$ | $$$$$$  |  $$ |  $$ $$ $$ |   $$ |          $$$$$$  |$$$$$$$$ |$$ $$ $$ |   
+{COLORS.GNSL}           $$ \__$$ |/  \__$$ | _$$ |_ $$ |$$$$ |   $$ |         /  \__$$ |$$ |  $$ |$$ |$$$$ |    
+{COLORS.GNSL}           $$    $$/ $$    $$/ / $$   |$$ | $$$ |   $$ |         $$    $$/ $$ |  $$ |$$ | $$$ |    
+{COLORS.GNSL}            $$$$$$/   $$$$$$/  $$$$$$/ $$/   $$/    $$/           $$$$$$/  $$/   $$/ $$/   $$/  
+{COLORS.REDL}           ,_._._._._._._._._|__________________________________________________________,
+{COLORS.REDL}           |_|_|_|_|_|_|_|_|_|_________________________________________________________/
+{COLORS.REDL}                             !   """
+
+def show_banner(*, clear=False):
+    if clear:
+        os.system("clear")
+    banner = random.SystemRandom().choice([BANNER1, BANNER2, BANNER3])
+    print(banner)
+
+
+if __name__ == "__main__":
+    show_banner()
