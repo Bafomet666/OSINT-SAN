@@ -1,11 +1,10 @@
-## OSINT SAN Framework.
+##                                                                           OSINT SAN Framework.
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/LOGOup.png)
 
 
 Framework направленный на получение данных и деанонимизацию пользователей. В инструменте используется большое количество API. Сейчас инструмент дорабатывается, некоторые функции могут работать не корректно.
 
-----
 
 Адаптированно под платформы: Kali Linux * Parrot OS
 
