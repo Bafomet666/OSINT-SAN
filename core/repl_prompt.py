@@ -11,7 +11,7 @@ from prompt_toolkit import prompt
 import subprocess
 import os
 import webbrowser
-
+import time as t
 
 # Developer by Bafomet
 def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
@@ -27,7 +27,6 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
                 return
 
             if len(user_input) == 0:
-                os.system("clear")
                 break
 
             try:
@@ -207,8 +206,10 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 18:
-            from module.update import update
-            update()
+            print()
+            print("   Проверка всех модулей")
+            t.sleep(6)
+            os.system("cd core;mpg123 01.mp3")
             show_banner(clear=True)
 
         elif choice == 19:
@@ -236,7 +237,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 22:
-            os.system("cd module;sudo ./instashell.sh")
+            webbrowser.open("https://canarytokens.org")
             show_banner(clear=True)
 
         elif choice == 23:
@@ -267,8 +268,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 27:
-            from module.domian2 import domain
-            domain()
+            os.system("git clone https://github.com/Bafomet666/osint-info")
             show_banner(clear=True)
 
         elif choice == 28:
@@ -293,8 +293,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 32:
-            os.system("git clone https://github.com/Bafomet666/osint-info")
-            show_banner(clear=True)
+            pass
 
         elif choice == 33:
             from module.whoyous import whois_menu
@@ -303,22 +302,13 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 34:
-            from module.leaks import leaks_menu
-
-            leaks_menu()
-            show_banner(clear=True)
+            pass
 
         elif choice == 35:
-            from plugins.webvuln.src.tisyka.bx66 import mission
-
-            mission()
-            show_banner(clear=True)
+            pass
 
         elif choice == 36:
-            from module.osint_pack import osint_pack
-
-            osint_pack()
-            show_banner(clear=True)
+            pass
 
         elif choice == 37:
             pass
@@ -341,18 +331,14 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
         elif choice == 43:
             pass
 
-        elif choice == 44:
-            webbrowser.open("https://t.me/osint_san_framework")
-            webbrowser.open("https://github.com/Bafomet666/OSINT-SAN")
+        elif choice == 65:
+            webbrowser.open("https://t.me/satana666mx")
             show_banner(clear=True)
 
         elif choice == 45:
-            from module.license_agreement import sogl
+            pass
 
-            sogl()
-            show_banner(clear=True)
-
-        elif choice == 66:
+        elif choice == 75:
             show_banner(clear=True)
 
         elif choice == 99:
@@ -365,7 +351,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             main()
             show_banner(clear=True)
 
-        elif choice == 0:
+        elif choice == 00:
             return
 
         else:
