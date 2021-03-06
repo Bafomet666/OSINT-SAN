@@ -242,10 +242,6 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
 
         elif choice == 23:
             urls = [
-                "https://temp-mail.org/ru",
-                "https://10minemail.com/ru",
-                "https://10minutemail.net/?lang=ru",
-                "https://www.lite14.us/10minutemail/russian.html",
                 "https://protonmail.com/ru",
                 "https://tutanota.com/ru/blog/posts/anonymous-email",
             ]
