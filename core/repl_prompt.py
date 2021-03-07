@@ -58,7 +58,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
         elif choice == 2:
             from plugins.domain import domain
 
-            host = input(" └──> Введите хостинг либо IP адрес : ")
+            host = input(" └──> Введите доменное имя : ")
             port = ""
 
             while True:
