@@ -15,25 +15,25 @@ Framework направленный на получение данных и де�
 Название API и сайты для их получения.
 
 
-     API для получения информации о номере: [Открыть сайт](https://numverify.com)
+     API для получения информации о номере https://numverify.com
 
-     API для получения информации whois: [Открыть сайт](https://ipstack.com)
+     API для получения информации whois https://ipstack.com
 
-     Shodan API: [Открыть сайт](https://www.shodan.io)
+     Shodan API https://www.shodan.io
 
-     Проверка на CMS: [Открыть сайт](https://whatcms.org/API)
+     Проверка на CMS https://whatcms.org/API
 
-     Gmap для gui [Открыть сайт](https://developers.google.com/maps/documentation)
+     Gmap для gui https://developers.google.com/maps/documentation
 
-     VirusTotal бесплатная служба проверки: [Открыть сайт](https://developers.virustotal.com/v3.0/reference)
+     VirusTotal бесплатная служба проверки https://developers.virustotal.com/v3.0/reference
  
-     Hunter.io API для получения сведений о @mail: [Открыть сайт](https://hunter.io/api)
+     Hunter.io API для получения сведений о @mail https://hunter.io/api
 
-     ZoomEye API, вход осуществляется путем авторизации в самом инструменте: [Открыть сайт](https://www.zoomeye.org)
+     ZoomEye API, вход осуществляется путем авторизации в самом инструменте https://www.zoomeye.org
 
-     Torrent API: [Открыть сайт](https://iknowwhatyoudownload.com/en/api/)
+     Torrent API https://iknowwhatyoudownload.com/en/api/
 
-     CMS detect [Открыть сайт](https://whatcms.org)
+     CMS detect https://whatcms.org
 
      Обязательно прописывать API в settings.py
      
