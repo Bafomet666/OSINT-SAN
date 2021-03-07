@@ -1,15 +1,15 @@
 import os
-#####  API ТОКЕНЫ, ВПИСЫВАТЬ ВМЕСТО `NONE`
+#####  API ТОКЕНЫ, Записывать внутри "  "
 #####  ПО ТИПУ `shodan_api = "..."`
 shodan_api = "17x0y"  # https://www.shodan.io
 ipstack_api = "278321a02"  # https://ipstack.com
-gmap_api = None  # https://developers.google.com/maps/documentation / для gui и для plugins/ipaddress.py
+gmap_api = "ed36e3c"  # https://developers.google.com/maps/documentation / для gui и для plugins/ipaddress.py
 torrent_api = "3cd6463b477d46b79e9eeec21342e4c7"  # https://iknowwhatyoudownload.com/en/api/
 
 # https://developers.virustotal.com/reference#getting-started 
 virustotal_api = "353646353565854f53" #Рабочий API plugins/webosint/subdomain.py
 
-cms_detect_api = None  # https://whatcms.org/API  /plugins/webosint/CMSdetect
+cms_detect_api = "ed36e3c"  # https://whatcms.org/API  /plugins/webosint/CMSdetect
 maildb_api = "e96ed36e3cf64a17c"  # https://api.hunter.io   /plugins/mail.db
 zoomeye_api = "eyJh0PQ"  # https://api.zoomeye.org/user/login non required
 
