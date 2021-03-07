@@ -4,35 +4,38 @@
 
 Framework направленный на получение данных и деанонимизацию пользователей. В инструменте используется большое количество API. Сейчас инструмент дорабатывается, некоторые функции могут работать не корректно.
 
-Инструмент адаптирован под os: Kali Linux * Parrot
+Инструмент адаптирован под: Kali Linux * Parrot
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/LOGOup.png)
 
+----
 
 ### Для работы вам понадобятся API
 
 Название API и сайты для их получения.
 
 
-  API для получения информации о номере: [Открыть сайт](https://numverify.com)
+     API для получения информации о номере: [Открыть сайт](https://numverify.com)
 
-  API для получения информации whois: [Открыть сайт](https://ipstack.com)
+     API для получения информации whois: [Открыть сайт](https://ipstack.com)
 
-  Shodan API: [Открыть сайт](https://www.shodan.io)
+     Shodan API: [Открыть сайт](https://www.shodan.io)
 
-  Проверка на CMS: [Открыть сайт](https://whatcms.org/API)
+     Проверка на CMS: [Открыть сайт](https://whatcms.org/API)
 
-  Gmap для gui [Открыть сайт](https://developers.google.com/maps/documentation)
+     Gmap для gui [Открыть сайт](https://developers.google.com/maps/documentation)
 
-  VirusTotal бесплатная служба проверки: [Открыть сайт](https://developers.virustotal.com/v3.0/reference)
+     VirusTotal бесплатная служба проверки: [Открыть сайт](https://developers.virustotal.com/v3.0/reference)
  
-  Hunter.io API для получения сведений о @mail: [Открыть сайт](https://hunter.io/api)
+     Hunter.io API для получения сведений о @mail: [Открыть сайт](https://hunter.io/api)
 
-  ZoomEye API, вход осуществляется путем авторизации в самом инструменте: [Открыть сайт](https://www.zoomeye.org)
+     ZoomEye API, вход осуществляется путем авторизации в самом инструменте: [Открыть сайт](https://www.zoomeye.org)
 
-  Torrent API: [Открыть сайт](https://iknowwhatyoudownload.com/en/api/)
+     Torrent API: [Открыть сайт](https://iknowwhatyoudownload.com/en/api/)
 
-  Обязательно прописывать API в settings.py
+     CMS detect [Открыть сайт](https://whatcms.org)
+
+     Обязательно прописывать API в settings.py
      
 ---
      
