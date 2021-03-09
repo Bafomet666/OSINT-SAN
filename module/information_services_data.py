@@ -46,6 +46,24 @@ page_emails = f'''
 
 {REDL}__________________________________________________________________________________________________________________________________{WHSL}
 '''
+page_restokz = f'''
+ {WHSL}Поиск информации о гражданине/компании Казахстана{WHSL}
+
+ {REDL}01.{REDL}{GNSL}kgd.gov.kz/ru/services/taxpayer_search —{WHSL} Поиск в базе налогоплательщиков.{WHSL}
+ {REDL}02.{REDL}{GNSL}zhytel.rosfirm.info/kazahstan — {WHSL}Найдет адрес прописки и дату рождения.{WHSL}
+ {REDL}03.{REDL}{GNSL}fa-fa.kz/search_ip_too — {WHSL}Проверка наличия задолженностей, ИП, и ограничения на выезд.{WHSL}
+ {REDL}04.{REDL}{GNSL}adata.kz — {WHSL}Выдаст ИНН в URL, дату рождения предпринимателя.{WHSL}
+ {REDL}05.{REDL}{GNSL}@ShtrafKZBot —{WHSL} Найдет ИНН, дату рождения и много других данных.{WHSL}
+ {REDL}06.{REDL}{GNSL}spra.vkaru.net — {WHSL}Телефонный справочник.{WHSL}
+ {REDL}07.{REDL}{GNSL}spravochnik109.link/kazahstan —{WHSL} Поиск по городскому номеру телефона, найдет ФИО и адрес.{WHSL}
+ {REDL}08.{REDL}{GNSL}tel.nomer-ok.info/kazgibdd — {WHSL}Найдет марку, год выпуска, ФИО владельца город, улицу, дом и квартиру.{WHSL}
+ {REDL}09.{REDL}{GNSL}qamqor.gov.kz/portal/page/portal/POPageGroup/Services/Trans —{WHSL} Проверить авто на ДТП.{WHSL}
+ {REDL}10.{REDL}{GNSL}mmnt.ru — {WHSL}Найдет упоминания в документах.{WHSL}
+ {REDL}11.{REDL}{GNSL}aleph.occrp.org — {WHSL}Поиск по базам данных, файлам, реестрам компаний, утечкам, и другим источникам.{WHSL}
+ {REDL}12.{REDL}{GNSL}munscanner.com/dbs —{WHSL} Поиск по реестрам компаний разных стран.{WHSL}
+
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
 
 page_fio = f'''
   {REDL}01.{REDL}{GNSL}@egrul_bot{GNSL} —{WHSL} Найдет ИП и компании {WHSL}
@@ -181,8 +199,133 @@ page_mail = f'''
 
 {REDL}__________________________________________________________________________________________________________________________________{WHSL}
 '''
+page_flight_tracking = f'''
+ {WHSL}Отслеживание полетов
+{GNSL}
+ https://openflights.org/
+ https://planefinder.net/
+ https://www.planespotters.net/
+ https://ru.flightaware.com/
+ https://www.flightstats.com/v2
+ http://www.planeflighttracker.com/
+ https://ru.flightaware.com/live/flight_event_history.rvt?ident=
+ https://www.flightradar24.com/
+ https://flightwise.com/
+ https://airportwebcams.net/
+ https://www.liveatc.net/
+ https://www.radarbox.com
+ https://www.pilotweb.aero/airfields/search-airfields
+ https://registry.faa.gov/aircraftinquiry/NNum_Inquiry.aspx
+ 
+ {REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_auto_searche = f'''
+
+ {WHSL}Поиск по номеру авто, vin номеру, модели. Европа. Россия. США
+ {GNSL}
+ https://poctra.com/
+ https://www.nomerogram.ru/
+ https://www.reversephonecheck.com/
+ https://www.autowini.com/main
+ https://thatsthem.com/vin-lookup
+ https://www.checkthatvin.com/?action=pcheck
+ https://www.nicb.org/vincheck
+ https://www.vehiclehistory.com/
+ https://www.vehiclehistory.com/license-plate-search
+ https://www.autobidmaster.com/ru/
+ https://www.copart.com/
+ https://checkthatvin.com/ctv/#/home
+ https://uk.vin-info.com/
+ {REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_marine_cargo_tracking = f'''
+
+ {WHSL}Отслеживание морского и грузового транспорта
+ {GNSL}
+ https://www.fleetmon.com/
+ https://www.marinetraffic.com
+ https://www.vesseltracker.com
+ https://www.vesselfinder.com/
+ https://www.boatinfoworld.com/
+ https://www.myshiptracking.com/
+ http://shipspotting.com/
+ http://eships.net/
+ https://www.livecruiseshiptracker.com/
+ https://www.cruisemapper.com/
+ https://www.track-trace.com/container
+ https://www.track-trace.com/bol
+ https://panjiva.com/search
+ https://www.importgenius.com/
+ {REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_forum = f'''
+
+ {WHSL}Поиск форумов и дискуссионных форумов
+ {GNSL}
+ https://boardreader.com/
+ https://groups.google.com/my-groups
+ http://omgili.com/
+ https://in.yahoo.com/?p=us
+ {REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_events = f'''
+
+ {WHSL}События в Европе.
+ {GNSL}
+ https://www.wherevent.com/
+ https://www.eventbrite.com/
+ https://www.songkick.com/
+ https://www.townscript.com/in/online
+ https://www.wikido.com/
+ https://etrigg.com/
+ https://whatupintown.com/
+ {REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_classifieds = f'''
+
+ {WHSL}Объявления Eвропа
+ {GNSL}
+ http://www.flippity.com/
+ http://fatfingers.com/default.aspx
+ https://www.salespider.com/
+ http://www.searchalljunk.com/
+ https://www.searchtempest.com/
+ https://indore.craigslist.org/
+ https://www.classifiedads.com/
+ https://www.speurders.nl/
+ {REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_cryptocurrency_investigations = f'''
+
+ {WHSL}Криптовалютные расследования.
+ {GNSL}
+ https://www.blockchain.com/explorer
+ https://bitcoinwhoswho.com/
+ https://www.blockonomics.co/
+ https://www.walletexplorer.com/
+ https://blockchair.com/
+ https://www.etherchain.org/
+ https://etherscan.io/
+ https://tokenview.com/
+ https://explorer.bitcoin.com/bch
+ https://blockchair.com/
+ https://localmonero.co/blocks
+ https://xmrchain.net/
+ https://bitref.com/
+ https://www.walletexplorer.com/
+ https://www.livecoinwatch.com/
+ {REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+
 banner_end = f'''
-  {WHSL}Дата последнего обновления:{GNSL} вторник 26 Февраля 2021г. {GNSL}Проматай вверх сразу.
+  {WHSL}Дата последнего обновления:{GNSL} вторник 9 Марта 2021г. {GNSL}Проматай вверх сразу.
 
 {REDL}__________________________________________________________________________________________________________________________________{WHSL}
 
@@ -349,7 +492,6 @@ page_vk_osint = f'''
   https://archive.org
   https://www.google.ru
   https://vk.watch/ID/profile
-{WHSL}
 {REDL}__________________________________________________________________________________________________________________________________{WHSL}
 '''
 page_offenosint = f'''{WHSL}
@@ -455,7 +597,7 @@ page_ru_gov = f'''{WHSL}
   Проверка диплома {GNSL}
 
   http://obrnadzor.gov.ru/ru/activity/main_directions/reestr_of_education/ {WHSL}
-
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
 '''
 
 page_telegram_osint = f'''
@@ -630,8 +772,8 @@ page_shodan = f''' {WHSL}
   Вот тебе еще ссылка, там много информации по доркам.
   {GNSL}
   https://github.com/jakejarvis/awesome-shodan-queries
-  
   https://google.com
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
 '''
 page_millitary = f'''
 
@@ -651,8 +793,212 @@ page_sun_geolocation = f'''{WHSL}
   {WHSL}
   Определяем геолокацию человека перешедшего по ссылке.{GNSL}
   https://github.com/Bafomet666/OSINT-SAN
-  https://github.com/Bafomet666/Bigbro
+  https://github.com/Bafomet666/Bigbro {WHSL}
 
+  Вам когда-нибудь хотелось использовать спутниковый снимок странного объекта для реверсивного поиска? 
+  Или, может быть, изучить американские военные объекты?
+  Наверняка хотелось, и вы даже пробовали, но результативность была небольшой.
+  Поможет вам в исследованиях. Вы сможете выбрать область размером около 100х100 метров, 
+  на выходе же вы получите визуально схожие области. 
+  https://search.descarteslabs.com/
+
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+page_aresti = f'''
+{WHSL} Аресты, заключенные и обыск в суде. OSINT USA
+{GNSL}
+  https://aussiefinder.com.au/#gsc.tab=0&gsc.q=hunter
+  https://www.courtlistener.com/
+  https://www.courtrecord.net/
+  https://www.docketalarm.com/
+  https://scholar.google.com/
+  https://www.jailbase.com/search/
+  https://www.judyrecords.com/
+  https://mugshots.com/search.html?t=g&q=
+  https://www.nettrace.com.au/resource/search/people/
+  https://pacer.uscourts.gov/
+  https://www.peoplesearch.com.au/
+  https://www.peoplesearch.ph/
+  https://publicrecords.searchsystems.net/
+  https://theinmatesearch.org/
+  https://unicourt.com/
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+page_uzbusa = f'''
+{WHSL} Данные избирателя (США)
+{GNSL}
+  https://www.findagrave.com/
+  http://www.dobsearch.com/death-records/
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_searche_system = f'''
+{WHSL} Специальные поисковые системы
+{GNSL}
+  https://spyse.com/
+  https://www.2lingual.com/
+  https://biznar.com/biznar/desktop/en/search.html
+  http://citeseer.ist.psu.edu/index
+  https://programmablesearchengine.google.com/about/
+  https://www.harmari.com/login/?redirect_to=%2Fsearch%2Funified
+  https://millionshort.com/
+  https://worldwidescience.org/
+  http://zanran.com/
+  https://swisscows.com/
+  http://bvsg.org/
+  https://www.webcitation.org/
+  http://symbolhound.com/
+  https://science-libraries.canada.ca/eng/home/
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_msearche_system = f'''
+{WHSL} Международные поисковые системы
+{GNSL}
+  https://www.alleba.com/ Alleba (PH)
+  www.ansearch.com.au Ansearch (AU)
+  www.ansearch.com.au (SE)
+  www.goo.ne.jp (JP)
+  http://www.najdi.si/ Najdsi (SL)
+  https://www.naver.com/ Naver (KR)
+  https://www.daum.net/ Daum (KR)
+  https://www.onet.pl/ Onet.pl (PL)
+  https://www.orange.fr/portail Parseek (IR)
+  https://www.sapo.pt/ SAPO (PT)
+  https://www.search.ch/ Search.ch (CH)
+  https://tiger.ch/ Tiger.ch (CH)
+  https://www.baidu.com/ Baidu (China) (CH)
+  https://www.walla.co.il/ Walla (IL)
+  https://yandex.lt/ Yandex (RU)
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_system_claster = f'''
+{WHSL} Визуальный поиск и поисковые системы кластеризации
+{GNSL}
+  https://search.carrot2.org/#/search/web
+  https://www.hugedomains.com/domain_profile.cfm?d=binpad&e=com
+  https://www.izito.com/
+  yippy.com
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_doc_searche = f'''
+{WHSL} Поиск документов и слайдов
+{GNSL}
+  http://www.authorstream.com/
+  www.findpdfdoc.com
+  http://www.freefullpdf.com/#gsc.tab=0
+  https://offshoreleaks.icij.org/
+  https://www.andrewmohawk.com
+  http://www.pdfsearchengine.info/
+  http://ww1.pdfsb.net/
+  www.ppthunter.com
+  https://www.courtlistener.com/recap/
+  https://ru.scribd.com/
+  www.slidesearchengine.com
+  https://www.slideshare.net/
+  http://www.slideworld.com/
+  http://www.sopdf.com/
+  https://www.documentcloud.org/
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_twitter = f'''
+{WHSL} Twitter osint
+{GNSL}
+  https://www.twuko.com/  
+  https://onemilliontweetmap.com
+  https://twitterfall.com/
+  https://www.omnisci.com/demos/tweetmap
+  https://www.allmytweets.net/connect/
+  https://doesfollow.com/
+  https://followerwonk.com/
+  http://www.geochirp.com/
+  http://geosocialfootprint.com/
+  http://gettwitterid.com/
+  http://gigatweeter.com/
+  http://worldmap.harvard.edu/tweetmap
+  https://hashtagify.me/hashtag/wandavision
+  https://www.hashtags.org/
+  https://www.techinweb.com/
+  https://mentionmapp.com/
+  https://ritetag.com/
+  http://www.twittersentiment.appspot.com/
+  http://sleepingtime.org/
+  https://www.trufan.io/
+  https://tagdef.com/en/
+  https://trends24.in/
+  https://www.trendsmap.com/
+  https://twbirthday.com/
+  http://twchat.com/
+  http://www.tweetarchivist.com/
+  http://tweetpsych.com/
+  https://tweetreach.com/
+  http://tweettunnel.com/
+  http://www.twiangulate.com/search/
+  http://www.twitonomy.com/
+  https://www.twitteraudit.com/
+  https://www.tweetreports.com/twitter-chat-schedule/
+  http://twubs.com/twitter-chats
+  https://warble.co/
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_facebook = f'''
+{WHSL} Facebook OSINT
+{GNSL}
+  https://whopostedwhat.com/
+  https://www.social-searcher.com/
+  https://www.fanpagekarma.com/
+  https://www.facebook.com/help/821153694683665/
+  https://netbootcamp.org/facebook.html
+  https://www.facelive.org
+  https://lookup-id.com/
+  https://searchisback.com/
+  https://clearinghouse.wallflux.com/
+  https://findmyfbid.in/
+  https://www.wolframalpha.com/input/?i=facebook+report
+  http://zesty.ca/facebook/
+  https://www.osintcombine.com/facebook-intersect-search-tool 
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_suite_searche = f'''
+{WHSL} Поиск похожих сайтов
+{GNSL}
+  www.similarpages.com
+  https://www.similarsites.com/
+  https://www.similarsitesearch.com/
+  https://www.siteslike.com/
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+
+page_reddit = f'''
+{WHSL} Reddit info
+{GNSL}
+  https://www.resavr.com/
+  https://imgur.com/
+  http://www.redditarchive.com/
+  https://www.redditinvestigator.com/
+  http://www.redective.com/
+  http://redditlist.com/
+  https://redditsearch.io/
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
+'''
+page_scam_and_spam_nomber = f'''
+{WHSL} Проверка номера на скам и спам. Европа и USA
+
+{GNSL}
+  https://sync.me/
+  https://repdigger.com/
+  https://www.truecaller.com/
+  https://freecarrierlookup.com/
+  https://bmobile.in/
+  https://www.phonevalidator.com/index.aspx
+  https://thatsthem.com/
+  https://nextcaller.com/
+  http://www.fonefinder.net/ 
 {REDL}__________________________________________________________________________________________________________________________________{WHSL}
 '''
 page_social_osint = f'''
@@ -684,4 +1030,5 @@ page_social_osint = f'''
 {WHSL}  OSINT For skype account:
  {GNSL}
   mostwantedhf.info • cyber-hub.pw • webresolver.nl • @usersbox_bot 
+{REDL}__________________________________________________________________________________________________________________________________{WHSL}
 '''
