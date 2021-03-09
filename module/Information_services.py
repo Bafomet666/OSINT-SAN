@@ -52,6 +52,7 @@ option_to_page = {
     37: information_services_data.page_marine_cargo_tracking,
     38: information_services_data.page_forum,
     39: information_services_data.page_classifieds,
+    40: information_services_data.page_events,
 }
 
 # переместим в information_services_data, а вообще стоит его переименовать, да
