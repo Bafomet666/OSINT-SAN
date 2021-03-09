@@ -11,7 +11,7 @@ BANNER1 = '''
  {1}[{2} Добро пожаловать в Framework.{1}]                                                   {3}⠄⠄⠄⠄⠄⠄⠄⠉⠛⠛⠛⠛⠛⠛⠛⠋⠉⠄⠄⠄⠄⠄⠄⠄
                                                                                     {3}⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
  {3}Author:{1}   [{2} Free    {1}]                                                               {3}⠄⡠⠄⠄⠄⢀⣠⣶⣿⣿⣿⣷⣼⣿⣿⣿⣶⣄⡀⠄⠄⠠⢄⠄
- {3}Version:{1}  [{2} 3.5.1   {1}]                                                              {3}⠄⣇⠄⢀⣴⣿⣿⣿⣿⣿⣿⡟⢻⣿⣿⣿⣿⣿⣿⣦⠄⠄⢸⠄
+ {3}Version:{1}  [{2} 3.5.2   {1}]                                                              {3}⠄⣇⠄⢀⣴⣿⣿⣿⣿⣿⣿⡟⢻⣿⣿⣿⣿⣿⣿⣦⠄⠄⢸⠄
  {3}Country {1}  [{2} Russia{1}  ]                                                              {3}⠄⠈⠙⠛⠿⠿⠿⠿⠟⠛⠁⠄⠄⠈⠛⠻⠿⠿⠿⠿⠟⠋⠁⠄
  {3}Database:{1} [{2} 0{0} | {2}50.30 mb {1}] default                                                 {3}⠄⠄⠄⠄⠄⠄⣠⣶⣴⣤⡀⠄⠄⠄⣀⣤⣄⣦⡀⠄⠄⠄⠄⠄
  {3}API:     {1} [{2} on {1}]                                                                   {3}⠄⠄⠄⣀⣤⣾⣿⣿⣿⣿⣿⣷⣶⣿⣿⣿⣿⣿⣿⣦⣄⠄⠄⠄
@@ -34,7 +34,7 @@ BANNER2 = '''
  {1}  [{2} Добро пожаловать в Framework.{1}]                                                {2}:bafomet3422\                         :Ns.BOB&ALICEes
                                                                                    {2}pm---srwxrwx:-.m                        cMS146.52.No.
  {3}Author:{1}   [{2} Free    {1}]                                                             {1}k54ТыscriptAc816/                        sENbove3101.
- {3}Version:{1}  [{2} 3.5.1   {1}]                                                             {1}connect5836ITY.Do                        cT:/shSYSTEM
+ {3}Version:{1}  [{2} 3.5.2   {1}]                                                             {1}connect5836ITY.Do                        cT:/shSYSTEM
  {3}Country {1}  [{2} Russia{1}  ]                                                             {1}62.143.135.24aid                       /STFU|wall.No.
  {3}Database:{1} [{2} 0{0} | {2}50.30 mb {1}] default                                                {1}:hevnsntSurb025N.                      dяжду32NG2GIV8
  {3}API:     {1} [{2} on {1}]                                                                  {1}:#OUTHOUSE-  -s:                       /corysucses23D
