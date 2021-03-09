@@ -25,15 +25,14 @@ banner1 = '''{1}
                                     $$ |  $$ |\$$$$$$$\ \$$$$$$$ |      $$ |  $$ |$$ |\$$$$$$$\ $$ |       \$$$$  |
                                     \__|  \__| \_______| \_______|      \__|  \__|\__| \_______|\__|        \____/ 
 
- {2}Framework :{2}{0} OSINT SAN.{0}
+ {2}Framework:{2}{0} OSINT SAN{0}
   '''.format(GNSL, REDL, WHSL)
 choi = (banner1,)
 print (random.choice(choi))
 time.sleep(0.5)
 
-
-data = input(REDL + " [ + ] " + WHSL + " Вы хотите сохранить результат в файле? yes / no :").strip()
-print("")
+data = input(REDL + " [ + ] " + WHSL + "Вы хотите сохранить результат в файле? y/n:"+GNSL+" ").strip()
+print()
 l0g = ("")
 
 def logger(data):
@@ -42,17 +41,14 @@ def logger(data):
     file.close()
 
 if data.startswith("y" or "Y"):
-    l0g = input(REDL + " [ + ] " + WHSL + " Дайте название файлу :")
+    l0g = input(REDL + " [ + ] " + WHSL + "Дайте название файлу:"+GNSL+" ")
     print("")
-    print(REDL +" Данные будут сохранены по пути: OSINT-SAN /module/ Название файла")
-    print("")
-    print ("\n" + "  " + "»" * 78 + "\n")
+    print(GNSL +" Данные будут сохранены по пути: OSINT-SAN /module/ Название файла")
+    print ("\n" + "  " + "»" * 80 + "\n")
     logger(data)
 else:
     print("")
-    print (REDL + " [ + ] " + WHSL + " Ок скипнул да ! потом не пизди что не сохранил !!! ")
-    print("")
-    
+    print (REDL + " [ + ] " + WHSL + "Внимание: поисковые запросы не будут сохранены !!! \n")
 
 def showdam():
     if os.path.exists("./api.txt") and os.path.getsize("./api.txt") > 0:
@@ -61,8 +57,7 @@ def showdam():
     else:
         file = open("api.txt", "w")
         os.system("stty -echo")
-        shodan_api_key = input(REDL + " [ + ] " + WHSL + " Ваш ключ не валидный. Введите другой :")
-        print("")
+        shodan_api_key = input(REDL + " [ + ] " + WHSL + "Ваш ключ не валидный. Введите другой :\n")
         os.system("stty echo")
         file.write(shodan_api_key)
         print ("\n [~] \033[34mFile written: ./api.txt \033[0m")
@@ -75,26 +70,22 @@ def showdam():
     counter = 1
 
     try:
-        print (REDL + " [ + ] " + WHSL + " Проверка вашего ключа shodan :")
+        print (REDL + " [ + ] " + WHSL + "Проверка вашего ключа\n")
         api.search("b00m")
-        print("")
-        print (REDL + " [ + ] " + WHSL + " Успешно авторизован.. ")
-        print("")
+        print (REDL + " [ + ] " + WHSL + "Авторизация успешно пройдена\n")
         time.sleep(0.5)
-        b00m = input(REDL + " [ + ] " + WHSL + " Введите ключевой запрос поиска :")
+        b00m = input(REDL + " [ + ] " + WHSL + "Введите ключевой запрос поиска:"+GNSL+" ")
         print("")
         counter = counter + 1
         for banner in api.search_cursor(b00m):
-            print (REDL + " [ + ] " + WHSL + " IP: " + (banner["ip_str"]))
-            print (REDL + " [ + ] " + WHSL + " Порт: " + str(banner["port"]))
-            print (REDL + " [ + ] " + WHSL + " Организация: " + str(banner["org"]))
-            print (REDL + " [ + ] " + WHSL + " Локация: " + str(banner["location"]))
-            print (REDL + " [ + ] " + WHSL + " Layer: " + (banner["transport"]))
-            print (REDL + " [ + ] " + WHSL + " Layer: " + (banner["transport"]))
-            print (REDL + " [ + ] " + WHSL + " Domains: " + str(banner["domains"]))
-            print (REDL + " [ + ] " + WHSL + " Hostnames: " + str(banner["hostnames"]))
-            print (REDL + " [ + ] " + WHSL + " Информация о баннере для службы: " + (banner["data"]))
-            print (REDL + " [ + ] " + WHSL + " Результат: %s. Search query: %s" % (str(counter), str(b00m)))
+            print (REDL + " [ + ] " + WHSL + "IP:"+GNSL+" "+ (banner["ip_str"]))
+            print (REDL + " [ + ] " + WHSL + "Порт:"+GNSL+" " + str(banner["port"]))
+            print (REDL + " [ + ] " + WHSL + "Организация:"+GNSL+" " + str(banner["org"]))
+            print (REDL + " [ + ] " + WHSL + "Локация:"+GNSL+" " + str(banner["location"]))
+            print (REDL + " [ + ] " + WHSL + "Layer:"+GNSL+" "+ (banner["transport"]))
+            print (REDL + " [ + ] " + WHSL + "Domains:"+GNSL+" " + str(banner["domains"]))
+            print (REDL + " [ + ] " + WHSL + "Hostnames:"+GNSL+" " + str(banner["hostnames"]))
+            print (REDL + " [ + ] " + WHSL + "Результат:"+GNSL+" %s. Search query: %s" % (str(counter), str(b00m)))
 
             data = ("\nIP: " + banner["ip_str"]) + ("\nPort: " + str(banner["port"])) + ("\nOrganisation: " + str(banner["org"])) + ("\nLocation: " + str(banner["location"])) + ("\nLayer: " + banner["transport"]) + ("\nDomains: " + str(banner["domains"])) + ("\nHostnames: " + str(banner["hostnames"])) + ("\nData\n" + banner["data"])
             logger(data)
@@ -107,22 +98,22 @@ def showdam():
 
     except KeyboardInterrupt:
             print ("\n")
-            print (REDL + " [ + ] " + WHSL + " Приятно было иметь с вами дело сэр...")
+            print (REDL + " [ + ] " + WHSL + "Выполняем обратный переход.")
             time.sleep(0.5)
             os.system("cd ..;python3 osintsan.py")
 
     except shodan.APIError as oeps:
-            print (" [✘] \033[1;31mError: %s \033[0m" % (oeps))
-            sha_api = input(REDL + " [ + ] " + WHSL + "Хотите поменять API-ключ? <Y/N>: ").lower()
+            print (REDL + " [ + ] " + WHSL + "Суточные лимиты ключа привышены %s " % (oeps))
+            sha_api = input(REDL + " [ + ] " + WHSL + "Хотите поменять API-ключ ? | Y да / N нет, выход:"+GNSL+" ").lower()
             if sha_api.startswith("y" or "Y"):
                 file = open("api.txt", "w")
                 os.system("stty -echo")
-                shodan_api_key = input(REDL + " [ + ] " + WHSL + " Чувак... У тебя ключ не валидный. ")
+                shodan_api_key = input(REDL + " [ + ] " + WHSL + "Ваш ключ не рабочий. ")
                 os.system("stty echo")
                 file.write(shodan_api_key)
                 print ("\n[~] \033[34mFile written: ./api.txt\033[0m")
                 file.close()
-                print ("[~] \033[34mRestarting the Platform, Please wait...\033[0m \n")
+                print (REDL + " [ + ] " + WHSL + "Перезапуск, подождите. ")
                 time.sleep(1)
                 showdam()
             else:
