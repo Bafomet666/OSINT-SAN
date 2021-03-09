@@ -50,7 +50,7 @@ def crawler(target, port):
 	print(f'\n[+] Total Links Extracted : {number_of_all_urls}\n')
 
 	if number_of_all_urls:
-		path_to_dump = os.path.join(PROJECT_PATH, "db", file)
+		path_to_dump = os.path.join(PROJECT_PATH, "module/db", file)
 		print(f'[+] Dumping Links in {path_to_dump}')
 		with open(path_to_dump, 'w') as dumpfile:
 			dumpfile.write(f'URL : {target}\n\n')
