@@ -148,10 +148,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             MacAddressLookup(mac)
 
         elif choice == 9:
-            from module.gui import run_gui
-
-            run_gui()
-
+            os.system("cd module/gui;python3 gui.py")
             show_banner(clear=True)
 
         elif choice == 10:
