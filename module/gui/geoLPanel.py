@@ -1,9 +1,7 @@
-from module.gui import geoLGobal as gv
-
 import wx
 import webbrowser
 from datetime import datetime
-
+import geoLGobal as gv
 
 #-----------------------------------------------------------------------------
 #-----------------------------------------------------------------------------
@@ -83,8 +81,8 @@ class PanelCtrl(wx.Panel):
         self.zoomInCB = wx.ComboBox(
             self, -1, choices=[str(i) for i in range(10, 19)], size=(80, 22), style=wx.CB_READONLY)
         self.zoomInCB.SetSelection(3)
-        hbox0.Add(self.zoomInCB, border=2)  # flagsR = wx.RIGHT | wx.ALIGN_CENTER_VERTICAL
-        ctSizer.Add(hbox0, border=2) # flag=flagsR, border=2)
+        hbox0.Add(self.zoomInCB, flag=flagsR, border=2)
+        ctSizer.Add(hbox0, flag=flagsR, border=2)
         ctSizer.AddSpacer(5)
         # Row idx 1: URL/IP fill in text field.
         hbox1 = wx.BoxSizer(wx.HORIZONTAL)
@@ -96,15 +94,15 @@ class PanelCtrl(wx.Panel):
         self.searchBt = wx.Button(self, label='Поиск', size=(80, 22))
         self.searchBt.Bind(wx.EVT_BUTTON, self.onSearch)
         hbox1.Add(self.searchBt, flag=flagsR, border=2)
-        ctSizer.Add(hbox1, border=2)  # flag=flagsR
+        ctSizer.Add(hbox1, flag=flagsR, border=2)
         ctSizer.AddSpacer(5)
         # Row idx 2: url parse detail information display area.
-        ctSizer.Add(wx.StaticText(self, label="Полная информация : "), border=2)  # ,
-                    # flag=flagsR, )
+        ctSizer.Add(wx.StaticText(self, label="Полная информация : "),
+                    flag=flagsR, border=2)
         ctSizer.AddSpacer(5)
         self.detailTC = wx.TextCtrl(
             self, size=(381, 410), style=wx.TE_MULTILINE)
-        ctSizer.Add(self.detailTC, border=2) #  , #  flag=flagsR, )
+        ctSizer.Add(self.detailTC, flag=flagsR, border=2)
         ctSizer.AddSpacer(5)
         hbox2 = wx.BoxSizer(wx.HORIZONTAL)
         self.clearBt = wx.Button(self, label='Очистить', size=(70, 22))
@@ -115,7 +113,7 @@ class PanelCtrl(wx.Panel):
             self, label='Открыть GPS координаты на карте : ', size=(300, 22))
         self.searchBt.Bind(wx.EVT_BUTTON, self.onMark)
         hbox2.Add(self.searchBt, flag=flagsR, border=2)
-        ctSizer.Add(hbox2, border=2)  #  flag=flagsR, )
+        ctSizer.Add(hbox2, flag=flagsR, border=2)
         return ctSizer
 
 #--PanelCtrl-------------------------------------------------------------------
@@ -130,7 +128,8 @@ class PanelCtrl(wx.Panel):
         """
         url = "http://maps.google.com/maps?z=12&t=m&q=loc:" + \
             str(self.gpsPos[0])+"+"+str(self.gpsPos[1])
-        webbrowser.open(url)
+        webbrowser.open_new(url)
+        webbrowser.get('chrome').open_new(url)
 
 #--PanelCtrl-------------------------------------------------------------------
     def onSearch(self, event):
@@ -174,3 +173,5 @@ class PanelCtrl(wx.Panel):
             self.detailTC.Clear()
         else:
             self.detailTC.AppendText(" - %s \n" %str(data))
+            
+            

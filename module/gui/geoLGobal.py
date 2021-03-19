@@ -1,6 +1,7 @@
 import os
 
-dirpath = os.path.dirname(os.path.realpath(__file__))
+dirpath = os.getcwd()
+print("Current working directory is : %s" % dirpath)
 APP_NAME = 'OSINT SAN Геолокация'
 
 #------<IMAGES PATH>-------------------------------------------------------------
