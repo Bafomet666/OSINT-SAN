@@ -148,7 +148,10 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             MacAddressLookup(mac)
 
         elif choice == 9:
-            os.system("cd module/gui;python3 gui.py")
+            from module.gui import run_gui
+
+            run_gui()
+
             show_banner(clear=True)
 
         elif choice == 10:
@@ -188,11 +191,8 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 15:
-            while 1:
-                os.system("cd plugins/Brother;sudo python3 dlc.py -t manual -k start")
-                show_banner(clear=True)
-                break
-                continue
+            os.system("cd module;python3 dlc.py -t manual -k start")
+            show_banner(clear=True)
 
         elif choice == 16:
             subprocess.call("cd module;python3 hynder.py", shell=True)
@@ -206,11 +206,11 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             print()
             print("   Проверка всех модулей")
             t.sleep(6)
-            os.system("cd core;mpg123 01.mp3")
+            os.system("cd module/utils/voice;mpg123 02.mp3")
             show_banner(clear=True)
 
         elif choice == 19:
-            os.system("cd plugins/Brother;sudo python3 dlc2.py -t manual -k start")
+            os.system("cd module;sudo python3 dlc2.py -t manual -k start")
             show_banner(clear=True)
 
         elif choice == 20:
@@ -321,8 +321,8 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
         elif choice == 42:
             pass
                     
-        elif choice == 43:
-            pass
+        elif choice == 55:
+            os.system("git pull https://github.com/Bafomet666/OSINT-SAN")
 
         elif choice == 65:
             webbrowser.open("https://t.me/satana666mx")
@@ -332,11 +332,10 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             pass
 
         elif choice == 75:
-            show_banner(clear=True)
+            subprocess.call("python3 osintsan.py", shell=True)
 
         elif choice == 99:
-            os.system("python3 osintsan.py")
-            return
+            show_banner(clear=True)
 
         elif choice == 88:
             from core.repl_huepl import main
@@ -348,6 +347,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             return
 
         else:
+            exit()
             os.system("clear")
             print(f"{COLORS.REDL}  Опции такой нет, дурак!{COLORS.ENDL}")
 
