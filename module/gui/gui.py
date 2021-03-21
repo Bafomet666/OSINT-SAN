@@ -23,7 +23,7 @@ def main():
     
     while(1):
         if option == '1':
-            os.system("cd plugins/gui;python3 geoLRun.py")
+            os.system("cd module/gui;python3 geoLRun.py")
             exit()
             option = input(ENDL + ""+GNSL+"["+REDL + " menu " + GNSL + "]"+ENDL + " :")
 
@@ -32,7 +32,7 @@ def main():
             print(("{1}  [ {0}+{1} ]{2} Происходит установка зависимостей...{3}").format(REDL, GNSL, WHSL, ENDL))
             print("")
             os.system("sudo pip3 install wxPython")
-            os.system("cd plugins/gui;python3 geoLRun.py")
+            os.system("cd module/gui;python3 geoLRun.py")
             exit()
             break
         else:
