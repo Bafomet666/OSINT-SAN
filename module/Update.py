@@ -30,6 +30,6 @@ def update():
             
         if option == '66':
             print(f'\n Загрузка обновления OSINT-SAN. \n Скорость загрузки зависит от скорости интернета')
-            os.system('git clone --quiet https://github.com/Bafomet666/OSINT-SAN')
+            os.system('git clone https://github.com/Bafomet666/OSINT-SAN')
             print(f'\n Обновленный клиент успешно загружен!')
             return
