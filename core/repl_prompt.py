@@ -6,7 +6,7 @@ from module.utils import COLORS
 from osintsan import menu
 from plugins.maildb import maildb
 from prompt_toolkit import prompt
-
+from module.Update import update
 
 import subprocess
 import os
@@ -322,7 +322,10 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             pass
                     
         elif choice == 55:
-            os.system("git pull https://github.com/Bafomet666/OSINT-SAN")
+            while 1:
+                break
+            update()
+            continue
 
         elif choice == 65:
             webbrowser.open("https://t.me/satana666mx")
