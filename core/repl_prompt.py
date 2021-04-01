@@ -191,7 +191,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 15:
-            os.system("cd module;python3 dlc.py -t manual -k start")
+            os.system("cd plugins/Brother;python3 dlc.py -t manual -k start")
             show_banner(clear=True)
 
         elif choice == 16:
