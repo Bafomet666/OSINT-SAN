@@ -5,6 +5,7 @@ from module.utils.banner import show_banner
 from module.utils import COLORS
 from osintsan import menu
 from plugins.maildb import maildb
+from plugins.macaddress import MacAddressLookup
 from prompt_toolkit import prompt
 from module.Update import update
 
@@ -138,14 +139,13 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
                 honeypot(hp_inp)
 
         elif choice == 8:
-            from plugins.macaddress import MacAddressLookup
-
-            print()
-            mac = input(" └──> Ожидаю ввод MAC адреса :")
-
-            show_banner(clear=True)
-
+            while 1:
+                show_banner(clear=True)
+                print("")
+                mac = prompt(" └──> Введите mac address: ") 
+                break
             MacAddressLookup(mac)
+            continue
 
         elif choice == 9:
             from module.gui import run_gui
@@ -206,11 +206,12 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             print()
             print("   Проверка всех модулей")
             t.sleep(6)
-            os.system("cd module/utils/voice;mpg123 02.mp3")
+            print("   \nРаботает в штатном режиме")
+            t.sleep(2)
             show_banner(clear=True)
 
         elif choice == 19:
-            os.system("cd module;sudo python3 dlc2.py -t manual -k start")
+            os.system("cd plugins/Brother;sudo python3 dlc2.py -t manual -k start")
             show_banner(clear=True)
 
         elif choice == 20:
@@ -280,47 +281,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
 
             deanon_menu()
             show_banner(clear=True)
-
-        elif choice == 31:
-            webbrowser.open("https://canarytokens.org")
-            show_banner(clear=True)
-
-        elif choice == 32:
-            pass
-
-        elif choice == 33:
-            from module.whoyous import whois_menu
-
-            whois_menu()
-            show_banner(clear=True)
-
-        elif choice == 34:
-            pass
-
-        elif choice == 35:
-            pass
-
-        elif choice == 36:
-            pass
-
-        elif choice == 37:
-            pass
-
-        elif choice == 38:
-            pass
-
-        elif choice == 39:
-            pass
-
-        elif choice == 40:
-            pass
-
-        elif choice == 41:
-            pass
-            
-        elif choice == 42:
-            pass
-                    
+                   
         elif choice == 55:
             while 1:
                 break
@@ -330,10 +291,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
         elif choice == 65:
             webbrowser.open("https://t.me/satana666mx")
             show_banner(clear=True)
-
-        elif choice == 45:
-            pass
-
+            
         elif choice == 75:
             subprocess.call("python3 osintsan.py", shell=True)
 
