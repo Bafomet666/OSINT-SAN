@@ -79,7 +79,7 @@ def color(s, color=None):
 			attr.append(color_attr)
 
 		attrs = ';'.join(attr)
-		return f'\x1b[{attrs}m{s}\x1b[0m'
+		return
 
 	else:
 		for prefix, text_attr in prefixes_to_text.items():
@@ -87,7 +87,7 @@ def color(s, color=None):
 				attr.append(text_attr)
 				attrs = ';'.join(attr)
 
-				return f'\x1b[{attrs}m{s}\x1b[0m'
+				return
 
 		else:
 			return s
