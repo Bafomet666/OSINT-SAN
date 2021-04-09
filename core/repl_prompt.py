@@ -211,8 +211,9 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 19:
-            os.system("cd plugins/Brother;sudo python3 dlc2.py -t manual -k start")
+            # Это дополнительный модуль
             show_banner(clear=True)
+            os.system("cd module/maigret;python3 wizard.py")
 
         elif choice == 20:
             urls = [
