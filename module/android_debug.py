@@ -167,7 +167,7 @@ def android_debug():
                 print(f"     {connect}")
                 print("   {1}[{0} + {1}]{2} Введите название pack_name \n".format(REDL, GNSL, WHSL))
                 package_name = input(f"    {arrow} Android Debug Bridge {GNSL}[{REDL} app_delete {GNSL}]{ENDL}:")
-                os.system(f"adb -s {device_name} unistall {package_name}")
+                os.system(f"adb -s {device_name} uninstall {package_name}")
 
         elif option == '12':
             if not device_name:
