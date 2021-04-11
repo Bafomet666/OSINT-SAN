@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 #Developer by Bafomet and l3e86
 from module import deanon_mod
-from utils import COLORS
+from module.utils import COLORS
 from osintsan import menu
 
 def deanon_menu():
