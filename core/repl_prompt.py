@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from module.utils.banner import show_banner
 from module.utils import COLORS
 from osintsan import menu
+from osintsan import main1
 from plugins.maildb import maildb
 from plugins.macaddress import MacAddressLookup
 from prompt_toolkit import prompt
@@ -294,7 +295,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
             
         elif choice == 75:
-            subprocess.call("python3 osintsan.py", shell=True)
+            main1()
 
         elif choice == 99:
             show_banner(clear=True)
