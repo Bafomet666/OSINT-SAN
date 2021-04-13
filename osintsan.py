@@ -53,7 +53,7 @@ def main1():
     os.system("printf '\033]2; OSINT SAN 3.5 \a'")
     os.system('clear')
     show_preload_banner()
-
+# Психологическая авторизация
     hardcoded_username = "osint"
     hardcoded_password = "san"
 
