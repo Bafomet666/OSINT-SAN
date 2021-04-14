@@ -58,7 +58,7 @@ def showdam():
     api = shodan.Shodan(shodan_api_key)
     time.sleep(0.4)
 
-    limit = 50  # Just a number
+    limit = 200  # Здесь вы можете изменять лимит запросов
     counter = 1
 
     try:
