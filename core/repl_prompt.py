@@ -196,7 +196,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 16:
-            subprocess.call("cd module;python3 hynder.py", shell=True)
+            subprocess.call("cd module;python3 shodan_module.py", shell=True)
             show_banner(clear=True)
 
         elif choice == 17:
