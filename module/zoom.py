@@ -32,7 +32,7 @@ class ZoomEye(object):
             print("")
             print(WHSL +" Давай щас войдем в твой аккаунт, для осуществления поиска, здесь аккаунт и есть API.")
             print("")
-            print(WHSL +" Все данные сохраняться по пути OSINT SAN 3.0 RED OSINT/exploit_database/ Название файла")
+            print(WHSL +" Все данные сохраняться по пути OSINT-SAN/module Название файла")
             self.login()
         else:
             with open('access_token.txt', 'r') as fr:
