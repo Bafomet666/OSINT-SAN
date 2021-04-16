@@ -14,6 +14,7 @@ import subprocess
 import os
 import webbrowser
 import time as t
+from grab import Grab
 
 # Developer by Bafomet
 def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
@@ -85,15 +86,39 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
                 show_banner(clear=True)
 
         elif choice == 3:
-            from plugins.Phonenumber import phone_number, check_phone_api_token
-
-            if not check_phone_api_token():
-                show_banner(clear=True)
-                print(f"{COLORS.REDL}phone api невалиден! (settings.py){COLORS.REDL}")
-            else:
-                ph = input(" └──> Введи мобильный номер телефона с +7... : ")
-                show_banner(clear=True)
-                phone_number(ph)
+            show_banner(clear=True)
+            g = Grab()
+            number = input(
+                f" {COLORS.REDL}[ {COLORS.GNSL}+ {COLORS.REDL}] {COLORS.WHSL}Введите номер телефона, без кода страны:{COLORS.GNSL} ")
+            g.go('http://phoneradar.ru/phone/' + number)
+            operator = g.doc.select('//*[@class="table"]/tbody/tr[1]/td[2]').text()
+            region = g.doc.select('//*[@class="table"]/tbody/tr[2]/td[2]').text()
+            sity = g.doc.select('//*[@class="table"]/tbody/tr[3]/td[2]/a').text()
+            search_number = g.doc.select('//*[@class="table"]/tbody/tr[4]/td[2]').text()
+            views_number = g.doc.select('//*[@class="table"]/tbody/tr[5]/td[2]').text()
+            positive_reviews = g.doc.select('//*[@class="table"]/tbody/tr[6]/td[2]').text()
+            negative_reviews = g.doc.select('//*[@class="table"]/tbody/tr[7]/td[2]').text()
+            neutral_reviews = g.doc.select('//*[@class="table"]/tbody/tr[8]/td[2]').text()
+            print(f"\n{COLORS.REDL} Базовые данные о номере:\n")
+            print(f" {COLORS.WHSL}Оператор            :{COLORS.GNSL} {operator}")
+            print(f" {COLORS.WHSL}Регион              :{COLORS.GNSL} {region}")
+            print(f" {COLORS.WHSL}Город               :{COLORS.GNSL} {sity}")
+            print(f" {COLORS.WHSL}Поисков номера      :{COLORS.GNSL} {search_number}")
+            print(f" {COLORS.WHSL}Просмотров номера   :{COLORS.GNSL} {views_number}")
+            print(f" {COLORS.WHSL}Положительные отзывы:{COLORS.GNSL} {positive_reviews}")
+            print(f" {COLORS.WHSL}Отрицательные отзывы:{COLORS.GNSL} {negative_reviews}")
+            print(f" {COLORS.WHSL}Нейтральные отзывы  :{COLORS.GNSL} {neutral_reviews}")
+            print(
+                f" \n{COLORS.WHSL} Обязательно оставляйте отзывы о номере, на сайте:{COLORS.GNSL} http://phoneradar.ru/phone/{number}#collapseOtz")
+            print(f' {COLORS.WHSL}Нам важен каждый отзыв )')
+            print(f" \n{COLORS.REDL} Комментарии к номеру\n")
+            try:
+                for elem in g.doc.select('//*[@class="card-body"]/div[3]/div'):
+                    otziv = elem.select('div[2]').text()
+                    print(f' {COLORS.GNSL}[{otziv}]')
+                    print(f' {COLORS.REDL}-------------------------------------------------------------------------')
+            except:
+                print(f" {COLORS.WHSL}Отзывы не найдены!")
 
         elif choice == 4:
             from plugins.dnsdump import dnsmap
