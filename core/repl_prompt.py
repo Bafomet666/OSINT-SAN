@@ -16,6 +16,31 @@ import webbrowser
 import time as t
 from grab import Grab
 
+
+page_8 =f''' {COLORS.GNSL}
+  ⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀                         _       _                                           
+  ⠀⠀⠀⡏⢢⡁⠂⠤⣀⣀⣀⣀⣀ ⠤⠐⢈⡔⢹                  ___  ___(_)_ __ | |_      ___  __ _ _ __                     
+  ⠀⠀⠀⢿⡀⠙⠆⠀⠉⠀⠀⠀⠀⠉⠀⠰⠋⢀⡿                 / _ \/ __| | '_ \| __|____/ __|/ _` | '_ \                    
+⠀ ⠀⠀⠀⠈⢷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⡾⠁                | (_) \__ \ | | | | ||_____\__ \ (_| | | | |                   
+⠀ ⠀⠀⠀⠀⠀⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹                  \___/|___/_|_| |_|\__|    |___/\__,_|_| |_|                   
+  ⣰⠊⠉⠉⠉⡇⠀⠢⣤⣄⠀⠀ ⣠⣤⠔⠀⢸
+  ⠙⠓⠒⢦⠀⠱⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠎                                     _                                     _ 
+  ⠀⠀⠀⠀⡇⠀⠀⠏⠑⠒⠀⠉⠀⠒⠊⠹                 _ __  _   _ _ __ ___ | |__   ___ _ __   _ __ ___   ___   __| |
+  ⡎⠉⢹⠀⠙⡶⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⠀⠀⡏⠉⢱         | '_ \| | | | '_ ` _ \| '_ \ / _ \ '__| | '_ ` _ \ / _ \ / _` |
+  ⢧⡈⠛⠉⠉⠀⠀⣠⠀⠀⠀⠀⠀⠀⠀⠀⣄⠀⠉⠉⠋⢁⡼         | | | | |_| | | | | | | |_) |  __/ |    | | | | | | (_) | (_| |
+  ⠀⢉⣿⠖⠚⠛⢋⢀⠀⠀⠀⠀⠀⠀⠀⡀⡙⠛⠓⠲⣿⣄          |_| |_|\__,_|_| |_| |_|_.__/ \___|_|    |_| |_| |_|\___/ \__,_|
+  ⠀⢸⡇⠀⠀⠀⡞⠁⠈⡃⠀⠀⠀⠀⢘⠁⠈⢳⠀⠀⠀⢸⡇
+  ⠀⠈⢷⣄⠀⠀⠙⠦⠌⠑⠢⠤⠔⠊⠁⢠⠎⠀⠀⣠⡾⠁
+⠀  ⠀⠀⠈⠛⠲⠤⣤⣀⣀⣀⣀⣠⣤⣚⣡⠤⠖⠛⠁
+
+  {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL} Международный поиск, базовый
+
+  {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL} Страны бывшего советского союза.
+  
+  {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL}В главное меню OSINT-SAN 
+ {COLORS.REDL} _________________________________________________________________________________________________________
+'''
+
 # Developer by Bafomet
 def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
     while True:
@@ -85,40 +110,102 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             finally:
                 show_banner(clear=True)
 
+
         elif choice == 3:
-            show_banner(clear=True)
-            g = Grab()
-            number = input(
-                f" {COLORS.REDL}[ {COLORS.GNSL}+ {COLORS.REDL}] {COLORS.WHSL}Введите номер телефона, без кода страны:{COLORS.GNSL} ")
-            g.go('http://phoneradar.ru/phone/' + number)
-            operator = g.doc.select('//*[@class="table"]/tbody/tr[1]/td[2]').text()
-            region = g.doc.select('//*[@class="table"]/tbody/tr[2]/td[2]').text()
-            sity = g.doc.select('//*[@class="table"]/tbody/tr[3]/td[2]/a').text()
-            search_number = g.doc.select('//*[@class="table"]/tbody/tr[4]/td[2]').text()
-            views_number = g.doc.select('//*[@class="table"]/tbody/tr[5]/td[2]').text()
-            positive_reviews = g.doc.select('//*[@class="table"]/tbody/tr[6]/td[2]').text()
-            negative_reviews = g.doc.select('//*[@class="table"]/tbody/tr[7]/td[2]').text()
-            neutral_reviews = g.doc.select('//*[@class="table"]/tbody/tr[8]/td[2]').text()
-            print(f"\n{COLORS.REDL} Базовые данные о номере:\n")
-            print(f" {COLORS.WHSL}Оператор            :{COLORS.GNSL} {operator}")
-            print(f" {COLORS.WHSL}Регион              :{COLORS.GNSL} {region}")
-            print(f" {COLORS.WHSL}Город               :{COLORS.GNSL} {sity}")
-            print(f" {COLORS.WHSL}Поисков номера      :{COLORS.GNSL} {search_number}")
-            print(f" {COLORS.WHSL}Просмотров номера   :{COLORS.GNSL} {views_number}")
-            print(f" {COLORS.WHSL}Положительные отзывы:{COLORS.GNSL} {positive_reviews}")
-            print(f" {COLORS.WHSL}Отрицательные отзывы:{COLORS.GNSL} {negative_reviews}")
-            print(f" {COLORS.WHSL}Нейтральные отзывы  :{COLORS.GNSL} {neutral_reviews}")
-            print(
-                f" \n{COLORS.WHSL} Обязательно оставляйте отзывы о номере, на сайте:{COLORS.GNSL} http://phoneradar.ru/phone/{number}#collapseOtz")
-            print(f' {COLORS.WHSL}Нам важен каждый отзыв )')
-            print(f" \n{COLORS.REDL} Комментарии к номеру\n")
-            try:
-                for elem in g.doc.select('//*[@class="card-body"]/div[3]/div'):
-                    otziv = elem.select('div[2]').text()
-                    print(f' {COLORS.GNSL}[{otziv}]')
-                    print(f' {COLORS.REDL}-------------------------------------------------------------------------')
-            except:
-                print(f" {COLORS.WHSL}Отзывы не найдены!")
+            os.system('clear')
+            print(page_8)
+            option = input(f" {COLORS.REDL} └──> {COLORS.WHSL} Выберите вариант запуска: {COLORS.GNSL}")
+            if option == "1":
+              from plugins.Phonenumber import phone_number, check_phone_api_token
+              if not check_phone_api_token():
+                  print(f"{COLORS.REDL}phone api невалиден! (settings.py){COLORS.REDL}")
+              else:
+                  ph = input(f"\n{COLORS.REDL}  └──>{COLORS.GNSL}  Введи номер телефона с +7: {COLORS.WHSL}")
+                  show_banner(clear=True)
+                  phone_number(ph)
+
+            elif option == "2":
+                g = Grab()
+                print(f'\n  {COLORS.WHSL}Пример: {COLORS.GNSL}9262063265\n')
+                number = input(f"  {COLORS.REDL}[ {COLORS.GNSL}+ {COLORS.REDL}] {COLORS.WHSL}Введите номер телефона, без кода страны:{COLORS.GNSL} ")
+                g.go('http://phoneradar.ru/phone/' + number)
+                try:
+                    operator = g.doc.select('//*[@class="table"]/tbody/tr[1]/td[2]').text()
+                    region = g.doc.select('//*[@class="table"]/tbody/tr[2]/td[2]').text()
+                    sity = g.doc.select('//*[@class="table"]/tbody/tr[3]/td[2]/a').text()
+                    search_number = g.doc.select('//*[@class="table"]/tbody/tr[4]/td[2]').text()
+                    views_number = g.doc.select('//*[@class="table"]/tbody/tr[5]/td[2]').text()
+                    positive_reviews = g.doc.select('//*[@class="table"]/tbody/tr[6]/td[2]').text()
+                    negative_reviews = g.doc.select('//*[@class="table"]/tbody/tr[7]/td[2]').text()
+                    neutral_reviews = g.doc.select('//*[@class="table"]/tbody/tr[8]/td[2]').text()
+
+                    print(f"\n{COLORS.REDL} Базовые данные о номере:\n")
+                    print(f" {COLORS.WHSL}Оператор            :{COLORS.GNSL} {operator}")
+                    print(f" {COLORS.WHSL}Регион              :{COLORS.GNSL} {region}")
+                    print(f" {COLORS.WHSL}Город               :{COLORS.GNSL} {sity}")
+                    print(f" {COLORS.WHSL}Поисков номера      :{COLORS.GNSL} {search_number}")
+                    print(f" {COLORS.WHSL}Просмотров номера   :{COLORS.GNSL} {views_number}")
+                    print(f" {COLORS.WHSL}Положительные отзывы:{COLORS.GNSL} {positive_reviews}")
+                    print(f" {COLORS.WHSL}Отрицательные отзывы:{COLORS.GNSL} {negative_reviews}")
+                    print(f" {COLORS.WHSL}Нейтральные отзывы  :{COLORS.GNSL} {neutral_reviews}")
+                    print(f" \n{COLORS.WHSL} Обязательно оставляйте отзывы о номере")
+                    print(f' {COLORS.WHSL}Нам важен каждый отзыв )')
+                    print(f" \n{COLORS.REDL} Комментарии к номеру\n")
+                    try:
+                        for elem in g.doc.select('//*[@class="card-body"]/div[3]/div'):
+                            review = elem.select('div[2]').text()
+                            print(f'\n {COLORS.GNSL}[{review}]{COLORS.WHSL}')
+                            print(f' {COLORS.REDL}-------------------------------------------------------------------------') 
+                            
+                    except:
+                        print(f" {COLORS.WHSL}Отзывов не найдено")
+                except:
+                    print(f' {COLORS.WHSL}Информация не найдена')
+
+                print(f'\n{COLORS.WHSL} Второй уровень комментариев:')
+                print(f' {COLORS.REDL}-------------------------------------------------------------------------') 
+                g.go(f'https://po-nomeru.ru/phone/{number}/')
+                try:
+                    for elem in g.doc.select('//*[@class="row"]/blockquote'):
+                        print(1)
+                        avtor_review = elem.select('h3').text()
+                        review = elem.select('p').text()
+                        print(f' \n{COLORS.GNSL} [{avtor_review}: {review}]\n')
+                        print(f' {COLORS.REDL}-------------------------------------------------------------------------{COLORS.WHSL}') 
+                    if not avtor_review:
+                        print(f" {COLORS.WHSL}Отзывов не найдено\n")
+                except:
+                    print(f"Нет отзывов!\n")
+                print(f' \n Вы желаете оставить отзыв о номере ?\n')
+                print(f' {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] - {COLORS.WHSL}Да       {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] -{COLORS.WHSL} Нет\n')
+                zapros = input(f' {COLORS.WHSL}\n Введите опцию: {COLORS.GNSL}')
+                print('')
+                if zapros == '1':
+                    show_banner(clear=True)
+                    print(f' {COLORS.REDL}-------------------------------------------------------------------------') 
+                    print(f' {COLORS.WHSL}Используйте любое имя, отзыв будет оставлен анонимно')
+                    print(f' {COLORS.WHSL}Но я бы на вашем месте не отказался от proxy/vpn')
+                    name = input(f'\n {COLORS.WHSL}Введите ваше имя: {COLORS.GNSL}')
+                    message = input(f'\n {COLORS.WHSL}Введите ваш отзыв о владельце номера:{COLORS.GNSL} ')
+                    rating = input(f'\n {COLORS.GNSL}Выберите рейтинг человека:\n'
+                    
+                      f'{COLORS.REDL} [ {COLORS.GNSL}1 {COLORS.REDL}] -{COLORS.WHSL} Положительный, можно звонить и отвечать на звонок.\n'
+                      f'{COLORS.REDL} [ {COLORS.GNSL}2 {COLORS.REDL}] -{COLORS.WHSL} Отрицательный, не отвечать на звонок с этого номера.\n'
+                      f'{COLORS.REDL} [ {COLORS.GNSL}3 {COLORS.REDL}] -{COLORS.WHSL} Нейтральный.\n Введите рейтинг: ')
+                    g.setup(headers={'X-Requested-With': 'XMLHttpRequest',
+                                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                                        'Origin': 'https://po-nomeru.ru'})
+                    g.setup(post={'name': name,
+                                    'message': message,
+                                    'rating': rating,
+                                    'number': number,
+                                    'action': 'addReview'})
+                    g.go('https://po-nomeru.ru/comments/')
+                    print(f' \n{COLORS.REDL}Поздравляю !!! Ваш отзыв добавлен. ')
+                else:
+                    pass
+                    show_banner(clear=True)
+                    
 
         elif choice == 4:
             from plugins.dnsdump import dnsmap
