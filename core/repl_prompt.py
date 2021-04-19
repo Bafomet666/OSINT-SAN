@@ -201,7 +201,7 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
                                     'number': number,
                                     'action': 'addReview'})
                     g.go('https://po-nomeru.ru/comments/')
-                    print(f' \n{COLORS.REDL}Поздравляю !!! Ваш отзыв добавлен. ')
+                    print(f' \n{COLORS.REDL} Поздравляю !!! Ваш отзыв добавлен. ')
                 else:
                     pass
                     show_banner(clear=True)
