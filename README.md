@@ -6,6 +6,8 @@ Framework направленный на получение данных и де�
 
 Инструмент адаптирован под: Kali Linux * Parrot
 
+PRO Версия https://www.youtube.com/watch?v=5oFaQADPtnc
+
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/LOGOup.png)
 
 ----
