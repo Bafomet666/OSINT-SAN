@@ -46,7 +46,7 @@ PRO Версия https://www.youtube.com/watch?v=5oFaQADPtnc
  
 Как только вы ввели все свои API, вам нужно установить зависимости:
 
-     sudo pip3 install -r requirements.txt
+     sudo pip3 install -r requerements.txt
     
      В сложных модулях, вам будет предоставлен выбор дополнительной установки модулей.
 ---
