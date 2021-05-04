@@ -8,6 +8,8 @@ Framework направленный на получение данных и де�
 
 PRO Версия https://www.youtube.com/watch?v=5oFaQADPtnc
 
+Для получение PRO версии напишите в лс в телеграм: https://t.me/satana666mx Платно
+
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/LOGOup.png)
 
 ----
