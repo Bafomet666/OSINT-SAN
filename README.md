@@ -8,7 +8,10 @@ OSINT-SAN Framework дает возможность быстро находит�
 
 PRO Версия https://www.youtube.com/watch?v=5oFaQADPtnc
 
+Подробное описание PRO версии 2.7 https://github.com/Bafomet666/OSINT-SAN-PRO/blob/main/README.md
+
 Для получение PRO версии напишите в лс в телеграм: https://t.me/satana666mx Платно
+
 
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/LOGOup.png)
 
