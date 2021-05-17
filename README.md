@@ -57,6 +57,8 @@ PRO Версия https://www.youtube.com/watch?v=5oFaQADPtnc
      sudo pip3 install -r requerements.txt
      
      В сложных модулях, вам будет предоставлен выбор дополнительной установки модулей.
+
+     Если вдруг возникли ошибки при установке зависимостей, подсказки тут: https://github.com/Bafomet666/OSINT-SAN/issues/11
 ---
 
 ### Использование:
