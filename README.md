@@ -48,15 +48,14 @@ PRO Версия https://www.youtube.com/watch?v=5oFaQADPtnc
      
 ### Зависимости.
 
-    python3: Уже установлен в рекомендуемых системах
-
-    pip3:    sudo apt install -y python3-pip
-
- 
 Как только вы ввели все свои API, вам нужно установить зависимости:
 
+     python3: Уже установлен в рекомендуемых системах
+
+     pip3:    sudo apt install -y python3-pip
+     
      sudo pip3 install -r requerements.txt
-    
+     
      В сложных модулях, вам будет предоставлен выбор дополнительной установки модулей.
 ---
 
