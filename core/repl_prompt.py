@@ -368,7 +368,8 @@ def repl():  # Read\xe2\x80\x93eval\xe2\x80\x93print loop
             show_banner(clear=True)
 
         elif choice == 25:
-            os.system("cd plugins/xss;python2 xss.py")
+            print('  Модуль временно отключен')
+            t.sleep(2)
 
         elif choice == 26:
             from module.bx54 import bx_menu
