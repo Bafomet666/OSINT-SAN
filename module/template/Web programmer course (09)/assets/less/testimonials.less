@@ -1,0 +1,88 @@
+/* ======= Testimonials Section ======= */
+.testimonials-section {
+    background:@color-primary url('../images/map.png') no-repeat center center;
+    .background-size(cover);
+    padding-top: 90px;
+    padding-bottom: 90px;
+    
+    .section-title {
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 36px;
+        font-weight:300;
+        color: #fff;
+    }
+    
+    .item {
+        position: relative;
+        max-width: 800px;
+        padding: 30px;
+        &:last-child {
+            margin-bottom:0;
+        }
+        
+        &.item-reversed {
+            .profile-holder {
+                left: inherit;
+                right: 30px;
+            }
+            .quote {
+                margin-left: 0;
+                margin-right: 105px;
+                &:before {
+                    left: inherit;
+                    right: -10px;
+                    content:"";
+                	border-top: 10px solid transparent;
+                	border-bottom: 10px solid transparent; 
+                	border-left:10px solid rgba(0, 0, 0, 0.2); 
+                	border-right: inherit;
+                }
+            }
+        }
+        
+        .profile-holder {
+            position: absolute;
+            left: 30px;
+            text-align: center;
+            
+        }        
+        
+        .profile-image {
+            display: inline-block;
+            margin: 0 auto;
+            width: 80px;
+            height: 80px;
+        }
+        .quote {
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            margin-left: 105px;
+            border-left: none;
+            margin-bottom: 0;
+            font-size: 14px;
+            min-height: 80px;
+            .border-radius(4px);
+            position: relative;
+            padding:30px;
+            &:before {
+                position: absolute;
+                left: -10px;
+                top:30px;
+                content:"";
+                width: 0; 
+            	height: 0; 
+            	border-top: 10px solid transparent;
+            	border-bottom: 10px solid transparent; 
+            	border-right:10px solid rgba(0, 0, 0, 0.2); 
+            }
+        }
+        .quote-source {
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+}
+
+
+

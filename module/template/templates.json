@@ -1,0 +1,175 @@
+{    
+    "templates": [
+         
+        {
+            "name": "Почта России | Geo",
+            "dir_name": "Russian Post (00)",
+            "module": false,
+            "import_file": null
+        },
+        {
+            "name": "Aviasales | Geo",
+            "dir_name": "Air travel (01)",
+            "module": false,
+            "import_file": null
+        },
+        {
+            "name": "Букинг отелей | Geo",
+            "dir_name": "Hotel Booking (02)",
+            "module": false,
+            "import_file": null
+        },
+        {
+            "name": "Telegram статистика | Geo",
+            "dir_name": "Telegram statistics (03)",
+            "module": false,
+            "import_file": null
+        }, 
+        {
+            "name": "Биткойн инвестиции | Geo",
+            "dir_name": "Cryptocurrency investments (04)",
+            "module": false,
+            "import_file": null
+        },     
+        {
+            "name": "Блогеры на карте | Geo",
+            "dir_name": "Bloggers nearby (05)",
+            "module": false,
+            "import_file": null
+        },       
+        {
+          "name": "Bitcoin магазин | Geo",
+            "dir_name": "Bitcoin market (06)",
+            "module": false,
+            "import_file": null
+        },       
+        {
+            "name": "Ngrok облако | Geo",
+            "dir_name": "Ngrok cloud (07)",
+            "module": false,
+            "import_file": null
+        },       
+        {
+            "name": "Youtube аналитика | Geo",
+            "dir_name": "Youtube (08)",
+            "module": false,
+            "import_file": null
+        },       
+        {
+            "name": "Курсы прогр Skybox | Geo",
+            "dir_name": "Web programmer course (09)",
+            "module": false,
+            "import_file": null
+        },       
+        {
+            "name": "Пара на вечер | Geo",
+            "dir_name": "Tynder (10)",
+            "module": false,
+            "import_file": null
+        },       
+        {
+            "name": "Испанцы на картах | Geo + IP",
+            "dir_name": "Amigos nos Mapas (12)",
+            "module": false,
+            "import_file": null
+        },       
+        {
+            "name": "OSINT Telegram | Geo",
+            "dir_name": "OSINT Telegram (13)",
+            "module": false ,
+            "import_file": null
+        },       
+        {
+            "name": "Друг вокруг | Geo",
+            "dir_name": "Friend around (14)",
+            "module": false ,
+            "import_file": null
+        },
+        {  
+            "name": "Друзья по португальски | Geo + IP", 
+            "dir_name": "Amigos (15)",
+            "module": false ,
+            "import_file": null
+        
+        },
+        {
+            "name": "Google Drive | Geo + IP",
+            "dir_name": "gdrive (17)",
+            "module": true,
+            "import_file": "mod_gdrive"
+        },
+        {
+            "name": "Фотограф eng версия | Geo",
+            "dir_name": "Photographer (18)",
+            "module": false ,
+            "import_file": null
+        },
+        {
+            "name": "WhatsApp | Geo",
+            "dir_name": "whatsapp",
+            "module": true,
+            "import_file": "mod_whatsapp"
+        },
+        {
+            "name": "Telegram | Geo",
+            "dir_name": "telegram",
+            "module": true,
+            "import_file": "mod_telegram"
+        },
+        {
+            "name": "Проститундер | Geo",
+            "dir_name": "Prostitunder (20)",
+            "module": false ,
+            "import_file": null
+         },
+         {
+            "name": "Фотограф Россия | Geo",
+            "dir_name": "Photographer RU (21)",
+            "module": false ,
+            "import_file": null
+        },
+        {
+            "name": "Туризм в горах | Geo",
+            "dir_name": "Tourism in the mountains (22)",
+            "module": false ,
+            "import_file": null
+        },
+        {
+            "name": "Каршеринг авто | Geo",
+            "dir_name": "Car sharing (23)",
+            "module": false ,
+            "import_file": null
+        },
+        {
+            "name": "Знакомства в регионах | Geo",
+            "dir_name": "Regional flirting (24)",
+            "module": false ,
+            "import_file": null
+        },
+        {
+            "name": "Тайга | Geo",
+            "dir_name": "taiga game (25)",
+            "module": false ,
+            "import_file": null
+        },
+        {
+            "name": "Поиск работы | Geo",
+            "dir_name": "Job search (26)",
+            "module": false ,
+            "import_file": null
+        },              
+        {
+            "name": "Ближайший ресторан | Geo",
+            "dir_name": "Nearest restaurant (27)",
+            "module": false ,
+            "import_file": null
+        },
+        {
+            "name": "Идеальное свидание | Geo",
+            "dir_name": "Perfect date (28)",
+            "module": false ,
+            "import_file": null
+       
+         }                  
+    ]
+}

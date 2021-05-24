@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каршер авто</title>
+	<!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet"> 
+    <link rel="shortcut icon" href="https://i.ibb.co/S6GmqVW/Daco-293410.png" type="image/x-icon">
+    
+</head> 
+
+<body id="home">
+
+    <header id="header">
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="#home">Страховой депозит</a></li> 
+                        <li class="scroll"><a href="#services">Поддержка</a></li>
+                        <li class="scroll"><a href="#about">Отечественные</a></li>
+                        <li class="scroll"><a href="#pricing">Иномарки</a></li>
+                        <li class="scroll"><a href="#portfolio">Срочная доставка</a></li>                     
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+    <section id="main-slider">
+        <div class="owl-carousel">
+            <div class="item" style="background-image: url(images/slider/bg1.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="carousel-content">
+                                    <h2>Make Your <span>Car</span> Shine</h2> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+             <div class="item" style="background-image: url(images/slider/bg2.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="carousel-content">
+                                    <h2>Get Our <span>Amazing</span> Service</h2> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+        </div><!--/.owl-carousel-->
+    </section><!--/#main-slider-->
+
+    <section id="text" class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>Что бы найти ближайшие свободные машины вам нужно нажать кнопку " Открыть карту с авто "</h2>
+                    <p>Некоторые операторы предоставляют пользователям возможность завершить аренду на стоянках аэропортов. Но зону обслуживания лучше уточнить — у всех операторов она разная.
+                    </p>
+                </div>
+                <div class="col-sm-3 text-right">
+                   
+                    <footer>
+					<button id="change" class="button" type="button" onclick="main()">Открыть карту с авто</button>
+                    <div  class="text" id="result"> 
+					</footer>
+                </div>
+            </div>
+        </div>
+    </section><!--/#hero-text-->
+
+      <section id="services" >
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">На дорогах России и Украины</h2>
+                <p class="text-center wow fadeInDown">Стоимость аренды отличается в зависимости от выбранного оператора, а также класса авто, и составляет от 3 до 15 рублей в минуту. Преимущество каршеринга в том, что вам не надо тратить деньги на парковку, бензин, страховку, мойку автомобиля и его содержание.</p>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Car Checkup</h4>
+                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-compass"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Car Wash</h4>
+                                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters greater</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-bell"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Car Repair</h4>
+                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-cube"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Car Paint</h4>
+                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-yelp"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Car Decor</h4>
+                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-life-ring"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Car Polish</h4>
+                                <p>Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum.</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div>
+            </div><!--/.row-->    
+        </div><!--/.container-->
+    </section><!--/#services-->
+   
+
+ <section id="about">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Кто мы такие</h2>
+                <p class="text-center wow fadeInDown">Обратите внимание: у каждого оператора свои ограничения по возрасту и водительскому стажу арендаторов. Эти сведения размещены на сайтах или в приложениях операторов каршеринга. Также там можно посмотреть контакты для обращений</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                  <img class="img-responsive" src="images/about.png" alt="">
+                </div>
+
+                <div class="col-sm-6 wow fadeInRight"> 
+                    <p>Чтобы арендовать автомобиль, необходимо зарегистрироваться в мобильном приложении оператора. В процессе регистрации вам нужно прикрепить фотографии паспорта и водительского удостоверения, после чего подписать договор (путем присоединения к условиям оператора в приложении). Процедура проверки может занять несколько дней.</p>
+
+                    <p>Забронировать доступный автомобиль можно в приложении. После того как машина зарезервирована, у вас есть некоторое время бесплатного бронирования — в среднем 20 минут — для того чтобы добраться до нее. По его истечении начинается оплата по тарифу за ожидание, который составляет от 2 до 5 рублей в минуту. Авто открывается с помощью приложения. Все необходимые документы и ключ замка зажигания находятся внутри машины. После визуальной проверки авто на наличие повреждений можно начинать аренду.</p>
+
+					<p>После использования автомобиля нужно завершить аренду. Чаще всего использование автомобиля считается прекращенным после нажатия кнопки «Завершить аренду» в приложении, однако лучше уточнить у оператора заранее, с какого момента он перестает списывать средства за аренду. </p>
+ 
+
+                </div>
+            </div>
+        </div>
+    </section><!--/#about-->
+
+
+<section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Расценки</h2>
+                <p class="text-center wow fadeInDown">Не забывайте, что использование арендованного автомобиля не освобождает от ответственности: штрафы за нарушения правил дорожного движения, расходы на оплату штрафстоянки, спецстоянки и эвакуации несет арендатор. Несмотря на то, что транспортные средства застрахованы, у всех операторов предусмотрена материальная ответственность за порчу автомобиля в ДТП по вине водителя.</p>
+            </div>
+
+            <div class="row"> 
+			<div class="col-md-4 menuItem">     
+                            <ul class="menu">
+                                <li>
+                                    Car Wash <span class="price">$15</span>
+                                    <div class="detail">ipsum dolor sit amet, consectetur </div>
+                                </li>
+                                <li>
+                                    Car Repair  <span class="price">$15</span>
+                                    <div class="detail">ipsum dolor sit amet dskfj consectetur </div>
+                                </li>
+                                <li>
+                                    Car Checkup  <span class="price">$15</span>
+                                    <div class="detail">Semper aliquam quis mattis quam </div>
+                                </li>
+                                <li>
+                                    Wheel Alignment  <span class="price">$15</span>
+                                    <div class="detail">ipsum dolor sit amet, consectetur </div>
+                                </li>
+                                <li>
+                                    Tyer Change  <span class="price">$15</span>
+                                    <div class="detail">ipsum dolor sit amet dskfj consectetur </div>
+                                </li>
+                            </ul>
+                        </div>
+						<div class="col-md-4 menuItem">     
+                            <ul class="menu">
+                                <li>
+                                    Car Painting  <span class="price">$15</span>
+                                    <div class="detail">ipsum dolor sit amet, consectetur </div>
+                                </li>
+                                <li>
+                                   Music System  <span class="price">$15</span>
+                                    <div class="detail">ipsum dolor sit amet dskfj consectetur </div>
+                                </li>
+                                <li>
+                                    Car Interior  <span class="price">$15</span>
+                                    <div class="detail">Semper aliquam quis mattis quam </div>
+                                </li>
+                                <li>
+                                    Car Exterior  <span class="price">$15</span>
+                                    <div class="detail">ipsum dolor sit amet, consectetur </div>
+                                </li>
+                                <li>
+                                    Car Modification  <span class="price">$15</span>
+                                    <div class="detail">ipsum dolor sit amet dskfj consectetur </div>
+                                </li>
+                            </ul>
+                        </div>
+						<div class="col-md-4 menuItem">  
+                            <ul class="menu">
+                                <li>
+                                    Car Polishing  <span class="price">$5</span>
+                                    <div class="detail">ipsum dolor sit amet, consectetur </div>
+                                </li>
+                                <li>
+                                    Scrach Remove  <span class="price">$10</span>
+                                    <div class="detail">ipsum dolor sit amet dskfj consectetur </div>
+                                </li>
+                                <li>
+                                    Denting  <span class="price">$25</span>
+                                    <div class="detail">Semper aliquam quis mattis quam </div>
+                                </li>
+                                <li>
+                                    Provision Store  <span class="price">$35</span>
+                                    <div class="detail">ipsum dolor sit amet, consectetur </div>
+                                </li>
+                                <li>
+                                    Car Salon  <span class="price">$125</span>
+                                    <div class="detail">ipsum dolor sit amet dskfj consectetur </div>
+                                </li>
+                            </ul>
+                        </div>
+			</div>
+        </div>
+    </section><!--/#pricing-->
+  
+
+ 
+
+  <section id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Наши машины</h2> 
+                <p class="text-center wow fadeInDown"></p>
+            </div>
+
+            </div>
+
+            <div class="portfolio-items">
+                <div class="portfolio-item designing">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="images/portfolio/1.jpg" alt="">
+                        <div class="portfolio-info">
+                            
+                            <a class="preview" href="images/portfolio/1.jpg" rel="prettyPhoto"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item mobile development">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="images/portfolio/2.jpg" alt="">
+                        <div class="portfolio-info">
+                            
+                            <a class="preview" href="images/portfolio/2.jpg" rel="prettyPhoto"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item designing">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="images/portfolio/3.jpg" alt="">
+                        <div class="portfolio-info">
+                            
+                            <a class="preview" href="images/portfolio/3.jpg" rel="prettyPhoto"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item mobile">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="images/portfolio/4.jpg" alt="">
+                        <div class="portfolio-info">
+                            
+                            <a class="preview" href="images/portfolio/4.jpg" rel="prettyPhoto"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item designing development">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="images/portfolio/5.jpg" alt="">
+                        <div class="portfolio-info">
+                            
+                            <a class="preview" href="images/portfolio/5.jpg" rel="prettyPhoto"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item mobile">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="images/portfolio/6.jpg" alt="">
+                        <div class="portfolio-info">
+                            
+                            <a class="preview" href="images/portfolio/6.jpg" rel="prettyPhoto"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item designing development">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="images/portfolio/7.jpg" alt="">
+                        <div class="portfolio-info">
+                            
+                            <a class="preview" href="images/portfolio/7.jpg" rel="prettyPhoto"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item mobile">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="images/portfolio/8.jpg" alt="">
+                        <div class="portfolio-info">
+                            
+                            <a class="preview" href="images/portfolio/8.jpg" rel="prettyPhoto"><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+            </div>
+        </div><!--/.container-->
+    </section><!--/#portfolio-->
+
+   
+   
+    <section id="our-team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Лучшие сотрудники</h2>
+                <p class="text-center wow fadeInDown">Наши сотрудники всегда онлайн, они помогут вам найти ближайшую свободную к вам машину. <br> </p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="team-img">
+                            <img class="img-responsive" src="images/team/01.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>John Deo</h3>
+                            <span>Manager</span>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="team-img">
+                            <img class="img-responsive" src="images/team/02.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Анюта</h3>
+                            <span>Manager</span>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="team-img">
+                            <img class="img-responsive" src="images/team/03.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Владимир</h3>
+                            <span>Manager</span>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                        <div class="team-img">
+                            <img class="img-responsive" src="images/team/04.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Алена</h3>
+                            <span>Manager</span>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!--/#our-team-->
+
+<div id="google-map" style="height:400px" data-latitude="55.751054" data-longitude="37.571342"></div>   
+   </section><!--/#bottom-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                  
+                </div>
+                <div class="col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="contact/jqBootstrapValidation.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/custom-scripts.js"></script>
+    <script type="text/javascript">
+    if (window.location.protocol == "http:") {
+        var restOfUrl = window.location.href.substr(5);
+        window.location = "https:" + restOfUrl;
+    }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/location.js"></script>
+    <script src="js/info.js"></script>
+</body>
+</html>

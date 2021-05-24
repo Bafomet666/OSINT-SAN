@@ -1,0 +1,54 @@
+/* ======= Features Section ======= */
+.features-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    .section-title {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 36px;
+        font-weight:300;
+    }
+    .intro {
+        color: @text-grey;
+        font-size: 16px;
+        max-width: 760px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+}
+
+.feature-nav {
+
+    text-align: center;
+    margin-bottom: 30px;
+    & > li {
+       
+       position: relative;
+       
+       .fa {
+           margin-right: 10px;
+           width: 20px;
+       }
+       &.active {
+           
+           & > a {
+               color: @color-primary;
+               background: none;
+               padding: 8px 0;
+           }
+       }
+       & > a {
+           background: none;
+           padding: 8px 0;
+           color: @text-color-secondary;
+           
+           &:hover {
+               background: none;
+               color: @color-primary;
+           }
+       }
+    }
+}
+.feature-content {
+    
+}
