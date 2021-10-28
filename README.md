@@ -62,7 +62,7 @@ sudo pip3 install -r requerements.txt
 Ключ для входа в инструмент вы найдете у нас в постах в telegram.
 
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/001.png)
+![alt tag](https://github.com/Bafomet666/screen/blob/main/menu_demo.png)
 
 После успешной авторизации, вам будет доступно меню с инструментами.
 
