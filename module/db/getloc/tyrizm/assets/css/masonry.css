@@ -1,0 +1,125 @@
+/*
+A Pen By Jonathan D LaPlante
+http://codepen.io/jdlaplan/pen/Aowpj
+*/
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .masonry {
+    margin: 3% 0;
+  }
+  .masonry .grid-sizer {
+    width: 100%;
+  }
+  .masonry .gutter-sizer {
+    width: 3%;
+  }
+  .masonry .item {
+    width: 100%;
+    margin-bottom: 3%;
+  }
+  .masonry .item img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: xxspx) {
+  .masonry {
+    margin: 3% 0;
+  }
+  .masonry .grid-sizer {
+    width: 48.5%;
+  }
+  .masonry .gutter-sizer {
+    width: 3%;
+  }
+  .masonry .item {
+    width: 48.5%;
+    margin-bottom: 3%;
+  }
+  .masonry .item img {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .masonry {
+    margin: 2.25% 0;
+  }
+  .masonry .grid-sizer {
+    width: 48.87%;
+  }
+  .masonry .gutter-sizer {
+    width: 2.25%;
+  }
+  .masonry .item {
+    width: 48.87%;
+    margin-bottom: 2.25%;
+  }
+  .masonry .item img {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .masonry {
+    margin: 2% 0;
+  }
+  .masonry .grid-sizer {
+    width: 32%;
+  }
+  .masonry .gutter-sizer {
+    width: 2%;
+  }
+  .masonry .item {
+    width: 32%;
+    margin-bottom: 2%;
+  }
+  .masonry .item img {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .masonry {
+    margin: 1.875% 0;
+  }
+  .masonry .grid-sizer {
+    width: 32.08%;
+  }
+  .masonry .gutter-sizer {
+    width: 1.875%;
+  }
+  .masonry .item {
+    width: 32.08%;
+    margin-bottom: 1.875%;
+  }
+  .masonry .item img {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .masonry {
+    margin: 1.8% 0;
+  }
+  .masonry .grid-sizer {
+    width: 32.13%;
+  }
+  .masonry .gutter-sizer {
+    width: 1.8%;
+  }
+  .masonry .item {
+    width: 32.13%;
+    margin-bottom: 1.8%;
+  }
+  .masonry .item-width2 {
+    width: 66.06%;
+    margin-bottom: 1.8%;
+  }
+  .masonry .item img,
+  .masonry .item-width2 img {
+    width: 100%;
+  }
+}

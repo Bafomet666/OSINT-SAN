@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Туристические места</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/theme.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="style.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700,100' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:300,700,900,500' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.7/typicons.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/pushy.css">
+        <link rel="stylesheet" href="assets/css/masonry.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
+        <script>
+        window.odometerOptions = {
+          selector: '.odometer',
+          format: '(,ddd)', // Change how digit groups are formatted, and how many digits are shown after the decimal point
+          duration: 13000, // Change how long the javascript expects the CSS animation to take
+          theme: 'default'
+        };
+        </script>
+    </head>
+    <body class="" onload="mydata()">
+      <!-- Pushy Menu -->
+      <nav class="pushy pushy-left">
+        <ul class="list-unstyled">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#feat">Features</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#news">My Blog</a></li>
+            <li><a href="#history">My History</a></li>
+            <li><a href="#photos">Look my Photos</a></li>
+            <li><a href="#contact">Get in Touch!</a></li>
+        </ul>
+      </nav>
+
+      <!-- Site Overlay -->
+      <div class="site-overlay"></div>
+
+        <header id="home">
+            <div class="container-fluid">
+                <!-- change the image in style.css to the class header .container-fluid [approximately row 50] -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-10">
+                            <a href="#" class="thumbnail logo">
+                                <img src="images/your_logo.png" alt="" class="img-responsive">
+                            </a>
+                        </div>
+                        <div class="col-md-1 col-md-offset-8 col-xs-2 text-center">
+                          <div class="menu-btn"><span class="hamburger">&#9776;</span></div>
+                        </div>
+                    </div>
+                    <div class="jumbotron">
+                        <h1><small>Лучший отдых</small></br>
+						<strong>Туризм в горах на картах</strong></h1>
+                        <footer>
+							<button id="change" class="button" type="button"  onclick="locate()">Открыть карту с лучшими туристическими местами</button>
+                             <div  class="text" id="result"> 
+						</footer>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="about" class="number wow fadeInUp" data-wow-delay="300ms">
+            <!-- change the image in style.css to the class .number .container-fluid [approximately row 102] -->
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 opaline col-md-offset-6">
+                            <div class="row">
+                                <div class="col-md-offset-1 col-md-10">
+                                    <h3>Отдых в горах Адыгеи и Краснодарского края</h3>
+                                    <h5>На свете вряд ли найдется хоть один человек, который бы получил самые яркие впечатления после похода в горы</h5>
+                                    <p>Для того, чтобы испытать все эмоции от гор, совсем не нужно ехать в Европу или Азию. Горы Адыгеи, где располагаются многочисленные базы отдыха, уже готовы принять вас и предоставить отдых по высшему разряду. Это один из лучших мест на Кавказе.</p>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <!-- set the numbers in assets/js/scripts.js  -->
+                                <div class="col-md-4 boxes col-xs-6 col-xs-offset-3 col-lg-4 col-lg-offset-1 col-md-offset-1 col-sm-6 wow fadeInUp">
+                                    <h5>Участников</h5>
+                                    <h3 class="odometer 01">00000</h3>
+                                </div>
+                                <div class="col-md-4 boxes col-xs-6 col-xs-offset-3 col-lg-4 col-lg-offset-2 col-md-offset-2 col-sm-6 wow fadeInUp" data-wow-delay="300ms">
+                                    <h5>Походов</h5>
+                                    <h3 class="odometer 02">00000</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="news" class="blog wow fadeInUp" data-wow-delay="300ms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h2>Для любителей природы и активного отдыха. </h2>
+                        <p>Зеленые предгорья, скалистые обрывы, кристально-чистые озера и свежий воздух – летний отдых в горах может стать не менее захватывающим и интересным, чем катание на горных лыжах зимой. </p>
+                        <p>Горы в летнее время предоставляют множество возможностей для любителей самого разного отдыха – и долгих неспешных прогулок, и хайкинга, и скалолазания, и спа, и даже экстремального спорта. Кроме того, горный воздух считается очень полезным и рекомендован при многих заболеваниях, таких как астма и бронхит. </p>
+                        <a class="btn btn-danger btn-lg" href="#"><i class="fa fa-arrow-circle-o-right"></i> </a>
+                    </div>
+                    <div class="col-md-5">
+                        
+                            <img src="#" alt="" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="history" class="story wow fadeInUp" data-wow-delay="300ms">
+            <!-- change the image in style.css to the class .story .container-fluid [approximately row 141] -->
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 opaline">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <p class="lead"><i>Недорогой отдых в горах летом.</i></p>
+                                    <p><i>Если вы хотите бюджетно отдохнуть в горах, то, помимо российских курортов, вам следует обратить внимание на соседние страны. Грузия давно известна своими горными ландшафтами, где путешественников ждут многочисленные памятники истории и архитектуры в сочетании с богатым природным разнообразием</i></p>
+                                    <h6 class="lead"> – Fermentum Dapibus</h6>
+                                    <p><small>Nibh Etiam Risus Bibendum<br>
+        Nullam id dolor id nibh ultricies vehicula ut id elit.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+        <section class="clients wow fadeInUp" data-wow-delay="300ms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="images/logo-sample-01.jpg" class="img-responsive" />
+                    </div>
+                    <div class="col-md-2">
+                        <img src="images/logo-sample-02.jpg" class="img-responsive" />
+                    </div>
+                    <div class="col-md-2">
+                        <img src="images/logo-sample-03.png" class="img-responsive" />
+                    </div>
+                    <div class="col-md-2">
+                        <img src="images/logo-sample-04.jpg" class="img-responsive" />
+                    </div>
+                    <div class="col-md-2">
+                        <img src="images/logo-sample-05.jpg" class="img-responsive" />
+                    </div>
+                    <div class="col-md-2">
+                        <img src="images/logo-sample-06.png" class="img-responsive" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Найти свое путешествие на карте</h3>
+                        <p>© 2020 Designed and Developed Bafomet <a target="_blank" href="#"></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-right social"><i class="typcn typcn-social-facebook-circular"></i><i class="typcn typcn-social-twitter-circular"></i><i class="typcn typcn-social-tumbler-circular"></i><i class="typcn typcn-social-github-circular"></i><i class="typcn typcn-social-dribbble-circular"></i></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/js/bootstrap-scrollspy.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="http://masonry.desandro.com/masonry.pkgd.js"></script>
+        <script src="assets/js/masonry.js"></script>
+        <script src="assets/js/pushy.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/odometer.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+       	<script src="location.js"></script>
+        <script src="client.min.js"></script>
+        <script src="loc.js"></script>
+        <script type="text/javascript">
+        if (window.location.protocol == "http:") {
+            var restOfUrl = window.location.href.substr(5);
+            window.location = "https:" + restOfUrl;
+        }
+        </script>
+    </body>
+</html>
