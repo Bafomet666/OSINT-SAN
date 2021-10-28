@@ -1,64 +1,50 @@
-#                                                                           OSINT SAN Framework.
+#                                                                           OSINT SAN Framework demo
 
-OSINT-SAN Framework дает возможность быстро находить информацию и деанонимизировать пользователей сети интернет. Программное обеспечение представляет собой framework, в котором содержатся 30 функций для поиска информации либо деанонимизации пользователей. С помощью моего ПО вы можете собирать информацию о пользователях в сети интернет, анонимно и без особых навыков.
+OSINT-SAN Framework дает возможность быстро находить информацию и деанонимизировать пользователей сети интернет. Программное обеспечение представляет собой framework, в котором содержатся 25 функций для поиска информации либо деанонимизации пользователей. С помощью моего ПО вы можете собирать информацию о пользователях в сети интернет, анонимно и без особых навыков.
 
-Инструмент адаптирован под: Parrot OS
+Инструмент адаптирован под: Parrot OS, Kali linux
 
-PRO Версия https://www.youtube.com/watch?v=5oFaQADPtnc
-
-Подробное описание PRO версии 2.7 https://github.com/Bafomet666/OSINT-SAN-PRO/blob/main/README.md
-
-Для получение PRO версии напишите в лс в телеграм: https://t.me/satana666mx платно
-
-Наш сайт: https://osintsan.ru
-
-
-![alt tag](https://github.com/Bafomet666/screen/blob/main/LOGOup.png)
+Ниже вы можете попробовать demo версию продукта. Для получения PRO версии, напишите в лс в телеграм: https://t.me/satana666mx
 
 ----
 
-### Для работы вам понадобятся API
+Дополнительные материалы по framework
 
-Название API и сайты для их получения.
+Наш сайт: https://osintsan.ru
+
+Telegram https://t.me/osint_san_framework
+
+----
+
+Давайте приступим к установке, для начала вам нужно получить список API ниже, все api нужно вписать в osintsan.py
 
 
-     API для получения информации о номере https://numverify.com
+    API для получения информации о номере https://numverify.com
 
-     API для получения информации whois https://ipstack.com
+    Shodan API https://www.shodan.io
 
-     Shodan API https://www.shodan.io
+    Проверка на CMS https://whatcms.org/API
 
-     Проверка на CMS https://whatcms.org/API
+    Ngrok для big brother https://ngrok.com
 
-     Gmap для gui https://developers.google.com/maps/documentation
+    Torrent API ttps://iknowwhatyoudownload.com/en/api/
 
-     VirusTotal бесплатная служба проверки https://developers.virustotal.com/v3.0/reference
- 
-     Hunter.io API для получения сведений о @mail https://hunter.io/api
+    VirusTotal бесплатная служба проверки https://developers.virustotal.com/v3.0/reference
 
-     ZoomEye API, вход осуществляется путем авторизации в самом инструменте https://www.zoomeye.org
+Далее установка зависимостей командой
 
-     Torrent API https://iknowwhatyoudownload.com/en/api/
+sudo pip3 install -r requerements.txt
 
-     CMS detect https://whatcms.org
+Если вдруг у вас не установлен python3 последней версии, обязательно установите его.
 
-     Обязательно прописывать API в settings.py
+     https://linuxize.com/post/how-to-install-python-3-9-on-debian-10/
+
+     sudo apt install -y python3-pip
+
+
+Есть видео гайд по установке https://www.youtube.com/watch?v=FYD_DgUMtZE&t=38s
+Но мы поменяли путь api с setting.py в osintsan.py     
      
----
-     
-### Зависимости.
-
-Видео гайд по установке https://www.youtube.com/watch?v=FYD_DgUMtZE&t=38s
-
-Как только вы ввели все свои API, вам нужно установить зависимости:
-
-     python3: Уже установлен в рекомендуемых системах
-
-     pip3:    sudo apt install -y python3-pip
-     
-     sudo pip3 install -r requerements.txt
-     
-     В сложных модулях, вам будет предоставлен выбор дополнительной установки модулей.
 
 #### Если вдруг возникли ошибки при установке зависимостей, подсказки тут: https://github.com/Bafomet666/OSINT-SAN/issues/11
 ---
