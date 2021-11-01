@@ -16,7 +16,7 @@ shodan_api_key = 'Здесь прописать api'
 # API номер телефона phone_apis -- https://numverify.com/dashboard?logged_in=1
 phone_apis = "Здесь прописать api"
 
-# Torrent API  ---  https://api.antitor.com
+# Torrent API  ---  https://iknowwhatyoudownload.com/en/api/
 torrent_api = "Здесь прописать api"
 
 # Virus total api -- https://developers.virustotal.com/reference#getting-started 
