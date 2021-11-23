@@ -11,7 +11,7 @@ from core.core import main, licence, check_licence
 token = "Здесь прописать api"
 
 # Ваш личный код Shodan -- https://www.shodan.io/
-shodan_api_key = 'Здесь прописать api'
+shodan_api_key = "Здесь прописать api"
 
 # API номер телефона phone_apis -- https://numverify.com/dashboard?logged_in=1
 phone_apis = "Здесь прописать api"
