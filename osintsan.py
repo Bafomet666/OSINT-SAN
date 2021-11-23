@@ -5,7 +5,7 @@
 import os
 from core.core import main, licence, check_licence
 
-# Внимание впишите API ниже
+# Внимание впишите между '' свои API ниже, пример: shodan = 'ащ34гн49арлмокщ48ущышолдвв'
 
 # Здесь хранится твой ngrok токен (API) -- https://ngrok.com/
 token = "Здесь прописать api"
