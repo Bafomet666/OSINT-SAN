@@ -1,48 +1,158 @@
 from module.utils import COLORS
 
+WHSL = C = "\033[39m"
+REDL = R = "\033[0;31m"
+GNSL = G = "\033[1;34m"
+GRNL = U = "\033[32;1m"
+FIOL = H = "\033[95m"
 
-page_26 = f'''                                                                                                           
-
-  {COLORS.GNSL}[{COLORS.REDL} 1 {COLORS.GNSL}] {COLORS.WHSL}  Nickname                   {COLORS.GNSL}[{COLORS.REDL} 31 {COLORS.GNSL}] {COLORS.WHSL} Международные поисковые системы  
-  {COLORS.GNSL}[{COLORS.REDL} 2 {COLORS.GNSL}] {COLORS.WHSL}  Mail и почта               {COLORS.GNSL}[{COLORS.REDL} 32 {COLORS.GNSL}] {COLORS.WHSL} Twitter OSINT                     
-  {COLORS.GNSL}[{COLORS.REDL} 3 {COLORS.GNSL}] {COLORS.WHSL}  Мобильные номера           {COLORS.GNSL}[{COLORS.REDL} 33 {COLORS.GNSL}] {COLORS.WHSL} Поиск документов           
-  {COLORS.GNSL}[{COLORS.REDL} 4 {COLORS.GNSL}] {COLORS.WHSL}  Карты                      {COLORS.GNSL}[{COLORS.REDL} 34 {COLORS.GNSL}] {COLORS.WHSL} Отслеживание полетов             
-  {COLORS.GNSL}[{COLORS.REDL} 5 {COLORS.GNSL}] {COLORS.WHSL}  Пользователь Telegram      {COLORS.GNSL}[{COLORS.REDL} 35 {COLORS.GNSL}] {COLORS.WHSL} Криптовалютные расследования
-  {COLORS.GNSL}[{COLORS.REDL} 6 {COLORS.GNSL}] {COLORS.WHSL}  Граждане Белaруси          {COLORS.GNSL}[{COLORS.REDL} 36 {COLORS.GNSL}] {COLORS.WHSL} Информация об автомобиле    
-  {COLORS.GNSL}[{COLORS.REDL} 7 {COLORS.GNSL}] {COLORS.WHSL}  Военнослужащие             {COLORS.GNSL}[{COLORS.REDL} 37 {COLORS.GNSL}] {COLORS.WHSL} Морской и грузовой транспорт  
-  {COLORS.GNSL}[{COLORS.REDL} 8 {COLORS.GNSL}] {COLORS.WHSL}  Граждане России            {COLORS.GNSL}[{COLORS.REDL} 38 {COLORS.GNSL}] {COLORS.WHSL} Поиск форумов            
-  {COLORS.GNSL}[{COLORS.REDL} 9 {COLORS.GNSL}] {COLORS.WHSL}  Мониториг техники          {COLORS.GNSL}[{COLORS.REDL} 39 {COLORS.GNSL}] {COLORS.WHSL} Объявления Европа               
-  {COLORS.GNSL}[{COLORS.REDL} 10 {COLORS.GNSL}] {COLORS.WHSL} Социальные сети            {COLORS.GNSL}[{COLORS.REDL} 40 {COLORS.GNSL}] {COLORS.WHSL} Критическая инфраструктура страны
-  {COLORS.GNSL}[{COLORS.REDL} 11 {COLORS.GNSL}] {COLORS.WHSL} Геолокация                 {COLORS.GNSL}[{COLORS.REDL} 41 {COLORS.GNSL}] {COLORS.WHSL} OSINT карты
-  {COLORS.GNSL}[{COLORS.REDL} 12 {COLORS.GNSL}] {COLORS.WHSL} Деанонимизация по лицу     {COLORS.GNSL}[{COLORS.REDL} 42 {COLORS.GNSL}] {COLORS.WHSL} Административный поиск. Россия
-  {COLORS.GNSL}[{COLORS.REDL} 13 {COLORS.GNSL}] {COLORS.WHSL} Instagram OSINT            {COLORS.GNSL}[{COLORS.REDL} 43 {COLORS.GNSL}] {COLORS.WHSL} Поиск информации об авиаперелетах в режиме real time 
-  {COLORS.GNSL}[{COLORS.REDL} 14 {COLORS.GNSL}] {COLORS.WHSL} Offenosint OS              {COLORS.GNSL}[{COLORS.REDL} 44 {COLORS.GNSL}] {COLORS.WHSL} Граждане республики Киргизии
-  {COLORS.GNSL}[{COLORS.REDL} 15 {COLORS.GNSL}] {COLORS.WHSL} VK OSINT                   {COLORS.GNSL}[{COLORS.REDL} 45 {COLORS.GNSL}] {COLORS.WHSL} Граждане республики Польша
-  {COLORS.GNSL}[{COLORS.REDL} 16 {COLORS.GNSL}] {COLORS.WHSL} Восстановление доступа     {COLORS.GNSL}[{COLORS.REDL} 46 {COLORS.GNSL}] {COLORS.WHSL} Поиск по могилам. Кладбище
-  {COLORS.GNSL}[{COLORS.REDL} 17 {COLORS.GNSL}] {COLORS.WHSL} Mail и почта               {COLORS.GNSL}[{COLORS.REDL} 47 {COLORS.GNSL}] {COLORS.WHSL} Поиск по дате публикации
-  {COLORS.GNSL}[{COLORS.REDL} 18 {COLORS.GNSL}] {COLORS.WHSL} Сканирование сайтов        {COLORS.GNSL}[{COLORS.REDL} 48 {COLORS.GNSL}] {COLORS.WHSL} Telegram боты
-  {COLORS.GNSL}[{COLORS.REDL} 19 {COLORS.GNSL}] {COLORS.WHSL} Карты                      {COLORS.GNSL}[{COLORS.REDL} 49 {COLORS.GNSL}] {COLORS.WHSL} Определяем кредитную карту
-  {COLORS.GNSL}[{COLORS.REDL} 20 {COLORS.GNSL}] {COLORS.WHSL} Ресурсы
-  {COLORS.GNSL}[{COLORS.REDL} 21 {COLORS.GNSL}] {COLORS.WHSL} Shodan запросы
-  {COLORS.GNSL}[{COLORS.REDL} 22 {COLORS.GNSL}] {COLORS.WHSL} Граждане Казахстана
-  {COLORS.GNSL}[{COLORS.REDL} 23 {COLORS.GNSL}] {COLORS.WHSL} Аресты, заключенные USA
-  {COLORS.GNSL}[{COLORS.REDL} 24 {COLORS.GNSL}] {COLORS.WHSL} Данные избирателя USA
-  {COLORS.GNSL}[{COLORS.REDL} 25 {COLORS.GNSL}] {COLORS.WHSL} Пров номера на скам
-  {COLORS.GNSL}[{COLORS.REDL} 26 {COLORS.GNSL}] {COLORS.WHSL} Reddit info
-  {COLORS.GNSL}[{COLORS.REDL} 27 {COLORS.GNSL}] {COLORS.WHSL} Facebook OSINT
-  {COLORS.GNSL}[{COLORS.REDL} 28 {COLORS.GNSL}] {COLORS.WHSL} Поиск похожих сайтов
-  {COLORS.GNSL}[{COLORS.REDL} 29 {COLORS.GNSL}] {COLORS.WHSL} Cистемы кластеризации
-  {COLORS.GNSL}[{COLORS.REDL} 30 {COLORS.GNSL}] {COLORS.WHSL} Спец поисковые системы 
-  
-  {COLORS.REDL}OSINT-SAN {COLORS.GNSL}PRO
-  {COLORS.WHSL}Ваша мини osint википедия
-  {COLORS.REDL}Нашли ресурс которого нет в wikipedia и хотите добавить его ? Напишите создателю, он его моментально добавит на github
-  _______________________________________________________________________________________________________________________
-
-  {COLORS.WHSL}Для выхода в главное меню, введите номер опции 99
+page_42 = fr'''{COLORS.FIOL}
+  _  _  ____  ____  __     __  __ _  ____  __  
+ ( \/ )(  __)(_  _)/ _\   (  )(  ( \(  __)/  \ 
+ / \/ \ ) _)   )( /    \   )( /    / ) _)(  O )
+ \_)(_/(____) (__)\_/\_/  (__)\_)__)(__)  \__/ \
+ {COLORS.WHSL}
+ Ваш помошник просмотра metadata\
+ 
+ {COLORS.GNSL}[{COLORS.REDL} 1 {COLORS.GNSL}] {COLORS.WHSL}  Просмотр metadata photo
+ {COLORS.GNSL}[{COLORS.REDL} 2 {COLORS.GNSL}] {COLORS.WHSL}  Просмотр metadata pdf
+ {COLORS.GNSL}[{COLORS.REDL} 99 {COLORS.GNSL}] {COLORS.WHSL} Обратно в меню
 '''
 
+page_44 = f'''{COLORS.WHSL}
+ О разработчиках проекта, разрабатываю проект сам, но часто нанимаю других разработчиков, так как не всегда
+ могу написать код идеально, бывает что комьюнити помогает дописать код, 
+ либо внести новые элементы в проект.
 
+ {COLORS.FIOL}Наш сайт:{COLORS.REDL}      http://osintsan.ru
+ 
+ {COLORS.FIOL}Наш телеграм:{COLORS.REDL}  https://t.me/osint_san_framework
+
+ {COLORS.WHSL}Спасибо что вы нас поддерживаете, стараемся сделать проект лучше каждый день )) 
+
+
+ {COLORS.GNSL}[{COLORS.REDL} y {COLORS.GNSL}] {COLORS.WHSL} Макс ебать я не понял ошибки какие то выходят, заебало все, ты нужен срочно 
+ 
+ {COLORS.GNSL}[{COLORS.REDL} n {COLORS.GNSL}] {COLORS.WHSL} Установить зависимости самим, или проверить
+'''
+page_45 = fr'''{COLORS.GRNL}
+  ______             _                          _______                __       
+ |_   _ `.          (_)                        |_   __ \              [  |  _   
+   | | `. \ _ .--.  __  _   __  .---.  _ .--.    | |__) |,--.   .---.  | | / ]  
+   | |  | |[ `/'`\][  |[ \ [  ]/ /__\\[ `/'`\]   |  ___/`'_\ : / /'`\] | '' <   
+  _| |_.' / | |     | | \ \/ / | \__., | |      _| |_   // | |,| \__.  | |`\ \  
+ |______.' [___]   [___] \__/   '.__.'[___]    |_____|  \'-;__/'.___.'[__|  \_] 
+
+ {COLORS.WHSL}Driver Pack on {COLORS.REDL}OSINT-SAN PRO
+
+ {COLORS.WHSL}Данный pack драйверов подходит под многих осинт инструментов,
+ {COLORS.WHSL}связанных с парсингом данных
+
+ Перед запуском модулей советую запустить терминал от рута
+ Командой:{REDL} sudo su
+ 
+ {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}]  {COLORS.WHSL} Установка {COLORS.GNSL}pycurl and grub                {COLORS.REDL}[ {COLORS.GNSL}5 {COLORS.REDL}]  {COLORS.WHSL} Написать {COLORS.GNSL}разработчику
+
+ {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL}  Установка {GNSL} geckodriver                   {COLORS.REDL}[ {COLORS.GNSL}6 {COLORS.REDL}]  {COLORS.WHSL} Установить {COLORS.GNSL}selenium
+
+ {COLORS.REDL}[ {COLORS.GNSL}3 {COLORS.REDL}] {COLORS.WHSL}  Основные зависимости                     {COLORS.REDL}[ {COLORS.GNSL}7 {COLORS.REDL}]  {COLORS.WHSL} Установка стикеров в терминал
+
+ {COLORS.REDL}[ {COLORS.GNSL}4 {COLORS.REDL}]  {COLORS.WHSL} Установить android debug driver
+
+ {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL} Обратно в меню                         
+
+'''
+
+page_22_bear = fr'''  {COLORS.GNSL}
+    _--_     _--_    _--_     _--_     _--_     _--_     _--_     _--_
+   (    )___(    )  (    )___(    )   (    )___(    )   (    )___(    )
+    \           /    \           /     \           /     \           /
+     ( () _ () )      ( () _ () )       ( () _ () )       ( () _ () )
+      \  ___  /        \  ___  /         \  ___  /         \  ___  /
+    .__( `-' )          ( `-' )           ( `-' )        .__( `-' )  ___
+   / !  `---' \      _--'`---_          .--`---'\       /   /`---'`-'   \
+  /  \         !    /         \___     /        _>\    /   /          ._/   __
+ !   /\        !   /   /       !  \   /  /-___-'   ) /'   /.-----\___/     /  )
+ !   !_\______/\. (   <        !__/ /'  (        _/  \___//          `----'   !
+  \    \       ! \ \   \      /\    \___/`------' )       \            ______/
+   \___/   )  /__/  \--/   \ /  \  ._    \      `<         `--_____----'
+     \    /   !       `.    )-   \/  ) ___>-_     \   /-\    \    /
+     /   !   /         !   !  `.    / /      `-_   `-/  /    !   !
+    !   /__ /___       /  /__   \__/ (  \---__/ `-_    /     /  /__
+    (______)____)     (______)        \__)         `-_/     (______)
+   
+ {COLORS.FIOL}Сибирские медведи ниндзя найдут ваш запрос в социальных сетях.
+ {COLORS.REDL}Версия модуля {COLORS.GNSL}[ {COLORS.WHSL}beta {COLORS.GNSL}] {COLORS.WHSL}
+'''
+
+page_31 = f''' {COLORS.FIOL}                                  
+
+ {COLORS.WHSL}Памятка по модулю YaSeeker
+ {COLORS.OKNL}Вам необходимо пройти авторизацию yandex в браузере и выгрузить cookies.txt для правильной работы инструмента,
+ после того как вы выгрузите файл cookies.txt, переместите его в папку с инструментом.
+ 
+ {COLORS.GNSL}Plugins для firefox :{COLORS.REDL} https://addons.mozilla.org/en-US/firefox/addon/cookies-txt/
+ {COLORS.GNSL}Pluging для chrome  :{COLORS.REDL} https://chrome.google.com/webstore/detail/get-cookiestxt/bgaddhkoddajcdgocldbbfleckgcbcid
+ {COLORS.GNSL}Дополнительная информация:{COLORS.REDL} https://github.com/HowToFind-bot/YaSeeker/blob/main/README.md
+
+'''
+
+page_28 = f'''
+ {COLORS.WHSL}Wikipedia
+
+ {COLORS.GNSL}[ {COLORS.REDL}1 {COLORS.GNSL}]  {COLORS.WHSL}Wikipedia в графах ( Европа и США  )
+ 
+ {COLORS.GNSL}[ {COLORS.REDL}2 {COLORS.GNSL}]  {COLORS.WHSL}Wikipedia в тексте ( Бывшие страны Советского союза )
+ 
+{COLORS.REDL} [ {COLORS.GNSL}99{COLORS.REDL} ]{COLORS.WHSL} Выход в главное меню  {COLORS.REDL}
+  
+'''
+
+page_26 = f'''                                                                                                           
+  {COLORS.GNSL}[{COLORS.REDL} 1 {COLORS.GNSL}] {COLORS.WHSL}  Nickname                   {COLORS.GNSL}[{COLORS.REDL} 26 {COLORS.GNSL}] {COLORS.WHSL} Reddit info 
+  {COLORS.GNSL}[{COLORS.REDL} 2 {COLORS.GNSL}] {COLORS.WHSL}  Mail и почта               {COLORS.GNSL}[{COLORS.REDL} 27 {COLORS.GNSL}] {COLORS.WHSL} Facebook OSINT           
+  {COLORS.GNSL}[{COLORS.REDL} 3 {COLORS.GNSL}] {COLORS.WHSL}  Мобильные номера           {COLORS.GNSL}[{COLORS.REDL} 28 {COLORS.GNSL}] {COLORS.WHSL} Поиск похожих сайтов            
+  {COLORS.GNSL}[{COLORS.REDL} 4 {COLORS.GNSL}] {COLORS.WHSL}  Карты                      {COLORS.GNSL}[{COLORS.REDL} 29 {COLORS.GNSL}] {COLORS.WHSL} Cистемы кластеризации           
+  {COLORS.GNSL}[{COLORS.REDL} 5 {COLORS.GNSL}] {COLORS.WHSL}  Пользователь Telegram      {COLORS.GNSL}[{COLORS.REDL} 30 {COLORS.GNSL}] {COLORS.WHSL} Спец поисковые системы   
+  {COLORS.GNSL}[{COLORS.REDL} 6 {COLORS.GNSL}] {COLORS.WHSL}  Граждане Белaруси          {COLORS.GNSL}[{COLORS.REDL} 31 {COLORS.GNSL}] {COLORS.WHSL} Международные поисковые системы       
+  {COLORS.GNSL}[{COLORS.REDL} 7 {COLORS.GNSL}] {COLORS.WHSL}  Военнослужащие             {COLORS.GNSL}[{COLORS.REDL} 32 {COLORS.GNSL}] {COLORS.WHSL} Twitter OSINT             
+  {COLORS.GNSL}[{COLORS.REDL} 8 {COLORS.GNSL}] {COLORS.WHSL}  Граждане России            {COLORS.GNSL}[{COLORS.REDL} 33 {COLORS.GNSL}] {COLORS.WHSL} Поиск документов              
+  {COLORS.GNSL}[{COLORS.REDL} 9 {COLORS.GNSL}] {COLORS.WHSL}  Мониториг техники          {COLORS.GNSL}[{COLORS.REDL} 34 {COLORS.GNSL}] {COLORS.WHSL} Отслеживание полетов                
+  {COLORS.GNSL}[{COLORS.REDL} 10 {COLORS.GNSL}] {COLORS.WHSL} Социальные сети            {COLORS.GNSL}[{COLORS.REDL} 35 {COLORS.GNSL}] {COLORS.WHSL} Криптовалютные расследования 
+  {COLORS.GNSL}[{COLORS.REDL} 11 {COLORS.GNSL}] {COLORS.WHSL} Геолокация                 {COLORS.GNSL}[{COLORS.REDL} 36 {COLORS.GNSL}] {COLORS.WHSL} Информация об автомобиле 
+  {COLORS.GNSL}[{COLORS.REDL} 12 {COLORS.GNSL}] {COLORS.WHSL} Деанонимизация по лицу     {COLORS.GNSL}[{COLORS.REDL} 37 {COLORS.GNSL}] {COLORS.WHSL} Морской и грузовой транспорт 
+  {COLORS.GNSL}[{COLORS.REDL} 13 {COLORS.GNSL}] {COLORS.WHSL} Instagram OSINT            {COLORS.GNSL}[{COLORS.REDL} 38 {COLORS.GNSL}] {COLORS.WHSL} Поиск форумов 
+  {COLORS.GNSL}[{COLORS.REDL} 14 {COLORS.GNSL}] {COLORS.WHSL} Offenosint OS              {COLORS.GNSL}[{COLORS.REDL} 39 {COLORS.GNSL}] {COLORS.WHSL} Объявления Европа    
+  {COLORS.GNSL}[{COLORS.REDL} 15 {COLORS.GNSL}] {COLORS.WHSL} VK OSINT                   {COLORS.GNSL}[{COLORS.REDL} 40 {COLORS.GNSL}] {COLORS.WHSL} Критическая инфраструктура страны 
+  {COLORS.GNSL}[{COLORS.REDL} 16 {COLORS.GNSL}] {COLORS.WHSL} Восстановление доступа     {COLORS.GNSL}[{COLORS.REDL} 41 {COLORS.GNSL}] {COLORS.WHSL} OSINT карты 
+  {COLORS.GNSL}[{COLORS.REDL} 17 {COLORS.GNSL}] {COLORS.WHSL} Mail и почта               {COLORS.GNSL}[{COLORS.REDL} 42 {COLORS.GNSL}] {COLORS.WHSL} Административный поиск. Россия 
+  {COLORS.GNSL}[{COLORS.REDL} 18 {COLORS.GNSL}] {COLORS.WHSL} Сканирование сайтов        {COLORS.GNSL}[{COLORS.REDL} 43 {COLORS.GNSL}] {COLORS.WHSL} Поиск информации об авиаперелетах в режиме real time  
+  {COLORS.GNSL}[{COLORS.REDL} 19 {COLORS.GNSL}] {COLORS.WHSL} Карты                      {COLORS.GNSL}[{COLORS.REDL} 44 {COLORS.GNSL}] {COLORS.WHSL} Граждане республики Киргизии 
+  {COLORS.GNSL}[{COLORS.REDL} 20 {COLORS.GNSL}] {COLORS.WHSL} Ресурсы                    {COLORS.GNSL}[{COLORS.REDL} 45 {COLORS.GNSL}] {COLORS.WHSL} Граждане республики Польша
+  {COLORS.GNSL}[{COLORS.REDL} 21 {COLORS.GNSL}] {COLORS.WHSL} Shodan запросы             {COLORS.GNSL}[{COLORS.REDL} 46 {COLORS.GNSL}] {COLORS.WHSL} Поиск по могилам. Кладбище
+  {COLORS.GNSL}[{COLORS.REDL} 22 {COLORS.GNSL}] {COLORS.WHSL} Граждане Казахстана        {COLORS.GNSL}[{COLORS.REDL} 47 {COLORS.GNSL}] {COLORS.WHSL} Поиск по дате публикации
+  {COLORS.GNSL}[{COLORS.REDL} 23 {COLORS.GNSL}] {COLORS.WHSL} Аресты, заключенные USA    {COLORS.GNSL}[{COLORS.REDL} 48 {COLORS.GNSL}] {COLORS.WHSL} Telegram боты
+  {COLORS.GNSL}[{COLORS.REDL} 24 {COLORS.GNSL}] {COLORS.WHSL} Данные избирателя USA      {COLORS.GNSL}[{COLORS.REDL} 49 {COLORS.GNSL}] {COLORS.WHSL} Определяем кредитную карту
+  {COLORS.GNSL}[{COLORS.REDL} 25 {COLORS.GNSL}] {COLORS.WHSL} Пров номера на скам
+
+  {COLORS.FIOL}Для выхода в главное меню, введите номер опции 99
+'''
+
+page_14 = f'''
+
+  {COLORS.WHSL}Статус модуля {COLORS.REDL}[{COLORS.GNSL}beta{COLORS.REDL}]
+
+  {COLORS.GNSL}OSINT-SAN Framework 
+
+  {COLORS.REDL}===================================================================================                                          
+
+  {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL}  Поиск Shodan
+
+  {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL}  Открыть памятку из Wikipedia по запросам Shodan
+
+  {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL} В главное меню
+
+'''
 page_25 = f''' {COLORS.FIOL}
    ________  __    __     ______    ________       __      _____  ___   
   /"       )/" |  | "\   /    " \  |"      "\     /""\    (\"   \|"  \  
@@ -56,18 +166,18 @@ page_25 = f''' {COLORS.FIOL}
 
 page_23 = f'''
 
- {COLORS.WHSL}Новая архетиктура x0com, {COLORS.FIOL}big brother 13.0{COLORS.WHSL} с низким уровнем доступа
+ {COLORS.WHSL}Новая архетиктура x0com, big brother 13.0
 
- {COLORS.GNSL}[ {COLORS.REDL}1 {COLORS.GNSL}]  {COLORS.WHSL}Nearyou         {COLORS.GNSL}[ {COLORS.REDL}11 {COLORS.GNSL}]  {COLORS.WHSL}Блогер рядом       {COLORS.GNSL}[ {COLORS.REDL}21 {COLORS.GNSL}]  {COLORS.WHSL}Друг вокруг
- {COLORS.GNSL}[ {COLORS.REDL}2 {COLORS.GNSL}]  {COLORS.WHSL}Погода          {COLORS.GNSL}[ {COLORS.REDL}12 {COLORS.GNSL}]  {COLORS.WHSL}Курсы Skillbox     {COLORS.GNSL}[ {COLORS.REDL}22 {COLORS.GNSL}]  {COLORS.WHSL}Биржа bitcoin
- {COLORS.GNSL}[ {COLORS.REDL}3 {COLORS.GNSL}]  {COLORS.WHSL}Hostel          {COLORS.GNSL}[ {COLORS.REDL}13 {COLORS.GNSL}]  {COLORS.WHSL}Лучшее свидание    {COLORS.GNSL}[ {COLORS.REDL}23 {COLORS.GNSL}]  {COLORS.WHSL}Каршеринг авто
- {COLORS.GNSL}[ {COLORS.REDL}4 {COLORS.GNSL}]  {COLORS.WHSL}Авиабилеты      {COLORS.GNSL}[ {COLORS.REDL}14 {COLORS.GNSL}]  {COLORS.WHSL}Ближ фотограф      {COLORS.GNSL}[ {COLORS.REDL}24 {COLORS.GNSL}]  {COLORS.WHSL}Portugal друзья
- {COLORS.GNSL}[ {COLORS.REDL}5 {COLORS.GNSL}]  {COLORS.WHSL}YouTube         {COLORS.GNSL}[ {COLORS.REDL}15 {COLORS.GNSL}]  {COLORS.WHSL}Premium ngrok
- {COLORS.GNSL}[ {COLORS.REDL}6 {COLORS.GNSL}]  {COLORS.WHSL}Почта РФ        {COLORS.GNSL}[ {COLORS.REDL}16 {COLORS.GNSL}]  {COLORS.WHSL}Знакомства, секс
- {COLORS.GNSL}[ {COLORS.REDL}7 {COLORS.GNSL}]  {COLORS.WHSL}Telegram        {COLORS.GNSL}[ {COLORS.REDL}17 {COLORS.GNSL}]  {COLORS.WHSL}Флирт в регионе
- {COLORS.GNSL}[ {COLORS.REDL}8 {COLORS.GNSL}]  {COLORS.WHSL}Проститундер    {COLORS.GNSL}[ {COLORS.REDL}18 {COLORS.GNSL}]  {COLORS.WHSL}Туризм, отдых
- {COLORS.GNSL}[ {COLORS.REDL}9 {COLORS.GNSL}]  {COLORS.WHSL}Fast Jobs       {COLORS.GNSL}[ {COLORS.REDL}19 {COLORS.GNSL}]  {COLORS.WHSL}Ближайший ресторан
- {COLORS.GNSL}[ {COLORS.REDL}10 {COLORS.GNSL}] {COLORS.WHSL}Bitcoin         {COLORS.GNSL}[ {COLORS.REDL}20 {COLORS.GNSL}]  {COLORS.WHSL}Игра " Тайга "     
+ {COLORS.GNSL}[ {COLORS.REDL}1 {COLORS.GNSL}]  {COLORS.WHSL}Nearyou         {COLORS.GNSL}[ {COLORS.REDL}11 {COLORS.GNSL}]  {COLORS.WHSL}Блогер рядом       {COLORS.GNSL}[ {COLORS.REDL}21 {COLORS.GNSL}]  {COLORS.WHSL}Друг вокруг       {COLORS.GNSL}[ {COLORS.REDL}31 {COLORS.GNSL}]  {COLORS.WHSL}Свободный
+ {COLORS.GNSL}[ {COLORS.REDL}2 {COLORS.GNSL}]  {COLORS.WHSL}Погода          {COLORS.GNSL}[ {COLORS.REDL}12 {COLORS.GNSL}]  {COLORS.WHSL}Курсы Skillbox     {COLORS.GNSL}[ {COLORS.REDL}22 {COLORS.GNSL}]  {COLORS.WHSL}Биржа bitcoin     {COLORS.GNSL}[ {COLORS.REDL}32 {COLORS.GNSL}]  {COLORS.WHSL}Свободный
+ {COLORS.GNSL}[ {COLORS.REDL}3 {COLORS.GNSL}]  {COLORS.WHSL}Hostel          {COLORS.GNSL}[ {COLORS.REDL}13 {COLORS.GNSL}]  {COLORS.WHSL}Лучшее свидание    {COLORS.GNSL}[ {COLORS.REDL}23 {COLORS.GNSL}]  {COLORS.WHSL}Каршеринг авто    {COLORS.GNSL}[ {COLORS.REDL}33 {COLORS.GNSL}]  {COLORS.WHSL}Свободный
+ {COLORS.GNSL}[ {COLORS.REDL}4 {COLORS.GNSL}]  {COLORS.WHSL}Авиабилеты      {COLORS.GNSL}[ {COLORS.REDL}14 {COLORS.GNSL}]  {COLORS.WHSL}Ближ фотограф      {COLORS.GNSL}[ {COLORS.REDL}24 {COLORS.GNSL}]  {COLORS.WHSL}Portugal друзья   {COLORS.GNSL}[ {COLORS.REDL}34 {COLORS.GNSL}]  {COLORS.WHSL}Свободный
+ {COLORS.GNSL}[ {COLORS.REDL}5 {COLORS.GNSL}]  {COLORS.WHSL}YouTube         {COLORS.GNSL}[ {COLORS.REDL}15 {COLORS.GNSL}]  {COLORS.WHSL}Premium ngrok      {COLORS.GNSL}[ {COLORS.REDL}25 {COLORS.GNSL}]  {COLORS.WHSL}Свободный         {COLORS.GNSL}[ {COLORS.REDL}35 {COLORS.GNSL}]  {COLORS.WHSL}Свободный
+ {COLORS.GNSL}[ {COLORS.REDL}6 {COLORS.GNSL}]  {COLORS.WHSL}Почта РФ        {COLORS.GNSL}[ {COLORS.REDL}16 {COLORS.GNSL}]  {COLORS.WHSL}Знакомства, секс   {COLORS.GNSL}[ {COLORS.REDL}26 {COLORS.GNSL}]  {COLORS.WHSL}Свободный         {COLORS.GNSL}[ {COLORS.REDL}36 {COLORS.GNSL}]  {COLORS.WHSL}Свободный
+ {COLORS.GNSL}[ {COLORS.REDL}7 {COLORS.GNSL}]  {COLORS.WHSL}Telegram        {COLORS.GNSL}[ {COLORS.REDL}17 {COLORS.GNSL}]  {COLORS.WHSL}Флирт в регионе    {COLORS.GNSL}[ {COLORS.REDL}27 {COLORS.GNSL}]  {COLORS.WHSL}Свободный         {COLORS.GNSL}[ {COLORS.REDL}37 {COLORS.GNSL}]  {COLORS.WHSL}Свободный
+ {COLORS.GNSL}[ {COLORS.REDL}8 {COLORS.GNSL}]  {COLORS.WHSL}Проститундер    {COLORS.GNSL}[ {COLORS.REDL}18 {COLORS.GNSL}]  {COLORS.WHSL}Туризм, отдых      {COLORS.GNSL}[ {COLORS.REDL}28 {COLORS.GNSL}]  {COLORS.WHSL}Свободный         {COLORS.GNSL}[ {COLORS.REDL}38 {COLORS.GNSL}]  {COLORS.WHSL}Свободный
+ {COLORS.GNSL}[ {COLORS.REDL}9 {COLORS.GNSL}]  {COLORS.WHSL}Fast Jobs       {COLORS.GNSL}[ {COLORS.REDL}19 {COLORS.GNSL}]  {COLORS.WHSL}Ближайший ресторан {COLORS.GNSL}[ {COLORS.REDL}29 {COLORS.GNSL}]  {COLORS.WHSL}Свободный         {COLORS.GNSL}[ {COLORS.REDL}39 {COLORS.GNSL}]  {COLORS.WHSL}Свободный
+ {COLORS.GNSL}[ {COLORS.REDL}10 {COLORS.GNSL}] {COLORS.WHSL}Bitcoin         {COLORS.GNSL}[ {COLORS.REDL}20 {COLORS.GNSL}]  {COLORS.WHSL}Игра " Тайга "     {COLORS.GNSL}[ {COLORS.REDL}30 {COLORS.GNSL}]  {COLORS.WHSL}Свободный         {COLORS.GNSL}[ {COLORS.REDL}40 {COLORS.GNSL}]  {COLORS.WHSL}Свободный
  
  {COLORS.GNSL}[ {COLORS.REDL}99 {COLORS.GNSL}] {COLORS.WHSL}В главное меню OSINT-SAN
  
@@ -105,33 +215,20 @@ page_20 = f'''{COLORS.WHSL}
  {COLORS.REDL}----------------------------------------------------------------------------------------------------------------
 '''
 
-page_14 =f'''
-
-  {COLORS.WHSL}Статус модуля {COLORS.REDL}[{COLORS.GNSL}beta{COLORS.REDL}]
-  
-  {COLORS.GNSL}OSINT-SAN Framework 
-  
-  {COLORS.REDL}====================================================================================================                                          
-
-  {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL}  Поиск Shodan
-
-  {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL}  Открыть памятку из Wikipedia по запросам Shodan
-  
-  {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL} В главное меню
-
-'''
-
-page_13 = fr''' {COLORS.GRNL} 
-                                                        
-   {COLORS.GNSL}Runet network scanning tool - Специализированный набор инструментов для людей нашего профиля.
-   {COLORS.WHSL}Russian language version{COLORS.REDL} demo
-   {COLORS.WHSL}Новости: {COLORS.GNSL}http://osintsan.ru
-   {COLORS.WHSL}By Bafomёd Group.
+page_13 = fr""" {COLORS.GRNL} 
+ {COLORS.REDL}Runet network scanning tool - Специализированный набор инструментов для людей OSINT профиля.
+ {COLORS.FIOL}Russian language version{COLORS.REDL}
+ {COLORS.WHSL}Новости: {COLORS.GNSL}http://osintsan.ru
+ {COLORS.WHSL}Приобрести подписку можно только в лс:{COLORS.GNSL} https://t.me/satana666mx
+ {COLORS.WHSL}By Bafomёd Group
    
-   {COLORS.REDL}----------------------------------------------------------------------
-   
-   {COLORS.FIOL}Пройдите авторизацию в системе '''
-
+ {COLORS.WHSL}Проверка {COLORS.REDL}API.{COLORS.WHSL} Eсли вдруг api отсутствует,
+ вам необходимо открыть {COLORS.GNSL}osintsan.py{COLORS.WHSL} и записать туда api.
+ Именно своё API, указывать обязательно для работоспособности модулей,
+ и для вашей безопасности.
+ 
+ Версия 6.1 Ознакомительная, локальная
+"""
 
 menu = f"""
 
@@ -140,8 +237,8 @@ menu = f"""
  
  {COLORS.REDL}------------------------------------------------------------------------------------------------
  
-{COLORS.GNSL} [ {COLORS.REDL}1{COLORS.GNSL} ] {COLORS.WHSL}  DNS карта сайта в трех форматах          {COLORS.GNSL} [ {COLORS.REDL}16{COLORS.GNSL} ] {COLORS.WHSL} CMS detect
-{COLORS.GNSL} [ {COLORS.REDL}2{COLORS.GNSL} ] {COLORS.WHSL}  Headers
+{COLORS.GNSL} [ {COLORS.REDL}1 {COLORS.GNSL} ] {COLORS.WHSL} DNS карта сайта в трех форматах           {COLORS.GNSL} [ {COLORS.REDL}16{COLORS.GNSL} ] {COLORS.WHSL} CMS detect
+{COLORS.GNSL} [ {COLORS.REDL}2{COLORS.GNSL} ] {COLORS.WHSL}  Поиск {COLORS.GNSL}@mail{COLORS.WHSL} адресов на сайтах            {COLORS.GNSL} [ {COLORS.REDL}17{COLORS.GNSL} ] {COLORS.WHSL} Headers
 {COLORS.GNSL} [ {COLORS.REDL}3{COLORS.GNSL} ] {COLORS.WHSL}  DNS Lookup
 {COLORS.GNSL} [ {COLORS.REDL}4{COLORS.GNSL} ] {COLORS.WHSL}  Reverse DNS.{COLORS.GNSL} Обратный просмотр DNS
 {COLORS.GNSL} [ {COLORS.REDL}5{COLORS.GNSL} ] {COLORS.WHSL}  Полная история доменного имени      
@@ -156,28 +253,78 @@ menu = f"""
 {COLORS.GNSL} [ {COLORS.REDL}14{COLORS.GNSL} ] {COLORS.WHSL} Extract Page Links
 {COLORS.GNSL} [ {COLORS.REDL}15{COLORS.GNSL} ] {COLORS.WHSL} Subdomain.{COLORS.GNSL} Поиск сабдоменов
 
- {COLORS.GNSL} [ {COLORS.REDL}99{COLORS.GNSL} ] {COLORS.WHSL} В главню меню OSINT-SAN    {COLORS.GNSL} [ {COLORS.REDL}0{COLORS.GNSL} ] {COLORS.WHSL} Закрыть framework
+{COLORS.GNSL} [ {COLORS.REDL}99{COLORS.GNSL} ] {COLORS.WHSL} В главню меню OSINT-SAN    {COLORS.GNSL} [ {COLORS.REDL}0{COLORS.GNSL} ] {COLORS.WHSL} Закрыть framework
  
 """
+page_40 = f''' {COLORS.FIOL}
 
-page_10 =f'''
+ Меню с дополнительными модулями, модули могут быть от других разработчиков, 
+ адаптированные для работы с OSINT-SANY
+ Спасибо сторонним разработчикам за модули на github, наша дополненная коллекция.
+ Здесь будут и наши модули тоже.
 
- {COLORS.GNSL}[{COLORS.REDL} 1 {COLORS.GNSL}] {COLORS.WHSL}  Сканировать IP, глобальный поиск             {COLORS.GNSL}[{COLORS.REDL} 11 {COLORS.GNSL}] {COLORS.WHSL} Downloads OSINT starter info pack
- {COLORS.GNSL}[{COLORS.REDL} 2 {COLORS.GNSL}] {COLORS.WHSL}  Глобальный поиск {COLORS.GNSL}[{COLORS.REDL}domain{COLORS.GNSL}]                    {COLORS.GNSL}[{COLORS.REDL} 12 {COLORS.GNSL}] {COLORS.WHSL} Анонимная почта                
- {COLORS.GNSL}[{COLORS.REDL} 3 {COLORS.GNSL}] {COLORS.WHSL}  Поиск по номеру телефона                     {COLORS.GNSL}[{COLORS.REDL} 13 {COLORS.GNSL}] {COLORS.WHSL} Поиск по bitcoin кошельку
- {COLORS.GNSL}[{COLORS.REDL} 4 {COLORS.GNSL}] {COLORS.WHSL}  Получить metadata картинки                   {COLORS.GNSL}[{COLORS.REDL} 14 {COLORS.GNSL}] {COLORS.WHSL} Фильтрованный поисковой запрос
- {COLORS.GNSL}[{COLORS.REDL} 5 {COLORS.GNSL}] {COLORS.WHSL}  Поиск по лицу                                {COLORS.GNSL}[{COLORS.REDL} 15 {COLORS.GNSL}] {COLORS.WHSL} Поиск по нику {COLORS.FIOL}maigret
- {COLORS.GNSL}[{COLORS.REDL} 6 {COLORS.GNSL}] {COLORS.WHSL}  Mac address inform                           {COLORS.GNSL}[{COLORS.REDL} 16 {COLORS.GNSL}] {COLORS.WHSL} FAQ по работе с Big Brother 
- {COLORS.GNSL}[{COLORS.REDL} 7 {COLORS.GNSL}] {COLORS.FIOL}  Big brother 10.0 {COLORS.GNSL}[{COLORS.REDL}Определение геолокации{COLORS.GNSL}]    {COLORS.GNSL}[{COLORS.REDL} 17 {COLORS.GNSL}] {COLORS.WHSL} Shodan поиск
- {COLORS.GNSL}[{COLORS.REDL} 8 {COLORS.GNSL}] {COLORS.WHSL}  OSINT Wikipedia                              {COLORS.GNSL}[{COLORS.REDL} 18 {COLORS.GNSL}] {COLORS.WHSL} OSINT Комьюнити
- {COLORS.GNSL}[{COLORS.REDL} 9 {COLORS.GNSL}] {COLORS.WHSL}  Генератор личности
- {COLORS.GNSL}[{COLORS.REDL} 10 {COLORS.GNSL}] {COLORS.WHSL} IP loggers
- 
- {COLORS.WHSL}Перезапустить {COLORS.GNSL}[{COLORS.REDL} 99 {COLORS.GNSL}]    {COLORS.WHSL} Очистить {COLORS.GNSL}[{COLORS.REDL} 66 {COLORS.GNSL}]    {COLORS.WHSL} Купить PRO версию {COLORS.REDL}24/7 {COLORS.GNSL}[{COLORS.REDL} 65 {COLORS.GNSL}]    {COLORS.WHSL} Покинуть {COLORS.GNSL}[{COLORS.REDL} 0 {COLORS.GNSL}]
+ {COLORS.GNSL}[{COLORS.REDL} 31 {COLORS.GNSL}] {COLORS.WHSL}  Android Debug Bridge  {COLORS.GNSL}[{COLORS.REDL} 41 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
+ {COLORS.GNSL}[{COLORS.REDL} 32 {COLORS.GNSL}] {COLORS.WHSL}  Свободный             {COLORS.GNSL}[{COLORS.REDL} 42 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
+ {COLORS.GNSL}[{COLORS.REDL} 33 {COLORS.GNSL}] {COLORS.WHSL}  Свободный             {COLORS.GNSL}[{COLORS.REDL} 43 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
+ {COLORS.GNSL}[{COLORS.REDL} 34 {COLORS.GNSL}] {COLORS.WHSL}  Свободный             {COLORS.GNSL}[{COLORS.REDL} 44 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
+ {COLORS.GNSL}[{COLORS.REDL} 35 {COLORS.GNSL}] {COLORS.WHSL}  Свободный             {COLORS.GNSL}[{COLORS.REDL} 45 {COLORS.GNSL}] {COLORS.WHSL}  Свободный 
+ {COLORS.GNSL}[{COLORS.REDL} 36 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
+ {COLORS.GNSL}[{COLORS.REDL} 37 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
+ {COLORS.GNSL}[{COLORS.REDL} 38 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
+ {COLORS.GNSL}[{COLORS.REDL} 39 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
+ {COLORS.GNSL}[{COLORS.REDL} 40 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
 '''
 
+page_10 = f'''
 
-page_2 =f''' {COLORS.GNSL}
+ {COLORS.GNSL}[{COLORS.REDL} 1 {COLORS.GNSL}] {COLORS.WHSL}  Сканировать IP, глобальный поиск             {COLORS.GNSL}[{COLORS.REDL} 11 {COLORS.GNSL}] {COLORS.WHSL} Загрузить OSINT Pack {COLORS.GNSL}5.0 и{COLORS.WHSL} Сообщество OSINT 
+ {COLORS.GNSL}[{COLORS.REDL} 2 {COLORS.GNSL}] {COLORS.WHSL}  Глобальный поиск {COLORS.GNSL}[{COLORS.REDL}domain{COLORS.GNSL}]                    {COLORS.GNSL}[{COLORS.REDL} 12 {COLORS.GNSL}] {COLORS.WHSL} Анонимная почта
+ {COLORS.GNSL}[{COLORS.REDL} 3 {COLORS.GNSL}] {COLORS.WHSL}  Собрать информацию о мобильном номере        {COLORS.GNSL}[{COLORS.REDL} 13 {COLORS.GNSL}] {COLORS.WHSL} Поиск по bitcoin кошельку
+ {COLORS.GNSL}[{COLORS.REDL} 4 {COLORS.GNSL}] {COLORS.WHSL}  Определение metadata                         {COLORS.GNSL}[{COLORS.REDL} 14 {COLORS.GNSL}] {COLORS.GNSL} Shodan поиск
+ {COLORS.GNSL}[{COLORS.REDL} 5 {COLORS.GNSL}] {COLORS.WHSL}  Поиск личности по фото, картинкам            {COLORS.GNSL}[{COLORS.REDL} 15 {COLORS.GNSL}]  Поиск по нику maigret
+ {COLORS.GNSL}[{COLORS.REDL} 6 {COLORS.GNSL}] {COLORS.WHSL}  Mac address{COLORS.WHSL} информация
+ {COLORS.GNSL}[{COLORS.REDL} 7 {COLORS.GNSL}] {COLORS.WHSL}  Url деанонимизация {COLORS.GNSL}[{COLORS.REDL}Big Brother 13 PRO{COLORS.GNSL}]
+ {COLORS.GNSL}[{COLORS.REDL} 8 {COLORS.GNSL}] {COLORS.WHSL}  Википедия OSINT                             
+ {COLORS.GNSL}[{COLORS.REDL} 9 {COLORS.GNSL}] {COLORS.WHSL}  Рандомная сетевая личность {COLORS.GNSL}User-Agent        
+ {COLORS.GNSL}[{COLORS.REDL} 10 {COLORS.GNSL}] {COLORS.WHSL} Пароли
+ 
+ {COLORS.GNSL}[{COLORS.REDL} 16 {COLORS.GNSL}] {COLORS.WHSL} Мои токены и личный кабинет
+ {COLORS.GNSL}[{COLORS.REDL} 88 {COLORS.GNSL}] {COLORS.WHSL} Дополнительный функционал
+
+ {COLORS.WHSL}Перезапустить {COLORS.GNSL}[{COLORS.REDL} 99 {COLORS.GNSL}]  {COLORS.WHSL} Очистить {COLORS.GNSL}[{COLORS.REDL} 66 {COLORS.GNSL}]  {COLORS.WHSL} Поддержка, driver {COLORS.GNSL}[{COLORS.REDL} 65 {COLORS.GNSL}]  {COLORS.WHSL} Покинуть {COLORS.GNSL}[{COLORS.REDL} 0 {COLORS.GNSL}]
+'''
+
+page_8 = f'''   {COLORS.GNSL}
+  ,--------.      ,--.
+  '--.  .--',---. |  | ,---.  ,---. ,--.--. ,--,--.,--,--,--.
+     |  |  | .-. :|  || .-. :| .-. ||  .--'' ,-.  ||        |
+     |  |  \   --.|  |\   --.' '-' '|  |   \ '-'  ||  |  |  |
+     `--'   `----'`--' `----'.`-  / `--'    `--`--'`--`--`--'
+   ,---.                     `---'    ,--.                    
+  '   .-'  ,---.  ,--,--.,--.--. ,---.|  ,---. 
+  `.  `-. | .-. :' ,-.  ||  .--'| .--'|  .-.  |
+  .-'    |\   --.\ '-'  ||  |   \ `--.|  | |  |
+  `-----'  `----' `--`--'`--'    `---'`--' `--'          
+
+  {COLORS.WHSL}Статус модуля {COLORS.REDL}[{COLORS.GNSL}3.0{COLORS.REDL}]
+  
+  {COLORS.GNSL}OSINT-SAN Framework 
+  
+  {COLORS.REDL}=====================================================================================
+
+
+  {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL} Глобальный поиск по постам telegram, через ключевое слово.
+
+  {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL} Фишинг боты telegram, дополнение к пункту 3, выше.
+  
+  {COLORS.REDL}[ {COLORS.GNSL}3 {COLORS.REDL}] {COLORS.WHSL} Деанонимизация по ID Telegram
+  
+  {COLORS.REDL}-----------------------------------------------------------------------------------
+  
+  {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL}В главное меню OSINT-SAN   
+                                           
+'''
+page_2 = f''' {COLORS.GNSL}
   ____  _____                       __                        
  |_   \|_   _|                     [  |                       
    |   \ | |  __   _   _ .--..--.   | |.--.   .---.  _ .--.   
@@ -193,8 +340,17 @@ page_2 =f''' {COLORS.GNSL}
 
  {COLORS.REDL}OSINT-SAN Framework '''
 
+page_9 = f''' {COLORS.WHSL}
+ Вторую опцию будешь использовать, включи vpn в браузере, так как откроются сайты ip logger,
+ анонимность при использовании стороннего ip logger это обязательно
 
-page_5 =f'''
+ {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL} Заглянуть за сокращенную ссылку 
+
+ {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL} Открыть в браузере IP логгеры
+ 
+ {COLORS.WHSL}Нажмите enter для выхода в меню
+'''
+page_5 = f'''
 
  {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL} Начать поиск по bitcoin токену
 
@@ -202,7 +358,24 @@ page_5 =f'''
  
  {COLORS.WHSL}Нажмите enter для выхода в меню
 '''
+page_6 = f''' {COLORS.REDL}
+   _____ _____ _____ _   _ _____         _           _                                         
+  |  _  /  ___|_   _| \ | |_   _|       | |         | |                                        
+  | | | \ `--.  | | |  \| | | |    _ __ | |__   ___ | |_ ___  ___   _ __ ___   ___ _ __  _   _ 
+  | | | |`--. \ | | | . ` | | |   | '_ \| '_ \ / _ \| __/ _ \/ __| | '_ ` _ \ / _ \ '_ \| | | |
+  \ \_/ /\__/ /_| |_| |\  | | |   | |_) | | | | (_) | || (_) \__ \ | | | | | |  __/ | | | |_| |
+   \___/\____/ \___/\_| \_/ \_/   | .__/|_| |_|\___/ \__\___/|___/ |_| |_| |_|\___|_| |_|\__,_|
+                                  | |                                                          
+                                  |_|                                                          
 
+  {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL} Открыть систему поиска по картинкам ⛔️
+
+  {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL} Поиск или идентификация по лицу
+  
+  {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL}В главное меню OSINT-SAN 
+  
+{COLORS.WHSL}  OSINT SAN Framework production 
+  '''
 
 page_3 = f''' {COLORS.WHSL}
  Вы можете собрать очень большое количество информации по тематике OSINT в telegram каналах.
@@ -220,10 +393,37 @@ page_3 = f''' {COLORS.WHSL}
  {COLORS.WHSL}Russian OSINT
  {COLORS.WHSL}Канал {COLORS.GNSL}@Russian_OSINT
  {COLORS.REDL}---------------------------------------------------------------------------------------------
+  
+ {COLORS.WHSL}Хочешь загрузить книги, мануалы, документы по OSINT ?
+ Если выберешь 1 и будешь загружать, не останавливай, пусть загружает, 
+ папка osint-info будет в папке с инструментом
+  
+ {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL}  Загрузить 
+
+ {COLORS.REDL}[ {COLORS.GNSL}99{COLORS.REDL} ] {COLORS.WHSL} Обратно в меню
 '''
 
+page_1 = f'''
+ Пароли:
+  
+ {COLORS.WHSL}14 млн паролей, 250 МБ, зеркало {COLORS.GNSL}
+ SHA1 hash of the 7-Zip file: 00fc585efad08a4b6323f8e4196aae9207f8b09f
+ SHA1 hash of the text file: 3fe6457fa8be6da10191bffa0f4cec43603a9f56
+ https://downloads.pwnedpasswords.com/passwords/pwned-passwords-update-1.txt.7z
+  
+ {COLORS.WHSL}306 млн паролей, 5,3 ГБ, зеркало {COLORS.GNSL}
+ SHA1 hash of the 7-Zip file: 90d57d16a2dfe00de6cc58d0fa7882229ace4a53
+ SHA1 hash of the text file: d3f3ba6d05b9b451c2b59fd857d94ea421001b16
+ https://downloads.pwnedpasswords.com/passwords/pwned-passwords-1.0.txt.7z
+
+ {COLORS.WHSL}Словари для брута wifi сетей. Проверьте поcледнее на virus total
+ {COLORS.GNSL}https://yadi.sk/d/O5FQG3B4zNmS5Q
+
+ {COLORS.WHSL}10 млн паролей
+ {COLORS.GNSL}https://github.com/Bafomet666/password_one '''
 
 page_licence = f''' {COLORS.REDL}
+   
                                                                    Лицензионное соглашение. {COLORS.WHSL}
 
   "Студия "Bafomet group", в дальнейшем именуемая "Bafomet group", с одной стороны,
@@ -341,7 +541,7 @@ page_licence = f''' {COLORS.REDL}
   Bafomet Group не несет ответственности за любые виды убытков, 
   произошедшие вследствие использования Пользователем сервисов Bafomet Group или отдельных частей/функций сервисов;
   При любых обстоятельствах ответственность Bafomet Group,
-  в соответствии со статьей 15 Гражданского кодекса России ограничена и возлагается на него при наличии в его действиях прямой вины.
+   в соответствии со статьей 15 Гражданского кодекса России ограничена и возлагается на него при наличии в его действиях прямой вины.
 
   Настоящее Соглашение представляет собой договор между Пользователем и Bafomet Group,
   относительно порядка использования сервисов и заменяет собой все предыдущие соглашения между Пользователем и Bafomet Group.

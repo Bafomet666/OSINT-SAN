@@ -3,28 +3,33 @@
 # Официальный канал https://t.me/osint_san_framework
 # Наш сайт: https://osintsan.ru/
 import os
-from core.core import main, licence, check_licence
+from core.core import osint
+from module.utils.licensysi import licence, check_licence
 
-# Внимание впишите между '' свои API ниже, пример: shodan = 'ащ34гн49арлмокщ48ущышолдвв'
+# Вам необходимо использовать свои API для максимальной анонимности и защиты переваемых данных.
 
-# Здесь хранится твой ngrok токен (API) -- https://ngrok.com/
-token = "Здесь прописать api"
+api = {
+    "Shodan": " здесь_писать_апи ",
+    # Ваш личный token Shodan, вписывать между "сюда_вписывать_ваш_токен"  Получать токен в -->> https://www.shodan.io/
 
-# Ваш личный код Shodan -- https://www.shodan.io/
-shodan_api_key = "Здесь прописать api"
+    "Gmap_g": " здесь_писать_апи ",
+    # Ваш личный token google, вписывать между "сюда_вписывать_ваш_токен" Получать токен в -->>
+    # https://console.cloud.google.com/google/maps-apis/
 
-# API номер телефона phone_apis -- https://numverify.com/dashboard?logged_in=1
-phone_apis = "Здесь прописать api"
+    "IP_api": " здесь_писать_апи ",  # API Массового сканирование ip address "сюда_вписывать_ваш_токен"
+    # Получать токен в -->> https://ipapi.com/
 
-# Torrent API  ---  https://iknowwhatyoudownload.com/en/api/
-torrent_api = "Здесь прописать api"
+    "ngrok.set_auth_token": " здесь_писать_апи ",
+    # big brother 13,  "сюда_вписывать_ваш_токен" # Получать токен в -->>
+    # https://dashboard.ngrok.com/get-started/your-authtoken
 
-# Virus total api -- https://developers.virustotal.com/reference#getting-started 
-virustotal_api = "Здесь прописать api"
+    "virustotal_api": " ",
+    # Выше впиши API вирус тотал
+    "cms_detect_api": "здесь_писать_апи",
 
-# Качать здесь https://whatcms.org/
-cms_detect_api = "Здесь прописать api"
+    "phone_apis": " здесь_писать_апи ", # API номер телефона phone_apis -- https://numverify.com/dashboard?logged_in=1
 
+}
 
 LICENCE_FILENAME = 'licence.json'
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -32,7 +37,7 @@ PATH_TO_LICENCE = os.path.join(BASE_DIR, LICENCE_FILENAME)
 
 
 def osintsan():
-    main()
+    osint()
 
 
 if __name__ == '__main__':
@@ -40,3 +45,5 @@ if __name__ == '__main__':
         licence(PATH_TO_LICENCE)
 
     osintsan()
+
+

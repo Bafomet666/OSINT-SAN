@@ -3,8 +3,10 @@ import requests
 from module.utils.ban import menu
 from module.utils.banner import show_banner
 from module.utils import COLORS
-from osintsan import virustotal_api
-from osintsan import cms_detect_api
+from osintsan import api
+
+virustotal_api = api['virustotal_api']
+cms_detect_api = api['cms_detect_api']
 
 
 def run():

@@ -2,7 +2,7 @@
 import requests
 
 
-def MacAddressLookup(mac):
+def maclookup(mac):
     url = "https://macvendors.co/api/" + mac
     response = requests.get(url)
     result = response.json()

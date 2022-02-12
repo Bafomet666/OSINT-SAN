@@ -6,151 +6,23 @@ import time
 import json
 import requests
 import random
-from osintsan import shodan_api_key, torrent_api
+from osintsan import api
 from module.utils import COLORS
-from selenium import webdriver
 
-shodan_api = shodan_api_key
-torrent_api = torrent_api
-
-
-def ip_info(ip):
-    UA_list = [x.strip() for x in open('module/utils/user_agent.txt').readlines()]
-    user_agent = random.choice(UA_list)
-
-    # user_agent for Selenium
-    profile = webdriver.FirefoxProfile()
-    profile.set_preference("general.useragent.override", user_agent)
-    opts = Options()
-    opts.headless = True
-    br = webdriver.Firefox(profile, options=opts)
-
-    # user_agent for REQUESTS
-    session = requests.Session()
-    session.headers.update({'User-Agent': user_agent})
-
-    api = shodan.Shodan(shodan_api)
-    # ip = input(f"{COLORS.REDL} └──>{COLORS.GNSL} Введите IP адрес:{COLORS.WHSL} ")
-
-    if not shodan_api:
-        print(f"{COLORS.REDL}API ключ Shodan'а невалиден! (settings.py){COLORS.REDL}")
-    try:
-        api.info()
-    except shodan.APIError:
-        print(f"{COLORS.REDL}API ключ Shodan'а невалиден! (settings.py){COLORS.REDL}")
-
-    try:
-        host = api.host(ip)
-        print(f' \n{COLORS.REDL} Глобальный поиск информации по IP \n')
-        print(f"{COLORS.GNSL} [ + ] {COLORS.REDL} Получена информация с Shodan. \n")
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} IP Address ----: " + str(host["ip_str"]))
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} Страна  -------: " + str(host["country_name"]))
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} Город----------: " + str(host["city"]))
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} Организация  --: " + str(host["org"]))
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} ISP -----------: " + str(host["isp"]))
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} Открытые порты : " + str(host["ports"]))
-    except:
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} На сервисах Shodan нечего не найдено. ")
-        print("")
-
-    try:
-        dirty_response = session.get(f'https://censys.io/ipv4/{ip}/raw').text
-        clean_response = dirty_response.replace('&#34;', '"')
-        x = clean_response.split('<code class="json">')[1].split('</code>')[0]
-        censys = json.loads(x)
-        print("")
-        print(f"{COLORS.GNSL} [ + ] {COLORS.REDL} Получена информация с Censys. \n")
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} Страна -------> " + str(censys["location"]["country"]))
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} Континент-----> " + str(censys["location"]["continent"]))
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} Код страны -- > " + str(censys["location"]["country_code"]))
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} Широта  ------> " + str(censys["location"]["latitude"]))
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} Долгота  -----> " + str(censys["location"]["longitude"]))
-    except:
-        print(f"{COLORS.GNSL} [ + ] {COLORS.WHSL} На сервисах Censys нечего не найдено. ")
-        print("")
-
-    # url = f"https://api.shodan.io/labs/honeyscore/{ip}"
-    try:
-        result: str = session.get(f"https://api.shodan.io/labs/honeyscore/{ip}", params={"key": shodan_api}).text
-    except:
-        print(f"\n {COLORS.GNSL}Нет доступной информации")
-    if "error" in result or "404" in result:
-        print(f"{COLORS.GNSL} IP address не найден")
-    elif result:
-        robability = str(float(result) * 10)
-        print(f' \n{COLORS.REDL} ==================================================================================')
-        print(f" \n{COLORS.GNSL} IP address просканирован лабораторией Shodan")
-        print(
-            f" \n{COLORS.GNSL} Вероятность что по данному IP address установлена ловушка:{COLORS.REDL} {robability}% ")
-        print(f' \n{COLORS.REDL} ==================================================================================')
-
-    r = session.get("https://api.antitor.com/history/peer/", params={"ip": ip, "key": torrent_api})
-    res = r.json()
-    print(f"\n{COLORS.REDL} Информация по загрузкам Torrent \n")
-    if len(res) > 4:
-        print(f" {COLORS.WHSL}IP address:{COLORS.GNSL}  {res['ip']}")
-        print(f" {COLORS.WHSL}Провайдер :{COLORS.GNSL}  {res['isp']}")
-        geo_data = res['geoData']
-        print(f" {COLORS.WHSL}Страна    :{COLORS.GNSL}  {geo_data['country']}")
-        print(f' {COLORS.REDL}\n Примерные координаты жертвы по мнению shodan\n')
-        print(f" {COLORS.WHSL}Широта    :{COLORS.GNSL}  {geo_data['latitude']}")
-        print(f" {COLORS.WHSL}Долгота   :{COLORS.GNSL}  {geo_data['longitude']}\n")
-        print(f' {COLORS.REDL}\n Загружает в данный момент:\n')
-        for i in res["contents"]:
-            print('')
-            print(f" {COLORS.WHSL}Каталог   :  {COLORS.GNSL}{i['category']}")
-            print(f" {COLORS.WHSL}Имя       :  {COLORS.GNSL}{i['name']}")
-            print(f" {COLORS.WHSL}Начало    :  {COLORS.GNSL}{i['startDate']}")
-            print(f" {COLORS.WHSL}Конец     :  {COLORS.GNSL}{i['endDate']}")
-            print(f" {COLORS.WHSL}Размер    :  {COLORS.GNSL}{i['torrent']['size']}")
-    else:
-        print(f" {COLORS.WHSL}По вашему запросу нечего не найдено")
-
-
-from selenium.webdriver import Firefox
-from selenium.webdriver.firefox.options import Options
-
-opts = Options()
-opts.headless = True
+shodan_api = api['Shodan']
 
 
 def blockchain(q):
+    from selenium.webdriver import Firefox
+    from selenium.webdriver.firefox.options import Options
+
+    opts = Options()
+    opts.headless = True
     br = Firefox(options=opts)
     print(' ------------------------------------')
     br.get(f'https://www.blockchain.com/btc/address/{q}')
     ob_inf = br.find_element_by_xpath('.//*[@class="sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC"]').text
     print(f'{ob_inf}')
-    print(' ------------------------------------')
-    # br.get(f'https://blockchair.com/search?q={q}')
-    # try:
-    # if br.find_element_by_xpath('.//*[@class="mb-30"]'):
-    # print(f' Данный адресс встречается в следующих крипто-платформах:\n')
-    # for elem in br.find_elements_by_xpath('.//*[@class="display-block c-black bgc-white br-8 plr-15 ptb-10 mb-5 hover-highlight"]'):
-    # crypto_money = elem.find_element_by_xpath("div[1]").text.split('\n')
-    # balance = elem.find_element_by_xpath('div[3]').text.split('\n')
-    # print(f'{crypto_money[0]}\t{balance[1]} ({balance[2]})\n')
-    # print('------------------------------------')
-    # except Exception as er1:
-    # print('\n Ошибка обработки запроса. Отправте ошибку разработчику')
-    # print(f' ER1 ==>> {er1}\n')
-    print('\n ------- Информация о Bitcoin адрессе -------')
-    br.get(f'https://blockchair.com/bitcoin/address/{q}')
-    time.sleep(5)
-    br.find_element_by_xpath('.//*[@class="address-aside__expand-checkmark mr-5 p-relative d-flex ai-center"]').click()
-    ad_info = [elem.text for elem in br.find_elements_by_xpath(
-        './/*[@class="transaction-costs__values font-p fs-15 medium ls-2 d-flex ai-center fw-wrap "]')]
-    print(f' Тип кошелька (формат):\t {ad_info[0]}')
-    print(f' Первое изменение кошелька:  ' + ad_info[1].replace("\n", " "))
-    print(f' Поледнее изменеие кошелька: ' + ad_info[2].replace("\n", " "))
-    print(f' Количество транзакций: \t{ad_info[3]}')
-    print(f' Количество выходных данных: {ad_info[4]}')
-    print(f' Неизрасходованных выходных данных: {ad_info[5]}')
-    bal = [elem.text.replace('\n', ' (') for elem in
-           br.find_elements_by_xpath('.//*[@class="account-hash__balance__values"]')]
-    # t_bal = br.find_element_by_xpath('.//*[@class="account-hash__balance__values"]').text.replace('\n', ' (')
-    print(f' Текущий баланс:   {bal[0]})')
-    print(f' Всего получено:   {bal[1]})')
-    print(f' Всего отправлено: {bal[2]})')
     print('\n ------- История транзакций (последние 5)-------')
     history_all = br.find_elements_by_xpath('.//*[@class="tr-history__btc-entry-wrap"]')
     for elem in history_all[:5]:

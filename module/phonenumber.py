@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 # Developer by Bafomet
 
-from osintsan import phone_apis
+from osintsan import api
 from module.utils import COLORS
 import requests
+
+phone_apis = api['phone_apis']
 
 
 def check_phone_api_token():
@@ -40,7 +42,8 @@ def phone_number(ph):
                 print(f"{COLORS.GNSL} [{COLORS.REDL} +{COLORS.GNSL} ]{COLORS.WHSL} Страна: {result['country_name']}")
                 print(f"{COLORS.GNSL} [{COLORS.REDL} +{COLORS.GNSL} ]{COLORS.WHSL} Геолокация: {result['location']}")
                 print(f"{COLORS.GNSL} [{COLORS.REDL} +{COLORS.GNSL} ]{COLORS.WHSL} Оператор: {result['carrier']}")
-                print(f'\n{COLORS.REDL}---------------------------------------------------------------------------------------')
+                print(
+                    f'\n{COLORS.REDL}---------------------------------------------------------------------------------------')
                 return
         except:
             continue
