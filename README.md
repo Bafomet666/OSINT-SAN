@@ -22,7 +22,7 @@ Telegram: https://t.me/osint_san_framework
 
 ----
 
-Давайте приступим к установке, для начала вам нужно получить список API ниже, все api нужно вписать в osintsan.py
+Давайте приступим к установке, для начала вам нужно получить список API ниже, все api нужно вписать в api.py
 
 
     API для получения информации о номере https://numverify.com
@@ -49,7 +49,7 @@ sudo pip3 install -r requerements.txt
 
 
 Есть видео гайд по установке: https://www.youtube.com/watch?v=FYD_DgUMtZE&t=38s
-Внимание, мы поменяли путь api с setting.py в osintsan.py
+Внимание, мы поменяли путь api с setting.py в api.py
      
 
 #### Возникли ошибки при установке зависимостей ? Решение проблем тут: https://github.com/Bafomet666/OSINT-SAN/issues/11
