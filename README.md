@@ -49,7 +49,7 @@ sudo pip3 install -r requerements.txt
 
 
 Есть видео гайд по установке: https://www.youtube.com/watch?v=FYD_DgUMtZE&t=38s
-Внимание, мы поменяли путь api с setting.py в api.py
+Внимание, мы поменяли путь api с api.py в osintsan.py
      
 
 #### Возникли ошибки при установке зависимостей ? Решение проблем тут: https://github.com/Bafomet666/OSINT-SAN/issues/11
