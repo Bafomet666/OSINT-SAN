@@ -39,7 +39,7 @@ Telegram: https://t.me/osint_san_framework
 
 Далее установка зависимостей командой
 
-sudo pip3 install -r requerements.txt
+sudo pip3 install -r requirements.txt
 
 Если вдруг у вас не установлен python3 последней версии, обязательно установите его.
 
