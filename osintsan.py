@@ -37,6 +37,8 @@ PATH_TO_LICENCE = os.path.join(BASE_DIR, LICENCE_FILENAME)
 
 
 def osintsan():
+    os.system('clear')
+    print('\n Друг, надеюсь ты указал API в api.py')
     osint()
 
 

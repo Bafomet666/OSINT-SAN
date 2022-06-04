@@ -1,1 +1,28 @@
-[Fri Feb 11 23:27:43 2022] PHP 7.4.25 Development Server (http://localhost:8767) started
+[Sun Jun  5 00:30:31 2022] PHP 7.4.25 Development Server (http://localhost:9000) started
+[Sun Jun  5 00:30:41 2022] [::1]:55524 Accepted
+[Sun Jun  5 00:30:41 2022] [::1]:55524 [200]: (null) /
+[Sun Jun  5 00:30:41 2022] [::1]:55524 Closing
+[Sun Jun  5 00:30:42 2022] [::1]:55526 Accepted
+[Sun Jun  5 00:30:42 2022] [::1]:55526 [200]: (null) /css/arf.css
+[Sun Jun  5 00:30:42 2022] [::1]:55526 Closing
+[Sun Jun  5 00:30:42 2022] [::1]:55528 Accepted
+[Sun Jun  5 00:30:42 2022] [::1]:55528 [200]: (null) /js/d3.v3.min.js
+[Sun Jun  5 00:30:42 2022] [::1]:55530 Accepted
+[Sun Jun  5 00:30:42 2022] [::1]:55528 Closing
+[Sun Jun  5 00:30:42 2022] [::1]:55530 [200]: (null) /js/arf.js
+[Sun Jun  5 00:30:42 2022] [::1]:55530 Closing
+[Sun Jun  5 00:30:42 2022] [::1]:55532 Accepted
+[Sun Jun  5 00:30:42 2022] [::1]:55532 [200]: (null) /location.js
+[Sun Jun  5 00:30:42 2022] [::1]:55532 Closing
+[Sun Jun  5 00:30:42 2022] [::1]:55534 Accepted
+[Sun Jun  5 00:30:42 2022] [::1]:55534 [200]: (null) /client.min.js
+[Sun Jun  5 00:30:42 2022] [::1]:55536 Accepted
+[Sun Jun  5 00:30:42 2022] [::1]:55534 Closing
+[Sun Jun  5 00:30:42 2022] [::1]:55536 [200]: (null) /loc.js
+[Sun Jun  5 00:30:42 2022] [::1]:55536 Closing
+[Sun Jun  5 00:30:44 2022] [::1]:55538 Accepted
+[Sun Jun  5 00:30:44 2022] [::1]:55538 [200]: (null) /arf.json
+[Sun Jun  5 00:30:44 2022] [::1]:55538 Closing
+[Sun Jun  5 00:30:44 2022] [::1]:55540 Accepted
+[Sun Jun  5 00:30:44 2022] [::1]:55540 [404]: (null) /favicon.ico - No such file or directory
+[Sun Jun  5 00:30:44 2022] [::1]:55540 Closing

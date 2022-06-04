@@ -237,8 +237,8 @@ menu = f"""
  
  {COLORS.REDL}------------------------------------------------------------------------------------------------
  
-{COLORS.GNSL} [ {COLORS.REDL}1 {COLORS.GNSL} ] {COLORS.WHSL} DNS карта сайта в трех форматах           {COLORS.GNSL} [ {COLORS.REDL}16{COLORS.GNSL} ] {COLORS.WHSL} CMS detect
-{COLORS.GNSL} [ {COLORS.REDL}2{COLORS.GNSL} ] {COLORS.WHSL}  Поиск {COLORS.GNSL}@mail{COLORS.WHSL} адресов на сайтах            {COLORS.GNSL} [ {COLORS.REDL}17{COLORS.GNSL} ] {COLORS.WHSL} Headers
+{COLORS.GNSL} [ {COLORS.REDL}1 {COLORS.GNSL}] {COLORS.WHSL}  DNS карта сайта в трех форматах           {COLORS.GNSL} [ {COLORS.REDL}16{COLORS.GNSL} ] {COLORS.WHSL} CMS detect
+{COLORS.GNSL} [ {COLORS.REDL}2{COLORS.GNSL} ] {COLORS.WHSL}  Поиск {COLORS.GNSL}@mail{COLORS.WHSL} адресов на сайтах             {COLORS.GNSL} [ {COLORS.REDL}17{COLORS.GNSL} ] {COLORS.WHSL} Headers
 {COLORS.GNSL} [ {COLORS.REDL}3{COLORS.GNSL} ] {COLORS.WHSL}  DNS Lookup
 {COLORS.GNSL} [ {COLORS.REDL}4{COLORS.GNSL} ] {COLORS.WHSL}  Reverse DNS.{COLORS.GNSL} Обратный просмотр DNS
 {COLORS.GNSL} [ {COLORS.REDL}5{COLORS.GNSL} ] {COLORS.WHSL}  Полная история доменного имени      
@@ -256,6 +256,21 @@ menu = f"""
 {COLORS.GNSL} [ {COLORS.REDL}99{COLORS.GNSL} ] {COLORS.WHSL} В главню меню OSINT-SAN    {COLORS.GNSL} [ {COLORS.REDL}0{COLORS.GNSL} ] {COLORS.WHSL} Закрыть framework
  
 """
+
+
+page_5 = f'''
+
+ {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL} #                                                    {COLORS.REDL}[ {COLORS.GNSL}6 {COLORS.REDL}] {COLORS.WHSL} Визуализация данных
+ {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL} Публичные данные блокчейн, Bitcoin                   {COLORS.REDL}[ {COLORS.GNSL}7 {COLORS.REDL}] {COLORS.WHSL} Статьи, кейсы
+ {COLORS.REDL}[ {COLORS.GNSL}3 {COLORS.REDL}] {COLORS.WHSL} Определяем владельца криптокошелька                  {COLORS.REDL}[ {COLORS.GNSL}8 {COLORS.REDL}] {COLORS.WHSL} ????
+ {COLORS.REDL}[ {COLORS.GNSL}4 {COLORS.REDL}] {COLORS.WHSL} Анализ криптотранзакций                              {COLORS.REDL}[ {COLORS.GNSL}9 {COLORS.REDL}] {COLORS.WHSL} ????
+ {COLORS.REDL}[ {COLORS.GNSL}5 {COLORS.REDL}] {COLORS.WHSL} Место хранения файлов криптокошельков по умолчанию   {COLORS.REDL}[ {COLORS.GNSL}10 {COLORS.REDL}] {COLORS.WHSL} ????
+ 
+ 
+ {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL}В главное меню OSINT-SAN 
+'''
+
+
 page_40 = f''' {COLORS.FIOL}
 
  Меню с дополнительными модулями, модули могут быть от других разработчиков, 
@@ -350,14 +365,7 @@ page_9 = f''' {COLORS.WHSL}
  
  {COLORS.WHSL}Нажмите enter для выхода в меню
 '''
-page_5 = f'''
 
- {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL} Начать поиск по bitcoin токену
-
- {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL} Показать дополнительную информацию для сбора данных
- 
- {COLORS.WHSL}Нажмите enter для выхода в меню
-'''
 page_6 = f''' {COLORS.REDL}
    _____ _____ _____ _   _ _____         _           _                                         
   |  _  /  ___|_   _| \ | |_   _|       | |         | |                                        

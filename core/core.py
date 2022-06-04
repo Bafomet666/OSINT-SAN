@@ -8,7 +8,7 @@ from module.utils import COLORS
 from module.utils.ban import (
     page_1, page_14, page_3, page_6, page_10,
     page_13, page_28, page_45, page_44,
-    page_40, page_42
+    page_40, page_42, page_5,
 )
 from module.utils.banner import show_banner
 
@@ -74,6 +74,7 @@ def osint():
             from ipwhois import IPWhois
 
             ip = input(f' Введите IP address: ')
+            clear_screen()
             from ipwhois import IPWhois
             from pprint import pprint
 
@@ -116,10 +117,10 @@ def osint():
             print(page_42)
             option = input(f"{COLORS.REDL} └──> {COLORS.WHSL} Введите номер опции: {COLORS.GNSL}")
             if option == "1":
-                from module.metadata import metaexit
-                imagepath = input(f'\n {COLORS.WHSL}Укажите пожалуйста путь до фотографии:{COLORS.GNSL} ')
-                print(f'')
-                metaexit(imagepath)
+                os.system(f'sudo apt install exif')
+                filename = input(f" {COLORS.REDL}└──> {COLORS.WHSL} Укажите путь до файла: {COLORS.GNSL}")
+                show_banner(clear=True)
+                os.system(f'exif {filename}')
 
             elif option == "2":
                 from module.metadata import pdf
@@ -218,16 +219,90 @@ def osint():
                 show_banner(clear=True)
 
         elif choice == 12:
+            show_banner(clear=True)
             urls = [
                 "https://tutanota.com/ru/",
             ]
             for url in urls:
                 webbrowser.open(url)
+                
+            print('\n Сайты открыты')
 
         elif choice == 13:
-            from module.info_ip import blockchain
-            q = input(f"{COLORS.REDL} └──> {COLORS.WHSL} Введите номер кошелька: {COLORS.GNSL}")
-            blockchain(q)
+            clear_screen()          
+            print(page_5)
+            option = input(f"{COLORS.REDL} └──>{COLORS.WHSL} Выберите опцию: ")
+            if option == "1":
+                pass
+
+            elif option == "2":
+                urls = [
+                    "https://btc.com/",
+                    "https://www.blockchain.com/explorer",
+                    "https://live.blockcypher.com/",
+                    "https://tokenview.com/en/",
+                    "https://www.walletexplorer.com/",
+                    "https://bitinfocharts.com/",
+                ]
+                for url in urls:
+                    webbrowser.open(url)
+                show_banner(clear=True)
+                print(f"\n Сайты открыты")
+                
+            elif option == "3":
+                urls = [
+                    "https://bitcoinwhoswho.com/",
+                    "https://www.bitcoinabuse.com/",
+                    "https://www.walletexplorer.com/",
+                    "https://intelx.io/tools?tab=bitcoin",
+                ]
+                for url in urls:
+                    webbrowser.open(url)
+                show_banner(clear=True)
+                print(f"\n Сайты открыты")
+                
+                
+            elif option == "4":
+                urls = [
+                    "https://crystalblockchain.com/",
+                    "https://www.chainalysis.com/",
+                    "https://ciphertrace.com/",
+                    "https://amlbot.com/",
+                    "https://learnmeabitcoin.com/tools/path/",
+                ]
+                for url in urls:
+                    webbrowser.open(url)
+                show_banner(clear=True)
+                print(f"\n Сайты открыты")
+                
+                
+            elif option == "5":
+                show_banner(clear=True)
+                print(page_cryptocu)
+                
+                
+            elif option == "6":
+                urls = [
+                    "https://blocks.wizb.it/",
+                    "https://oxt.me/",
+                ]
+                for url in urls:
+                    webbrowser.open(url)
+                show_banner(clear=True)
+                print(f"\n Сайты открыты")
+                
+            elif option == "7":
+                urls = [
+                    "https://vk.com/@tomhunter-pogovorim-ob-identifikacii-kriptovalutnyh-koshelkov",
+                    "https://oxt.me/",
+                ]
+                for url in urls:
+                    webbrowser.open(url)
+                show_banner(clear=True)
+                print(f"\n Сайты открыты")   
+                
+            elif option == "99":
+                show_banner(clear=True)
 
         elif choice == 14:
             from module.chmodan import showdam
@@ -265,7 +340,7 @@ def osint():
                     webbrowser.open(url)
 
             elif option == "n":
-                from driver.driver import driver
+                from module.driver import driver
                 show_banner(clear=True)
                 print(page_45)
                 option = input(f"{COLORS.REDL} └──> {COLORS.WHSL} Выберите опцию:{COLORS.GNSL} ")
@@ -300,6 +375,11 @@ def osint():
             from module.utils.killing import kill
             kill()
 
+
+        elif choice == 31:
+            from module.android import android_debug
+            android_debug()
+            
         else:
             show_banner(clear=True)
             print(f"{COLORS.WHSL} Неверный ввод опции, хотите больше опций ? Приобритайте PRO версию")
