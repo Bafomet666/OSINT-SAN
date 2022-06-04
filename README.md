@@ -59,10 +59,6 @@ sudo pip3 install -r requirements.txt
 
 Запускать командой: python3 osintsan.py
 
-Ключ для входа в инструмент вы найдете у нас в постах в Telegram.
-https://t.me/osint_san_framework
-
-
 ![alt tag](https://github.com/Bafomet666/screen/blob/main/menu_demo.png)
 
 После успешной авторизации, вам будет доступно меню с инструментами.
