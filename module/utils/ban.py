@@ -12,56 +12,13 @@ page_42 = fr'''{COLORS.FIOL}
  / \/ \ ) _)   )( /    \   )( /    / ) _)(  O )
  \_)(_/(____) (__)\_/\_/  (__)\_)__)(__)  \__/ \
  {COLORS.WHSL}
- Ваш помошник просмотра metadata\
+ Ваш помошник просмотра metadata
  
  {COLORS.GNSL}[{COLORS.REDL} 1 {COLORS.GNSL}] {COLORS.WHSL}  Просмотр metadata photo
  {COLORS.GNSL}[{COLORS.REDL} 2 {COLORS.GNSL}] {COLORS.WHSL}  Просмотр metadata pdf
  {COLORS.GNSL}[{COLORS.REDL} 99 {COLORS.GNSL}] {COLORS.WHSL} Обратно в меню
 '''
 
-page_44 = f'''{COLORS.WHSL}
- О разработчиках проекта, разрабатываю проект сам, но часто нанимаю других разработчиков, так как не всегда
- могу написать код идеально, бывает что комьюнити помогает дописать код, 
- либо внести новые элементы в проект.
-
- {COLORS.FIOL}Наш сайт:{COLORS.REDL}      http://osintsan.ru
- 
- {COLORS.FIOL}Наш телеграм:{COLORS.REDL}  https://t.me/osint_san_framework
-
- {COLORS.WHSL}Спасибо что вы нас поддерживаете, стараемся сделать проект лучше каждый день )) 
-
-
- {COLORS.GNSL}[{COLORS.REDL} y {COLORS.GNSL}] {COLORS.WHSL} Макс ебать я не понял ошибки какие то выходят, заебало все, ты нужен срочно 
- 
- {COLORS.GNSL}[{COLORS.REDL} n {COLORS.GNSL}] {COLORS.WHSL} Установить зависимости самим, или проверить
-'''
-page_45 = fr'''{COLORS.GRNL}
-  ______             _                          _______                __       
- |_   _ `.          (_)                        |_   __ \              [  |  _   
-   | | `. \ _ .--.  __  _   __  .---.  _ .--.    | |__) |,--.   .---.  | | / ]  
-   | |  | |[ `/'`\][  |[ \ [  ]/ /__\\[ `/'`\]   |  ___/`'_\ : / /'`\] | '' <   
-  _| |_.' / | |     | | \ \/ / | \__., | |      _| |_   // | |,| \__.  | |`\ \  
- |______.' [___]   [___] \__/   '.__.'[___]    |_____|  \'-;__/'.___.'[__|  \_] 
-
- {COLORS.WHSL}Driver Pack on {COLORS.REDL}OSINT-SAN PRO
-
- {COLORS.WHSL}Данный pack драйверов подходит под многих осинт инструментов,
- {COLORS.WHSL}связанных с парсингом данных
-
- Перед запуском модулей советую запустить терминал от рута
- Командой:{REDL} sudo su
- 
- {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}]  {COLORS.WHSL} Установка {COLORS.GNSL}pycurl and grub                {COLORS.REDL}[ {COLORS.GNSL}5 {COLORS.REDL}]  {COLORS.WHSL} Написать {COLORS.GNSL}разработчику
-
- {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL}  Установка {GNSL} geckodriver                   {COLORS.REDL}[ {COLORS.GNSL}6 {COLORS.REDL}]  {COLORS.WHSL} Установить {COLORS.GNSL}selenium
-
- {COLORS.REDL}[ {COLORS.GNSL}3 {COLORS.REDL}] {COLORS.WHSL}  Основные зависимости                     {COLORS.REDL}[ {COLORS.GNSL}7 {COLORS.REDL}]  {COLORS.WHSL} Установка стикеров в терминал
-
- {COLORS.REDL}[ {COLORS.GNSL}4 {COLORS.REDL}]  {COLORS.WHSL} Установить android debug driver
-
- {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL} Обратно в меню                         
-
-'''
 
 page_22_bear = fr'''  {COLORS.GNSL}
     _--_     _--_    _--_     _--_     _--_     _--_     _--_     _--_
@@ -97,12 +54,25 @@ page_31 = f''' {COLORS.FIOL}
 
 '''
 
-page_28 = f'''
+page_28 =fr'''{COLORS.OKNL}
+
+  ____      ____  _   __        _                        __   _          
+ |_  _|    |_  _|(_) [  |  _   (_)                      |  ] (_)         
+   \ \  /\  / /  __   | | / ]  __  _ .--.   .---.   .--.| |  __   ,--.   
+    \ \/  \/ /  [  |  | '' <  [  |[ '/'`\ \/ /__\\/ /'`\' | [  | `'_\ :  
+     \  /\  /    | |  | |`\ \  | | | \__/ || \__.,| \__/  |  | | // | |, 
+      \/  \/    [___][__|  \_][___]| ;.__/  '.__.' '.__.;__][___]\'-;__/ 
+                                  [__|                                   
+
  {COLORS.WHSL}Wikipedia
 
- {COLORS.GNSL}[ {COLORS.REDL}1 {COLORS.GNSL}]  {COLORS.WHSL}Wikipedia в графах ( Европа и США  )
+ {COLORS.GNSL}[ {COLORS.REDL}1 {COLORS.GNSL}]  {COLORS.WHSL}Wikipedia в графах [ Европа и США ]
  
- {COLORS.GNSL}[ {COLORS.REDL}2 {COLORS.GNSL}]  {COLORS.WHSL}Wikipedia в тексте ( Бывшие страны Советского союза )
+ {COLORS.GNSL}[ {COLORS.REDL}2 {COLORS.GNSL}]  {COLORS.WHSL}Wikipedia в тексте [ Бывшие страны Советского союза ]
+ 
+ {COLORS.GNSL}[ {COLORS.REDL}3 {COLORS.GNSL}]  {COLORS.WHSL}Wikipedia европейская
+ 
+ {COLORS.GNSL}[ {COLORS.REDL}4 {COLORS.GNSL}]  {COLORS.WHSL}Wikipedia ввиде закладок в браузер
  
 {COLORS.REDL} [ {COLORS.GNSL}99{COLORS.REDL} ]{COLORS.WHSL} Выход в главное меню  {COLORS.REDL}
   
@@ -270,41 +240,58 @@ page_5 = f'''
  {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL}В главное меню OSINT-SAN 
 '''
 
+page_start =fr'''{COLORS.OKNL}
 
-page_40 = f''' {COLORS.FIOL}
-
- Меню с дополнительными модулями, модули могут быть от других разработчиков, 
- адаптированные для работы с OSINT-SANY
- Спасибо сторонним разработчикам за модули на github, наша дополненная коллекция.
- Здесь будут и наши модули тоже.
-
- {COLORS.GNSL}[{COLORS.REDL} 31 {COLORS.GNSL}] {COLORS.WHSL}  Android Debug Bridge  {COLORS.GNSL}[{COLORS.REDL} 41 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
- {COLORS.GNSL}[{COLORS.REDL} 32 {COLORS.GNSL}] {COLORS.WHSL}  Свободный             {COLORS.GNSL}[{COLORS.REDL} 42 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
- {COLORS.GNSL}[{COLORS.REDL} 33 {COLORS.GNSL}] {COLORS.WHSL}  Свободный             {COLORS.GNSL}[{COLORS.REDL} 43 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
- {COLORS.GNSL}[{COLORS.REDL} 34 {COLORS.GNSL}] {COLORS.WHSL}  Свободный             {COLORS.GNSL}[{COLORS.REDL} 44 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
- {COLORS.GNSL}[{COLORS.REDL} 35 {COLORS.GNSL}] {COLORS.WHSL}  Свободный             {COLORS.GNSL}[{COLORS.REDL} 45 {COLORS.GNSL}] {COLORS.WHSL}  Свободный 
- {COLORS.GNSL}[{COLORS.REDL} 36 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
- {COLORS.GNSL}[{COLORS.REDL} 37 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
- {COLORS.GNSL}[{COLORS.REDL} 38 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
- {COLORS.GNSL}[{COLORS.REDL} 39 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
- {COLORS.GNSL}[{COLORS.REDL} 40 {COLORS.GNSL}] {COLORS.WHSL}  Свободный
+     ______    ________     __      _____  ___       ________    _______  ___      ___     ______    
+    /    " \  /"       )   /""\    (\"   \|"  \     |"      "\  /"     "||"  \    /"  |   /    " \   
+   // ____  \(:   \___/   /    \   |.\\   \    |    (.  ___  :)(: ______) \   \  //   |  // ____  \  
+  /  /    ) :)\___  \    /' /\  \  |: \.   \\  |    |: \   ) || \/    |   /\\  \/.    | /  /    ) :) 
+ (: (____/ //  __/  \\  //  __'  \ |.  \    \. |    (| (___\ || // ___)_ |: \.        |(: (____/ //  
+  \        /  /" \   :)/   /  \\  \|    \    \ |    |:       :)(:      "||.  \    /:  | \        /   
+   \"_____/  (_______/(___/    \___)\___|\____\)    (________/  \_______)|___|\__/|___|  \"_____/    
+                                                                                                   
+ {COLORS.WHSL}Обязательно добавь свои api в osintsan.py
+ 
+ Дополнительно установите ngrok, и все нужные зависимости в 65 модуле.
+ 
+ Приятного OSINT ...
 '''
+page_45 = fr'''{COLORS.OKNL}
+      ______           __     ____       _                    _____ ___    _   __
+     / ____/___ ______/ /_   / __ \_____(_)   _____  _____   / ___//   |  / | / /
+    / /_  / __ `/ ___/ __/  / / / / ___/ / | / / _ \/ ___/   \__ \/ /| | /  |/ / 
+   / __/ / /_/ (__  ) /_   / /_/ / /  / /| |/ /  __/ /      ___/ / ___ |/ /|  /  
+  /_/    \__,_/____/\__/  /_____/_/  /_/ |___/\___/_/      /____/_/  |_/_/ |_/   
+                                                                               
 
+  {COLORS.WHSL}A package of drivers and dependencies for framework to work
+  
+  Привет, если вдруг у тебя появилась ошибка и ты не можешь ее решить самостоятельно,
+  напиши в чат OSINT-SAN поддержка.VIP
+  
+  {COLORS.REDL}Подсказка выбора в меню: 
+
+  {COLORS.REDL}y - {COLORS.WHSL}Согласится на проведение установки.
+  
+  {COLORS.REDL}n - {COLORS.WHSL}Отказатся от установки, уже установленно.
+  
+  {COLORS.REDL}-------------------------------------------------------------------------
+               
+'''
 page_10 = f'''
 
- {COLORS.GNSL}[{COLORS.REDL} 1 {COLORS.GNSL}] {COLORS.WHSL}  Сканировать IP, глобальный поиск             {COLORS.GNSL}[{COLORS.REDL} 11 {COLORS.GNSL}] {COLORS.WHSL} Загрузить OSINT Pack {COLORS.GNSL}5.0 и{COLORS.WHSL} Сообщество OSINT 
+ {COLORS.GNSL}[{COLORS.REDL} 1 {COLORS.GNSL}] {COLORS.WHSL}  Сканировать IP, глобальный поиск             {COLORS.GNSL}[{COLORS.REDL} 11 {COLORS.GNSL}] {COLORS.WHSL} OSINT Pack {COLORS.GNSL}5.0 и{COLORS.WHSL} Сообщество OSINT 
  {COLORS.GNSL}[{COLORS.REDL} 2 {COLORS.GNSL}] {COLORS.WHSL}  Глобальный поиск {COLORS.GNSL}[{COLORS.REDL}domain{COLORS.GNSL}]                    {COLORS.GNSL}[{COLORS.REDL} 12 {COLORS.GNSL}] {COLORS.WHSL} Анонимная почта
  {COLORS.GNSL}[{COLORS.REDL} 3 {COLORS.GNSL}] {COLORS.WHSL}  Собрать информацию о мобильном номере        {COLORS.GNSL}[{COLORS.REDL} 13 {COLORS.GNSL}] {COLORS.WHSL} Поиск по bitcoin кошельку
  {COLORS.GNSL}[{COLORS.REDL} 4 {COLORS.GNSL}] {COLORS.WHSL}  Определение metadata                         {COLORS.GNSL}[{COLORS.REDL} 14 {COLORS.GNSL}] {COLORS.GNSL} Shodan поиск
  {COLORS.GNSL}[{COLORS.REDL} 5 {COLORS.GNSL}] {COLORS.WHSL}  Поиск личности по фото, картинкам            {COLORS.GNSL}[{COLORS.REDL} 15 {COLORS.GNSL}]  Поиск по нику maigret
- {COLORS.GNSL}[{COLORS.REDL} 6 {COLORS.GNSL}] {COLORS.WHSL}  Mac address{COLORS.WHSL} информация
+ {COLORS.GNSL}[{COLORS.REDL} 6 {COLORS.GNSL}] {COLORS.WHSL}  Mac address{COLORS.WHSL} информация                       {COLORS.GNSL}[{COLORS.REDL} 16 {COLORS.GNSL}] {COLORS.WHSL} Android Debug Bridge
  {COLORS.GNSL}[{COLORS.REDL} 7 {COLORS.GNSL}] {COLORS.WHSL}  Url деанонимизация {COLORS.GNSL}[{COLORS.REDL}Big Brother 13 PRO{COLORS.GNSL}]
  {COLORS.GNSL}[{COLORS.REDL} 8 {COLORS.GNSL}] {COLORS.WHSL}  Википедия OSINT                             
  {COLORS.GNSL}[{COLORS.REDL} 9 {COLORS.GNSL}] {COLORS.WHSL}  Рандомная сетевая личность {COLORS.GNSL}User-Agent        
  {COLORS.GNSL}[{COLORS.REDL} 10 {COLORS.GNSL}] {COLORS.WHSL} Пароли
  
  {COLORS.GNSL}[{COLORS.REDL} 16 {COLORS.GNSL}] {COLORS.WHSL} Мои токены и личный кабинет
- {COLORS.GNSL}[{COLORS.REDL} 88 {COLORS.GNSL}] {COLORS.WHSL} Дополнительный функционал
 
  {COLORS.WHSL}Перезапустить {COLORS.GNSL}[{COLORS.REDL} 99 {COLORS.GNSL}]  {COLORS.WHSL} Очистить {COLORS.GNSL}[{COLORS.REDL} 66 {COLORS.GNSL}]  {COLORS.WHSL} Поддержка, driver {COLORS.GNSL}[{COLORS.REDL} 65 {COLORS.GNSL}]  {COLORS.WHSL} Покинуть {COLORS.GNSL}[{COLORS.REDL} 0 {COLORS.GNSL}]
 '''

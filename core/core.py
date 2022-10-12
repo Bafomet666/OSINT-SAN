@@ -7,22 +7,21 @@ from module.utils import COLORS
 # banners
 from module.utils.ban import (
     page_1, page_14, page_3, page_6, page_10,
-    page_13, page_28, page_45, page_44,
-    page_40, page_42, page_5,
+    page_13, page_28, page_45, page_45,
+    page_42, page_5,
 )
 from module.utils.banner import show_banner
 
 page_32 = f'''
  {COLORS.REDL}Авторизация успешно пройдена️
                
- {COLORS.WHSL}Уровень допуска: {COLORS.GNSL}Пользователь - OSINT 🔎
+ {COLORS.WHSL}Уровень допуска: {COLORS.GNSL}Демо версия 
 
  {COLORS.REDL}Обновленные цены на подписку framework.
  
- {COLORS.WHSL}1 месяц ипользования   -{COLORS.GNSL} 700  {COLORS.REDL}₽
- {COLORS.WHSL}3 месяца ипользования  -{COLORS.GNSL} 1400 {COLORS.REDL}₽
- {COLORS.WHSL}6 месяцев ипользования -{COLORS.GNSL} 1900 {COLORS.REDL}₽
- {COLORS.WHSL}12 месяцев пользования -{COLORS.GNSL} 3400 {COLORS.REDL}₽
+ {COLORS.WHSL}3 месяца ипользования  -{COLORS.GNSL} 1200 {COLORS.REDL}₽
+ {COLORS.WHSL}6 месяцев ипользования -{COLORS.GNSL} 1800 {COLORS.REDL}₽
+ {COLORS.WHSL}12 месяцев пользования -{COLORS.GNSL} 2500 {COLORS.REDL}₽
  
  {COLORS.FIOL}Подписка приобретается строго через разработчика, 
  написать разработчику{COLORS.WHSL} https://t.me/satana666mx
@@ -40,7 +39,7 @@ def clear_screen():
 
 def osint():
     import os
-    os.system("printf '\033]2;Demo version 6.1 🇸🇮 \a'")
+    os.system("printf '\033]2;Demo version 7.0 🇸🇮 \a'")
     global option
     while True:
         print(page_10)
@@ -107,6 +106,7 @@ def osint():
 
         elif choice == 3:
             from module.phonenumber import phone_number
+            print(f' Внимание ввод номера с +7\n Пример вводимых номеров: +79228009988 +79127654325\n Обязательно замените API в osintsan.py\n')
             ph = input(f"{COLORS.REDL} └──>{COLORS.GNSL} 🔎 Введите номер телефона:{COLORS.WHSL} ")
             show_banner(clear=True)
             phone_number(ph)
@@ -184,6 +184,16 @@ def osint():
             elif input1 == "2":
                 from module.Information_services import information_menu
                 information_menu()
+
+            elif input1 == "3":
+                show_banner(clear=True)
+                print(f' Мини Wikipedia открыта')
+                webbrowser.open('https://map.malfrats.industries')
+
+            elif input1 == "4":
+                show_banner(clear=True)
+                print(f' Файл с закладками лежит в папке database,\n')
+                print(f' импортируйте эти закладки в браузер, в настройках браузера')
 
             elif input1 == "99":
                 show_banner(clear=True)
@@ -329,22 +339,9 @@ def osint():
             userfull(username)
 
         elif choice == 65:
-            show_banner(clear=True)
-            print(page_44)
-            option = input(f"{COLORS.FIOL} Выберите вариант? y/n: ")
-            if option == "y":
-                urls = [
-                    "https://t.me/satana666mx",
-                ]
-                for url in urls:
-                    webbrowser.open(url)
-
-            elif option == "n":
-                from module.driver import driver
-                show_banner(clear=True)
-                print(page_45)
-                option = input(f"{COLORS.REDL} └──> {COLORS.WHSL} Выберите опцию:{COLORS.GNSL} ")
-                driver(option)
+            from module.driver import driver
+            clear_screen()
+            driver()
 
         elif choice == 16:
             from osintsan import api
@@ -376,7 +373,7 @@ def osint():
             kill()
 
 
-        elif choice == 31:
+        elif choice == 16:
             from module.android import android_debug
             android_debug()
             
