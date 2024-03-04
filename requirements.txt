@@ -7,7 +7,7 @@ h8mail
 lxml
 httpx
 trio
-nmap
+python-nmap
 mtrpacket
 paramiko
 pillow
