@@ -1,9 +1,9 @@
 
 
 
-#                                                                          "Экосистема OSINT от OSINT-SAN Project.
+#                                                                          Экосистема OSINT от OSINT-SAN Project.
 
-## Сейчас вам доступна версия linux free клиент, но вы можете обновится до полного издания в котором присутствует web site версия и telegram bot с расширенной версией для терминала.
+### Сейчас вам доступна версия linux free клиент, но вы можете обновится до полного издания в котором присутствует web site версия и telegram bot с расширенной версией для терминала.
 
 ![alt tag](https://github.com/Bafomet666/OSINT-SAN/blob/main/report/Screenshot%20at%202024-04-03%2017-29-19.png)
 
