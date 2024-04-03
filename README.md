@@ -56,9 +56,10 @@ sudo pip3 install -r requirements.txt
 
 ### Использование framework:
 
-Запускать командой: python3 osintsan.py
+Запускать бесплатную версию командой: python3 osintsan.py, платную версию python3 san.py
+##
 
-![alt tag](https://github.com/Bafomet666/screen/blob/main/menu_demo.png)
+![alt tag](https://github.com/Bafomet666/OSINT-SAN/blob/main/report/Screenshot%20at%202024-04-03%2017-29-19.png)
 
 После успешной авторизации, вам будет доступно меню с инструментами.
 
