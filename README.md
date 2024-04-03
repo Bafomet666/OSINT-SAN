@@ -3,6 +3,10 @@
 
 #                                                                          Вы можете загрузить бесплатную версию OSINT SAN Framework terminal + bot
 
+##
+
+![alt tag](https://github.com/Bafomet666/OSINT-SAN/blob/main/report/Screenshot%20at%202024-04-03%2017-29-19.png)
+
 Бесплатный OSINT-SAN Framework дает возможность быстро находить информацию и деанонимизировать пользователей сети интернет, framework содержт 25 функций для поиска информации либо деанонимизации пользователей. С помощью нашего ПО вы можете собирать информацию о пользователях в сети интернет.
 
 Инструмент адаптирован под: Parrot OS, Kali linux, так-же имеется web site версия и telegram bot.
@@ -57,9 +61,6 @@ sudo pip3 install -r requirements.txt
 ### Использование framework:
 
 Запускать бесплатную версию командой: python3 osintsan.py, платную версию python3 san.py
-##
-
-![alt tag](https://github.com/Bafomet666/OSINT-SAN/blob/main/report/Screenshot%20at%202024-04-03%2017-29-19.png)
 
 После успешной авторизации, вам будет доступно меню с инструментами.
 
