@@ -280,6 +280,8 @@ page_45 = fr'''{COLORS.OKNL}
 '''
 page_10 = f'''
 
+ {COLORS.WHSL}t.me/osint_san_framework
+
  {COLORS.GNSL}[{COLORS.REDL} 1 {COLORS.GNSL}] {COLORS.WHSL}  Сканировать IP, глобальный поиск             {COLORS.GNSL}[{COLORS.REDL} 11 {COLORS.GNSL}] {COLORS.WHSL} OSINT Pack {COLORS.GNSL}5.0 и{COLORS.WHSL} Сообщество OSINT 
  {COLORS.GNSL}[{COLORS.REDL} 2 {COLORS.GNSL}] {COLORS.WHSL}  Глобальный поиск {COLORS.GNSL}[{COLORS.REDL}domain{COLORS.GNSL}]                    {COLORS.GNSL}[{COLORS.REDL} 12 {COLORS.GNSL}] {COLORS.WHSL} Анонимная почта
  {COLORS.GNSL}[{COLORS.REDL} 3 {COLORS.GNSL}] {COLORS.WHSL}  Собрать информацию о мобильном номере        {COLORS.GNSL}[{COLORS.REDL} 13 {COLORS.GNSL}] {COLORS.WHSL} Поиск по bitcoin кошельку
