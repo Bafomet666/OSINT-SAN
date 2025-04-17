@@ -1,7 +1,7 @@
 
 
 
-#                                                                          OSINT экосистема от OSINT-SAN Project.
+#                                                                          OSINT экосистема от OSINT-SAP Project.
 
 ![alt tag](https://github.com/Bafomet666/OSINT-SAN/blob/main/report/Screenshot%20at%202024-04-03%2017-29-19.png)
 
