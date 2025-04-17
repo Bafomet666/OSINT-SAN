@@ -1,3 +1,0 @@
-[console_scripts]
-ipwhois_cli = ipwhois.scripts.ipwhois_cli:main
-ipwhois_utils_cli = ipwhois.scripts.ipwhois_utils_cli:main

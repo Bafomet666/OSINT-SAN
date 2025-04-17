@@ -1,2 +1,0 @@
-h8mail
-tests
