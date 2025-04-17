@@ -43,9 +43,7 @@ sudo pip3 install -r requirements.txt
      https://linuxize.com/post/how-to-install-python-3-9-on-debian-10/
 
      sudo apt install -y python3-pip
-
-
-Есть видео гайд по установке: https://www.youtube.com/watch?v=FYD_DgUMtZE&t=38s
+     
 Внимание, мы поменяли путь api с api.py в osintsan.py
      
 
