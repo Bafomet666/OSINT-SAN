@@ -15,7 +15,6 @@ shodan
 faker
 wget
 maigret
-pyngrok
 whois
 pipe-subprocess
 censys
@@ -36,6 +35,7 @@ future-annotations
 html5lib
 idna
 Jinja2
+ipwhois
 MarkupSafe
 mock
 multidict
@@ -63,8 +63,6 @@ bs4
 dnspython
 selenium
 exif
-grab
-fpdf
 argparse
 pynput
 gpsphoto

@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+torrequest.py
+torrequest.egg-info/PKG-INFO
+torrequest.egg-info/SOURCES.txt
+torrequest.egg-info/dependency_links.txt
+torrequest.egg-info/not-zip-safe
+torrequest.egg-info/requires.txt
+torrequest.egg-info/top_level.txt

@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: plum-py
+Version: 0.8.7
+Summary: Pack/Unpack Memory.
+Home-page: https://plum-py.readthedocs.io/en/latest/index.html
+Download-URL: https://plum-py.readthedocs.io/en/latest/index.html
+Author: Dan Gass
+Author-email: dan.gass@gmail.com
+Maintainer: Dan Gass
+Maintainer-email: dan.gass@gmail.com
+License: MIT License; http://opensource.org/licenses/MIT
+Keywords: pack unpack bytes structure memory
+Platform: any
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.6
+License-File: LICENSE
+
+
+#########################
+[plum] Pack/Unpack Memory
+#########################
+
+.. image:: https://readthedocs.org/projects/plum-py/badge/?version=latest
+    :target: https://plum-py.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+The plum-py Python package provides classes and utility functions to
+transform byte sequences into Python objects and back. While similar in
+purpose to Python's standard library ``struct`` module, this package
+provides a larger set of format specifiers and is extensible, allowing
+you to easily create complex ones of your own.

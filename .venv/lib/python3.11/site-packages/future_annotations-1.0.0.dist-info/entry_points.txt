@@ -1,0 +1,3 @@
+[console_scripts]
+future-annotations-show = future_annotations:main
+

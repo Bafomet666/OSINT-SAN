@@ -1,0 +1,15 @@
+aiohttp_socks-0.8.4.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+aiohttp_socks-0.8.4.dist-info/LICENSE.txt,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+aiohttp_socks-0.8.4.dist-info/METADATA,sha256=RormkqE6mgPUyvvVwm-KbpELrAiuYvmZ1OpecRxlyBc,3056
+aiohttp_socks-0.8.4.dist-info/RECORD,,
+aiohttp_socks-0.8.4.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiohttp_socks-0.8.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aiohttp_socks-0.8.4.dist-info/top_level.txt,sha256=AV2lnF7KdxoUZdO7YNCuVdPeaaxzBz_pFqG-IKWfRwE,14
+aiohttp_socks/__init__.py,sha256=TL1zOMiPCZ8u5lGcGpQk6btq6Z30cFK51avCFAe0Qlg,743
+aiohttp_socks/__pycache__/__init__.cpython-311.pyc,,
+aiohttp_socks/__pycache__/_deprecated.cpython-311.pyc,,
+aiohttp_socks/__pycache__/connector.cpython-311.pyc,,
+aiohttp_socks/__pycache__/utils.cpython-311.pyc,,
+aiohttp_socks/_deprecated.py,sha256=Pn8YYxCyTqxx7eLLNmE26sLY-ZJ6ixWQS7XV76HXCck,907
+aiohttp_socks/connector.py,sha256=ltVvcFPkTQiA_G3JO1cufnSUL0zBr7Yy-AdrD5hyXV8,5332
+aiohttp_socks/utils.py,sha256=2F8Ms9k1OHVyQ09CMgS-JfvHdBZVuftTosyTW9L4cuk,2525

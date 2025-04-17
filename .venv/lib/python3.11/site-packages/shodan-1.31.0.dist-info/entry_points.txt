@@ -1,0 +1,2 @@
+[console_scripts]
+shodan = shodan.__main__:main

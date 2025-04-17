@@ -189,7 +189,6 @@ page_13 = fr""" {COLORS.GRNL}
  {COLORS.REDL}Runet network scanning tool - Специализированный набор инструментов для людей OSINT профиля.
  {COLORS.FIOL}Russian language version{COLORS.REDL}
  {COLORS.WHSL}Новости: {COLORS.GNSL}http://osintsan.ru
- {COLORS.WHSL}Приобрести подписку можно только в лс:{COLORS.GNSL} https://t.me/satana666mx
  {COLORS.WHSL}By Bafomёd Group
    
  {COLORS.WHSL}Проверка {COLORS.REDL}API.{COLORS.WHSL} Eсли вдруг api отсутствует,
@@ -197,7 +196,6 @@ page_13 = fr""" {COLORS.GRNL}
  Именно своё API, указывать обязательно для работоспособности модулей,
  и для вашей безопасности.
  
- Версия 6.1 Ознакомительная, локальная
 """
 
 menu = f"""
@@ -240,54 +238,27 @@ page_5 = f'''
  {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL}В главное меню OSINT-SAN 
 '''
 
-page_start =fr'''{COLORS.OKNL}
+page_start = fr'''{COLORS.OKNL}
+  _______   __        ________  ___________      ___________  ______      ______    ___        ________  
+ /"     "| /""\      /"       )("     _   ")    ("     _   ")/    " \    /    " \  |"  |      /"       ) 
+(: ______)/    \    (:   \___/  )__/  \\__/      )__/  \\__/// ____  \  // ____  \ ||  |     (:   \___/  
+ \/    | /' /\  \    \___  \       \\_ /            \\_ /  /  /    ) :)/  /    ) :)|:  |      \___  \    
+ // ___)//  __'  \    __/  \\      |.  |            |.  | (: (____/ //(: (____/ //  \  |___    __/  \\   
+(:  (  /   /  \\  \  /" \   :)     \:  |            \:  |  \        /  \        /  ( \_|:  \  /" \   :)  
+ \__/ (___/    \___)(_______/       \__|             \__|   \"_____/    \"_____/    \_______)(_______/   
+   
+ {COLORS.WHSL}Больше информации{COLORS.REDL} в t.me/osint_san_framework                                           
+ {COLORS.WHSL}Обязательно добавь свои api в osintsan.py '''
 
-     ______    ________     __      _____  ___       ________    _______  ___      ___     ______    
-    /    " \  /"       )   /""\    (\"   \|"  \     |"      "\  /"     "||"  \    /"  |   /    " \   
-   // ____  \(:   \___/   /    \   |.\\   \    |    (.  ___  :)(: ______) \   \  //   |  // ____  \  
-  /  /    ) :)\___  \    /' /\  \  |: \.   \\  |    |: \   ) || \/    |   /\\  \/.    | /  /    ) :) 
- (: (____/ //  __/  \\  //  __'  \ |.  \    \. |    (| (___\ || // ___)_ |: \.        |(: (____/ //  
-  \        /  /" \   :)/   /  \\  \|    \    \ |    |:       :)(:      "||.  \    /:  | \        /   
-   \"_____/  (_______/(___/    \___)\___|\____\)    (________/  \_______)|___|\__/|___|  \"_____/    
-                                                                                                   
- {COLORS.WHSL}Обязательно добавь свои api в osintsan.py
- 
- Дополнительно установите ngrok, и все нужные зависимости в 65 модуле.
- 
- Приятного OSINT ...
-'''
-page_45 = fr'''{COLORS.OKNL}
-      ______           __     ____       _                    _____ ___    _   __
-     / ____/___ ______/ /_   / __ \_____(_)   _____  _____   / ___//   |  / | / /
-    / /_  / __ `/ ___/ __/  / / / / ___/ / | / / _ \/ ___/   \__ \/ /| | /  |/ / 
-   / __/ / /_/ (__  ) /_   / /_/ / /  / /| |/ /  __/ /      ___/ / ___ |/ /|  /  
-  /_/    \__,_/____/\__/  /_____/_/  /_/ |___/\___/_/      /____/_/  |_/_/ |_/   
-                                                                               
-
-  {COLORS.WHSL}A package of drivers and dependencies for framework to work
-  
-  Привет, если вдруг у тебя появилась ошибка и ты не можешь ее решить самостоятельно,
-  напиши в чат OSINT-SAN поддержка.VIP
-  
-  {COLORS.REDL}Подсказка выбора в меню: 
-
-  {COLORS.REDL}y - {COLORS.WHSL}Согласится на проведение установки.
-  
-  {COLORS.REDL}n - {COLORS.WHSL}Отказатся от установки, уже установленно.
-  
-  {COLORS.REDL}-------------------------------------------------------------------------
-               
-'''
 page_10 = f'''
-
- {COLORS.WHSL}t.me/osint_san_framework
+ Мини набор утилит.
 
  {COLORS.GNSL}[{COLORS.REDL} 1 {COLORS.GNSL}] {COLORS.WHSL}  Сканировать IP, глобальный поиск             {COLORS.GNSL}[{COLORS.REDL} 11 {COLORS.GNSL}] {COLORS.WHSL} OSINT Pack {COLORS.GNSL}5.0 и{COLORS.WHSL} Сообщество OSINT 
- {COLORS.GNSL}[{COLORS.REDL} 2 {COLORS.GNSL}] {COLORS.WHSL}  Глобальный поиск {COLORS.GNSL}[{COLORS.REDL}domain{COLORS.GNSL}]                    {COLORS.GNSL}[{COLORS.REDL} 12 {COLORS.GNSL}] {COLORS.WHSL} Анонимная почта
+ {COLORS.GNSL}[{COLORS.REDL} 2 {COLORS.GNSL}] {COLORS.WHSL}  Глобальный поиск {COLORS.GNSL}[{COLORS.REDL}domain{COLORS.GNSL}]                    {COLORS.GNSL}[{COLORS.REDL} 12 {COLORS.GNSL}]  Поиск по нику maigret
  {COLORS.GNSL}[{COLORS.REDL} 3 {COLORS.GNSL}] {COLORS.WHSL}  Собрать информацию о мобильном номере        {COLORS.GNSL}[{COLORS.REDL} 13 {COLORS.GNSL}] {COLORS.WHSL} Поиск по bitcoin кошельку
  {COLORS.GNSL}[{COLORS.REDL} 4 {COLORS.GNSL}] {COLORS.WHSL}  Определение metadata                         {COLORS.GNSL}[{COLORS.REDL} 14 {COLORS.GNSL}] {COLORS.GNSL} Shodan поиск
- {COLORS.GNSL}[{COLORS.REDL} 5 {COLORS.GNSL}] {COLORS.WHSL}  Поиск личности по фото, картинкам            {COLORS.GNSL}[{COLORS.REDL} 15 {COLORS.GNSL}]  Поиск по нику maigret
- {COLORS.GNSL}[{COLORS.REDL} 6 {COLORS.GNSL}] {COLORS.WHSL}  Mac address{COLORS.WHSL} информация                       {COLORS.GNSL}[{COLORS.REDL} 16 {COLORS.GNSL}] {COLORS.WHSL} Android Debug Bridge
+ {COLORS.GNSL}[{COLORS.REDL} 5 {COLORS.GNSL}] {COLORS.WHSL}  Поиск личности по фото, картинкам
+ {COLORS.GNSL}[{COLORS.REDL} 6 {COLORS.GNSL}] {COLORS.WHSL}  Mac address{COLORS.WHSL} информация
  {COLORS.GNSL}[{COLORS.REDL} 7 {COLORS.GNSL}] {COLORS.WHSL}  Url деанонимизация {COLORS.GNSL}[{COLORS.REDL}Big Brother 13 PRO{COLORS.GNSL}]
  {COLORS.GNSL}[{COLORS.REDL} 8 {COLORS.GNSL}] {COLORS.WHSL}  Википедия OSINT                             
  {COLORS.GNSL}[{COLORS.REDL} 9 {COLORS.GNSL}] {COLORS.WHSL}  Рандомная сетевая личность {COLORS.GNSL}User-Agent        
@@ -295,39 +266,10 @@ page_10 = f'''
  
  {COLORS.GNSL}[{COLORS.REDL} 16 {COLORS.GNSL}] {COLORS.WHSL} Мои токены и личный кабинет
 
- {COLORS.WHSL}Перезапустить {COLORS.GNSL}[{COLORS.REDL} 99 {COLORS.GNSL}]  {COLORS.WHSL} Очистить {COLORS.GNSL}[{COLORS.REDL} 66 {COLORS.GNSL}]  {COLORS.WHSL} Поддержка, driver {COLORS.GNSL}[{COLORS.REDL} 65 {COLORS.GNSL}]  {COLORS.WHSL} Покинуть {COLORS.GNSL}[{COLORS.REDL} 0 {COLORS.GNSL}]
+ {COLORS.WHSL}Перезапустить {COLORS.GNSL}[{COLORS.REDL} 99 {COLORS.GNSL}]  {COLORS.WHSL} Очистить {COLORS.GNSL}[{COLORS.REDL} 66 {COLORS.GNSL}]  {COLORS.WHSL} Покинуть {COLORS.GNSL}[{COLORS.REDL} 0 {COLORS.GNSL}]
 '''
 
-page_8 = f'''   {COLORS.GNSL}
-  ,--------.      ,--.
-  '--.  .--',---. |  | ,---.  ,---. ,--.--. ,--,--.,--,--,--.
-     |  |  | .-. :|  || .-. :| .-. ||  .--'' ,-.  ||        |
-     |  |  \   --.|  |\   --.' '-' '|  |   \ '-'  ||  |  |  |
-     `--'   `----'`--' `----'.`-  / `--'    `--`--'`--`--`--'
-   ,---.                     `---'    ,--.                    
-  '   .-'  ,---.  ,--,--.,--.--. ,---.|  ,---. 
-  `.  `-. | .-. :' ,-.  ||  .--'| .--'|  .-.  |
-  .-'    |\   --.\ '-'  ||  |   \ `--.|  | |  |
-  `-----'  `----' `--`--'`--'    `---'`--' `--'          
 
-  {COLORS.WHSL}Статус модуля {COLORS.REDL}[{COLORS.GNSL}3.0{COLORS.REDL}]
-  
-  {COLORS.GNSL}OSINT-SAN Framework 
-  
-  {COLORS.REDL}=====================================================================================
-
-
-  {COLORS.REDL}[ {COLORS.GNSL}1 {COLORS.REDL}] {COLORS.WHSL} Глобальный поиск по постам telegram, через ключевое слово.
-
-  {COLORS.REDL}[ {COLORS.GNSL}2 {COLORS.REDL}] {COLORS.WHSL} Фишинг боты telegram, дополнение к пункту 3, выше.
-  
-  {COLORS.REDL}[ {COLORS.GNSL}3 {COLORS.REDL}] {COLORS.WHSL} Деанонимизация по ID Telegram
-  
-  {COLORS.REDL}-----------------------------------------------------------------------------------
-  
-  {COLORS.REDL}[ {COLORS.GNSL}99 {COLORS.REDL}] {COLORS.WHSL}В главное меню OSINT-SAN   
-                                           
-'''
 page_2 = f''' {COLORS.GNSL}
   ____  _____                       __                        
  |_   \|_   _|                     [  |                       
@@ -375,22 +317,7 @@ page_6 = f''' {COLORS.REDL}
   '''
 
 page_3 = f''' {COLORS.WHSL}
- Вы можете собрать очень большое количество информации по тематике OSINT в telegram каналах.
- Список только самых информативных каналов.
 
- {COLORS.WHSL}OSINT CLUB                                  {COLORS.WHSL}OSINT Беларусь
- {COLORS.WHSL}Канал {COLORS.GNSL}@osint_club_channel                   {COLORS.WHSL}Канал {COLORS.GNSL}@osintby
-  
- {COLORS.WHSL}Investigation & Forensic tools              {COLORS.WHSL}Нетипичный ИБ 
- {COLORS.WHSL}Канал {COLORS.GNSL}@forensictools                        {COLORS.WHSL}Канал {COLORS.GNSL}@tmgroupsecurity                                        
-  
- {COLORS.WHSL}Записки сетевого выживальщика               {COLORS.WHSL}Интернет - розыск      
- {COLORS.WHSL}Канал {COLORS.GNSL}@NetSurvivalist                       {COLORS.WHSL}Канал {COLORS.GNSL}@irozysk
-
- {COLORS.WHSL}Russian OSINT
- {COLORS.WHSL}Канал {COLORS.GNSL}@Russian_OSINT
- {COLORS.REDL}---------------------------------------------------------------------------------------------
-  
  {COLORS.WHSL}Хочешь загрузить книги, мануалы, документы по OSINT ?
  Если выберешь 1 и будешь загружать, не останавливай, пусть загружает, 
  папка osint-info будет в папке с инструментом

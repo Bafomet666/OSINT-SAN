@@ -1,0 +1,2 @@
+import sys; exec('try:\n    import future_annotations\nexcept ImportError:\n    pass\nelse:\n    future_annotations.register()\n')
+

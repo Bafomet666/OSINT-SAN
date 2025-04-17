@@ -1,0 +1,597 @@
+Metadata-Version: 2.1
+Name: ipwhois
+Version: 1.3.0
+Summary: Retrieve and parse whois data for IPv4 and IPv6 addresses.
+Home-page: https://github.com/secynic/ipwhois
+Download-URL: https://github.com/secynic/ipwhois/tarball/master
+Author: Philip Hane
+Author-email: secynic@gmail.com
+License: BSD
+Keywords: Python, WHOIS, RWhois, Referral Whois, ASN, IP Address, IP, IPv4, IPv6,,IETF, REST, Arin, Ripe, Apnic, Lacnic, Afrinic, NIC, National Information,Center, RDAP, RIR, Regional Internet Registry, NIR, National Internet,Registry, ASN origin, Origin
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: dnspython
+Requires-Dist: defusedxml
+Requires-Dist: ipaddr==2.2.0; python_version < "3.3"
+
+=======
+ipwhois
+=======
+
+.. image:: https://coveralls.io/repos/github/secynic/ipwhois/badge.svg?branch=
+    master
+    :target: https://coveralls.io/github/secynic/ipwhois?branch=master
+.. image:: https://img.shields.io/github/issues-raw/secynic/ipwhois
+    :target: https://github.com/secynic/ipwhois/issues
+.. image:: https://codeclimate.com/github/secynic/ipwhois/badges/issue_count.svg
+    :target: https://codeclimate.com/github/secynic/ipwhois
+.. image:: https://img.shields.io/badge/license-BSD%202--Clause-blue.svg
+    :target: https://github.com/secynic/ipwhois/tree/master/LICENSE.txt
+.. image:: https://img.shields.io/badge/python-2.7%2C%203.4+-blue.svg
+    :target: https://docs.python.org
+.. image:: https://img.shields.io/badge/docs-latest-green.svg?style=flat
+    :target: https://ipwhois.readthedocs.io/en/latest
+.. image:: https://img.shields.io/badge/docs-dev-yellow.svg?style=flat
+    :target: https://ipwhois.readthedocs.io/en/dev
+
+Summary
+=======
+
+ipwhois is a Python package focused on retrieving and parsing whois data
+for IPv4 and IPv6 addresses.
+
+.. note::
+
+    If you are experiencing latency issues, it is likely related to rate
+    limiting. Rate limiting is based on your source IP, which may be a problem
+    with multiple users behind the same proxy. Additionally, LACNIC implements
+    aggressive rate limiting. Experimental bulk query support is new as of
+    v1.0.0.
+
+Features
+========
+
+* Parses a majority of whois fields in to a standard dictionary
+* IPv4 and IPv6 support
+* Supports RDAP queries (recommended method, see:
+  https://tools.ietf.org/html/rfc7483)
+* Proxy support for RDAP queries
+* Supports legacy whois protocol queries
+* Referral whois support for legacy whois protocol
+* Recursive network parsing for IPs with parent/children networks listed
+* National Internet Registry support for JPNIC and KRNIC
+* Supports IP to ASN and ASN origin queries
+* Python 2.7 and 3.4+ supported
+* Useful set of utilities
+* Experimental bulk query support
+* BSD license
+* Human readable field translations
+* Full CLI for IPWhois with optional ANSI colored console output.
+
+Links
+=====
+
+Documentation
+-------------
+
+GitHub latest
+^^^^^^^^^^^^^
+
+https://ipwhois.readthedocs.io/en/latest
+
+GitHub dev
+^^^^^^^^^^
+
+https://ipwhois.readthedocs.io/en/dev
+
+Examples
+--------
+
+https://github.com/secynic/ipwhois/tree/master/ipwhois/examples
+
+Github
+------
+
+https://github.com/secynic/ipwhois
+
+Pypi
+----
+
+https://pypi.org/project/ipwhois
+
+Changes
+-------
+
+https://ipwhois.readthedocs.io/en/latest/CHANGES.html
+
+Upgrade Notes
+-------------
+
+https://ipwhois.readthedocs.io/en/latest/UPGRADING.html
+
+Dependencies
+============
+
+Python 2.7::
+
+    dnspython
+    ipaddr
+    defusedxml
+
+Python 3.4+::
+
+    dnspython
+    defusedxml
+
+Installing
+==========
+
+Latest release from PyPi::
+
+    pip install --upgrade ipwhois
+
+GitHub - Stable::
+
+    pip install -e git+https://github.com/secynic/ipwhois@master#egg=ipwhois
+
+GitHub - Dev::
+
+    pip install -e git+https://github.com/secynic/ipwhois@dev#egg=ipwhois
+
+Firewall Ports
+==============
+
+ipwhois needs some outbound firewall ports opened from your host/server.
+
+:ASN (DNS): 53/tcp
+:ASN (Whois): 43/tcp
+:ASN (HTTP):
+    80/tcp
+
+    443/tcp (Pending)
+:RDAP (HTTP):
+    80/tcp
+
+    443/tcp (Pending)
+:NIR (HTTP):
+    80/tcp
+
+    443/tcp (KRNIC)
+:Legacy Whois: 43/tcp
+:Get Host: 43/tcp
+
+API
+===
+
+IPWhois (main class)
+--------------------
+
+ipwhois.IPWhois is the base class for wrapping RDAP and Legacy Whois lookups.
+Instantiate this object, then call one of the lookup functions:
+
+`RDAP (HTTP) - IPWhois.lookup_rdap() <#rdap-http>`_
+OR
+`Legacy Whois - IPWhois.lookup_whois() <#legacy-whois>`_
+
+Input
+^^^^^
+
++--------------------+--------+-----------------------------------------------+
+| **Key**            |**Type**| **Description**                               |
++--------------------+--------+-----------------------------------------------+
+| address            | str    | An IPv4 or IPv6 address as a string, integer, |
+|                    |        | IPv4Address, or IPv6Address.                  |
++--------------------+--------+-----------------------------------------------+
+| timeout            | int    | The default timeout for socket connections    |
+|                    |        | in seconds. Defaults to 5.                    |
++--------------------+--------+-----------------------------------------------+
+| proxy_opener       | object | The urllib.request.OpenerDirector request for |
+|                    |        | proxy support or None.                        |
++--------------------+--------+-----------------------------------------------+
+
+RDAP (HTTP)
+-----------
+
+IPWhois.lookup_rdap() is the recommended lookup method. RDAP provides a
+far better data structure than legacy whois and REST lookups (previous
+implementation). RDAP queries allow for parsing of contact information and
+details for users, organizations, and groups. RDAP also provides more detailed
+network information.
+
+RDAP documentation:
+
+https://ipwhois.readthedocs.io/en/latest/RDAP.html
+
+Legacy Whois
+------------
+
+.. note::
+
+    Legacy Whois output is different from RDAP. See the below JSON outputs for
+    a comparison:
+
+    Legacy Whois:
+    https://ipwhois.readthedocs.io/en/latest/WHOIS.html#basic-usage
+
+    RDAP:
+    https://ipwhois.readthedocs.io/en/latest/RDAP.html#basic-usage
+
+Legacy Whois documentation:
+
+https://ipwhois.readthedocs.io/en/latest/WHOIS.html
+
+National Internet Registries
+----------------------------
+
+This library now supports NIR lookups for JPNIC and KRNIC. Previously, Whois
+and RDAP data for Japan and South Korea was restricted. NIR lookups scrape
+these national registries directly for the data restricted from regional
+internet registries. NIR queries are enabled by default via the inc_nir
+argument in the IPWhois.lookup_*() functions.
+
+https://ipwhois.readthedocs.io/en/latest/NIR.html
+
+Autonomous System Numbers
+-------------------------
+
+This library now supports ASN origin lookups via Whois and HTTP.
+
+IP ASN functionality was moved to its own parser API (IPASN).
+
+There is no CLI for these yet.
+
+https://ipwhois.readthedocs.io/en/latest/ASN.html
+
+Utilities
+---------
+
+Utilities documentation:
+
+https://ipwhois.readthedocs.io/en/latest/UTILS.html
+
+Scripts
+-------
+
+CLI documentation:
+
+https://ipwhois.readthedocs.io/en/latest/CLI.html
+
+Experimental Functions
+----------------------
+
+.. caution::
+
+    Functions in experimental.py contain new functionality that has not yet
+    been widely tested. Bulk lookup support contained here can result in
+    significant system/network resource utilization. Additionally, abuse of
+    this functionality may get you banned by the various services queried by
+    this library. Use at your own discretion.
+
+Experimental functions documentation:
+
+https://ipwhois.readthedocs.io/en/latest/EXPERIMENTAL.html
+
+Contributing
+============
+
+https://ipwhois.readthedocs.io/en/latest/CONTRIBUTING.html
+
+IP Reputation Support
+=====================
+
+This feature is under consideration. Take a look at TekDefense's Automater:
+
+`TekDefense-Automater <https://github.com/1aN0rmus/TekDefense-Automater>`_
+
+Domain Support
+==============
+
+There are no plans for domain whois support in this project.
+
+Look at Sven Slootweg's
+`python-whois <https://github.com/joepie91/python-whois>`_ for a library with
+domain support.
+
+Special Thanks
+==============
+
+Thank you JetBrains for the `PyCharm <https://www.jetbrains.com/pycharm/>`_
+open source support!
+
+Thank you Chris Wells (`@cdubz <https://github.com/cdubz>`_) for your
+extensive testing on the experimental functions!
+
+Last but not least, thank you to all the issue submitters and contributors.
+
+Changelog
+=========
+
+1.3.0 (2024-10-15)
+------------------
+
+- Fixed deprecated query method of dnspython (#294 - monoidic)
+- Upgrade dnspython (#303)
+- Added requirement for defusedxml for security (#306)
+- Added support for Python up to 3.12
+- Remove reserved IANA 198.97.38.0/24 (#315)
+- Fix for ASN queries against RADB for RIPE source (#317)
+- Temporary (move to config later) hardcoding of user agent for ASN origin
+  lookup to avoid 403
+- Updated to HTTPS where applicable (#307)
+- Updated ARIN bootstrap URL (#300)
+- Close sockets on exception to avoid warnings
+- Move tests from assertEquals to assertEqual
+- Fix for local domain searches with ASN (#324)
+- Added get_recursive argument (-r) for IPWhois.lookup_whois() and
+  ipwhois.net.Net.get_whois() (#295)
+
+1.2.0 (2020-09-17)
+------------------
+
+- Removed deprecated functions: asn.IPASN._parse_fields_http,
+  asn.IPASN._parse_fields_dns, asn.IPASN._parse_fields_whois,
+  asn.ASNOrigin._parse_fields, asn.ASNOrigin._get_nets_radb,
+  net.Net.lookup_asn, whois.Whois._parse_fields, whois.Whois._get_nets_arin
+  whois.Whois._get_nets_lacnic, whois.Whois._get_nets_other,
+  nir.NIRWhois._parse_fields, nir.NIRWhois._get_nets_jpnic
+  nir.NIRWhois._get_nets_krnic, nir.NIRWhois._get_contact (#230)
+- Removed deprecated asn_alts parameter (#230)
+- Removed deprecated allow_permutations parameter (#230)
+- Fixed ASNOrigin lookups (#216)
+- Fixed bug in ASNOrigin lookups when multiple asn_methods provided (#216)
+- Fixed bug in KRNIC queries due to a change in their service (#243)
+- Fixed bug in experimental.bulk_lookup_rdap where only the last 
+  result was returned (#262 - ameidatou)
+- Fixed deprecation warnings due to invalid escape sequences 
+  (#272 - tirkarthi)
+- Fixed bug in root and sub-entities not getting queried/data (#247)
+- Fixed NIR datetime parsing issue if only date is returned (#284)
+- Added new argument root_ent_check to IPWhois.lookup_rdap and
+  RDAP.lookup. Set this to False to revert to old functionality - missing data,
+  but less queries (#247)
+- Added support for Python 3.8 (#267)
+- Fixed travis build warnings (#268)
+- Pinned requirements (#274)
+- Added ip_failed_total key to stats dictionary in
+  experimental.bulk_lookup_rdap (#235)
+- Added ipv4_generate_random and ipv6_generate_random to utils CLI (#236)
+- Added documentation note for ASN data (#278)
+
+1.1.0 (2019-02-01)
+------------------
+
+- Exceptions now inherit a new BaseIpwhoisException rather than Exception
+  (#205 - Darkheir)
+- Fixed list output for generate_examples.py (#196)
+- Fixed bug in ASN HTTP lookup where the ARIN results were reversed, and
+  parsing would fail on the first item (#220)
+- Removed support for Python 2.6/3.3, added support for 3.7 (#221)
+- Fixed deprecation warnings in core code (#203 - cstranex)
+- Fixed bug in host argument for elastic_search.py example (#202)
+- Set user agent in elastic_search.py example to avoid default user agent
+- Updated elastic_search.py example for ES 6.6.0
+- Readme update for RDAP vs Legacy Whois output (#204)
+- Removed the disallow_permutations argument from ipwhois_cli.py (#226)
+
+1.0.0 (2017-07-30)
+------------------
+
+- Deprecated asn_alts, allow_permutations in favor of new asn_methods (#158)
+- Added new exception ASNOriginLookupError (#158)
+- KRNIC lookups changed to HTTPS (#166)
+- Added experimental functions - get_bulk_asn_whois, bulk_lookup_rdap (#134)
+- Fixed bug in NIR lookups that caused addresses with multi-line contacts to
+  error (#172 - kwheeles)
+- Added IANA Reserved CIDR 198.97.38.0/24 to ipv4_is_defined (#174)
+- Fixed bug in RDAP notices/remarks parsing that would omit partial entries
+  missing one or more of title, description, links (#176)
+- Added new return key asn_description via verbose ASN DNS lookup support and
+  modified ASN whois lookups. New argument get_asn_description (#176)
+- Fixed some test function naming errors
+- Added new generators to utils.py: ipv4_generate_random and
+  ipv6_generate_random (#183)
+- Moved upgrade notes to new UPGRADING.rst
+- Deprecated unnecessary protected class functions, changed to public in
+  asn.py, nir.py, and whois.py (#184)
+- net.Net.get_host(), utils.ipv4_is_defined(), and utils.ipv6_is_defined now
+  return namedtuple instead of tuple.
+- Changed docstrings to Google standard for better napoleon parsing (#185)
+- Removed deprecated IPWhois.lookup() - This was moved to
+  IPWhois.lookup_whois()
+- Fixed 'nets'->'range' bug for legacy whois CIDR net_range values (#188)
+- Fixed a bug in IPASN/Net that caused the ASN result to vary if Cymru has
+  more than one ASN listed for an IP (#190)
+- Updated ElasticSearch example for ES v5.5.1 (#138)
+
+0.15.1 (2017-02-16)
+-------------------
+
+- Fixed IPv6 parsing for ASN origin lookups and added tests (#162 - ti-mo)
+- Fixed recursive role parsing at depths greater than 0 (#161 - cdubz)
+
+0.15.0 (2017-02-02)
+-------------------
+
+- Python 3.3+ dnspython3 requirement changed to dnspython (#155)
+- Added ASN origin lookup support (#149)
+- Moved ASN parsing from net.Net.get_asn_*() to new class asn.IPASN.
+  The original functions now return the raw query (#157)
+- net.Net.lookup_asn() is deprecated in favor of asn.IPASN.lookup() (#157)
+- Added new exception ASNParseError (#157)
+- Fixed rate-limiting exception handling for when HTTP errors are returned
+  rather than JSON errors (rikonor - #144)
+- Fixed rate-limit infinite recursion bug for legacy whois (rikonor - #144)
+- Fixed bug in net.Net.get_http_raw() that would pass the encoded form_data on
+  retry rather than the original argument.
+- Removed nose requirements and fixed travis.yml for updated pip
+- Documentation updates
+- Code style tweaks
+- Updated tests and version info for Python 3.6
+- Added basic stress tests (#144)
+- Minor tweaks to existing tests
+
+0.14.0 (2016-08-29)
+-------------------
+
+- Changed legacy whois emails output type to list (#133)
+- Fixed retry count non-decrementing infinite loop in
+  ipwhois.net.Net.get_whois() (issue #125 - krader1961)
+- Added new function ipwhois.net.Net.get_http_raw() and tests (#67)
+- Added National Internet Registry (JPNIC, KRNIC) support (#67). Enabled by
+  default in IPWhois.lookup_*(). Disable by passing inc_nir=False. Optionally,
+  lower level code can call nir.NIRWhois(). This enhancement results in extra
+  network queries, but more detailed information for NIRs.
+- Added utils CLI (ipwhois_utils_cli.py) - #121. Installed to your environments
+  Scripts dir. This is a wrapper for utils.py.
+- Documentation improvements (#123)
+- kw arg readability (#115)
+- Replaced usage of args with script_args in ipwhois_cli.py
+- Minor optimization in whois.py and online/test_whois.py
+- Added coveralls integration and re-enabled online tests with Travis CI
+- Added Read the Docs support (#132)
+- Added documentation (Sphinx) requirements.txt (#132)
+- Fixed test imports
+- Added --json argument (output in JSON format) to ipwhois_cli.py (#135)
+
+0.13.0 (2016-04-18)
+-------------------
+
+- Added events_actor parsing for RDAP results.
+- Added example for caching data via Redis (#81)
+- Added normalization (human-readable field information) in hr.py (#47)
+- README word wrap fix (#102)
+- Fixed bug in exception handling for ASN HTTP lookups.
+- Fixed bug in IPWhois.lookup_rdap() that caused ASN HTTP lookup responses to
+  be used in place of RDAP responses.
+- Added new function Net.get_asn_http() and migrated code from
+  Net.lookup_asn() + new tests.
+- Fixed bug in ASN HTTP fallback lookups for DNIC (#108).
+- Added new parameter extra_org_map in Net.get_asn_http(), Net.lookup_asn(),
+  and IPWhois.lookup*() (#108).
+- Fixed _RDAPCommon.summarize_notices() None check - changed len() to all().
+- Added CLI (ipwhois_cli.py) - #46. Installed to your environments Scripts dir.
+  This is a wrapper for ipwhois.py (IPWhois). Utils CLI will be in a future
+  release (#121).
+- Documentation split up and added more detail (#81).
+
+0.12.0 (2016-03-28)
+-------------------
+
+- Added headers parameter to ipwhois.Net.get_http_json() (issue #98).
+- Fixed ASN HTTP lookup (fallback) Accept headers (issue #98).
+- Fixed HTTP decoding, set to utf-8 (italomaia - issue #97)
+- IPWhois.lookup() deprecated (issue #96), and will be removed in a future
+  release (TBD). Use IPWhois.lookup_whois() instead.
+- Added rate_limit_timeout parameter (issue #99) to Net.get_http_json(),
+  IPWhois.lookup_rdap(), and RDAP.lookup(). New exception HTTPRateLimitError.
+- Added new parameter asn_alts to Net.lookup_asn(), IPWhois.lookup_rdap() and
+  IPWhois.lookup(). Takes a list of lookup types to attempt if the
+  ASN dns lookup fails. Allow permutations must be enabled. Defaults to all
+  ['whois', 'http'] (issue #93).
+- Fixed socket exception handling in Net.get_http_json() for Python 2.6.
+- Fixed assertIsInstance for Python 2.6 tests (issue #100). Implemented
+  unittest._formatMessage and unittest.util.safe_repr for Python 2.6.
+- Moved TestCommon to tests\\__init__.py to avoid duplicate code.
+- Replaced remaining % with str.format (issue #95).
+
+0.11.2 (2016-02-25)
+-------------------
+
+- Added allow_permutations parameter (bool) to net.Net() and ipwhois.IPWhois()
+  to allow alternate ASN lookups if DNS lookups fail. (FirefighterBlu3)
+- Fixed ASN DNS resolver timeout/retry_count support. Retry count is used as a
+  multiplier of timeout, to determine a limetime interval. (FirefighterBlu3)
+- Fixed bug where remarks would return None if missing a title.
+- Added CONTRIBUTING.rst
+- Added tests
+
+0.11.1 (2015-12-17)
+-------------------
+
+- Re-added CIDR calculation for RDAP lookups.
+- Improved tests - core code coverage now 100%. See '# pragma: no cover' for
+  exclusions. A few bugs were identified in the process, detailed below.
+- Moved IP zero stripping from rdap._RDAPNetwork.parse() to new helper function
+  utils.ipv4_lstrip_zeros().
+- Moved CIDR calculation from rdap._RDAPNetwork.parse() to new helper function
+  utils.calculate_cidr().
+- Fixed utils.ipv4_is_defined() if statement ordering for RFC 1918 conflict.
+- Fixed utils.ipv6_is_defined() if statement ordering for Unspecified and
+  Loopback (conflict with Reserved).
+- Added is_offline parameter to whois.Whois.lookup() primarily for testing.
+- Fixed bug in whois.Whois._parse_fields() that attempted to parse 'val2' of
+  regex, which is no longer used. Also fixed the expected Exception to be
+  IndexError.
+- Fixed bug in ipwhois.IPWhois.lookup() where the argument order was mixed up,
+  causing referral lookups to be skipped when get_referral=True.
+- Fixed bug in rdap._RDAPCommon.summarize_notices() output for links.
+- Fixed bug in root entity iteration exception handling in rdap.RDAP.lookup().
+
+0.11.0 (2015-11-02)
+-------------------
+
+- Support for REST lookups replaced with RDAP.
+- Split code for a more structured system (net, whois, rdap, exceptions).
+- Tests match the data new structure.
+- Split tests for online and offline testing.
+- Performance enhancements for parsing.
+- Added an optional bootstrap parameter for RDAP lookups, in order to replace
+  ASN lookups or use both. Will default to False. Afrinic is currently not
+  supported, so I would not use this for now. ARIN acknowledged my issue
+  for this, and will be adding support back in for Afrinic bootstrap.
+- Added field_list parameter (inclusion list) for WHOIS lookups.
+- Added logging.
+- Added examples directory.
+
+0.10.3 (2015-08-14)
+-------------------
+
+- Fixed LACNIC lookup_rws() queries, since they switched to RDAP. This is
+  temporary to get it working until the major library transition to RDAP and
+  new parsed formatting is complete.
+
+0.10.2 (2015-05-19)
+-------------------
+
+- Fixed APNIC parsing for updated field.
+- Fixed datetime parsing and validation when Zulu (Z) is appended.
+- Added RIPE parsing for created and updated fields (whois and RWS).
+- Removed unnecessary parentheses in IPWhois class declaration.
+- Some documentation and comment tweaking to work with Sphinx.
+- Minor PEP 8 tweaks.
+
+0.10.1 (2015-02-09)
+-------------------
+
+- Fixed setup.py bug.
+
+0.10.0 (2015-02-09)
+-------------------
+
+- Added .csv support for country code source. You can no longer download
+  country code information from iso.org.
+- Added support for IPv4Address or IPv6Address as the address arg in IPWhois.
+- Fixed file open encoding bug. Moved from open to io.open.
+- Fixed parameter in IPWhois ip defined checks.
+- Fixed TestIPWhois.test_ip_invalid() assertions.

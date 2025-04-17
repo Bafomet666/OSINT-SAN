@@ -1,0 +1,2 @@
+[console_scripts]
+socid_extractor = socid_extractor.cli:run

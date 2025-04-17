@@ -28,7 +28,7 @@ api = {
     # Выше впиши API вирус тотал
     "cms_detect_api": "",
     # Ниже пример как нужно указывать API
-    "phone_apis": "80fd4720becad81c5d60f5364c7d4b2f", # API номер телефона phone_apis -- https://numverify.com/dashboard?logged_in=1
+    "phone_apis": "80fd4720becad81c5d608c7d4b2f", # API номер телефона phone_apis -- https://numverify.com/dashboard?logged_in=1
 
 }
 

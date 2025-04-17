@@ -1,0 +1,3 @@
+[console_scripts]
+censys=censys.cli:main
+

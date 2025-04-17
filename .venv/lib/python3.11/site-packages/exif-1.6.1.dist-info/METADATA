@@ -1,0 +1,125 @@
+Metadata-Version: 2.1
+Name: exif
+Version: 1.6.1
+Summary: Read and modify image EXIF metadata using Python.
+Home-page: https://gitlab.com/TNThieding/exif
+Author: Tyler N. Thieding
+Author-email: python@thieding.com
+Maintainer: Tyler N. Thieding
+Maintainer-email: python@thieding.com
+License: UNKNOWN
+Download-URL: https://gitlab.com/TNThieding/exif
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Multimedia :: Graphics :: Editors
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: plum-py<2.0.0,>=0.5.0
+
+##############
+[exif] Package
+##############
+
+.. image:: https://www.gitlab.com/TNThieding/exif/badges/master/pipeline.svg
+    :target: https://gitlab.com/TNThieding/exif
+
+.. image:: https://www.gitlab.com/tnthieding/exif/badges/master/coverage.svg
+    :target: https://gitlab.com/TNThieding/exif
+
+.. image:: https://readthedocs.org/projects/exif/badge/?version=latest
+    :target: https://exif.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+
+.. image:: http://www.mypy-lang.org/static/mypy_badge.svg
+    :target: http://mypy-lang.org/
+    :alt: Checked with mypy
+
+Read and modify image EXIF metadata using Python without any third-party software
+dependencies. For example, batch process image metadata using a Python script.
+
+.. note::
+
+    I developed this package in 2018 as a hobby; however, I no longer have the same bandwidth
+    to work on this project. As always, contributions and bug fixes are welcome and appreciated.
+    If this package does not suit your needs in its current form, I encourage you to investigate
+    alternative packages such as piexif_, Pillow_, or the like.
+
+    .. _piexif: https://pypi.org/project/piexif/
+    .. _Pillow: https://pypi.org/project/Pillow/
+
+***********
+Quick Start
+***********
+
+Open an image with EXIF metadata using the Python ``open()`` built-in function. Ensure the
+binary mode flag is set. Pass this image file object into the ``exif.Image`` class::
+
+    >>> from exif import Image
+    >>> with open('grand_canyon.jpg', 'rb') as image_file:
+    ...     my_image = Image(image_file)
+    ...
+    >>> my_image.has_exif
+    True
+
+List EXIF attributes using the ``list_all()`` method::
+
+    >>> my_image.list_all()
+    ['_exif_ifd_pointer', '_gps_ifd_pointer', 'aperture_value', 'brightness_value', 'color_space',
+     'components_configuration', 'compression', 'datetime', 'datetime_digitized', 'datetime_original', 'exif_version',
+     'exposure_bias_value', 'exposure_mode', 'exposure_program', 'exposure_time', 'f_number', 'flash',
+     'flashpix_version', 'focal_length', 'focal_length_in_35mm_film', 'gps_altitude', 'gps_altitude_ref',
+     'gps_datestamp', 'gps_dest_bearing', 'gps_dest_bearing_ref', 'gps_horizontal_positioning_error',
+     'gps_img_direction', 'gps_img_direction_ref', 'gps_latitude', 'gps_latitude_ref', 'gps_longitude',
+     'gps_longitude_ref', 'gps_speed', 'gps_speed_ref', 'gps_timestamp', 'jpeg_interchange_format',
+     'jpeg_interchange_format_length', 'lens_make', 'lens_model', 'lens_specification', 'make', 'maker_note',
+     'metering_mode', 'model', 'orientation', 'photographic_sensitivity', 'pixel_x_dimension', 'pixel_y_dimension',
+     'resolution_unit', 'scene_capture_type', 'scene_type', 'sensing_method', 'shutter_speed_value', 'software',
+     'subject_area', 'subsec_time_digitized', 'subsec_time_original', 'white_balance', 'x_resolution',
+     'y_and_c_positioning', 'y_resolution']
+
+Access EXIF metadata tags using Python attribute notation::
+
+    >>> # Read tags with Python "get" notation.
+    >>> my_image.gps_latitude
+    (36.0, 3.0, 11.08)
+    >>> my_image.gps_longitude
+    (112.0, 5.0, 4.18)
+    >>> my_image.model
+    'iPhone 7'
+    >>>
+    >>> # Modify tags with Python "set" notation.
+    >>> my_image.make = "Python"
+    >>>
+    >>> # Delete tags with Python "del" notation.
+    >>> del my_image.gps_latitude
+    >>> del my_image.gps_longitude
+    >>>
+    >>> # Add new tags with Python "set" notation.
+    >>> from exif import LightSource
+    >>> my_image.light_source = LightSource.DAYLIGHT
+
+Write the image with modified EXIF metadata to an image file using ``open()`` in binary
+write mode::
+
+    >>> with open('modified_image.jpg', 'wb') as new_image_file:
+    ...     new_image_file.write(my_image.get_file())
+    ...
+
+Refer to the `usage page <https://exif.readthedocs.io/en/latest/usage.html>`_ for information and examples of alternative ways to access EXIF tags (e.g.
+with index/item syntax or with methods).
+
+

@@ -7,27 +7,11 @@ from module.utils import COLORS
 # banners
 from module.utils.ban import (
     page_1, page_14, page_3, page_6, page_10,
-    page_13, page_28, page_45, page_45,
+    page_13, page_28,
     page_42, page_5,
 )
 from module.utils.banner import show_banner
 
-page_32 = f'''
- {COLORS.REDL}Авторизация успешно пройдена️
-               
- {COLORS.WHSL}Уровень допуска: {COLORS.GNSL}Демо версия 
-
- {COLORS.REDL}Обновленные цены на подписку framework.
- 
- {COLORS.WHSL}3 месяца ипользования  -{COLORS.GNSL} 1200 {COLORS.REDL}₽
- {COLORS.WHSL}6 месяцев ипользования -{COLORS.GNSL} 1800 {COLORS.REDL}₽
- {COLORS.WHSL}12 месяцев пользования -{COLORS.GNSL} 2500 {COLORS.REDL}₽
- 
- {COLORS.FIOL}Подписка приобретается строго через разработчика, 
- написать разработчику{COLORS.WHSL} https://t.me/satana666mx
- 
- {COLORS.REDL}-----------------------------------------------------------------------------------------------
-'''
 
 
 def clear_screen():
@@ -39,7 +23,7 @@ def clear_screen():
 
 def osint():
     import os
-    os.system("printf '\033]2;Demo version 7.0 🇸🇮 \a'")
+    os.system("printf '\033]2;OSAN 🇸🇮 \a'")
     global option
     while True:
         print(page_10)
@@ -106,7 +90,6 @@ def osint():
 
         elif choice == 3:
             from module.phonenumber import phone_number
-            print(f' Внимание ввод номера с +7\n Пример вводимых номеров: +79228009988 +79127654325\n Обязательно замените API в osintsan.py\n')
             ph = input(f"{COLORS.REDL} └──>{COLORS.GNSL} 🔎 Введите номер телефона:{COLORS.WHSL} ")
             show_banner(clear=True)
             phone_number(ph)
@@ -229,14 +212,10 @@ def osint():
                 show_banner(clear=True)
 
         elif choice == 12:
-            show_banner(clear=True)
-            urls = [
-                "https://tutanota.com/ru/",
-            ]
-            for url in urls:
-                webbrowser.open(url)
-                
-            print('\n Сайты открыты')
+            from module.wizard import userfull
+            print(f'\n{COLORS.FIOL} By Soxoj')
+            username = input(f'{COLORS.WHSL} Введите имя пользователя для поиска{COLORS.REDL}: ')
+            userfull(username)
 
         elif choice == 13:
             clear_screen()          
@@ -332,22 +311,10 @@ def osint():
                 print(page_10)
                 show_banner(clear=True)
 
-        elif choice == 15:
-            from module.wizard import userfull
-            print(f'\n{COLORS.FIOL} By Soxoj')
-            username = input(f'{COLORS.WHSL} Введите имя пользователя для поиска{COLORS.REDL}: ')
-            userfull(username)
-
-        elif choice == 65:
-            from module.driver import driver
-            clear_screen()
-            driver()
-
         elif choice == 16:
             from osintsan import api
             clear_screen()
             print(page_13)
-            print(page_32)
             for i in api:
                 if api[i]:
                     print(f' {COLORS.WHSL}Токен {i} :{COLORS.GNSL} Активирован ✅')
@@ -366,7 +333,7 @@ def osint():
         elif choice == 66:
             show_banner(clear=True)
             print(
-                f'\n{COLORS.WHSL}                             Рабочее окно ознакомительной версии программы очищено\n')
+                f'\n{COLORS.WHSL}                             Рабочее окно программы очищено\n')
 
         elif choice == 00:
             from module.utils.killing import kill

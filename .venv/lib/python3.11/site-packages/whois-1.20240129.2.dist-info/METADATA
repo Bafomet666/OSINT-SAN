@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: whois
+Version: 1.20240129.2
+Summary: Python package for retrieving WHOIS information of domains.
+Project-URL: Bug Tracker, https://github.com/mboot-github/WhoisDomain/issues
+Project-URL: Home Page, https://github.com/mboot-github/WhoisDomain/
+Project-URL: Repository, https://github.com/mboot-github/WhoisDomain/
+Author: mboot-github
+Maintainer-email: Maarten Boot <130295084+mboot-github@users.noreply.github.com>
+License-Expression: MIT
+Keywords: Python,domain,expiration,registrar,tld,whois
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# github:python-whois
+# pypi: whois
+
+  * A Python package for retrieving WHOIS information of DOMAIN'S ONLY.
+
+**NOTICE: AS OF 2024-02-03; THIS SOFTWARE IS NOW UNSUPPORTED**
+
+ALL FURTHER ACTIONS WILL TAKE PLACE AT
+[WhoisDomain](https://github.com/mboot-github/WhoisDomain)
+
+For all further info:
+
+  * see [WhoisDomain](https://github.com/mboot-github/WhoisDomain)
+  * all future development will take place on WhoisDomain
+
