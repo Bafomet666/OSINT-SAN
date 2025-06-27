@@ -1,6 +1,6 @@
 # Студия разработки Bafomёd group
 # Получить доступ можно у https://t.me/satana666mx
-# Официальный канал https://t.me/osint_san_framework
+# Официальный канал https://t.me/maxim_viktorov_san
 # Наш сайт: https://osintsan.ru/
 import os
 from core.core import osint
