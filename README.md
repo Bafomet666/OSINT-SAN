@@ -14,7 +14,7 @@
 
 Наш сайт: https://osintsan.ru
 
-Telegram: https://t.me/osint_san_framework
+Telegram: https://t.me/maxim_viktorov_san
 
 ----
 
