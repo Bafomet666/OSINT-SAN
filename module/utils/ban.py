@@ -204,6 +204,7 @@ menu = f"""
  {COLORS.WHSL}некоторые модули блокируют сканирование через tor сеть, лучше используйте VPN или proxy
  
  {COLORS.REDL}------------------------------------------------------------------------------------------------
+https://t.me/maxim_viktorov_san
  
 {COLORS.GNSL} [ {COLORS.REDL}1 {COLORS.GNSL}] {COLORS.WHSL}  DNS карта сайта в трех форматах           {COLORS.GNSL} [ {COLORS.REDL}16{COLORS.GNSL} ] {COLORS.WHSL} CMS detect
 {COLORS.GNSL} [ {COLORS.REDL}2{COLORS.GNSL} ] {COLORS.WHSL}  Поиск {COLORS.GNSL}@mail{COLORS.WHSL} адресов на сайтах             {COLORS.GNSL} [ {COLORS.REDL}17{COLORS.GNSL} ] {COLORS.WHSL} Headers
